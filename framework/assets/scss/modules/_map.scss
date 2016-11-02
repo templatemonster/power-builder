@@ -1,0 +1,38 @@
+#tm_builder_outer_content {
+	.tm_pb_map {
+		height: 440px;
+		width: 100%;
+		position: relative;
+	}
+
+	body.chrome.parallax-map-support .tm_pb_map {
+		transform: inherit !important;
+	}
+
+	.tm_pb_fullwidth_section .tm_pb_map_container {
+		margin: 0;
+	}
+
+	.tm_pb_map_container img {
+		max-width: inherit;
+	}
+
+	.tm_pb_map_pin {
+		display: none;
+		visibility: hidden;
+	}
+
+	.tm_pb_column_2_3 .tm_pb_map {
+		height: 400px;
+	}
+
+	.tm_pb_column_1_2 .tm_pb_map,
+	.tm_pb_column_3_8 .tm_pb_map {
+		height: 280px;
+	}
+
+	.tm_pb_column_1_3 .tm_pb_map,
+	.tm_pb_column_1_4 .tm_pb_map {
+		height: 230px;
+	}
+}

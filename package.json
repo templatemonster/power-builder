@@ -1,0 +1,18 @@
+{
+  "name": "tm-content-builder",
+  "version": "1.0.0",
+  "description": "tm-content-builder",
+  "repository": {
+    "type": "git",
+    "url": "http://products.git.devoffice.com/cherry/tm-content-builder.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "rsvp": "^3.2.1",
+    "sass-convert": "^0.5.2",
+    "through2": "^2.0.1"
+  }
+}

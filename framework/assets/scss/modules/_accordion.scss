@@ -1,0 +1,10 @@
+#tm_builder_outer_content {
+	.tm_pb_accordion {
+		.tm_pb_toggle {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

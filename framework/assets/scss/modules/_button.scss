@@ -1,0 +1,43 @@
+#tm_builder_outer_content {
+	.tm_pb_button_module_wrapper {
+		&.tm_pb_button_alignment_right {
+			text-align: right;
+		}
+
+		&.tm_pb_button_alignment_center {
+			text-align: center;
+		}
+	}
+	.tm_pb_button:after {
+		@include fa-icon();
+	}
+	.tm_pb_button {
+		font-size: 20px;
+		line-height: 1.7em;
+		padding: 0.3em 1em;
+		background: transparent;
+		position: relative;
+		border: 2px solid;
+		display: inline-block;
+		transition: all 0.2s;
+		&:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+		&:after {
+			font-size: 20px;
+			line-height: 1.7em;
+			content: attr(data-icon);
+			opacity: 0;
+			position: absolute;
+			transition: all 0.2s;
+		}
+	}
+
+	.tm_pb_custom_button_icon.tm_pb_button:after {
+		content: attr(data-icon);
+	}
+
+	.tm_pb_custom_button_icon.tm_pb_button:before {
+		content: "";
+	}
+}

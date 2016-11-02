@@ -1,0 +1,79 @@
+// 3d mixins
+@mixin preserve-3d(){
+		transform-style: preserve-3d;
+}
+
+@mixin backface(){
+		backface-visibility:hidden;
+}
+// end 3d mixins
+
+// Transformations
+@mixin scale($ratio...) {
+	transform: scale($ratio);
+}
+
+@mixin scaleX($ratio) {
+	transform: scaleX($ratio);
+}
+@mixin scaleY($ratio) {
+	transform: scaleY($ratio);
+}
+@mixin skew($x, $y) {
+	transform: skewX($x) skewY($y);
+}
+@mixin translate($x, $y) {
+	transform: translate($x, $y);
+}
+@mixin matrixTransform($scaleX, $skewY, $skewX, $scaleY, $translateX, $translateY) {
+	transform: matrix($scaleX, $skewY, $skewX, $scaleY, $translateX, $translateY);
+}
+@mixin translate3d($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+}
+@mixin rotate($degrees) {
+	transform: rotate($degrees);
+}
+@mixin rotateX($degrees) {
+	transform: rotateX($degrees);
+}
+@mixin rotateY($degrees) {
+	transform: rotateY($degrees);
+}
+@mixin perspective($perspective) {
+	perspective: $perspective;
+}
+@mixin perspective-origin($perspective) {
+	perspective-origin: $perspective;
+}
+@mixin transform-origin($origin) {
+	transform-origin: $origin;
+}
+
+// Transitions
+@mixin transition($transition...) {
+	transition: $transition;
+}
+@mixin transition-property($transition-property...) {
+	transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+	transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration...) {
+	transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+	transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition...) {
+	transition: transform $transition;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	// IE8 filter
+	$opacity-ie: ($opacity * 100);
+	filter: #{alpha(opacity=$opacity-ie)};
+}

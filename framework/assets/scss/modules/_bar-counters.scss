@@ -1,0 +1,45 @@
+#tm_builder_outer_content {
+	.tm_pb_counters {
+		list-style: none !important;
+		padding: 0 !important;
+		line-height: inherit !important;
+	}
+
+	.tm_pb_counter_title {
+		font-size: 12px;
+		line-height: 1.6em;
+		display: block;
+		color: #666;
+		word-wrap: break-word;
+	}
+
+	.tm_pb_counter_container {
+		background-color: #dddddd;
+		color: #fff;
+		margin-bottom: 10px;
+		overflow: hidden;
+		position: relative;
+		display: block;
+	}
+
+	.tm_pb_counter_amount {
+		opacity: 0;
+		float: left;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.6em;
+		text-align: right;
+		padding: 1px 3% 1px 1px;
+		display: block;
+		min-height: 6px;
+		background-color: #2EA3F2;
+	}
+
+	.tm-animated .tm_pb_counter_amount {
+		opacity: 1;
+		-webkit-animation: slideWidth 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+		-moz-animation: slideWidth 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+		-o-animation: slideWidth 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+		animation: slideWidth 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+	}
+}

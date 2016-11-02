@@ -1,0 +1,13 @@
+#tm_builder_outer_content .tm_pb_pricing_heading {
+	background-color: $regular_accent_color_2;
+}
+#tm_builder_outer_content .tm_pb_featured_table .tm_pb_pricing_heading {
+	background-color: $regular_accent_color_1;
+}
+#tm_builder_outer_content .tm_pb_pricing li:before {
+	color: $regular_accent_color_1;
+}
+#tm_builder_outer_content .tm_pb_pricing .tm_pb_dollar_sign {
+	color: $regular_accent_color_1;
+}
+

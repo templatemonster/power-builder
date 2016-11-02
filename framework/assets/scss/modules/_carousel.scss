@@ -1,0 +1,39 @@
+.tm_pb_swiper {
+	opacity: 0;
+	.post__cats {
+		position: relative;
+		top: 0px;
+		left: 0px;
+	}
+	.post-thumbnail + .entry-content .post__cats {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+	h1+.title-delimiter,
+	h2+.title-delimiter,
+	h3+.title-delimiter,
+	h4+.title-delimiter,
+	h5+.title-delimiter,
+	h6+.title-delimiter {
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #000;
+		opacity: 0.5;
+	}
+	.entry {
+		&-content {
+			margin: 0;
+			padding: 0 2em;
+		}
+		&-footer {
+			margin: 1.5em 0;
+			padding: 0 2em;
+		}
+	}
+	.btn {
+		float: none;
+		white-space: normal;
+	}
+}

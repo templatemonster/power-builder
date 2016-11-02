@@ -1,0 +1,544 @@
+.tm-pb-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $white-color;
+  border-bottom: 1px solid $border-color;
+  border-radius: $border-radius-large $border-radius-large 0 0;
+  width: 100%;
+  height: 59px;
+}
+
+.tm_pb_section_specialty {
+  .tm_pb_global.tm_pb_row .tm-pb-controls,
+  &.tm_pb_global .tm_pb_row .tm-pb-controls {
+  }
+
+}
+
+.tm_pb_section.tm_pb_global .tm-pb-controls,
+.tm_pb_row.tm_pb_global .tm-pb-controls,
+.tm_pb_module_block.tm_pb_global,
+.tm_pb_section.tm_pb_global .tm_pb_module_block {
+}
+
+.tm_pb_row {
+  border-radius: $border-radius-medium;
+  position: relative;
+  cursor: move;
+  opacity: 1;
+  box-shadow: 0px 5px 21px rgba(0, 0, 0, 0.1);
+  //min-height: 130px;
+  background: $white_color;
+  margin: 0 0 30px;
+  transition: opacity 0.5s, box-shadow 0.5s;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .tm-pb-controls {
+    height: 50px;
+    background-color: $white_color;
+    a{
+      font-size: 16px;
+    }
+  }
+  &.tm_pb_global .tm_pb_module_block {
+  }
+}
+
+.tm-pb-section-content {
+  padding: 90px 30px 70px 30px;
+  background-color: $section_bg_color;
+}
+.tm-pb-row-content {
+  padding: 80px 30px 25px 30px;
+}
+
+.tm-pb-controls {
+  a {
+  	width: 20px;
+  	height: 20px;
+  	top: 16px;
+  	color: $section_icon_color;
+  	text-decoration: none;
+  	position: absolute;
+  	font-size: 20px;
+		&:before{
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			text-align: center;
+			line-height: 20px;
+		}
+		&:hover{
+			&:before{
+				color: $dark_color;
+			}
+		}
+    &:active{
+      box-shadow: none;
+    }
+  }
+
+  .tm-pb-settings {
+  	right: 20px;
+  }
+
+  .tm-pb-clone {
+  	right: 55px;
+  }
+
+  .tm-pb-remove {
+    top: 16px;
+  	left: 15px;
+    color: $module_bg_color;
+  }
+
+  .tm-pb-expand {
+    top: 16px;
+    left: 15px;
+    color: $module_bg_color;
+  }
+
+  .tm-pb-unlock {
+    top: 16px;
+    left: 15px;
+    color: $white_color;
+  }
+
+  .tm-pb-change-structure {
+  	right: 93px;
+  }
+
+}
+
+
+
+/* Right Click Controls */
+#tm-builder-right-click-controls {
+  opacity: 1;
+
+  .hide {
+	display: none;
+  }
+
+  .options {
+	background: white;
+	width: 200px;
+	box-shadow: rgba(13, 40, 64, 0.2) 0 0 10px;
+	position: absolute;
+	border-radius: 5px;
+	opacity: 0;
+	margin-bottom: -10%;
+	z-index: 10000;
+
+	/* higher than #adminmenuwrap */
+	li {
+	  &:first-child {
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		overflow: hidden;
+	  }
+
+	  &:last-child {
+		-webkit-border-bottom-right-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		overflow: hidden;
+	  }
+
+	}
+
+	li {
+	  margin-bottom: 0;
+	}
+
+	a {
+	  background: $white_color;
+	  border-bottom: 1px solid #EFF3F5;
+	  text-decoration: none;
+	  display: block;
+	  padding: 12px 20px;
+	  color: $context_menu_text_color;
+	  line-height: 1;
+	  font-weight: 600;
+	  font-size: 14px;
+	  opacity: 1;
+	  text-align: left;
+
+	  &:hover {
+		font-weight: 700;
+		background: $context_menu_bg_hover_color;
+		outline: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	  }
+
+	  outline: 0;
+	  -webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+	  box-shadow: none;
+
+	  &:active,
+	  &:focus {
+		outline: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	  }
+
+	}
+
+  }
+
+  .enable,
+  .expand,
+  .unlock {
+	display: none;
+  }
+
+}
+
+.tm_pb_collapsed{
+  .tm-pb-controls{
+    border-radius: $border-radius-medium;
+  }
+}
+
+.tm_pb_collapsed #tm-builder-right-click-controls .expand,
+.tm_pb_disabled #tm-builder-right-click-controls .enable,
+.tm_pb_locked #tm-builder-right-click-controls .unlock {
+  display: inline;
+}
+
+.tm_pb_collapsed #tm-builder-right-click-controls .collapse,
+.tm_pb_disabled #tm-builder-right-click-controls .disable,
+.tm_pb_locked #tm-builder-right-click-controls .lock,
+.tm-pb-expand {
+  display: none;
+}
+
+.tm_pb_collapsed {
+
+  &.tm_pb_section > .tm-pb-data-cid,
+  &.tm_pb_row > .tm-pb-data-cid,
+  &.tm_pb_section > .tm-pb-controls a,
+  &.tm_pb_row > .tm-pb-controls a {
+	display: none !important;
+  }
+
+  &.tm_pb_section > .tm-pb-controls a.tm-pb-expand,
+  &.tm_pb_row > .tm-pb-controls a.tm-pb-expand {
+	display: inline !important;
+  }
+
+  &.tm_pb_locked {
+	&.tm_pb_section > .tm-pb-controls a.tm-pb-expand,
+	&.tm_pb_row > .tm-pb-controls a.tm-pb-expand {
+	  display: none !important;
+	}
+
+  }
+
+}
+
+#tm_pb_main_container {
+  padding-bottom: 7px;
+}
+
+/* Right click anywhere inside builder to show right click options */
+#tm_pb_main_container_right_click_overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";  /*background: rgba( 231, 111, 226, 0.2);*/
+}
+
+/* Right/left click anywhere outisde builder to close right click options */
+#tm_pb_layout_right_click_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.tm-pb-right-click-trigger-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";  /*background: rgba( 231, 111, 226, 0.2);*/
+}
+
+/* Right Click Controls - Disable */
+.tm_pb_section.tm_pb_disabled {
+  background: rgba(222, 227, 231, 0.5);
+}
+
+.tm_pb_row.tm_pb_disabled {
+  background: rgba(250, 250, 250, 0.5);
+}
+
+.tm_pb_disabled {
+  .tm_pb_row {
+	background: rgba(250, 250, 250, 0.5);
+  }
+
+  .tm_pb_module_block {
+	background: rgba(75, 89, 102, 0.5);
+  }
+
+  .tm_pb_row > .tm-pb-controls {
+	background: rgba(0, 195, 170, 0.5);
+  }
+
+}
+
+.tm_pb_row.tm_pb_disabled > .tm-pb-controls {
+  background: rgba(0, 195, 170, 0.5);
+}
+
+.tm_pb_section {
+  &.tm_pb_disabled > .tm-pb-controls {
+	background: rgba(0, 139, 221, 0.5);
+  }
+
+  &.tm_pb_section_specialty {
+	&.tm_pb_disabled > .tm-pb-controls {
+	  background: rgba(240, 85, 85, 0.5);
+	}
+
+	.tm_pb_disabled.tm_pb_row > .tm-pb-controls,
+	&.tm_pb_disabled .tm_pb_row > .tm-pb-controls {
+	  background: rgba(255, 146, 50, 0.5);
+	}
+
+  }
+
+  &.tm_pb_section_fullwidth.tm_pb_disabled > .tm-pb-controls {
+	background: rgba(147, 67, 245, 0.5);
+  }
+
+}
+
+.tm_pb_disabled {
+  .tm-pb-controls a,
+  .tm_pb_module_block a {
+	opacity: 0.7;
+  }
+
+  &.tm_pb_module_block {
+	a {
+	  opacity: 0.7;
+	}
+
+	color: rgba(255, 255, 255, 0.7);
+  }
+
+  .tm_pb_module_block {
+	color: rgba(255, 255, 255, 0.7);
+  }
+
+}
+
+.tm_pb_section_fullwidth.tm_pb_disabled .tm-pb-insert-module {
+  color: rgba(125, 140, 155, 0.5);
+  box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+  -moz-box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+  -webkit-box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+}
+
+.tm_pb_disabled {
+  .tm-pb-insert-module {
+	color: rgba(125, 140, 155, 0.5);
+	box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+	-moz-box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+	-webkit-box-shadow: inset 0 0 0 2px rgba(166, 178, 187, 0.5);
+  }
+
+  .tm-pb-insert-column {
+	box-shadow: inset 0 0 0 2px rgba(180, 191, 200, 0.5);
+	-moz-box-shadow: inset 0 0 0 2px rgba(180, 191, 200, 0.5);
+	-webkit-box-shadow: inset 0 0 0 2px rgba(180, 191, 200, 0.5);
+  }
+
+  .tm_pb_global .tm-pb-controls,
+  &.tm_pb_global .tm-pb-controls {
+	//background: rgba(151, 208, 0, 0.5) !important;
+  }
+
+}
+
+.tm_pb_global .tm_pb_disabled {
+  .tm-pb-controls,
+  .tm_pb_module_block {
+	//background: rgba(151, 208, 0, 0.5) !important;
+  }
+
+}
+
+.tm_pb_disabled {
+  .tm_pb_global .tm_pb_module_block,
+  &.tm_pb_global .tm_pb_module_block,
+  .tm_pb_global.tm_pb_module_block,
+  &.tm_pb_global.tm_pb_module_block {
+	//background: rgba(151, 208, 0, 0.5) !important;
+  }
+
+}
+
+.tm_pb_global .tm_pb_disabled.tm_pb_module_block {
+  //background: rgba(151, 208, 0, 0.5) !important;
+}
+
+.tm_pb_disabled {
+  .tm_pb_locked .tm-pb-controls,
+  &.tm_pb_locked .tm-pb-controls,
+  .tm_pb_locked .tm_pb_module_block,
+  &.tm_pb_locked .tm_pb_module_block,
+  .tm_pb_locked.tm_pb_module_block,
+  &.tm_pb_locked.tm_pb_module_block {
+	background: rgba(235, 61, 0, 0.5) !important;
+  }
+
+  .tm_pb_global.tm_pb_locked .tm-pb-controls,
+  &.tm_pb_global.tm_pb_locked .tm-pb-controls,
+  .tm_pb_global.tm_pb_locked .tm_pb_module_block,
+  &.tm_pb_global.tm_pb_locked .tm_pb_module_block,
+  .tm_pb_global.tm_pb_locked.tm_pb_module_block {
+	//background: rgba(151, 208, 0, 0.5) !important;
+  }
+
+  &.tm_pb_global {
+	.tm_pb_locked.tm_pb_module_block,
+	&.tm_pb_locked.tm_pb_module_block {
+	  //background: rgba(151, 208, 0, 0.5) !important;
+	}
+
+  }
+
+}
+
+/* Right Click Controls - Lock */
+.tm_pb_module_block.tm_pb_locked,
+.tm_pb_section.tm_pb_locked > .tm-pb-controls,
+.tm_pb_row.tm_pb_locked > .tm-pb-controls {
+  background: $button_red_bg_color;
+}
+
+.tm_pb_section.tm_pb_locked {
+  .tm_pb_row > .tm-pb-controls,
+  .tm_pb_module_block {
+	background: $button_red_bg_color;
+  }
+
+}
+
+.tm_pb_row.tm_pb_locked .tm_pb_module_block {
+  background: $button_red_bg_color;
+}
+
+#tm-builder-right-click-controls .options a.tm-pb-right-click-lock,
+.tm-pb-unlock {
+  display: none;
+}
+
+.tm_pb_section > #tm-builder-right-click-controls .options a.tm-pb-right-click-lock,
+.tm_pb_row > #tm-builder-right-click-controls .options a.tm-pb-right-click-lock,
+.tm_pb_module_block > #tm-builder-right-click-controls .options a.tm-pb-right-click-lock {
+  display: block;
+}
+
+.tm_pb_locked {
+  &.tm_pb_section > .tm-pb-controls a,
+  &.tm_pb_row > .tm-pb-controls a,
+  &.tm_pb_module_block > a {
+	display: none !important;
+  }
+
+  &.tm_pb_section > .tm-pb-controls a.tm-pb-unlock,
+  &.tm_pb_row > .tm-pb-controls a.tm-pb-unlock,
+  &.tm_pb_module_block > a.tm-pb-unlock {
+	display: inline !important;
+  }
+
+}
+
+.tm_pb_children_locked {
+  &.tm_pb_section > .tm-pb-controls a.tm-pb-remove,
+  &.tm_pb_row > .tm-pb-controls a.tm-pb-remove {
+	display: none !important;
+  }
+
+}
+
+.tm_pb_section.tm_pb_locked {
+  .tm_pb_row > .tm-pb-controls a,
+  .tm_pb_module_block > a {
+	display: none !important;
+  }
+
+}
+
+.tm_pb_row.tm_pb_locked .tm_pb_module_block > a {
+  display: none !important;
+}
+
+.tm_pb_locked {
+  &.tm_pb_section > .tm-pb-controls,
+  &.tm_pb_row > .tm-pb-controls {
+	z-index: 10;
+  }
+
+  &.tm_pb_section > .tm-pb-locked-overlay,
+  &.tm_pb_row > .tm-pb-locked-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	z-index: 5;    /* Should be lower than .tm_pb_locked > .tm-pb-controls */
+  }
+
+  .tm-pb-insert-module {
+	display: none !important;
+  }
+
+}
+
+.tm_pb_parent_locked .tm-pb-insert-module,
+.tm_pb_section.tm_pb_locked .tm-pb-row-add,
+.tm_pb_parent_locked .tm-pb-row-add,
+.tm_pb_locked .tm-pb-insert-column,
+.tm_pb_parent_locked .tm-pb-insert-column {
+  display: none !important;
+}
+
+.tm_pb_locked {
+  &.tm_pb_section,
+  &.tm_pb_row,
+  &.tm_pb_module_block {
+	cursor: default;
+  }
+
+}
+
+/* Right Click Controls - Rename */
+#tm-builder-right-click-controls .options a.tm-pb-right-click-rename {
+  display: block;
+}

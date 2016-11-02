@@ -1,0 +1,259 @@
+version 1.2.4.1 ( updated 02-18-2016 )
+- Fixed escaping issues in comment count
+	* framework/functions.php
+- Fixed the issue with line breaks, stripped from modules in Page Builder
+	* framework/scripts/builder.js
+
+version 1.2.4 ( updated 02-17-2016 )
+- IMPORTANT: Fixed critical privilege escalation security vulnerability that, if properly exploited, could allow unprivileged registered WordPress users to perform a subset of actions within the Divi Builder, including the potential to manipulate posts.
+	* For more detailed information, please refer to the full public disclosure that was emailed to all customers on 2-17-2016: http://bit.ly/1Q9P13N
+- Added clear cache warning to remind users to clear their cache when Divi Builder files have been updated.
+	* /framework/functions.php
+- Reduced PHP memory usage within the Divi Builder to help reduce errors on hosting accounts with low memory limits.
+	* /framework/includes/builder/class-et-builder-element.php
+
+version 1.2.2 ( updated 02-04-2016 )
+- Fixed bug where clearing selected color failed in some situations.
+	* /framework/scripts/builder.js
+- Fixed bug that caused Admin Labels to not be available for Sections.
+	* framework/main-structure-elements.php
+- Fixed bug where responsive padding values where applied to the incorrect breakpoint in the Post Slider module.
+	* framework/main-modules.php
+- Fixed bug where custom column CSS classes were incorrectly applied to the parent Row in some situations.
+	* framework/scripts/frontend-builder-scripts.js
+- Removed the inapplicable Read More button from the tinyMCE editor when used inside the Divi Builder.
+	* includes/builder/functions.php
+- Fixed bug that caused various plugin incompatibilities.
+	* framework/layouts.php
+	* framework/functions.php
+	* framework/template-preview.php
+
+version 1.2.1 ( updated 01-25-2016 )
+- Fixed bug where builder would not load in certain browsers
+	* includes/builder/scripts/builder.js
+
+version 1.2 ( updated 01-25-2016 )
+- Updated Waypoints library to version 4.0.0
+	* framework/scripts/waypoints.min.js
+- Fixed reset color picker to default error
+	* framework/class-et-builder-element.php
+	* framework/scripts/builder.js
+- Fixed the issue with wrong appearance of reset button for the Font options
+	* framework/class-et-builder-element.php
+- Fixed JetPack Related Posts unwanted shortcode
+	* framework/functions.php
+- Fixed the issue with Video Post format when the first uploaded video is not updated if it's replaced by another video
+	* framework/functions.php
+- Fixed the issue with modules saving when limited tabs available for user
+	* framework/class-et-builder-element.php
+- Fixed the isue with missing "delete" button on custom widget areas
+	* framework/scripts/ext/widgets.js
+- Fixed incorrect divi builder icon placement in RTL layout
+	* framework/styles/style.css
+- Fixed translation issues in various modules
+	* framework/framework.php
+	* framework/functions.php
+- Gallery Module: Fixed image overlay styling in Safari
+	* framework/styles/frontend-builder-style.css
+- Fixed the issue when custom widget areas not displaying in theme customizer
+	* framework/functions.php
+- Fixed JetPack Related Posts unwanted shortcode issue
+	* framework/functions.php
+- Сontact Form Module: Improved email validation
+	* framework/scripts/frontend-builder-scripts.js
+- Сontact Form Module: Improved spam protection
+- Сontact Form Module: Added ability to add/remove/sort fields
+	* framework/class-et-builder-element.php
+	* framework/main-modules.php
+	* framework/scripts/frontend-builder-scripts.js
+	* framework/styles/frontend-builder-style.css
+- Fixed the issues with translation in Russian localization files
+	* framework/languages/ru_RU.po
+	* framework/languages/ru_RU.mo
+- Fixed the issue with preview error in library
+	* framework/layouts.php
+- Page Builder: Fixed the issue with CTRL+Z not working inside input fields
+	* framework/builder.js
+- Page Builder: Fixed the issue with disappearing predefined layouts sometimes
+	* framework/layouts.php
+- Page Builder: Added animations to Modals and different elements in Builder interface
+	* framework/styles/style.css
+	* framework/builder.js
+- Added overlay option for the Blog and Image modules
+	* framework/main-modules.php
+	* framework/scripts/builder.js
+	* framework/styles/frontend-builder-style.css
+- Added Image overlay and Text overlay options for the Slider module
+	* framework/main-modules.php
+	* framework/styles/frontend-builder-style.css
+- Added missing reset button for Columns advanced settings
+	* framework/class-et-builder-element.php
+- Slider Module: Fixed the Hide CTA on mobile and Hide Content on mobile options
+	* framework/main-modules.php
+- Fixed the issue with duplicated entries in "Built For" filter in Library
+	* framework/functions.php
+	* framework/layouts.php
+- Moved CSS Class and CSS ID options on Custom CSS tab
+	* framework/class-et-builder-element.php
+	* framework/main-modules.php
+- Page Builder: Optimized the Builder loading and made load faster
+	* framework/class-et-builder-element.php
+	* framework/functions.php
+	* framework/scripts/builder.js
+- Removed all monarch share button from preview screen
+	* framework/styles/preview.css
+- Fullwidth Portfolio: Added Advanced settings
+	* framework/main-modules.php
+- Fixed the issue when playing audio module stopped video background
+	* framework/scripts/frontend-builder-scripts.js
+- Fixed the issue with saving a row or section as global when it contains global items
+	* scripts/builder.js
+- Accordion Module: Fixed the issue with Open/Closed toggle text color option.
+	* framework/main-modules.php
+- Custom CSS: Improved custom css options and made the selector visible for each option
+- Custom CSS: Added useful css options to various modules
+- Custom CSS: Added custom css options to columns
+- Added Responsive Settings to various options in Builder
+- Added Option to hide module/row/section on certain devices ( Phone, Tablet, Desktop )
+	* Almost all files updated in the /framework directory
+- Added support of swipe gestures in Slider modules
+	* framework/frontend-builder-scripts.js
+	* framework/framework.php
+- Added Posts Nav module
+- Added Search module
+- Added Button module
+- Added Comments module
+- Added Posts Slider module
+- Added Fullwidth Posts Slider module
+	* framework/main-modules.php
+- Added system to sync the default Advanced Settings of child modules with current values of parent module
+	* framework/main-modules.php
+	* framework/scripts/builder.js
+
+version 1.1.3 ( updated 12-08-2015 )
+- Fixed the issue with permalinks when Yoast plugin is activated and page contains Blog or Portfolio module
+	* framework/functions.php
+
+version 1.1.2 ( updated 12-07-2015 )
+- Page Builder: Fixed the issue with expand/collapse button outline in WordPress 4.4
+	* framework/styles/style.css
+- Page Builder: Fixed the issue with Global Modules Admin Label reset, when a module is being duplicated
+	* framework/scripts/builder.js
+- Page Builder: Fixed the issue with content analysis in Yoast SEO 3.0 plugin
+	* framework/functions.php
+	* framework/scripts/builder.js
+- Updated FitVids.js to version 1.1
+	* framework/scripts/jquery.fitvids.js
+- Portfolio Module: Added help text to the category option
+	* framework/functions.php
+- Fixed the issue with incorrect video width and height saved values
+	* framework/main-modules.php
+	* framework/main-structure-elements.php
+- Map Module: Fixed unwanted pin title and info box behaviour
+	* framework/main-modules.php
+	* framework/scripts/frontend-builder-scripts.js
+- Circle Counters: Fixed the issue with counters not being fully responsive on page load
+	* framework/scripts/frontend-builder-scripts.js
+- Video Slider: Fixed the issue with Cover Image low resolution
+	* framework/functions.php
+	* framework/main-modules.php
+	* framework/scripts/frontend-builder-scripts.js
+- Social Media Follow: Fixed the issue with wrong skype URL
+	* framework/main-modules.php
+- Updated some localization files
+	* framework/languages/nb_NO.mo
+	* framework/languages/nb_NO.po
+	* framework/languages/da_DK.mo
+	* framework/languages/da_DK.po
+	* framework/languages/cs_CZ.mo
+	* framework/languages/cs_CZ.po
+
+version 1.1.1 ( updated 10-21-2015 )
+- Fixed the issue with incorrect font icons order
+	* framework/functions.php
+- Fixed the issue with line-height default units in Page Builder advanced settings
+	* framework/functions.php
+	* framework/class-et-builder-element.php
+- Blog Module: Added support of WP-Pagenavi plugin
+	* framework/main-modules.php
+
+version 1.1 ( updated 10-20-2015 )
+- Fixed the unexpected behavior, when gutter width is set to 0 in Rows
+	* framework/main-structure-elements.php
+- Fixed the issue with unwanted circle, appearing in slider with video background on iOS
+	* framework/styles/frontend-builder-style.css
+- Fixed the issue with wrong behavior of Enter and Esc hotkeys, when WordPress modal windows are open ( ex. Image Upload )
+	* framework/scripts/builder.js
+- Fixed the issue with Page Builder editor fullscreen mode incorrect display in Firefox
+	* framework/scripts/builder.js
+- Gallery Module: Fixed the issue with pagination, when multiple galleries exist on a page and one of them has ID attribute
+	* framework/scripts/frontend-builder-scripts.js
+- Global Modules: Fixed the issue with Admin labels not being saved properly
+	* framework/scripts/builder.js
+- Replaced enable/disable text in Dutch language to shorter version ( Aan/Uit )
+	* framework/languages/nl_NL.po
+- Contact Form: Fixed wrongly decoded ampersand in module's email title
+	* framework/main-modules.php
+- Updated Magnific Popup script to 1.0.0 version
+	* framework/scripts/jquery.magnific-popup.js
+- Slider: Fixed item title's discrepancies
+	* framework/main-modules.php
+	* framework/styles/frontend-builder-style.css
+- Added Parallax background images option for columns
+- Added Left/Right padding option for sections
+- Added custom margin options for Rows
+- Added Header Image to the CSS Tab in the Fullwidth Header module
+- Updated padding/margin/width option sanitization to accept "vh" and "vw"
+- Fixed the issue with CTA "max width" not being applied correctly
+	* framework/class-et-builder-element.php
+	* framework/main-modules.php
+	* framework/main-structure-elements.php
+	* framework/scripts/builder.js
+	* framework/styles/frontend-builder-style.css
+- Fullwidth header: Fixed the issue when the module becomes inactive, when specific button icons are selected
+	* framework/class-et-builder-element.php
+	* framework/scripts/builder.js
+- Fixed the issue with Reset button background color in Section settings
+	* framework/main-structure-elements.php
+	* framework/scripts/builder.js
+- Fixed encoding issue with French localization in Code Module
+	* framework/class-et-builder-element.php
+- Countdown Module: Improved responsive layout on small screens
+	* framework/main-modules.php
+	* framework/scripts/frontend-builder-scripts.js
+- Added missing "gift" icon into the Icon Picker option in all Modules
+	* framework/functions.php
+- Improved localization in Contact Form Module
+	* framework/framework.php
+	* framework/scripts/frontend-builder-scripts.js
+- Added support of Microformats
+	* framework/functions.php
+	* framework/main-modules.php
+- Fixed the issue with disappearing "Export Divi Layouts" button in FireFox
+	* framework/scripts/library_scripts.js
+	* framework/styles/library_pages.css
+- Fixed the issue with Submit button icon styling on hover in Contact Form module
+	* framework/styles/frontend-builder-style.css
+- Blurb Module: Fixed the issue where description text alignment is always centered for 768px breakpoint and lower
+	* framework/styles/frontend-builder-style.css
+- Fixed post title module padding issue
+	* framework/styles/frontend-builder-style.css
+- Email Optin: Fixed the issue with 25 lists limit for MailChimp
+	* framework/functions.php
+- Replaced curl function with wp_remote_post funciton in MailChimp_Divi class to avoid some issues
+	* framework/subscription/mailchimp/mailchimp.php
+	* framework/functions.php
+- Added Custom CSS tab to Individual Slides, Pricing tables, Bar Counters and Toggles
+	* framework/class-et-builder-element.php
+	* framework/main-modules.php
+- Added Basic ( websafe ) fonts into the Font options in Page Builder
+	* framework/functions.php
+- Fixed the issue with columns saving/appearance in some ET themes
+	* framework/functions.php
+- Fixed the issue with Search widget appearance in Weblizar theme
+	* theme-compat.php
+	* theme-compat/weblizar.php
+
+version 1.0
+
+- initial release

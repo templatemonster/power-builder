@@ -1,0 +1,108 @@
+.tm-posts {
+	&_item {
+		position: relative;
+		margin-bottom: 30px;
+		.tm_pb_row_padding_reset & {
+			margin-bottom: 0;
+		}
+		img {
+			display: block;
+		}
+	}
+
+	&_item_content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		z-index: 10;
+	}
+
+	&_title_divider {
+		margin: 15px auto;
+		background: rgba( 0, 0, 0, .3 );
+		height: 1px;
+		max-width: 50%;
+	}
+
+	&_item_excerpt {
+		padding: 0 0 15px;
+	}
+
+	&_title_group {
+		text-align: center;
+	}
+	&_item_meta {
+		padding: 0 0 10px;
+		> a {
+			display: inline-block;
+			margin: 0 0 0 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			.fa {
+				display: inline-block;
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+	&_button_wrap {
+		text-align: center;
+	}
+
+	&_layout-3 {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&_listing {
+		padding: 0 0 15px;
+	}
+}
+
+#tm_builder_outer_content {
+	.tm_pb_ajax_more{
+		&.btn-hidden {
+			display: none;
+		}
+	}
+	.tm-pb-spinner-double-bounce.tm-pb-spinner {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: -3px 0 0 15px;
+	}
+	.tm-pb-spinner-double-bounce .tm-pb-double-bounce1, .tm-pb-spinner-double-bounce .tm-pb-double-bounce2 {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: cherry-doubleBounce 2s infinite ease-in-out;
+	}
+
+	.tm-pb-spinner-double-bounce .tm-pb-double-bounce2 {
+		animation-delay: -1s;
+	}
+}
+
+@-webkit-keyframes cherry-doubleBounce {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+@keyframes cherry-doubleBounce {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}

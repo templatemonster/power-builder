@@ -1,0 +1,132 @@
+#tm_pb_layout_controls {
+  top: -100px;
+  right: 0;
+  margin: 0;
+  position: absolute;
+  border-radius: 0 0 $border-radius-large $border-radius-large;
+  padding: 0;
+  z-index: 101;
+  text-align: right;
+  .tm-pb-layout-buttons {
+	box-sizing: border-box;
+	text-align: center;
+	&.tm-pb-layout-buttons-save,
+	&.tm-pb-layout-buttons-load,
+	&.tm-pb-layout-buttons-clear {
+		font-size: 12px;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin: 0 10px;
+		padding: 16px 20px;
+		background-color: $button_bg_color;
+		border-radius: $border-radius-medium;
+		color: $white_color;
+		text-decoration: none;
+		display: inline-block;
+		box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(.5,.12,.46,.88);
+		&:first-child{
+			margin-left: 0;
+		}
+		&:hover{
+			background-color: $button_bg_hover_color;
+			box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2);
+			color: $white_color;
+		}
+	}
+	&.tm-pb-layout-buttons-history, &.tm-pb-layout-buttons-redo, &.tm-pb-layout-buttons-undo {
+		background: none;
+		font-size: 14px;
+		line-height: 20px;
+		position: absolute;
+		top: -39px;
+		margin: 0;
+		color: $text_color;
+		background: none;
+	}
+	&.tm-pb-layout-buttons-history{
+		opacity: 1;
+		right: 20px;
+			&:hover {
+				opacity: 0.5;
+			}
+			&.active{
+
+			}
+	}
+	&.tm-pb-layout-buttons-redo{
+		opacity: 1;
+		right: 45px;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	&.tm-pb-layout-buttons-undo {
+		opacity: 1;
+		right: 75px;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
+	&:before {
+	  display: none;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+  }
+}
+
+.tm-pb-load-layouts{
+	.tm_pb_layout_button_load, .tm_pb_layout_button_delete{
+		&:active{
+			box-shadow: none;
+		}
+		&:focus{
+			box-shadow: none;
+		}
+	}
+	.tm_pb_layout_button_load{
+		background-color: $module_bg_color !important;
+		box-shadow: none;
+		padding: 10px 20px;
+		border: none !important;
+		height: 34px;
+		line-height: 16px
+	}
+	.tm_pb_layout_button_delete{
+		background-color: $button_red_bg_color !important;
+		box-shadow: none;
+		padding: 10px 20px;
+		border: none !important;
+		height: 34px;
+		line-height: 16px;
+		color: $white_color;
+	}
+}
+
+.tm-pb-layout-buttons-history span.icon:after,
+.tm-pb-layout-buttons-redo span.icon:after,
+.tm-pb-layout-buttons-undo span.icon:after {
+  @include fa-icon();
+}
+
+.tm-pb-layout-buttons-redo span.icon:after {
+  content: "\f064";
+}
+
+.tm-pb-layout-buttons-undo span.icon:after {
+  content: "\f112";
+}
+
+.tm-pb-layout-buttons-history span.icon:after {
+  content: "\f1da";
+}

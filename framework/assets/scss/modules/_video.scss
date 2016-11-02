@@ -1,0 +1,128 @@
+#tm_builder_outer_content {
+	.tm_pb_video_box *,
+	.tm_main_video_container *,
+	.tm_pb_slide_video * {
+		height: auto;
+	}
+
+	.tm_pb_video_box iframe,
+	.tm_main_video_container iframe,
+	.tm_pb_slide_video iframe {
+		height: 100%;
+	}
+	.tm_pb_video {
+		position: relative;
+	}
+
+	.tm_pb_video_box {
+		display: block;
+		position: relative;
+		z-index: 1;
+		line-height: 0;
+
+		video {
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
+
+	.tm_pb_video_overlay {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	.tm_pb_video_play {
+		&:before {
+			@include fa-icon();
+			content: "\f144";
+		}
+
+		display: block;
+		position: absolute;
+		z-index: 100;
+		color: #fff;
+		left: 50%;
+		top: 50%;
+	}
+
+	.tm_pb_bg_layout_light .tm_pb_video_play {
+		color: #333;
+	}
+
+	.tm_pb_video_overlay_hover {
+		background: rgba(0, 0, 0, 0);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 100;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.tm_pb_video .tm_pb_video_overlay_hover:hover {
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	.tm_pb_column_4_4 .tm_pb_video_play,
+	.tm_pb_column_3_4 .tm_pb_video_play,
+	.tm_pb_column_2_3 .tm_pb_video_play,
+	.tm_pb_column_1_2 .tm_pb_video_play {
+		font-size: 6rem;
+		line-height: 1em;
+		margin-left: -0.5em;
+		margin-top: -0.5em;
+	}
+
+	.tm_pb_column_3_8 .tm_pb_video_play,
+	.tm_pb_column_1_3 .tm_pb_video_play,
+	.tm_pb_column_1_4 .tm_pb_video_play {
+		font-size: 3rem;
+		line-height: 1em;
+		margin-left: -0.5em;
+		margin-top: -0.5em;
+	}
+
+	.tm_pb_video_slider {
+		.tm_pb_slider:hover .tm_pb_video_overlay_hover {
+			background: rgba(0, 0, 0, 0.6);
+		}
+
+		.tm_pb_slider_dots {
+			+ .tm-pb-controllers {
+				position: relative;
+				margin-top: 10px;
+				bottom: 0;
+				z-index: initial;
+			}
+
+			&.tm_pb_controls_light + .tm-pb-controllers {
+				a {
+					background-color: rgba(255, 255, 255, 0.5);
+				}
+
+				.tm-pb-active-control {
+					background-color: #fff;
+				}
+			}
+
+			&.tm_pb_controls_dark + .tm-pb-controllers {
+				a {
+					background-color: rgba(51, 51, 51, 0.5);
+				}
+
+				.tm-pb-active-control {
+					background-color: #333;
+				}
+			}
+		}
+	}
+}

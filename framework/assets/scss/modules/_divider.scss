@@ -1,0 +1,38 @@
+#tm_builder_outer_content {
+	hr.tm_pb_divider {
+		width: 100%;
+		box-sizing: initial;
+	}
+	.tm_pb_divider {
+		margin: 0 0 30px;
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 100%;
+			height: 0px;
+			border-top-color: #eee;
+			border-top-color: rgba(0, 0, 0, 0.1);
+			border-top-width: 1px;
+			border-top-style: solid;
+			position: absolute;
+			left: 50%;
+			top: 0;
+		}
+	}
+
+
+	body.ie .tm_pb_divider {
+		overflow: visible;
+	}
+
+	.tm_pb_no_sidebar_vertical_divider {
+		.tm_pb_widget_area_left {
+			border-right: none;
+		}
+
+		.tm_pb_widget_area_right {
+			border-left: none;
+		}
+	}
+}

@@ -1,0 +1,5554 @@
+# Copyright (C) 2016 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/framework\n"
+"POT-Creation-Date: 2016-05-12 17:29+0200\n"
+"PO-Revision-Date: 2016-05-12 17:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments-template.php:4
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments-template.php:12
+msgid "0 Comments"
+msgstr ""
+
+#: comments-template.php:12 functions.php:2289
+msgid "1 Comment"
+msgstr ""
+
+#: comments-template.php:12
+msgid "Comments"
+msgstr ""
+
+#: comments-template.php:16 comments-template.php:29
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: comments-template.php:17 comments-template.php:30
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: comments-template.php:36
+msgid "Trackbacks/Pingbacks"
+msgstr ""
+
+#: comments-template.php:54
+msgid "Submit Comment"
+msgstr ""
+
+#: comments-template.php:54
+msgid "Submit a Comment"
+msgstr ""
+
+#: comments-template.php:54
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: framework.php:113
+msgid ""
+"Please, check the fields below to make sure you entered the correct "
+"information."
+msgstr ""
+
+#: framework.php:114
+msgid "Please, fill in the following fields:"
+msgstr ""
+
+#: framework.php:115
+msgid "Please, fix the following errors:"
+msgstr ""
+
+#: framework.php:116
+msgid "Invalid email"
+msgstr ""
+
+#: framework.php:117 includes/modules/templates/contact-form/captcha.php:15
+msgid "Captcha"
+msgstr ""
+
+#: framework.php:118
+msgid "Prev"
+msgstr ""
+
+#: framework.php:119
+msgid "Previous"
+msgstr ""
+
+#: framework.php:120
+msgid "Next"
+msgstr ""
+
+#: framework.php:121
+msgid "You entered the wrong number in captcha."
+msgstr ""
+
+#: functions.php:84 functions.php:2180
+msgid "All Categories"
+msgstr ""
+
+#: functions.php:93 layouts.php:10
+msgid "All Layouts"
+msgstr ""
+
+#: functions.php:94 functions.php:1008
+msgid "Modules"
+msgstr ""
+
+#: functions.php:95 functions.php:1007
+msgid "Rows"
+msgstr ""
+
+#: functions.php:96 functions.php:1006
+msgid "Sections"
+msgstr ""
+
+#: functions.php:97 functions.php:1005
+msgid "Layouts"
+msgstr ""
+
+#: functions.php:101
+msgid "Global/not Global"
+msgstr ""
+
+#: functions.php:102 functions.php:1543
+msgid "Global"
+msgstr ""
+
+#: functions.php:103
+msgid "not Global"
+msgstr ""
+
+#: functions.php:156 functions.php:171 functions.php:2034
+msgid "you don't have sufficient permissions to access this page"
+msgstr ""
+
+#: functions.php:378 includes/class-builder-element.php:977
+#: includes/class-builder-element.php:1697
+#: includes/class-builder-structure-element.php:240
+#: includes/modules/class-builder-module-blurb.php:113
+#: includes/modules/class-builder-module-button.php:65
+#: includes/modules/class-builder-module-image.php:215
+#: includes/modules/class-builder-module-post-slider.php:296
+#: includes/modules/class-builder-module-sidebar.php:91
+msgid "Left"
+msgstr ""
+
+#: functions.php:379 functions.php:387
+#: includes/modules/class-builder-module-button.php:66
+#: includes/modules/class-builder-module-fullwidth-header.php:397
+#: includes/modules/class-builder-module-image.php:216
+#: includes/modules/class-builder-module-slider-item.php:147
+#: includes/modules/class-builder-module-slider-item.php:228
+msgid "Center"
+msgstr ""
+
+#: functions.php:380 functions.php:386 includes/class-builder-element.php:976
+#: includes/class-builder-element.php:1683
+#: includes/class-builder-structure-element.php:238
+#: includes/modules/class-builder-module-blurb.php:115
+#: includes/modules/class-builder-module-button.php:67
+#: includes/modules/class-builder-module-image.php:217
+#: includes/modules/class-builder-module-post-slider.php:297
+#: includes/modules/class-builder-module-sidebar.php:92
+msgid "Right"
+msgstr ""
+
+#: functions.php:381
+msgid "Justified"
+msgstr ""
+
+#: functions.php:399
+msgid "Update Gallery"
+msgstr ""
+
+#: functions.php:408
+msgid "Select a menu"
+msgstr ""
+
+#: functions.php:449
+msgid "You currently don't have any projects assigned to a category."
+msgstr ""
+
+#: functions.php:553
+msgid "Solid"
+msgstr ""
+
+#: functions.php:554
+msgid "Dotted"
+msgstr ""
+
+#: functions.php:555
+msgid "Dashed"
+msgstr ""
+
+#: functions.php:556
+msgid "Double"
+msgstr ""
+
+#: functions.php:557
+msgid "Groove"
+msgstr ""
+
+#: functions.php:558
+msgid "Ridge"
+msgstr ""
+
+#: functions.php:559
+msgid "Inset"
+msgstr ""
+
+#: functions.php:560
+msgid "Outset"
+msgstr ""
+
+#: functions.php:645 includes/class-builder-element.php:933
+#: includes/modules/class-builder-module-fullwidth-slider.php:201
+#: includes/modules/class-builder-module-fullwidth-slider.php:218
+#: includes/modules/class-builder-module-post-slider.php:388
+#: includes/modules/class-builder-module-post-slider.php:405
+#: includes/modules/class-builder-module-slider-item.php:146
+#: includes/modules/class-builder-module-slider-item.php:163
+#: includes/modules/class-builder-module-slider.php:199
+#: includes/modules/class-builder-module-slider.php:216
+msgid "Default"
+msgstr ""
+
+#: functions.php:989
+msgid ""
+"You do not have sufficient permissions to export the content of this site."
+msgstr ""
+
+#: functions.php:993
+msgid "Export Builder Layouts"
+msgstr ""
+
+#: functions.php:994
+msgid ""
+"When you click the button below WordPress will create an XML file for you to "
+"save to your computer."
+msgstr ""
+
+#: functions.php:995
+msgid ""
+"This format, which we call WordPress eXtended RSS or WXR, will contain all "
+"layouts you created using the Page Builder."
+msgstr ""
+
+#: functions.php:996
+msgid ""
+"Once you&#8217;ve saved the download file, you can use the Import function "
+"in another WordPress installation to import all layouts from this site."
+msgstr ""
+
+#: functions.php:997
+msgid "Select Templates you want to export:"
+msgstr ""
+
+#: functions.php:1030
+msgid "Download Export File"
+msgstr ""
+
+#: functions.php:1035
+msgid "Export Layouts"
+msgstr ""
+
+#: functions.php:1039
+msgid "Manage Categories"
+msgstr ""
+
+#: functions.php:1189 functions.php:1191
+msgid "Use Default Editor"
+msgstr ""
+
+#: functions.php:1189 functions.php:1190
+msgid "Use Power Builder"
+msgstr ""
+
+#: functions.php:1289
+msgid "Replace the existing content with loaded layout"
+msgstr ""
+
+#: functions.php:1337
+msgid "Load"
+msgstr ""
+
+#: functions.php:1340 functions.php:3280
+msgid "Delete"
+msgstr ""
+
+#: functions.php:1457
+msgid ""
+"You have not saved any items to your library yet. Once an item has been "
+"saved to your library, it will appear here for easy use."
+msgstr ""
+
+#: functions.php:1492 functions.php:2171 functions.php:2217
+#: includes/class-builder-element.php:2233
+msgid "Module"
+msgstr ""
+
+#: functions.php:1493
+msgid "Fullwidth Module"
+msgstr ""
+
+#: functions.php:1494 functions.php:2215
+#: includes/structure/class-builder-row-inner.php:4
+#: includes/structure/class-builder-row.php:4
+msgid "Row"
+msgstr ""
+
+#: functions.php:1495 functions.php:2210
+#: includes/structure/class-builder-section.php:4
+msgid "Section"
+msgstr ""
+
+#: functions.php:1496 functions.php:2212 functions.php:2234 functions.php:2845
+msgid "Fullwidth Section"
+msgstr ""
+
+#: functions.php:1497 functions.php:2213 functions.php:2235 functions.php:2851
+msgid "Specialty Section"
+msgstr ""
+
+#: functions.php:1498 functions.php:2220
+#: includes/modules/class-builder-module-blog.php:131
+#: includes/modules/class-builder-module-countdown-timer.php:126
+msgid "Layout"
+msgstr ""
+
+#: functions.php:1502
+msgid "Include General Settings"
+msgstr ""
+
+#: functions.php:1503
+msgid "Include Advanced Design Settings"
+msgstr ""
+
+#: functions.php:1504 functions.php:3430
+msgid "Include Custom CSS"
+msgstr ""
+
+#: functions.php:1512
+msgid "Template Type"
+msgstr ""
+
+#: functions.php:1549
+msgid "Select category(ies) for new template or type a new name ( optional )"
+msgstr ""
+
+#: functions.php:1591
+msgid "New Template Settings"
+msgstr ""
+
+#: functions.php:1592 functions.php:3478
+msgid "Template Name"
+msgstr ""
+
+#: functions.php:2167
+msgid "The section should have at least one row."
+msgstr ""
+
+#: functions.php:2168
+msgid "Fullwidth module can't be used outside of the Fullwidth Section."
+msgstr ""
+
+#: functions.php:2169
+msgid "3 column row can't be used in this column."
+msgstr ""
+
+#: functions.php:2170
+msgid "Preview"
+msgstr ""
+
+#: functions.php:2172
+msgid ""
+"Still images cannot be generated from this video service and/or this video "
+"format"
+msgstr ""
+
+#: functions.php:2173
+msgid "Geocode was not successful for the following reason"
+msgstr ""
+
+#: functions.php:2174
+msgid "Geocoder failed due to"
+msgstr ""
+
+#: functions.php:2175
+msgid "No results found"
+msgstr ""
+
+#: functions.php:2176
+msgid "No available options for this configuration."
+msgstr ""
+
+#: functions.php:2177
+msgid ""
+"You're about to update global module. This change will be applied to all "
+"pages where you use this module. Press OK if you want to update this module"
+msgstr ""
+
+#: functions.php:2178
+msgid "You cannot add global rows into global sections"
+msgstr ""
+
+#: functions.php:2179
+msgid "You cannot add global modules into global sections or rows"
+msgstr ""
+
+#: functions.php:2184
+msgid "Map Pin Address cannot be empty"
+msgstr ""
+
+#: functions.php:2185
+msgid "Invalid Pin and address data. Please try again."
+msgstr ""
+
+#: functions.php:2186
+msgid "You do not have permission to unlock this section."
+msgstr ""
+
+#: functions.php:2187
+msgid "You do not have permission to unlock this row."
+msgstr ""
+
+#: functions.php:2188
+msgid "You do not have permission to unlock this module."
+msgstr ""
+
+#: functions.php:2189
+msgid "You do not have permission to perform this task."
+msgstr ""
+
+#: functions.php:2190
+msgid ""
+"Unable to perform copy/paste process due to inavailability of localStorage "
+"feature in your browser. Please use latest modern browser (Chrome, Firefox, "
+"or Safari) to perform copy/paste process"
+msgstr ""
+
+#: functions.php:2192
+msgid "Did"
+msgstr ""
+
+#: functions.php:2193
+msgid "Added"
+msgstr ""
+
+#: functions.php:2194
+msgid "Edited"
+msgstr ""
+
+#: functions.php:2195
+msgid "Removed"
+msgstr ""
+
+#: functions.php:2196
+msgid "Moved"
+msgstr ""
+
+#: functions.php:2197
+msgid "Expanded"
+msgstr ""
+
+#: functions.php:2198
+msgid "Collapsed"
+msgstr ""
+
+#: functions.php:2199
+msgid "Locked"
+msgstr ""
+
+#: functions.php:2200
+msgid "Unlocked"
+msgstr ""
+
+#: functions.php:2201
+msgid "Cloned"
+msgstr ""
+
+#: functions.php:2202
+msgid "Cleared"
+msgstr ""
+
+#: functions.php:2203
+msgid "Enabled"
+msgstr ""
+
+#: functions.php:2204
+msgid "Disabled"
+msgstr ""
+
+#: functions.php:2205
+msgid "Copied"
+msgstr ""
+
+#: functions.php:2206
+msgid "Renamed"
+msgstr ""
+
+#: functions.php:2207
+msgid "Loaded"
+msgstr ""
+
+#: functions.php:2211
+msgid "Saved Section"
+msgstr ""
+
+#: functions.php:2214 includes/class-builder-structure-element.php:229
+#: includes/class-builder-structure-element.php:314
+#: includes/class-builder-structure-element.php:366
+#: includes/structure/class-builder-column.php:5
+msgid "Column"
+msgstr ""
+
+#: functions.php:2216
+msgid "Saved Row"
+msgstr ""
+
+#: functions.php:2218
+msgid "Saved Module"
+msgstr ""
+
+#: functions.php:2219
+msgid "Page"
+msgstr ""
+
+#: functions.php:2223
+msgid "on Phone"
+msgstr ""
+
+#: functions.php:2224
+msgid "on Tablet"
+msgstr ""
+
+#: functions.php:2225
+msgid "on Desktop"
+msgstr ""
+
+#: functions.php:2227
+msgid "Invalid Color"
+msgstr ""
+
+#: functions.php:2233
+msgid "Standart Section"
+msgstr ""
+
+#: functions.php:2249
+msgid "Power Builder"
+msgstr ""
+
+#: functions.php:2270
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: functions.php:2285
+msgid "% Comments"
+msgstr ""
+
+#: functions.php:2287
+msgid "No Comments"
+msgstr ""
+
+#: functions.php:2300
+msgid "by"
+msgstr ""
+
+#: functions.php:2597 functions.php:2725
+msgid "Rename"
+msgstr ""
+
+#: functions.php:2603
+msgid "Copy"
+msgstr ""
+
+#: functions.php:2609
+msgid "Paste After"
+msgstr ""
+
+#: functions.php:2615 functions.php:2621
+msgid "Paste"
+msgstr ""
+
+#: functions.php:2627 functions.php:2733 functions.php:2734
+msgid "Save to Library"
+msgstr ""
+
+#: functions.php:2633
+msgid "Unlock"
+msgstr ""
+
+#: functions.php:2634
+msgid "Lock"
+msgstr ""
+
+#: functions.php:2642 functions.php:4421
+msgid "Enable"
+msgstr ""
+
+#: functions.php:2643 functions.php:4422
+msgid "Disable"
+msgstr ""
+
+#: functions.php:2688
+#: includes/modules/class-builder-module-fullwidth-menu.php:171
+msgid "Expand"
+msgstr ""
+
+#: functions.php:2689
+msgid "Collapse"
+msgstr ""
+
+#: functions.php:2693 functions.php:2781 functions.php:2782
+msgid "Undo"
+msgstr ""
+
+#: functions.php:2694 functions.php:2779 functions.php:2780
+msgid "Redo"
+msgstr ""
+
+#: functions.php:2698 functions.php:2791 functions.php:2792 functions.php:2905
+#: functions.php:2906 functions.php:3281
+msgid "Settings"
+msgstr ""
+
+#: functions.php:2713 functions.php:3111 functions.php:3300 functions.php:3354
+msgid "Cancel"
+msgstr ""
+
+#: functions.php:2714 functions.php:3301 functions.php:3355
+msgid "Save"
+msgstr ""
+
+#: functions.php:2726
+msgid "Enter a new name for this module"
+msgstr ""
+
+#: functions.php:2740 functions.php:2741
+msgid "Load From Library"
+msgstr ""
+
+#: functions.php:2747 functions.php:2748 functions.php:3325
+msgid "Clear Layout"
+msgstr ""
+
+#: functions.php:2783 functions.php:2784
+msgid "See History"
+msgstr ""
+
+#: functions.php:2797 functions.php:2798
+msgid "Clone Section"
+msgstr ""
+
+#: functions.php:2802 functions.php:2803
+msgid "Delete Section"
+msgstr ""
+
+#: functions.php:2807 functions.php:2808
+msgid "Unlock Section"
+msgstr ""
+
+#: functions.php:2827 functions.php:2828
+msgid "Expand Section"
+msgstr ""
+
+#: functions.php:2834 functions.php:3137 functions.php:3180 functions.php:3243
+#: functions.php:4210
+msgid "Add From Library"
+msgstr ""
+
+#: functions.php:2839
+msgid "Standard Section"
+msgstr ""
+
+#: functions.php:2913 functions.php:2914
+msgid "Clone Row"
+msgstr ""
+
+#: functions.php:2922 functions.php:2923
+msgid "Delete Row"
+msgstr ""
+
+#: functions.php:2931 functions.php:2932
+msgid "Change Structure"
+msgstr ""
+
+#: functions.php:2938 functions.php:2939
+msgid "Unlock Row"
+msgstr ""
+
+#: functions.php:2964 functions.php:2965
+msgid "Expand Row"
+msgstr ""
+
+#: functions.php:2985
+msgid "Add Row"
+msgstr ""
+
+#: functions.php:2993
+msgid "Insert Column(s)"
+msgstr ""
+
+#: functions.php:3023 functions.php:3024 functions.php:3282
+msgid "Clone Module"
+msgstr ""
+
+#: functions.php:3034 functions.php:3035
+msgid "Remove Module"
+msgstr ""
+
+#: functions.php:3045 functions.php:3046
+msgid "Unlock Module"
+msgstr ""
+
+#: functions.php:3054 functions.php:3055
+msgid "Module Settings"
+msgstr ""
+
+#: functions.php:3080
+msgid "Save & Exit"
+msgstr ""
+
+#: functions.php:3089
+msgid "Save & Add To Library"
+msgstr ""
+
+#: functions.php:3165
+msgid "Insert Columns"
+msgstr ""
+
+#: functions.php:3167
+msgid "New Row"
+msgstr ""
+
+#: functions.php:3209
+msgid "Insert Module"
+msgstr ""
+
+#: functions.php:3210
+msgid "New Module"
+msgstr ""
+
+#: functions.php:3241 functions.php:4197
+msgid "Load Layout"
+msgstr ""
+
+#: functions.php:3242
+msgid "Predefined Layouts"
+msgstr ""
+
+#: functions.php:3252
+msgid "Insert Module(s)"
+msgstr ""
+
+#: functions.php:3312
+msgid "Disable Builder"
+msgstr ""
+
+#: functions.php:3313
+msgid ""
+"All content created in the Builder will be lost. Previous content will be "
+"restored."
+msgstr ""
+
+#: functions.php:3314 functions.php:3327 functions.php:3338
+msgid "Do you wish to proceed?"
+msgstr ""
+
+#: functions.php:3326
+msgid "All of your current page content will be lost."
+msgstr ""
+
+#: functions.php:3337
+msgid "All advanced module settings in will be lost."
+msgstr ""
+
+#: functions.php:3368 functions.php:4206
+msgid "Save To Library"
+msgstr ""
+
+#: functions.php:3369
+msgid "Save your current page to the Library for later use."
+msgstr ""
+
+#: functions.php:3370
+msgid "Layout Name:"
+msgstr ""
+
+#: functions.php:3383
+msgid "Save And Add To Library"
+msgstr ""
+
+#: functions.php:3390
+msgid "Add To Categories:"
+msgstr ""
+
+#: functions.php:3411
+msgid "Create New Category"
+msgstr ""
+
+#: functions.php:3418
+msgid "Include General settings"
+msgstr ""
+
+#: functions.php:3424
+msgid "Include Advanced Design settings"
+msgstr ""
+
+#: functions.php:3477
+msgid ""
+"Here you can save the current item and add it to your Library for later use "
+"as well."
+msgstr ""
+
+#: functions.php:3479
+msgid "Selective Sync"
+msgstr ""
+
+#: functions.php:3483
+msgid "Please select at least 1 tab to save"
+msgstr ""
+
+#: functions.php:3484
+msgid "Save as Global:"
+msgstr ""
+
+#: functions.php:3485
+msgid "Make this a global item"
+msgstr ""
+
+#: functions.php:3503 includes/class-builder-element.php:689
+#: includes/class-builder-element.php:817
+#: includes/class-builder-element.php:935
+#: includes/class-builder-element.php:990
+#: includes/class-builder-structure-element.php:243
+#: includes/modules/class-builder-module-blog.php:183
+#: includes/modules/class-builder-module-blog.php:229
+#: includes/modules/class-builder-module-blog.php:239
+#: includes/modules/class-builder-module-blog.php:249
+#: includes/modules/class-builder-module-blog.php:259
+#: includes/modules/class-builder-module-blog.php:269
+#: includes/modules/class-builder-module-blurb.php:146
+#: includes/modules/class-builder-module-blurb.php:179
+#: includes/modules/class-builder-module-blurb.php:201
+#: includes/modules/class-builder-module-blurb.php:280
+#: includes/modules/class-builder-module-circle-counter.php:101
+#: includes/modules/class-builder-module-contact-form-item.php:95
+#: includes/modules/class-builder-module-contact-form-item.php:106
+#: includes/modules/class-builder-module-contact-form-item.php:117
+#: includes/modules/class-builder-module-contact-form-item.php:127
+#: includes/modules/class-builder-module-contact-form.php:97
+#: includes/modules/class-builder-module-contact-form.php:124
+#: includes/modules/class-builder-module-countdown-timer.php:112
+#: includes/modules/class-builder-module-cta.php:115
+#: includes/modules/class-builder-module-divider.php:129
+#: includes/modules/class-builder-module-fullwidth-header.php:220
+#: includes/modules/class-builder-module-fullwidth-header.php:233
+#: includes/modules/class-builder-module-fullwidth-header.php:351
+#: includes/modules/class-builder-module-fullwidth-menu.php:136
+#: includes/modules/class-builder-module-fullwidth-slider.php:168
+#: includes/modules/class-builder-module-fullwidth-slider.php:192
+#: includes/modules/class-builder-module-fullwidth-slider.php:257
+#: includes/modules/class-builder-module-fullwidth-slider.php:267
+#: includes/modules/class-builder-module-fullwidth-slider.php:277
+#: includes/modules/class-builder-module-image.php:122
+#: includes/modules/class-builder-module-image.php:205
+#: includes/modules/class-builder-module-image.php:234
+#: includes/modules/class-builder-module-image.php:245
+#: includes/modules/class-builder-module-post-slider.php:186
+#: includes/modules/class-builder-module-post-slider.php:196
+#: includes/modules/class-builder-module-post-slider.php:206
+#: includes/modules/class-builder-module-post-slider.php:240
+#: includes/modules/class-builder-module-post-slider.php:258
+#: includes/modules/class-builder-module-post-slider.php:283
+#: includes/modules/class-builder-module-post-slider.php:312
+#: includes/modules/class-builder-module-post-slider.php:340
+#: includes/modules/class-builder-module-post-slider.php:359
+#: includes/modules/class-builder-module-post-slider.php:379
+#: includes/modules/class-builder-module-post-slider.php:463
+#: includes/modules/class-builder-module-post-slider.php:473
+#: includes/modules/class-builder-module-post-slider.php:483
+#: includes/modules/class-builder-module-pricing-tables-item.php:164
+#: includes/modules/class-builder-module-pricing-tables.php:232
+#: includes/modules/class-builder-module-pricing-tables.php:258
+#: includes/modules/class-builder-module-pricing-tables.php:269
+#: includes/modules/class-builder-module-sidebar.php:107
+#: includes/modules/class-builder-module-slider-item.php:188
+#: includes/modules/class-builder-module-slider-item.php:208
+#: includes/modules/class-builder-module-slider-item.php:282
+#: includes/modules/class-builder-module-slider.php:124
+#: includes/modules/class-builder-module-slider.php:164
+#: includes/modules/class-builder-module-slider.php:190
+#: includes/modules/class-builder-module-slider.php:243
+#: includes/modules/class-builder-module-slider.php:253
+#: includes/modules/class-builder-module-slider.php:263
+#: includes/modules/class-builder-module-testimonial.php:141
+#: includes/modules/class-builder-module-testimonial.php:165
+#: includes/structure/class-builder-row-inner.php:133
+#: includes/structure/class-builder-row-inner.php:143
+#: includes/structure/class-builder-row-inner.php:168
+#: includes/structure/class-builder-row-inner.php:184
+#: includes/structure/class-builder-row.php:138
+#: includes/structure/class-builder-row.php:149
+#: includes/structure/class-builder-row.php:164
+#: includes/structure/class-builder-row.php:228
+#: includes/structure/class-builder-row.php:291
+#: includes/structure/class-builder-row.php:301
+#: includes/structure/class-builder-row.php:325
+#: includes/structure/class-builder-row.php:342
+#: includes/structure/class-builder-section.php:117
+#: includes/structure/class-builder-section.php:169
+#: includes/structure/class-builder-section.php:179
+#: includes/structure/class-builder-section.php:189
+#: includes/structure/class-builder-section.php:226
+#: includes/structure/class-builder-section.php:236
+#: includes/structure/class-builder-section.php:247
+#: includes/structure/class-builder-section.php:304
+#: includes/structure/class-builder-section.php:314
+msgid "No"
+msgstr ""
+
+#: functions.php:3504 functions.php:4454
+#: includes/class-builder-element.php:690
+#: includes/class-builder-element.php:818
+#: includes/class-builder-element.php:934
+#: includes/class-builder-element.php:989
+#: includes/class-builder-structure-element.php:242
+#: includes/modules/class-builder-module-blog.php:182
+#: includes/modules/class-builder-module-blog.php:228
+#: includes/modules/class-builder-module-blog.php:238
+#: includes/modules/class-builder-module-blog.php:248
+#: includes/modules/class-builder-module-blog.php:258
+#: includes/modules/class-builder-module-blog.php:268
+#: includes/modules/class-builder-module-blurb.php:147
+#: includes/modules/class-builder-module-blurb.php:180
+#: includes/modules/class-builder-module-blurb.php:202
+#: includes/modules/class-builder-module-blurb.php:281
+#: includes/modules/class-builder-module-circle-counter.php:100
+#: includes/modules/class-builder-module-contact-form-item.php:94
+#: includes/modules/class-builder-module-contact-form-item.php:105
+#: includes/modules/class-builder-module-contact-form-item.php:116
+#: includes/modules/class-builder-module-contact-form-item.php:126
+#: includes/modules/class-builder-module-contact-form.php:96
+#: includes/modules/class-builder-module-contact-form.php:125
+#: includes/modules/class-builder-module-countdown-timer.php:111
+#: includes/modules/class-builder-module-cta.php:114
+#: includes/modules/class-builder-module-divider.php:128
+#: includes/modules/class-builder-module-fullwidth-header.php:221
+#: includes/modules/class-builder-module-fullwidth-header.php:234
+#: includes/modules/class-builder-module-fullwidth-header.php:352
+#: includes/modules/class-builder-module-fullwidth-menu.php:137
+#: includes/modules/class-builder-module-fullwidth-slider.php:169
+#: includes/modules/class-builder-module-fullwidth-slider.php:193
+#: includes/modules/class-builder-module-fullwidth-slider.php:258
+#: includes/modules/class-builder-module-fullwidth-slider.php:268
+#: includes/modules/class-builder-module-fullwidth-slider.php:278
+#: includes/modules/class-builder-module-image.php:123
+#: includes/modules/class-builder-module-image.php:206
+#: includes/modules/class-builder-module-image.php:235
+#: includes/modules/class-builder-module-image.php:244
+#: includes/modules/class-builder-module-post-slider.php:195
+#: includes/modules/class-builder-module-post-slider.php:239
+#: includes/modules/class-builder-module-post-slider.php:313
+#: includes/modules/class-builder-module-post-slider.php:380
+#: includes/modules/class-builder-module-post-slider.php:464
+#: includes/modules/class-builder-module-post-slider.php:474
+#: includes/modules/class-builder-module-post-slider.php:484
+#: includes/modules/class-builder-module-pricing-tables-item.php:165
+#: includes/modules/class-builder-module-pricing-tables.php:231
+#: includes/modules/class-builder-module-pricing-tables.php:259
+#: includes/modules/class-builder-module-pricing-tables.php:270
+#: includes/modules/class-builder-module-sidebar.php:108
+#: includes/modules/class-builder-module-slider-item.php:283
+#: includes/modules/class-builder-module-slider.php:123
+#: includes/modules/class-builder-module-slider.php:165
+#: includes/modules/class-builder-module-slider.php:191
+#: includes/modules/class-builder-module-slider.php:244
+#: includes/modules/class-builder-module-slider.php:254
+#: includes/modules/class-builder-module-slider.php:264
+#: includes/modules/class-builder-module-testimonial.php:142
+#: includes/modules/class-builder-module-testimonial.php:164
+#: includes/structure/class-builder-row-inner.php:134
+#: includes/structure/class-builder-row-inner.php:144
+#: includes/structure/class-builder-row-inner.php:169
+#: includes/structure/class-builder-row-inner.php:183
+#: includes/structure/class-builder-row.php:139
+#: includes/structure/class-builder-row.php:150
+#: includes/structure/class-builder-row.php:165
+#: includes/structure/class-builder-row.php:229
+#: includes/structure/class-builder-row.php:292
+#: includes/structure/class-builder-row.php:302
+#: includes/structure/class-builder-row.php:326
+#: includes/structure/class-builder-row.php:341
+#: includes/structure/class-builder-section.php:118
+#: includes/structure/class-builder-section.php:170
+#: includes/structure/class-builder-section.php:180
+#: includes/structure/class-builder-section.php:190
+#: includes/structure/class-builder-section.php:227
+#: includes/structure/class-builder-section.php:237
+#: includes/structure/class-builder-section.php:248
+#: includes/structure/class-builder-section.php:305
+#: includes/structure/class-builder-section.php:315
+msgid "Yes"
+msgstr ""
+
+#: functions.php:3513
+msgid "Add Specialty Section"
+msgstr ""
+
+#: functions.php:3579
+msgid "Mobile"
+msgstr ""
+
+#: functions.php:3580 functions.php:3611
+#: includes/modules/class-builder-module-accordion.php:117
+#: includes/modules/class-builder-module-audio.php:138
+#: includes/modules/class-builder-module-bar-counters.php:136
+#: includes/modules/class-builder-module-blog.php:336
+#: includes/modules/class-builder-module-blurb.php:354
+#: includes/modules/class-builder-module-button.php:76
+#: includes/modules/class-builder-module-circle-counter.php:153
+#: includes/modules/class-builder-module-contact-form.php:174
+#: includes/modules/class-builder-module-countdown-timer.php:167
+#: includes/modules/class-builder-module-cta.php:160
+#: includes/modules/class-builder-module-divider.php:138
+#: includes/modules/class-builder-module-fullwidth-header.php:434
+#: includes/modules/class-builder-module-fullwidth-map.php:73
+#: includes/modules/class-builder-module-fullwidth-menu.php:194
+#: includes/modules/class-builder-module-fullwidth-slider.php:287
+#: includes/modules/class-builder-module-image.php:260
+#: includes/modules/class-builder-module-map.php:112
+#: includes/modules/class-builder-module-number-counter.php:112
+#: includes/modules/class-builder-module-post-slider.php:517
+#: includes/modules/class-builder-module-posts.php:87
+#: includes/modules/class-builder-module-pricing-tables.php:279
+#: includes/modules/class-builder-module-sidebar.php:117
+#: includes/modules/class-builder-module-slider.php:285
+#: includes/modules/class-builder-module-social-media-follow.php:78
+#: includes/modules/class-builder-module-tabs.php:85
+#: includes/modules/class-builder-module-team-member.php:183
+#: includes/modules/class-builder-module-testimonial.php:230
+#: includes/modules/class-builder-module-text.php:93
+#: includes/modules/class-builder-module-toggle.php:136
+#: includes/modules/class-builder-module-video-slider.php:92
+#: includes/modules/class-builder-module-video.php:73
+#: includes/structure/class-builder-row-inner.php:333
+#: includes/structure/class-builder-row.php:536
+#: includes/structure/class-builder-section.php:473
+msgid "Tablet"
+msgstr ""
+
+#: functions.php:3581 functions.php:3610
+#: includes/modules/class-builder-module-accordion.php:118
+#: includes/modules/class-builder-module-audio.php:139
+#: includes/modules/class-builder-module-bar-counters.php:137
+#: includes/modules/class-builder-module-blog.php:337
+#: includes/modules/class-builder-module-blurb.php:355
+#: includes/modules/class-builder-module-button.php:77
+#: includes/modules/class-builder-module-circle-counter.php:154
+#: includes/modules/class-builder-module-contact-form.php:175
+#: includes/modules/class-builder-module-countdown-timer.php:168
+#: includes/modules/class-builder-module-cta.php:161
+#: includes/modules/class-builder-module-divider.php:139
+#: includes/modules/class-builder-module-fullwidth-header.php:435
+#: includes/modules/class-builder-module-fullwidth-map.php:74
+#: includes/modules/class-builder-module-fullwidth-menu.php:195
+#: includes/modules/class-builder-module-fullwidth-slider.php:288
+#: includes/modules/class-builder-module-image.php:261
+#: includes/modules/class-builder-module-map.php:113
+#: includes/modules/class-builder-module-number-counter.php:113
+#: includes/modules/class-builder-module-post-slider.php:518
+#: includes/modules/class-builder-module-posts.php:88
+#: includes/modules/class-builder-module-pricing-tables.php:280
+#: includes/modules/class-builder-module-sidebar.php:118
+#: includes/modules/class-builder-module-slider.php:286
+#: includes/modules/class-builder-module-social-media-follow.php:79
+#: includes/modules/class-builder-module-tabs.php:86
+#: includes/modules/class-builder-module-team-member.php:184
+#: includes/modules/class-builder-module-testimonial.php:231
+#: includes/modules/class-builder-module-text.php:94
+#: includes/modules/class-builder-module-toggle.php:137
+#: includes/modules/class-builder-module-video-slider.php:93
+#: includes/modules/class-builder-module-video.php:74
+#: includes/structure/class-builder-row-inner.php:334
+#: includes/structure/class-builder-row.php:537
+#: includes/structure/class-builder-section.php:474
+msgid "Desktop"
+msgstr ""
+
+#: functions.php:3612
+msgid "Smartphone"
+msgstr ""
+
+#: functions.php:3770 includes/modules/templates/blog/more.php:7
+msgid "Read more"
+msgstr ""
+
+#: functions.php:4138
+msgid "Theme Customizer"
+msgstr ""
+
+#: functions.php:4143
+msgid "Module Customizer"
+msgstr ""
+
+#: functions.php:4148
+msgid "Page Options"
+msgstr ""
+
+#: functions.php:4159
+msgid "Plugin Options"
+msgstr ""
+
+#: functions.php:4159
+msgid "Theme Options"
+msgstr ""
+
+#: functions.php:4164
+msgid "Library"
+msgstr ""
+
+#: functions.php:4170
+msgid "Builder Interface"
+msgstr ""
+
+#: functions.php:4173
+msgid "Add/Delete Item"
+msgstr ""
+
+#: functions.php:4177
+msgid "Edit Item"
+msgstr ""
+
+#: functions.php:4181
+msgid "Move Item"
+msgstr ""
+
+#: functions.php:4185
+msgid "Disable Item"
+msgstr ""
+
+#: functions.php:4189
+msgid "Lock Item"
+msgstr ""
+
+#: functions.php:4193
+msgid "Toggle Builder"
+msgstr ""
+
+#: functions.php:4203
+msgid "Library Settings"
+msgstr ""
+
+#: functions.php:4214
+msgid "Edit Global Items"
+msgstr ""
+
+#: functions.php:4220
+msgid "Settings Tabs"
+msgstr ""
+
+#: functions.php:4223 includes/class-builder-element.php:1933
+#: includes/class-builder-element.php:2141
+msgid "General Settings"
+msgstr ""
+
+#: functions.php:4227
+msgid "Advanced Settings"
+msgstr ""
+
+#: functions.php:4231 includes/class-builder-element.php:1935
+msgid "Custom CSS"
+msgstr ""
+
+#: functions.php:4237
+msgid "Settings Types"
+msgstr ""
+
+#: functions.php:4240
+msgid "Edit Colors"
+msgstr ""
+
+#: functions.php:4244
+msgid "Edit Content"
+msgstr ""
+
+#: functions.php:4248
+msgid "Edit Fonts"
+msgstr ""
+
+#: functions.php:4252
+msgid "Edit Buttons"
+msgstr ""
+
+#: functions.php:4256 layouts.php:8
+msgid "Edit Layout"
+msgstr ""
+
+#: functions.php:4260
+msgid "Edit Configuration"
+msgstr ""
+
+#: functions.php:4266
+msgid "Module Use"
+msgstr ""
+
+#: functions.php:4306
+msgid "Administrator"
+msgstr ""
+
+#: functions.php:4307
+msgid "Editor"
+msgstr ""
+
+#: functions.php:4308
+msgid "Author"
+msgstr ""
+
+#: functions.php:4309
+msgid "Contributor"
+msgstr ""
+
+#: functions.php:4344
+msgid "Role Editor"
+msgstr ""
+
+#: functions.php:4345
+msgid "Save Roles"
+msgstr ""
+
+#: functions.php:4384
+msgid ""
+"Using the Role Editor, you can limit the types of actions that can be taken "
+"by WordPress users of different roles. This is a great way to limit the "
+"functionality available to your customers or guest authors to ensure that "
+"they only have the necessary options available to them."
+msgstr ""
+
+#: functions.php:4452
+msgid "Reset Roles"
+msgstr ""
+
+#: functions.php:4453
+msgid ""
+"All of your current role settings will be set to defaults. Do you wish to "
+"proceed?"
+msgstr ""
+
+#: functions.php:4455
+msgid "no"
+msgstr ""
+
+#: functions.php:4775
+#, php-format
+msgid "on %1$s at %2$s"
+msgstr ""
+
+#: functions.php:4778
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:4781
+msgid "Reply"
+msgstr ""
+
+#: functions.php:4790
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:4857
+msgid "Hide Notice"
+msgstr ""
+
+#: functions.php:4858
+msgid "Clear Cache"
+msgstr ""
+
+#: functions.php:4862
+msgid ""
+"The Builder has been updated, but you are currently using a caching plugin. "
+"Please clear your plugin cache <strong>and</strong> clear your browser cache "
+"(in that order) to make sure you are loading the updated builder files. "
+"Loading cached files may cause the builder to malfunction."
+msgstr ""
+
+#: includes/class-builder-element.php:515
+#: includes/class-builder-element.php:921
+#, php-format
+msgid "%1$s Font"
+msgstr ""
+
+#: includes/class-builder-element.php:525
+#, php-format
+msgid "%1$s Font Size"
+msgstr ""
+
+#: includes/class-builder-element.php:547
+#: includes/class-builder-element.php:556
+#: includes/class-builder-element.php:857
+#, php-format
+msgid "%1$s Text Color"
+msgstr ""
+
+#: includes/class-builder-element.php:566
+#: includes/class-builder-element.php:910
+#, php-format
+msgid "%1$s Letter Spacing"
+msgstr ""
+
+#: includes/class-builder-element.php:589
+#, php-format
+msgid "%1$s Line Height"
+msgstr ""
+
+#: includes/class-builder-element.php:620
+#, php-format
+msgid "%1$s All Caps"
+msgstr ""
+
+#: includes/class-builder-element.php:624
+#: includes/modules/class-builder-module-bar-counters.php:94
+#: includes/modules/class-builder-module-blog.php:217
+#: includes/modules/class-builder-module-blog.php:284
+#: includes/modules/class-builder-module-circle-counter.php:91
+#: includes/modules/class-builder-module-fullwidth-map.php:64
+#: includes/modules/class-builder-module-fullwidth-slider.php:137
+#: includes/modules/class-builder-module-fullwidth-slider.php:158
+#: includes/modules/class-builder-module-image.php:158
+#: includes/modules/class-builder-module-map.php:84
+#: includes/modules/class-builder-module-number-counter.php:98
+#: includes/modules/class-builder-module-post-slider.php:416
+#: includes/modules/class-builder-module-post-slider.php:437
+#: includes/modules/class-builder-module-slider.php:133
+#: includes/modules/class-builder-module-slider.php:154
+#: includes/modules/class-builder-module-social-media-follow.php:68
+msgid "Off"
+msgstr ""
+
+#: includes/class-builder-element.php:625
+#: includes/modules/class-builder-module-bar-counters.php:93
+#: includes/modules/class-builder-module-blog.php:218
+#: includes/modules/class-builder-module-blog.php:285
+#: includes/modules/class-builder-module-circle-counter.php:90
+#: includes/modules/class-builder-module-fullwidth-map.php:63
+#: includes/modules/class-builder-module-fullwidth-slider.php:138
+#: includes/modules/class-builder-module-fullwidth-slider.php:159
+#: includes/modules/class-builder-module-image.php:159
+#: includes/modules/class-builder-module-map.php:83
+#: includes/modules/class-builder-module-number-counter.php:97
+#: includes/modules/class-builder-module-post-slider.php:417
+#: includes/modules/class-builder-module-post-slider.php:438
+#: includes/modules/class-builder-module-slider.php:134
+#: includes/modules/class-builder-module-slider.php:155
+#: includes/modules/class-builder-module-social-media-follow.php:69
+msgid "On"
+msgstr ""
+
+#: includes/class-builder-element.php:652
+#: includes/class-builder-structure-element.php:234
+#: includes/modules/class-builder-module-audio.php:129
+#: includes/modules/class-builder-module-bar-counters-item.php:59
+#: includes/modules/class-builder-module-bar-counters.php:79
+#: includes/modules/class-builder-module-contact-form-item.php:144
+#: includes/modules/class-builder-module-countdown-timer.php:120
+#: includes/modules/class-builder-module-cta.php:123
+#: includes/modules/class-builder-module-fullwidth-header.php:339
+#: includes/modules/class-builder-module-fullwidth-menu.php:100
+#: includes/modules/class-builder-module-post-slider.php:263
+#: includes/modules/class-builder-module-slider-item.php:170
+#: includes/modules/class-builder-module-testimonial.php:173
+#: includes/structure/class-builder-row.php:249
+#: includes/structure/class-builder-section.php:126
+msgid "Background Color"
+msgstr ""
+
+#: includes/class-builder-element.php:662
+#: includes/class-builder-structure-element.php:230
+#: includes/modules/class-builder-module-post-slider.php:269
+#: includes/modules/class-builder-module-slider-item.php:133
+#: includes/structure/class-builder-row.php:240
+#: includes/structure/class-builder-section.php:104
+msgid "Background Image"
+msgstr ""
+
+#: includes/class-builder-element.php:665
+#: includes/class-builder-structure-element.php:231
+#: includes/modules/class-builder-module-audio.php:123
+#: includes/modules/class-builder-module-blurb.php:221
+#: includes/modules/class-builder-module-fullwidth-header.php:333
+#: includes/modules/class-builder-module-fullwidth-header.php:375
+#: includes/modules/class-builder-module-fullwidth-header.php:408
+#: includes/modules/class-builder-module-image.php:100
+#: includes/modules/class-builder-module-post-slider.php:272
+#: includes/modules/class-builder-module-slider-item.php:136
+#: includes/modules/class-builder-module-slider-item.php:178
+#: includes/modules/class-builder-module-team-member.php:117
+#: includes/modules/class-builder-module-testimonial.php:131
+#: includes/modules/class-builder-module-video-slider-item.php:53
+#: includes/modules/class-builder-module-video.php:52
+#: includes/structure/class-builder-row.php:243
+#: includes/structure/class-builder-section.php:107
+msgid "Upload an image"
+msgstr ""
+
+#: includes/class-builder-element.php:666
+#: includes/class-builder-structure-element.php:232
+#: includes/modules/class-builder-module-slider-item.php:137
+#: includes/structure/class-builder-row.php:244
+#: includes/structure/class-builder-section.php:108
+msgid "Choose a Background Image"
+msgstr ""
+
+#: includes/class-builder-element.php:667
+#: includes/class-builder-structure-element.php:233
+#: includes/modules/class-builder-module-post-slider.php:274
+#: includes/modules/class-builder-module-slider-item.php:138
+#: includes/structure/class-builder-row.php:245
+#: includes/structure/class-builder-section.php:109
+msgid "Set As Background"
+msgstr ""
+
+#: includes/class-builder-element.php:685
+msgid "Use Border"
+msgstr ""
+
+#: includes/class-builder-element.php:702
+msgid "Border Color"
+msgstr ""
+
+#: includes/class-builder-element.php:712
+msgid "Border Width"
+msgstr ""
+
+#: includes/class-builder-element.php:722
+msgid "Border Style"
+msgstr ""
+
+#: includes/class-builder-element.php:749
+#: includes/structure/class-builder-row.php:234
+msgid "Custom Margin"
+msgstr ""
+
+#: includes/class-builder-element.php:762
+msgid "Custom Margin Target Selector"
+msgstr ""
+
+#: includes/class-builder-element.php:776
+#: includes/structure/class-builder-row-inner.php:116
+#: includes/structure/class-builder-row.php:211
+#: includes/structure/class-builder-section.php:209
+msgid "Custom Padding"
+msgstr ""
+
+#: includes/class-builder-element.php:789
+msgid "Custom Padding Target Selector"
+msgstr ""
+
+#: includes/class-builder-element.php:813
+#, php-format
+msgid "Use Custom Styles for %1$s "
+msgstr ""
+
+#: includes/class-builder-element.php:842
+#, php-format
+msgid "%1$s Text Size"
+msgstr ""
+
+#: includes/class-builder-element.php:868
+#, php-format
+msgid "%1$s Background Color"
+msgstr ""
+
+#: includes/class-builder-element.php:879
+#, php-format
+msgid "%1$s Border Width"
+msgstr ""
+
+#: includes/class-builder-element.php:889
+#, php-format
+msgid "%1$s Border Color"
+msgstr ""
+
+#: includes/class-builder-element.php:900
+#, php-format
+msgid "%1$s Border Radius"
+msgstr ""
+
+#: includes/class-builder-element.php:929
+#, php-format
+msgid "Add %1$s Icon"
+msgstr ""
+
+#: includes/class-builder-element.php:949
+#, php-format
+msgid "%1$s Icon"
+msgstr ""
+
+#: includes/class-builder-element.php:961
+#, php-format
+msgid "%1$s Icon Color"
+msgstr ""
+
+#: includes/class-builder-element.php:972
+#, php-format
+msgid "%1$s Icon Placement"
+msgstr ""
+
+#: includes/class-builder-element.php:985
+#, php-format
+msgid "Only Show Icon On Hover for %1$s"
+msgstr ""
+
+#: includes/class-builder-element.php:998
+#, php-format
+msgid "%1$s Hover Text Color"
+msgstr ""
+
+#: includes/class-builder-element.php:1009
+#, php-format
+msgid "%1$s Hover Background Color"
+msgstr ""
+
+#: includes/class-builder-element.php:1020
+#, php-format
+msgid "%1$s Hover Border Color"
+msgstr ""
+
+#: includes/class-builder-element.php:1031
+#, php-format
+msgid "%1$s Hover Border Radius"
+msgstr ""
+
+#: includes/class-builder-element.php:1041
+#, php-format
+msgid "%1$s Hover Letter Spacing"
+msgstr ""
+
+#: includes/class-builder-element.php:1086
+#: includes/class-builder-structure-element.php:315
+msgid "Before"
+msgstr ""
+
+#: includes/class-builder-element.php:1091
+#: includes/class-builder-structure-element.php:316
+msgid "Main Element"
+msgstr ""
+
+#: includes/class-builder-element.php:1094
+#: includes/class-builder-structure-element.php:317
+msgid "After"
+msgstr ""
+
+#: includes/class-builder-element.php:1527
+#: includes/class-builder-structure-element.php:235
+msgid "Hex Value"
+msgstr ""
+
+#: includes/class-builder-element.php:1538
+msgid "Choose Custom Color"
+msgstr ""
+
+#: includes/class-builder-element.php:1548
+msgid "Upload"
+msgstr ""
+
+#: includes/class-builder-element.php:1549
+msgid "Choose image"
+msgstr ""
+
+#: includes/class-builder-element.php:1550
+msgid "Set image"
+msgstr ""
+
+#: includes/class-builder-element.php:1676
+#: includes/class-builder-structure-element.php:237
+#: includes/modules/class-builder-module-blurb.php:109
+#: includes/modules/class-builder-module-post-slider.php:298
+msgid "Top"
+msgstr ""
+
+#: includes/class-builder-element.php:1690
+#: includes/class-builder-structure-element.php:239
+#: includes/modules/class-builder-module-fullwidth-header.php:398
+#: includes/modules/class-builder-module-fullwidth-header.php:419
+#: includes/modules/class-builder-module-post-slider.php:299
+#: includes/modules/class-builder-module-slider-item.php:229
+msgid "Bottom"
+msgstr ""
+
+#: includes/class-builder-element.php:1934
+msgid "Advanced Design Settings"
+msgstr ""
+
+#: includes/class-builder-element.php:2090
+msgid "You don't have sufficient permissions to access the settings"
+msgstr ""
+
+#: includes/class-builder-element.php:2115
+#: includes/modules/class-builder-module-accordion-item.php:64
+#: includes/modules/class-builder-module-blog.php:199
+#: includes/modules/class-builder-module-blurb.php:262
+#: includes/modules/class-builder-module-cta.php:136
+#: includes/modules/class-builder-module-fullwidth-header.php:106
+#: includes/modules/class-builder-module-fullwidth-header.php:424
+#: includes/modules/class-builder-module-map-item.php:62
+#: includes/modules/class-builder-module-pricing-tables-item.php:212
+#: includes/modules/class-builder-module-slider-item.php:288
+#: includes/modules/class-builder-module-social-media-follow-item.php:65
+#: includes/modules/class-builder-module-tabs-item.php:68
+#: includes/modules/class-builder-module-testimonial.php:186
+#: includes/modules/class-builder-module-text.php:69
+#: includes/modules/class-builder-module-toggle.php:96
+msgid "Content"
+msgstr ""
+
+#: includes/class-builder-element.php:2116
+#: includes/modules/class-builder-module-accordion-item.php:67
+#: includes/modules/class-builder-module-contact-form-item.php:57
+#: includes/modules/class-builder-module-tabs-item.php:70
+msgid ""
+"Here you can define the content that will be placed within the current tab."
+msgstr ""
+
+#: includes/class-builder-element.php:2129
+msgid "Add New Item"
+msgstr ""
+
+#: includes/class-builder-element.php:2129
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: includes/class-builder-element.php:2231
+#, php-format
+msgid "%1$s %2$s Settings"
+msgstr ""
+
+#: includes/class-builder-element.php:2233
+msgid "Item"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:236
+msgid "Padding"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:241
+msgid "Parallax Effect"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:244
+#: includes/structure/class-builder-row.php:310
+#: includes/structure/class-builder-section.php:198
+msgid "Parallax Method"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:245
+#: includes/modules/class-builder-module-fullwidth-header.php:364
+#: includes/modules/class-builder-module-fullwidth-slider.php:181
+#: includes/modules/class-builder-module-post-slider.php:328
+#: includes/modules/class-builder-module-slider.php:179
+#: includes/structure/class-builder-row.php:314
+#: includes/structure/class-builder-section.php:202
+msgid "CSS"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:246
+#: includes/modules/class-builder-module-fullwidth-header.php:365
+#: includes/modules/class-builder-module-fullwidth-slider.php:182
+#: includes/modules/class-builder-module-post-slider.php:329
+#: includes/modules/class-builder-module-slider.php:180
+#: includes/structure/class-builder-row.php:315
+#: includes/structure/class-builder-section.php:203
+msgid "True Parallax"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:367
+#: includes/modules/class-builder-module-accordion.php:130
+#: includes/modules/class-builder-module-audio.php:151
+#: includes/modules/class-builder-module-bar-counters.php:149
+#: includes/modules/class-builder-module-blog.php:349
+#: includes/modules/class-builder-module-blurb.php:367
+#: includes/modules/class-builder-module-button.php:89
+#: includes/modules/class-builder-module-circle-counter.php:166
+#: includes/modules/class-builder-module-contact-form.php:187
+#: includes/modules/class-builder-module-countdown-timer.php:180
+#: includes/modules/class-builder-module-cta.php:173
+#: includes/modules/class-builder-module-divider.php:151
+#: includes/modules/class-builder-module-fullwidth-header.php:447
+#: includes/modules/class-builder-module-fullwidth-map.php:86
+#: includes/modules/class-builder-module-fullwidth-menu.php:207
+#: includes/modules/class-builder-module-fullwidth-slider.php:300
+#: includes/modules/class-builder-module-image.php:273
+#: includes/modules/class-builder-module-map.php:125
+#: includes/modules/class-builder-module-number-counter.php:125
+#: includes/modules/class-builder-module-post-slider.php:530
+#: includes/modules/class-builder-module-posts.php:100
+#: includes/modules/class-builder-module-pricing-tables.php:292
+#: includes/modules/class-builder-module-sidebar.php:130
+#: includes/modules/class-builder-module-slider.php:298
+#: includes/modules/class-builder-module-social-media-follow.php:91
+#: includes/modules/class-builder-module-tabs.php:98
+#: includes/modules/class-builder-module-team-member.php:196
+#: includes/modules/class-builder-module-testimonial.php:243
+#: includes/modules/class-builder-module-text.php:106
+#: includes/modules/class-builder-module-toggle.php:149
+#: includes/modules/class-builder-module-video-slider.php:105
+#: includes/modules/class-builder-module-video.php:86
+#: includes/structure/class-builder-row-inner.php:341
+#: includes/structure/class-builder-row.php:549
+#: includes/structure/class-builder-section.php:486
+msgid "CSS ID"
+msgstr ""
+
+#: includes/class-builder-structure-element.php:368
+#: includes/modules/class-builder-module-accordion.php:137
+#: includes/modules/class-builder-module-audio.php:158
+#: includes/modules/class-builder-module-bar-counters.php:156
+#: includes/modules/class-builder-module-blog.php:356
+#: includes/modules/class-builder-module-blurb.php:374
+#: includes/modules/class-builder-module-button.php:96
+#: includes/modules/class-builder-module-circle-counter.php:173
+#: includes/modules/class-builder-module-contact-form.php:194
+#: includes/modules/class-builder-module-countdown-timer.php:187
+#: includes/modules/class-builder-module-cta.php:180
+#: includes/modules/class-builder-module-divider.php:158
+#: includes/modules/class-builder-module-fullwidth-header.php:454
+#: includes/modules/class-builder-module-fullwidth-map.php:93
+#: includes/modules/class-builder-module-fullwidth-menu.php:214
+#: includes/modules/class-builder-module-fullwidth-slider.php:307
+#: includes/modules/class-builder-module-image.php:280
+#: includes/modules/class-builder-module-map.php:132
+#: includes/modules/class-builder-module-number-counter.php:132
+#: includes/modules/class-builder-module-post-slider.php:537
+#: includes/modules/class-builder-module-posts.php:107
+#: includes/modules/class-builder-module-pricing-tables.php:299
+#: includes/modules/class-builder-module-sidebar.php:137
+#: includes/modules/class-builder-module-slider.php:305
+#: includes/modules/class-builder-module-social-media-follow.php:98
+#: includes/modules/class-builder-module-tabs.php:105
+#: includes/modules/class-builder-module-team-member.php:203
+#: includes/modules/class-builder-module-testimonial.php:250
+#: includes/modules/class-builder-module-text.php:113
+#: includes/modules/class-builder-module-toggle.php:156
+#: includes/modules/class-builder-module-video-slider.php:112
+#: includes/modules/class-builder-module-video.php:93
+#: includes/structure/class-builder-row-inner.php:348
+#: includes/structure/class-builder-row.php:556
+#: includes/structure/class-builder-section.php:493
+msgid "CSS Class"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:4
+#: includes/modules/class-builder-module-accordion.php:4
+msgid "Accordion"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:34
+#: includes/modules/class-builder-module-accordion.php:24
+#: includes/modules/class-builder-module-accordion.php:58
+#: includes/modules/class-builder-module-toggle.php:4
+msgid "Toggle"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:37
+#: includes/modules/class-builder-module-accordion.php:62
+#: includes/modules/class-builder-module-toggle.php:59
+msgid "Open Toggle"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:41
+#: includes/modules/class-builder-module-accordion.php:66
+#: includes/modules/class-builder-module-toggle.php:63
+msgid "Toggle Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:45
+#: includes/modules/class-builder-module-accordion.php:70
+#: includes/modules/class-builder-module-toggle.php:67
+msgid "Toggle Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:49
+#: includes/modules/class-builder-module-accordion.php:74
+#: includes/modules/class-builder-module-toggle.php:71
+msgid "Toggle Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:58
+#: includes/modules/class-builder-module-audio.php:28
+#: includes/modules/class-builder-module-audio.php:102
+#: includes/modules/class-builder-module-bar-counters-item.php:47
+#: includes/modules/class-builder-module-bar-counters.php:39
+#: includes/modules/class-builder-module-blog.php:92
+#: includes/modules/class-builder-module-blurb.php:120
+#: includes/modules/class-builder-module-circle-counter.php:34
+#: includes/modules/class-builder-module-circle-counter.php:67
+#: includes/modules/class-builder-module-contact-form-item.php:55
+#: includes/modules/class-builder-module-contact-form.php:35
+#: includes/modules/class-builder-module-contact-form.php:108
+#: includes/modules/class-builder-module-countdown-timer.php:82
+#: includes/modules/class-builder-module-cta.php:82
+#: includes/modules/class-builder-module-fullwidth-header.php:75
+#: includes/modules/class-builder-module-fullwidth-header.php:161
+#: includes/modules/class-builder-module-fullwidth-header.php:186
+#: includes/modules/class-builder-module-map-item.php:27
+#: includes/modules/class-builder-module-number-counter.php:40
+#: includes/modules/class-builder-module-number-counter.php:81
+#: includes/modules/class-builder-module-posts.php:77
+#: includes/modules/class-builder-module-pricing-tables-item.php:170
+#: includes/modules/class-builder-module-sidebar.php:48
+#: includes/modules/class-builder-module-tabs-item.php:63
+#: includes/modules/class-builder-module-team-member.php:78
+#: includes/modules/class-builder-module-toggle.php:32
+#: includes/modules/class-builder-module-toggle.php:80
+msgid "Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:61
+#: includes/modules/class-builder-module-toggle.php:83
+msgid ""
+"The toggle title will appear above the content and when the toggle is closed."
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:70
+#: includes/modules/class-builder-module-accordion.php:83
+#: includes/modules/class-builder-module-toggle.php:102
+msgid "Open Toggle Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:76
+#: includes/modules/class-builder-module-accordion.php:89
+#: includes/modules/class-builder-module-toggle.php:108
+msgid "Open Toggle Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:82
+#: includes/modules/class-builder-module-accordion.php:95
+#: includes/modules/class-builder-module-toggle.php:114
+msgid "Closed Toggle Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:88
+#: includes/modules/class-builder-module-accordion.php:101
+#: includes/modules/class-builder-module-toggle.php:120
+msgid "Closed Toggle Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion-item.php:94
+#: includes/modules/class-builder-module-accordion.php:107
+#: includes/modules/class-builder-module-blurb.php:169
+#: includes/modules/class-builder-module-social-media-follow-item.php:94
+#: includes/modules/class-builder-module-team-member.php:167
+#: includes/modules/class-builder-module-toggle.php:126
+msgid "Icon Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:30
+#: includes/modules/class-builder-module-blog.php:82
+#: includes/modules/class-builder-module-blurb.php:71
+#: includes/modules/class-builder-module-cta.php:42
+#: includes/modules/class-builder-module-fullwidth-slider.php:65
+#: includes/modules/class-builder-module-post-slider.php:88
+#: includes/modules/class-builder-module-posts.php:51
+#: includes/modules/class-builder-module-pricing-tables-item.php:77
+#: includes/modules/class-builder-module-pricing-tables.php:132
+#: includes/modules/class-builder-module-sidebar.php:34
+#: includes/modules/class-builder-module-slider-item.php:67
+#: includes/modules/class-builder-module-slider.php:61
+#: includes/modules/class-builder-module-tabs-item.php:35
+#: includes/modules/class-builder-module-tabs.php:29
+#: includes/modules/class-builder-module-team-member.php:50
+#: includes/modules/class-builder-module-testimonial.php:45
+#: includes/modules/class-builder-module-toggle.php:38
+msgid "Body"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:113
+#: includes/modules/class-builder-module-audio.php:134
+#: includes/modules/class-builder-module-bar-counters.php:132
+#: includes/modules/class-builder-module-blog.php:332
+#: includes/modules/class-builder-module-blurb.php:350
+#: includes/modules/class-builder-module-button.php:72
+#: includes/modules/class-builder-module-circle-counter.php:149
+#: includes/modules/class-builder-module-contact-form.php:170
+#: includes/modules/class-builder-module-countdown-timer.php:163
+#: includes/modules/class-builder-module-cta.php:156
+#: includes/modules/class-builder-module-divider.php:134
+#: includes/modules/class-builder-module-fullwidth-header.php:430
+#: includes/modules/class-builder-module-fullwidth-map.php:69
+#: includes/modules/class-builder-module-fullwidth-menu.php:190
+#: includes/modules/class-builder-module-fullwidth-slider.php:283
+#: includes/modules/class-builder-module-image.php:256
+#: includes/modules/class-builder-module-map.php:108
+#: includes/modules/class-builder-module-number-counter.php:108
+#: includes/modules/class-builder-module-post-slider.php:513
+#: includes/modules/class-builder-module-posts.php:83
+#: includes/modules/class-builder-module-pricing-tables.php:275
+#: includes/modules/class-builder-module-sidebar.php:113
+#: includes/modules/class-builder-module-slider.php:281
+#: includes/modules/class-builder-module-social-media-follow.php:74
+#: includes/modules/class-builder-module-tabs.php:81
+#: includes/modules/class-builder-module-team-member.php:179
+#: includes/modules/class-builder-module-testimonial.php:226
+#: includes/modules/class-builder-module-text.php:89
+#: includes/modules/class-builder-module-toggle.php:132
+#: includes/modules/class-builder-module-video-slider.php:88
+#: includes/modules/class-builder-module-video.php:69
+#: includes/structure/class-builder-row-inner.php:329
+#: includes/structure/class-builder-row.php:532
+#: includes/structure/class-builder-section.php:469
+msgid "Disable on"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:116
+#: includes/modules/class-builder-module-audio.php:137
+#: includes/modules/class-builder-module-bar-counters.php:135
+#: includes/modules/class-builder-module-blog.php:335
+#: includes/modules/class-builder-module-blurb.php:353
+#: includes/modules/class-builder-module-button.php:75
+#: includes/modules/class-builder-module-circle-counter.php:152
+#: includes/modules/class-builder-module-contact-form.php:173
+#: includes/modules/class-builder-module-countdown-timer.php:166
+#: includes/modules/class-builder-module-cta.php:159
+#: includes/modules/class-builder-module-divider.php:137
+#: includes/modules/class-builder-module-fullwidth-header.php:433
+#: includes/modules/class-builder-module-fullwidth-map.php:72
+#: includes/modules/class-builder-module-fullwidth-menu.php:193
+#: includes/modules/class-builder-module-fullwidth-slider.php:286
+#: includes/modules/class-builder-module-image.php:259
+#: includes/modules/class-builder-module-map.php:111
+#: includes/modules/class-builder-module-number-counter.php:111
+#: includes/modules/class-builder-module-post-slider.php:516
+#: includes/modules/class-builder-module-posts.php:86
+#: includes/modules/class-builder-module-pricing-tables.php:278
+#: includes/modules/class-builder-module-sidebar.php:116
+#: includes/modules/class-builder-module-slider.php:284
+#: includes/modules/class-builder-module-social-media-follow.php:77
+#: includes/modules/class-builder-module-tabs.php:84
+#: includes/modules/class-builder-module-team-member.php:182
+#: includes/modules/class-builder-module-testimonial.php:229
+#: includes/modules/class-builder-module-text.php:92
+#: includes/modules/class-builder-module-toggle.php:135
+#: includes/modules/class-builder-module-video-slider.php:91
+#: includes/modules/class-builder-module-video.php:72
+#: includes/structure/class-builder-row-inner.php:332
+#: includes/structure/class-builder-row.php:535
+#: includes/structure/class-builder-section.php:472
+msgid "Phone"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:122
+#: includes/modules/class-builder-module-audio.php:143
+#: includes/modules/class-builder-module-bar-counters.php:141
+#: includes/modules/class-builder-module-blog.php:341
+#: includes/modules/class-builder-module-blurb.php:359
+#: includes/modules/class-builder-module-button.php:81
+#: includes/modules/class-builder-module-circle-counter.php:158
+#: includes/modules/class-builder-module-contact-form.php:179
+#: includes/modules/class-builder-module-countdown-timer.php:172
+#: includes/modules/class-builder-module-cta.php:165
+#: includes/modules/class-builder-module-divider.php:143
+#: includes/modules/class-builder-module-fullwidth-header.php:439
+#: includes/modules/class-builder-module-fullwidth-map.php:78
+#: includes/modules/class-builder-module-fullwidth-menu.php:199
+#: includes/modules/class-builder-module-fullwidth-slider.php:292
+#: includes/modules/class-builder-module-image.php:265
+#: includes/modules/class-builder-module-map.php:117
+#: includes/modules/class-builder-module-number-counter.php:117
+#: includes/modules/class-builder-module-post-slider.php:522
+#: includes/modules/class-builder-module-posts.php:92
+#: includes/modules/class-builder-module-pricing-tables.php:284
+#: includes/modules/class-builder-module-sidebar.php:122
+#: includes/modules/class-builder-module-slider.php:290
+#: includes/modules/class-builder-module-social-media-follow.php:83
+#: includes/modules/class-builder-module-tabs.php:90
+#: includes/modules/class-builder-module-team-member.php:188
+#: includes/modules/class-builder-module-testimonial.php:235
+#: includes/modules/class-builder-module-text.php:98
+#: includes/modules/class-builder-module-toggle.php:141
+#: includes/modules/class-builder-module-video-slider.php:97
+#: includes/modules/class-builder-module-video.php:78
+#: includes/structure/class-builder-row-inner.php:338
+#: includes/structure/class-builder-row.php:541
+#: includes/structure/class-builder-section.php:478
+msgid "This will disable the module on selected devices"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:125
+#: includes/modules/class-builder-module-audio.php:146
+#: includes/modules/class-builder-module-bar-counters.php:144
+#: includes/modules/class-builder-module-blog.php:344
+#: includes/modules/class-builder-module-blurb.php:362
+#: includes/modules/class-builder-module-button.php:84
+#: includes/modules/class-builder-module-circle-counter.php:161
+#: includes/modules/class-builder-module-contact-form.php:182
+#: includes/modules/class-builder-module-countdown-timer.php:175
+#: includes/modules/class-builder-module-cta.php:168
+#: includes/modules/class-builder-module-divider.php:146
+#: includes/modules/class-builder-module-fullwidth-header.php:442
+#: includes/modules/class-builder-module-fullwidth-map.php:81
+#: includes/modules/class-builder-module-fullwidth-menu.php:202
+#: includes/modules/class-builder-module-fullwidth-slider.php:295
+#: includes/modules/class-builder-module-image.php:268
+#: includes/modules/class-builder-module-map.php:120
+#: includes/modules/class-builder-module-number-counter.php:120
+#: includes/modules/class-builder-module-post-slider.php:525
+#: includes/modules/class-builder-module-posts.php:95
+#: includes/modules/class-builder-module-pricing-tables.php:287
+#: includes/modules/class-builder-module-sidebar.php:125
+#: includes/modules/class-builder-module-slider-item.php:306
+#: includes/modules/class-builder-module-slider.php:293
+#: includes/modules/class-builder-module-social-media-follow.php:86
+#: includes/modules/class-builder-module-tabs.php:93
+#: includes/modules/class-builder-module-team-member.php:191
+#: includes/modules/class-builder-module-testimonial.php:238
+#: includes/modules/class-builder-module-text.php:101
+#: includes/modules/class-builder-module-toggle.php:144
+#: includes/modules/class-builder-module-video-slider-item.php:25
+#: includes/modules/class-builder-module-video-slider.php:100
+#: includes/modules/class-builder-module-video.php:81
+#: includes/structure/class-builder-row.php:544
+#: includes/structure/class-builder-section.php:481
+msgid "Admin Label"
+msgstr ""
+
+#: includes/modules/class-builder-module-accordion.php:127
+#: includes/modules/class-builder-module-audio.php:148
+#: includes/modules/class-builder-module-bar-counters.php:146
+#: includes/modules/class-builder-module-blog.php:346
+#: includes/modules/class-builder-module-blurb.php:364
+#: includes/modules/class-builder-module-button.php:86
+#: includes/modules/class-builder-module-circle-counter.php:163
+#: includes/modules/class-builder-module-contact-form.php:184
+#: includes/modules/class-builder-module-countdown-timer.php:177
+#: includes/modules/class-builder-module-cta.php:170
+#: includes/modules/class-builder-module-divider.php:148
+#: includes/modules/class-builder-module-fullwidth-header.php:444
+#: includes/modules/class-builder-module-fullwidth-map.php:83
+#: includes/modules/class-builder-module-fullwidth-menu.php:204
+#: includes/modules/class-builder-module-fullwidth-slider.php:297
+#: includes/modules/class-builder-module-image.php:270
+#: includes/modules/class-builder-module-map.php:122
+#: includes/modules/class-builder-module-number-counter.php:122
+#: includes/modules/class-builder-module-post-slider.php:527
+#: includes/modules/class-builder-module-posts.php:97
+#: includes/modules/class-builder-module-pricing-tables.php:289
+#: includes/modules/class-builder-module-sidebar.php:127
+#: includes/modules/class-builder-module-slider.php:295
+#: includes/modules/class-builder-module-social-media-follow.php:88
+#: includes/modules/class-builder-module-tabs.php:95
+#: includes/modules/class-builder-module-team-member.php:193
+#: includes/modules/class-builder-module-testimonial.php:240
+#: includes/modules/class-builder-module-text.php:103
+#: includes/modules/class-builder-module-toggle.php:146
+#: includes/modules/class-builder-module-video-slider.php:102
+#: includes/modules/class-builder-module-video.php:83
+msgid ""
+"This will change the label of the module in the builder for easy "
+"identification."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:4
+#: includes/modules/class-builder-module-audio.php:92
+msgid "Audio"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:34
+msgid "Caption"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:55
+msgid "Audio Cover Art"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:59
+msgid "Audio Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:63
+msgid "Audio Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:67
+msgid "Audio Meta"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:71
+msgid "Player Buttons"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:75
+msgid "Player Timer"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:79
+msgid "Player Sliders"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:83
+msgid "Player Sliders Current"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:96
+msgid "Upload an audio file"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:97
+msgid "Choose an Audio file"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:98
+msgid "Set As Audio for the module"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:99
+msgid ""
+"Define the audio file for use in the module. To remove an audio file from "
+"the module, simply delete the URL from the settings field."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:105
+msgid "Define a title."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:108
+msgid "Artist Name"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:111
+msgid "Define an artist name."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:114
+msgid "Album name"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:117
+msgid "Define an album name."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:120
+msgid "Cover Art Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:124
+#: includes/modules/class-builder-module-blurb.php:222
+#: includes/modules/class-builder-module-fullwidth-header.php:334
+#: includes/modules/class-builder-module-fullwidth-header.php:376
+#: includes/modules/class-builder-module-fullwidth-header.php:409
+#: includes/modules/class-builder-module-image.php:101
+#: includes/modules/class-builder-module-team-member.php:118
+#: includes/modules/class-builder-module-testimonial.php:132
+#: includes/modules/class-builder-module-video-slider-item.php:54
+#: includes/modules/class-builder-module-video.php:53
+msgid "Choose an Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:125
+#: includes/modules/class-builder-module-blurb.php:223
+#: includes/modules/class-builder-module-fullwidth-header.php:335
+#: includes/modules/class-builder-module-fullwidth-header.php:377
+#: includes/modules/class-builder-module-fullwidth-header.php:410
+#: includes/modules/class-builder-module-image.php:102
+#: includes/modules/class-builder-module-team-member.php:119
+#: includes/modules/class-builder-module-testimonial.php:133
+#: includes/modules/class-builder-module-video-slider-item.php:55
+#: includes/modules/class-builder-module-video.php:54
+msgid "Set As Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:126
+#: includes/modules/class-builder-module-fullwidth-header.php:336
+#: includes/modules/class-builder-module-fullwidth-header.php:378
+#: includes/modules/class-builder-module-fullwidth-header.php:411
+#: includes/modules/class-builder-module-image.php:103
+#: includes/modules/class-builder-module-team-member.php:120
+#: includes/modules/class-builder-module-testimonial.php:134
+msgid ""
+"Upload your desired image, or type in the URL to the image you would like to "
+"display."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:131
+#: includes/structure/class-builder-section.php:129
+msgid ""
+"Define a custom background color for your module, or leave blank to use the "
+"default color."
+msgstr ""
+
+#: includes/modules/class-builder-module-audio.php:191
+#, php-format
+msgctxt "Audio Module meta information"
+msgid "by <strong>%1$s</strong>"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:4
+#: includes/modules/class-builder-module-bar-counters.php:8
+msgid "Bar Counter"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:22
+msgid "New Bar Counter"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:23
+msgid "Bar Counter Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:30
+#: includes/modules/class-builder-module-bar-counters.php:62
+msgid "Counter Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:34
+#: includes/modules/class-builder-module-bar-counters.php:66
+msgid "Counter Container"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:38
+#: includes/modules/class-builder-module-bar-counters.php:70
+msgid "Counter Amount"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:50
+msgid "Input a title for your bar."
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:53
+#: includes/modules/class-builder-module-bar-counters.php:45
+#: includes/modules/class-builder-module-number-counter.php:27
+msgid "Percent"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:56
+msgid "Define a percentage for this bar."
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:65
+#: includes/modules/class-builder-module-bar-counters.php:84
+#: includes/modules/class-builder-module-circle-counter.php:127
+msgid "Bar Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:71
+msgid "Label Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters-item.php:77
+msgid "Percentage Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:4
+msgid "Bar Counters"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:81
+msgid ""
+"This will adjust the color of the empty space in the bar (currently gray)."
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:86
+#: includes/modules/class-builder-module-circle-counter.php:129
+#: includes/modules/class-builder-module-number-counter.php:105
+msgid "This will change the fill color for the bar."
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:89
+msgid "Use Percentages"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:98
+msgid "Bar Top Padding"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:106
+msgid "Bar Bottom Padding"
+msgstr ""
+
+#: includes/modules/class-builder-module-bar-counters.php:114
+#: includes/modules/class-builder-module-contact-form-item.php:150
+msgid "Border Radius"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:11
+msgid "Blog"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:69
+#: includes/modules/class-builder-module-blurb.php:65
+#: includes/modules/class-builder-module-countdown-timer.php:35
+#: includes/modules/class-builder-module-cta.php:35
+#: includes/modules/class-builder-module-fullwidth-slider.php:56
+#: includes/modules/class-builder-module-post-slider.php:82
+#: includes/modules/class-builder-module-pricing-tables-item.php:32
+#: includes/modules/class-builder-module-pricing-tables.php:91
+#: includes/modules/class-builder-module-sidebar.php:28
+#: includes/modules/class-builder-module-slider-item.php:53
+#: includes/modules/class-builder-module-slider.php:55
+#: includes/modules/class-builder-module-team-member.php:44
+msgid "Header"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:76
+#: includes/modules/class-builder-module-post-slider.php:96
+msgid "Meta"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:96
+msgid "Post Meta"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:100
+msgid "Pagenavi"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:104
+msgid "Featured Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:108
+#: includes/modules/class-builder-module-blog.php:213
+msgid "Read More Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:118
+msgid "List"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:119
+msgid "Grid"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:120
+msgid "Masonry"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:140
+msgid "Toggle between the various blog layout types."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:143
+#: includes/modules/class-builder-module-post-slider.php:153
+msgid "Posts Number"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:146
+msgid "Choose how much posts you would like to display per page."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:149
+#: includes/modules/class-builder-module-countdown-timer.php:143
+msgid "Columns"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:163
+#: includes/modules/class-builder-module-post-slider.php:159
+msgid "Include Categories"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:169
+msgid "Choose which categories you would like to include in the feed."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:172
+msgid "Meta Date Format"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:175
+msgid ""
+"If you would like to adjust the date format, input the appropriate PHP date "
+"format here."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:178
+#: includes/modules/class-builder-module-post-slider.php:278
+msgid "Show Featured Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:188
+msgid "This will turn thumbnails on and off."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:191
+msgid "Featured Image Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:196
+msgid "Select featured thumbnail size."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:203
+#: includes/modules/class-builder-module-post-slider.php:225
+msgid "Show Excerpt"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:204
+#: includes/modules/class-builder-module-post-slider.php:226
+msgid "Show Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:205
+msgid "Hide Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:210
+msgid ""
+"Showing the full content will not truncate your posts on the index page. "
+"Showing the excerpt will only display your excerpt text."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:221
+msgid ""
+"Here you can define whether to show \"read more\" link after the excerpts or "
+"not."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:224
+msgid "Show Author"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:231
+msgid "Turn on or off the author link."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:234
+msgid "Show Date"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:241
+msgid "Turn the date on or off."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:244
+msgid "Show Categories"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:251
+msgid "Turn the category links on or off."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:254
+msgid "Show Comment Count"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:261
+msgid "Turn comment count on and off."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:264
+msgid "Show Pagination"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:271
+msgid "Turn pagination on and off."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:274
+msgid "Offset Number"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:277
+msgid "Choose how many posts you would like to offset by"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:280
+msgid "Featured Image Overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:292
+msgid ""
+"If enabled, an overlay color and icon will be displayed when a visitors "
+"hovers over the featured image of a post."
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:295
+#: includes/modules/class-builder-module-image.php:170
+msgid "Overlay Icon Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:299
+#: includes/modules/class-builder-module-image.php:174
+msgid "Here you can define a custom color for the overlay icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:302
+#: includes/modules/class-builder-module-image.php:177
+msgid "Hover Overlay Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:306
+#: includes/modules/class-builder-module-image.php:181
+msgid "Here you can define a custom color for the overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:309
+#: includes/modules/class-builder-module-image.php:184
+msgid "Hover Icon Picker"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:316
+#: includes/modules/class-builder-module-image.php:191
+msgid "Here you can define a custom icon for the overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:319
+msgid "Grid Tile Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-blog.php:729
+msgid "read more..."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:7
+msgid "Blurb"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:91
+msgid "Blurb Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:95
+msgid "Blurb Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:99
+msgid "Blurb Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:123
+msgid "The title of your blurb will appear in bold below your blurb image."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:126
+msgid "Url"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:129
+msgid ""
+"If you would like to make your blurb a link, input your destination URL here."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:132
+#: includes/modules/class-builder-module-button.php:45
+#: includes/modules/class-builder-module-cta.php:94
+#: includes/modules/class-builder-module-image.php:143
+#: includes/modules/class-builder-module-social-media-follow.php:54
+msgid "Url Opens"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:136
+#: includes/modules/class-builder-module-button.php:49
+#: includes/modules/class-builder-module-cta.php:98
+#: includes/modules/class-builder-module-image.php:147
+#: includes/modules/class-builder-module-social-media-follow.php:58
+#: includes/modules/class-builder-module-testimonial.php:122
+msgid "In The Same Window"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:137
+#: includes/modules/class-builder-module-button.php:50
+#: includes/modules/class-builder-module-cta.php:99
+#: includes/modules/class-builder-module-image.php:148
+#: includes/modules/class-builder-module-social-media-follow.php:59
+#: includes/modules/class-builder-module-testimonial.php:123
+msgid "In The New Tab"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:139
+#: includes/modules/class-builder-module-button.php:52
+#: includes/modules/class-builder-module-cta.php:101
+#: includes/modules/class-builder-module-image.php:151
+#: includes/modules/class-builder-module-social-media-follow.php:61
+msgid "Here you can choose whether or not your link opens in a new window"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:142
+msgid "Use Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:156
+msgid "Here you can choose whether icon set below should be used."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:159
+#: includes/modules/class-builder-module-fullwidth-header.php:242
+#: includes/modules/class-builder-module-social-media-follow-item.php:51
+#: includes/modules/class-builder-module-testimonial.php:150
+msgid "Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:165
+msgid "Choose an icon to display with your blurb."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:171
+msgid "Here you can define a custom color for your icon."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:175
+msgid "Circle Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:187
+msgid ""
+"Here you can choose whether icon set above should display within a circle."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:191
+#: includes/modules/class-builder-module-circle-counter.php:132
+msgid "Circle Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:193
+msgid "Here you can define a custom color for the icon circle."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:197
+msgid "Show Circle Border"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:208
+msgid "Here you can choose whether if the icon circle border should display."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:212
+msgid "Circle Border Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:214
+msgid "Here you can define a custom color for the icon circle border."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:218
+#: includes/modules/class-builder-module-image.php:4
+#: includes/modules/class-builder-module-image.php:55
+msgid "Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:225
+msgid "Upload an image to display at the top of your blurb."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:228
+msgid "Image Alt Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:231
+msgid "Define the HTML ALT text for your image here."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:235
+msgid "Image/Icon Placement"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:239
+msgid "Here you can choose where to place the icon."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:242
+msgid "Image/Icon Animation"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:246
+#: includes/modules/class-builder-module-image.php:70
+#: includes/modules/class-builder-module-team-member.php:131
+msgid "Top To Bottom"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:247
+#: includes/modules/class-builder-module-image.php:68
+#: includes/modules/class-builder-module-team-member.php:129
+msgid "Left To Right"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:248
+#: includes/modules/class-builder-module-image.php:69
+#: includes/modules/class-builder-module-team-member.php:130
+msgid "Right To Left"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:249
+#: includes/modules/class-builder-module-image.php:71
+#: includes/modules/class-builder-module-team-member.php:132
+msgid "Bottom To Top"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:250
+#: includes/modules/class-builder-module-image.php:73
+#: includes/modules/class-builder-module-team-member.php:127
+msgid "No Animation"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:252
+#: includes/modules/class-builder-module-image.php:198
+#: includes/modules/class-builder-module-team-member.php:134
+msgid "This controls the direction of the lazy-loading animation."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:255
+#: includes/modules/class-builder-module-cta.php:129
+#: includes/modules/class-builder-module-fullwidth-menu.php:115
+#: includes/modules/class-builder-module-testimonial.php:179
+#: includes/modules/class-builder-module-text.php:62
+msgid "Text Orientation"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:259
+msgid "This will control how your blurb text is aligned."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:265
+#: includes/modules/class-builder-module-cta.php:139
+#: includes/modules/class-builder-module-team-member.php:164
+#: includes/modules/class-builder-module-testimonial.php:189
+#: includes/modules/class-builder-module-toggle.php:99
+msgid "Input the main text content for your module here."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:268
+#: includes/modules/class-builder-module-image.php:222
+msgid "Image Max Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:276
+msgid "Use Icon Font Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:289
+msgid "Icon Font Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:303
+msgid "Circle Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:313
+msgid "Here you can define a custom diameter for the icon circle."
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:318
+msgid "Circle Border Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-blurb.php:328
+msgid "Here you can define a custom width for the icon circle border."
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:4
+#: includes/modules/class-builder-module-button.php:27
+#: includes/modules/class-builder-module-contact-form.php:57
+#: includes/modules/class-builder-module-cta.php:59
+#: includes/modules/class-builder-module-fullwidth-header.php:124
+#: includes/modules/class-builder-module-fullwidth-slider.php:74
+#: includes/modules/class-builder-module-post-slider.php:114
+#: includes/modules/class-builder-module-posts.php:68
+#: includes/modules/class-builder-module-pricing-tables-item.php:101
+#: includes/modules/class-builder-module-pricing-tables.php:170
+#: includes/modules/class-builder-module-slider-item.php:84
+#: includes/modules/class-builder-module-slider.php:70
+msgid "Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:39
+#: includes/modules/class-builder-module-cta.php:88
+#: includes/modules/class-builder-module-pricing-tables-item.php:200
+#: includes/modules/class-builder-module-slider-item.php:127
+msgid "Button URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:42
+msgid "Input the destination URL for your button."
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:55
+#: includes/modules/class-builder-module-cta.php:104
+#: includes/modules/class-builder-module-post-slider.php:214
+#: includes/modules/class-builder-module-pricing-tables-item.php:206
+#: includes/modules/class-builder-module-slider-item.php:121
+msgid "Button Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:58
+msgid "Input your desired button text."
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:61
+msgid "Button alignment"
+msgstr ""
+
+#: includes/modules/class-builder-module-button.php:69
+msgid "Here you can define the alignemnt of Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:4
+msgid "Circle Counter"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:40
+#: includes/modules/class-builder-module-circle-counter.php:73
+#: includes/modules/class-builder-module-number-counter.php:46
+#: includes/modules/class-builder-module-number-counter.php:87
+msgid "Number"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:50
+msgid "Percent Container"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:54
+msgid "Circle Counter Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:58
+msgid "Percent Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:70
+msgid "Input a title for the circle counter."
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:83
+msgid "Define a number for the circle counter."
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:86
+#: includes/modules/class-builder-module-number-counter.php:93
+msgid "Percent Sign"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:93
+#: includes/modules/class-builder-module-number-counter.php:100
+msgid ""
+"Here you can choose whether the percent sign should be added after the "
+"number set above."
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:96
+msgid "Rounded bar"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:105
+msgid "Circle line width"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:114
+msgid "Width of the bar line in px"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:117
+msgid "Circle size"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:138
+msgid "Circle Color Opacity"
+msgstr ""
+
+#: includes/modules/class-builder-module-circle-counter.php:209
+msgid "Incorrect settings: circle size to small"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:4
+#: includes/modules/class-builder-module-contact-form-item.php:30
+#: includes/modules/class-builder-module-contact-form.php:8
+msgid "Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:24
+msgid "New Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:25
+msgid "Field Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:50
+msgid "Field ID"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:52
+msgid ""
+"Define the unique ID of this field. You should use only English characters "
+"without special characters and spaces."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:60
+msgid "Placeholder"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:62
+msgid "Here you can define the placeholder for the current field."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:65
+#: includes/modules/class-builder-module-contact-form-item.php:82
+msgid "Type"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:69
+msgid "Input Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:70
+msgid "Email Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:71
+msgid "Select Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:72
+msgid "Textarea"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:79
+msgid "Choose the type of field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:87
+msgid ""
+"Define select options. Separate options with \";\". Separate option value "
+"from option label with \"==\""
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:90
+msgid "Allow multiple selections"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:101
+msgid "Insert a blank item as the first option"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:112
+msgid "Required Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:119
+msgid "Define whether the field should be required or optional"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:122
+msgid "Show field label"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:131
+msgid "Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form-item.php:140
+msgid "Fullwidth"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:4
+msgid "Contact Form"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:41
+msgid "Form Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:63
+msgid "Contact Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:67
+msgid "Contact Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:71
+msgid "Form Fields"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:75
+msgid "Message Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:79
+msgid "Captcha Field"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:83
+msgid "Captcha Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:92
+msgid "Display Captcha"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:99
+msgid "Turn the captcha on or off using this option."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:102
+msgid "Email"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:105
+msgid "Input the email address where messages should be sent."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:111
+msgid "Define a title for your contact form."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:114
+msgid "Message Pattern"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:117
+#, php-format
+msgid ""
+"Here you can define the custom pattern for the email Message. Fields should "
+"be included in following format - <strong>%%field_id%%</strong>. For example "
+"if you want to include the field with id = <strong>phone</strong> and field "
+"with id = <strong>message</strong>, then you can use the following pattern: "
+"<strong>My message is %%message%% and phone number is %%phone%%</strong>. "
+"Leave blank for default."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:120
+msgid "Enable Redirect URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:130
+msgid "Redirect users after successful form submission."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:133
+msgid "Redirect URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:137
+msgid "Type the Redirect URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:140
+msgid "Success Message"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:143
+msgid ""
+"Type the message you want to display after successful form submission. Leave "
+"blank for default"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:146
+msgid "Submit button text"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:149
+msgid "Input the label for submit button."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:152
+msgid "Form Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:158
+msgid "Input Border Radius"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:207
+#: includes/modules/class-builder-module-team-member.php:96
+msgid "Name"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:208
+msgid "Email Address"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:209
+msgid "Message"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:244
+msgid "Submit"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:274
+msgid "Thanks for contacting us"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:297
+msgid "Make sure you entered the captcha."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:306
+#: includes/modules/class-builder-module-contact-form.php:328
+msgid "Make sure you fill in all required fields."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:315
+msgid "Invalid Email."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:333
+msgid "Please refresh the page and try again."
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:379
+#, php-format
+msgid "New Message From %1$s%2$s"
+msgstr ""
+
+#: includes/modules/class-builder-module-contact-form.php:381
+#, php-format
+msgctxt "contact form title separator"
+msgid " - %s"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:7
+msgid "Countdown Timer"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:41
+msgid "Numbers"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:54
+msgid "Label"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:78
+msgid "Container"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:86
+msgid "Timer Section"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:95
+msgid "Countdown Timer Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:98
+msgid "This is the title displayed for the countdown timer."
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:101
+msgid "Countdown To"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:104
+#, php-format
+msgid ""
+"This is the date the countdown timer is counting down to. Your countdown "
+"timer is based on your timezone settings in your <a href=\"%1$s\" target="
+"\"_blank\" title=\"WordPress General Settings\">WordPress General Settings</"
+"a>"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:107
+#: includes/modules/class-builder-module-cta.php:110
+#: includes/modules/class-builder-module-testimonial.php:160
+msgid "Use Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:117
+#: includes/modules/class-builder-module-cta.php:120
+#: includes/modules/class-builder-module-testimonial.php:170
+msgid ""
+"Here you can choose whether background color setting below should be used or "
+"not."
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:123
+msgid "Here you can define a custom background color for your countdown timer."
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:129
+msgid "Flat"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:130
+#: includes/modules/class-builder-module-social-media-follow.php:49
+msgid "Circle"
+msgstr ""
+
+#: includes/modules/class-builder-module-countdown-timer.php:138
+msgid "Circle Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:4
+msgid "Call To Action"
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:65
+msgid "Promo Description"
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:69
+msgid "Promo Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:73
+msgid "Promo Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:85
+#: includes/modules/class-builder-module-posts.php:80
+msgid "Input your value to action title here."
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:91
+msgid "Input the destination URL for your CTA button."
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:107
+msgid "Input your desired button text, or leave blank for no button."
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:126
+#: includes/modules/class-builder-module-testimonial.php:175
+msgid "Here you can define a custom background color for your CTA."
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:133
+#: includes/modules/class-builder-module-testimonial.php:183
+msgid "This will adjust the alignment of the module text."
+msgstr ""
+
+#: includes/modules/class-builder-module-cta.php:142
+#: includes/modules/class-builder-module-text.php:75
+msgid "Max Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:4
+msgid "Divider"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:18
+msgid "Don't Show Divider"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:19
+msgid "Show Divider"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:66
+msgid "Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:68
+msgid "This will adjust the color of the 1px divider line."
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:71
+msgid "Visibility"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:79
+msgid ""
+"This settings turns on and off the 1px divider line, but does not affect the "
+"divider height."
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:82
+msgid "Height"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:94
+msgid "Define how much space should be added below the divider."
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:103
+msgid "Divider Style"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:111
+msgid "Divider Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-divider.php:124
+msgid "Hide On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:4
+msgid "Fullwidth Header"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:66
+msgid "Title Styling"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:67
+msgid "Subhead Styling"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:68
+msgid "Content Styling"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:91
+msgid "Subhead"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:133
+#: includes/modules/class-builder-module-fullwidth-header.php:169
+msgid "Button One"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:139
+#: includes/modules/class-builder-module-fullwidth-header.php:173
+msgid "Button Two"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:149
+msgid "Header Container"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:153
+msgid "Header Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:157
+msgid "Logo"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:165
+#: includes/modules/class-builder-module-pricing-tables-item.php:176
+msgid "Subtitle"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:177
+msgid "Scroll Down Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:189
+msgid "Enter your page title here."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:192
+msgid "Subheading Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:195
+msgid ""
+"If you would like to use a subhead, add it here. Your subhead will appear "
+"below your title in a small font."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:198
+#: includes/modules/class-builder-module-fullwidth-menu.php:105
+#: includes/modules/class-builder-module-team-member.php:137
+msgid "Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:202
+#: includes/modules/class-builder-module-fullwidth-menu.php:109
+#: includes/modules/class-builder-module-team-member.php:141
+msgid "Dark"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:203
+#: includes/modules/class-builder-module-fullwidth-menu.php:110
+#: includes/modules/class-builder-module-team-member.php:142
+msgid "Light"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:205
+#: includes/modules/class-builder-module-fullwidth-menu.php:112
+#: includes/modules/class-builder-module-team-member.php:144
+msgid ""
+"Here you can choose the value of your text. If you are working with a dark "
+"background, then your text should be set to light. If you are working with a "
+"light background, then your text should be dark."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:208
+msgid "Text & Logo Orientation"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:212
+#: includes/modules/class-builder-module-fullwidth-menu.php:119
+#: includes/modules/class-builder-module-text.php:66
+msgid "This controls the how your text is aligned within the module."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:216
+msgid "Make Fullscreen"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:226
+msgid "Here you can choose whether the header is expanded to fullscreen size."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:229
+msgid "Show Scroll Down Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:239
+msgid "Here you can choose whether the scroll down button is shown."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:248
+msgid "Choose an icon to display for the scroll down button."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:252
+msgid "Scroll Down Icon Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:258
+msgid "Scroll Down Icon Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:271
+msgid "Title Font Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:278
+msgid "Subhead Font Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:285
+msgid "Content Font Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:292
+msgid "Text Max Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:306
+#: includes/modules/class-builder-module-fullwidth-header.php:318
+#, php-format
+msgid "Button %1$s Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:309
+#: includes/modules/class-builder-module-fullwidth-header.php:321
+msgid "Enter the text for the Button."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:312
+#: includes/modules/class-builder-module-fullwidth-header.php:324
+#, php-format
+msgid "Button %1$s URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:315
+#: includes/modules/class-builder-module-fullwidth-header.php:327
+msgid "Enter the URL for the Button."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:330
+msgid "Background Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:343
+#: includes/modules/class-builder-module-post-slider.php:348
+#: includes/modules/class-builder-module-slider-item.php:197
+msgid "Background Overlay Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:347
+#: includes/modules/class-builder-module-fullwidth-slider.php:164
+#: includes/modules/class-builder-module-post-slider.php:308
+#: includes/modules/class-builder-module-slider.php:160
+msgid "Use Parallax effect"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:357
+#: includes/modules/class-builder-module-fullwidth-slider.php:174
+msgid ""
+"If enabled, your background images will have a fixed position as your "
+"scroll, creating a fun parallax-like effect."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:360
+#: includes/modules/class-builder-module-fullwidth-slider.php:177
+#: includes/modules/class-builder-module-post-slider.php:324
+#: includes/modules/class-builder-module-slider.php:175
+msgid "Parallax method"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:368
+#: includes/modules/class-builder-module-fullwidth-slider.php:185
+#: includes/modules/class-builder-module-post-slider.php:332
+#: includes/modules/class-builder-module-slider.php:183
+#: includes/structure/class-builder-section.php:206
+msgid "Define the method, used for the parallax effect."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:372
+msgid "Logo Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:381
+msgid "Logo Image Alternative Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:384
+#: includes/modules/class-builder-module-image.php:109
+msgid ""
+"This defines the HTML ALT text. A short description of your image can be "
+"placed here."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:387
+msgid "Logo Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:390
+#: includes/modules/class-builder-module-image.php:115
+msgid "This defines the HTML Title text."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:393
+msgid "Text Vertical Alignment"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:400
+msgid ""
+"This setting determines the vertical alignment of your content. Your content "
+"can either be vertically centered, or aligned to the bottom."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:405
+msgid "Header Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:414
+msgid "Image Vertical Alignment"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:418
+msgid "Vertically Centered"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:421
+msgid "This controls the orientation of the image within the module."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-header.php:427
+#: includes/modules/class-builder-module-map-item.php:65
+msgid ""
+"Here you can define the content that will be placed within the infobox for "
+"the pin."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:4
+msgid "Fullwidth Map"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:8
+#: includes/modules/class-builder-module-map-item.php:4
+#: includes/modules/class-builder-module-map.php:8
+msgid "Pin"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:31
+#: includes/modules/class-builder-module-map.php:36
+msgid "Map Center Address"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:36
+#: includes/modules/class-builder-module-map-item.php:40
+#: includes/modules/class-builder-module-map.php:41
+msgid "Find"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:39
+#: includes/modules/class-builder-module-map.php:44
+msgid ""
+"Enter an address for the map center point, and the address will be geocoded "
+"and displayed on the map below."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:59
+#: includes/modules/class-builder-module-map.php:79
+msgid "Mouse Wheel Zoom"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-map.php:66
+#: includes/modules/class-builder-module-map.php:86
+msgid ""
+"Here you can choose whether the zoom level will be controlled by mouse wheel "
+"or not."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:4
+msgid "Fullwidth Menu"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:32
+#: includes/modules/class-builder-module-fullwidth-menu.php:88
+msgid "Menu"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:61
+msgid "Menu Link"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:65
+msgid "Active Menu Link"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:69
+msgid "Dropdown Menu Container"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:73
+msgid "Dropdown Menu Links"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:95
+msgid "Select a menu that should be used in the module"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:96
+msgid "Click here to create new menu"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:102
+#: includes/modules/class-builder-module-post-slider.php:266
+#: includes/modules/class-builder-module-slider-item.php:172
+msgid "Use the color picker to choose a background color for this module."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:122
+msgid "Sub-Menus Open"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:126
+msgid "Downwards"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:127
+msgid "Upwards"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:129
+msgid ""
+"Here you can choose the direction that your sub-menus will open. You can "
+"choose to have them open downwards or upwards."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:132
+msgid "Make Menu Links Fullwidth"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:142
+msgid "Active Link Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:148
+msgid "Dropdown Menu Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:154
+msgid "Dropdown Menu Line Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:160
+msgid "Dropdown Menu Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:166
+msgid "Dropdown Menu Animation"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:170
+msgid "Fade"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:172
+#: includes/modules/class-builder-module-fullwidth-slider.php:8
+#: includes/modules/class-builder-module-slider-item.php:4
+#: includes/modules/class-builder-module-slider.php:8
+msgid "Slide"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:173
+msgid "Flip"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:178
+msgid "Mobile Menu Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:184
+msgid "Mobile Menu Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-menu.php:290
+msgid "Home"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:4
+msgid "Fullwidth Slider"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:80
+#: includes/modules/class-builder-module-post-slider.php:120
+#: includes/modules/class-builder-module-slider-item.php:98
+#: includes/modules/class-builder-module-slider.php:76
+msgid "Slide Description"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:84
+#: includes/modules/class-builder-module-post-slider.php:124
+#: includes/modules/class-builder-module-slider-item.php:94
+#: includes/modules/class-builder-module-slider.php:80
+msgid "Slide Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:88
+#: includes/modules/class-builder-module-post-slider.php:128
+#: includes/modules/class-builder-module-slider-item.php:102
+#: includes/modules/class-builder-module-slider.php:84
+msgid "Slide Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:92
+#: includes/modules/class-builder-module-post-slider.php:132
+#: includes/modules/class-builder-module-slider.php:88
+msgid "Slide Controllers"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:96
+#: includes/modules/class-builder-module-post-slider.php:136
+#: includes/modules/class-builder-module-slider.php:92
+msgid "Slide Active Controller"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:100
+#: includes/modules/class-builder-module-post-slider.php:140
+#: includes/modules/class-builder-module-slider-item.php:106
+#: includes/modules/class-builder-module-slider-item.php:175
+#: includes/modules/class-builder-module-slider.php:96
+msgid "Slide Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:104
+#: includes/modules/class-builder-module-post-slider.php:144
+#: includes/modules/class-builder-module-slider.php:100
+msgid "Slide Arrows"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:113
+#: includes/modules/class-builder-module-slider.php:109
+#: includes/modules/class-builder-module-video-slider.php:56
+msgid "Arrows"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:117
+#: includes/modules/class-builder-module-post-slider.php:181
+#: includes/modules/class-builder-module-slider.php:113
+#: includes/modules/class-builder-module-video-slider.php:60
+msgid "Show Arrows"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:118
+#: includes/modules/class-builder-module-slider.php:114
+#: includes/modules/class-builder-module-video-slider.php:61
+msgid "Hide Arrows"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:120
+msgid "This setting allows you to turn the navigation arrows on or off."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:123
+msgid "Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:127
+msgid "Show Slider Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:128
+msgid "Hide Slider Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:130
+msgid ""
+"Disabling this option will remove the circle button at the bottom of the "
+"slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:133
+#: includes/modules/class-builder-module-post-slider.php:412
+#: includes/modules/class-builder-module-slider.php:129
+msgid "Automatic Animation"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:143
+#: includes/modules/class-builder-module-post-slider.php:422
+#: includes/modules/class-builder-module-slider.php:139
+msgid ""
+"If you would like the slider to slide automatically, without the visitor "
+"having to click the next button, enable this option and then adjust the "
+"rotation speed below if desired."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:146
+#: includes/modules/class-builder-module-post-slider.php:425
+#: includes/modules/class-builder-module-slider.php:142
+msgid "Automatic Animation Speed (in ms)"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:150
+#: includes/modules/class-builder-module-post-slider.php:429
+#: includes/modules/class-builder-module-slider.php:146
+msgid ""
+"Here you can designate how fast the slider fades between each slide, if "
+"'Automatic Animation' option is enabled above. The higher the number the "
+"longer the pause between each rotation."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:153
+#: includes/modules/class-builder-module-post-slider.php:432
+#: includes/modules/class-builder-module-slider.php:149
+msgid "Continue Automatic Slide on Hover"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:161
+#: includes/modules/class-builder-module-post-slider.php:440
+#: includes/modules/class-builder-module-slider.php:157
+msgid ""
+"Turning this on will allow automatic sliding to continue on mouse hover."
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:188
+#: includes/modules/class-builder-module-post-slider.php:375
+#: includes/modules/class-builder-module-slider.php:186
+msgid "Remove Inner Shadow"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:197
+#: includes/modules/class-builder-module-post-slider.php:384
+#: includes/modules/class-builder-module-slider-item.php:142
+#: includes/modules/class-builder-module-slider.php:195
+msgid "Background Image Position"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:202
+#: includes/modules/class-builder-module-post-slider.php:389
+#: includes/modules/class-builder-module-slider-item.php:148
+#: includes/modules/class-builder-module-slider.php:200
+msgid "Top Left"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:203
+#: includes/modules/class-builder-module-post-slider.php:390
+#: includes/modules/class-builder-module-slider-item.php:149
+#: includes/modules/class-builder-module-slider.php:201
+msgid "Top Center"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:204
+#: includes/modules/class-builder-module-post-slider.php:391
+#: includes/modules/class-builder-module-slider-item.php:150
+#: includes/modules/class-builder-module-slider.php:202
+msgid "Top Right"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:205
+#: includes/modules/class-builder-module-post-slider.php:392
+#: includes/modules/class-builder-module-slider-item.php:151
+#: includes/modules/class-builder-module-slider.php:203
+msgid "Center Right"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:206
+#: includes/modules/class-builder-module-post-slider.php:393
+#: includes/modules/class-builder-module-slider-item.php:152
+#: includes/modules/class-builder-module-slider.php:204
+msgid "Center Left"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:207
+#: includes/modules/class-builder-module-post-slider.php:394
+#: includes/modules/class-builder-module-slider-item.php:153
+#: includes/modules/class-builder-module-slider.php:205
+msgid "Bottom Left"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:208
+#: includes/modules/class-builder-module-post-slider.php:395
+#: includes/modules/class-builder-module-slider-item.php:154
+#: includes/modules/class-builder-module-slider.php:206
+msgid "Bottom Center"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:209
+#: includes/modules/class-builder-module-post-slider.php:396
+#: includes/modules/class-builder-module-slider-item.php:155
+#: includes/modules/class-builder-module-slider.php:207
+msgid "Bottom Right"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:214
+#: includes/modules/class-builder-module-post-slider.php:401
+#: includes/modules/class-builder-module-slider-item.php:159
+#: includes/modules/class-builder-module-slider.php:212
+msgid "Background Image Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:219
+#: includes/modules/class-builder-module-post-slider.php:406
+#: includes/modules/class-builder-module-slider-item.php:165
+#: includes/modules/class-builder-module-slider.php:217
+msgid "Fit"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:220
+#: includes/modules/class-builder-module-post-slider.php:407
+#: includes/modules/class-builder-module-slider-item.php:166
+#: includes/modules/class-builder-module-slider.php:218
+msgid "Actual Size"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:225
+#: includes/modules/class-builder-module-post-slider.php:443
+#: includes/modules/class-builder-module-slider.php:223
+msgid "Top Padding"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:233
+#: includes/modules/class-builder-module-post-slider.php:451
+#: includes/modules/class-builder-module-slider.php:231
+msgid "Bottom Padding"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:253
+#: includes/modules/class-builder-module-post-slider.php:459
+#: includes/modules/class-builder-module-slider.php:239
+msgid "Hide Content On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:263
+#: includes/modules/class-builder-module-post-slider.php:469
+#: includes/modules/class-builder-module-slider.php:249
+msgid "Hide CTA On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-fullwidth-slider.php:273
+#: includes/modules/class-builder-module-slider.php:259
+msgid "Show Image / Video On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:59
+msgid "Lightbox link"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:72
+#: includes/modules/class-builder-module-team-member.php:128
+msgid "Fade In"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:97
+#: includes/modules/class-builder-module-team-member.php:114
+msgid "Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:106
+#: includes/modules/class-builder-module-slider-item.php:240
+msgid "Image Alternative Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:112
+msgid "Image Title Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:118
+msgid "Open in Lightbox"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:130
+msgid ""
+"Here you can choose whether or not the image should open in Lightbox. Note: "
+"if you select to open the image in Lightbox, url options below will be "
+"ignored."
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:133
+msgid "Link URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:140
+msgid ""
+"If you would like your image to be a link, input your destination URL here. "
+"No link will be created if this field is left blank."
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:154
+msgid "Image Overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:167
+msgid ""
+"If enabled, an overlay color and icon will be displayed when a visitors "
+"hovers over the image"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:194
+#: includes/modules/class-builder-module-team-member.php:123
+msgid "Animation"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:201
+msgid "Remove Space Below The Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:208
+msgid ""
+"Here you can choose whether or not the image should have a space below it."
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:211
+msgid "Image Alignment"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:219
+msgid "Here you can choose the image alignment."
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:230
+msgid "Force Fullwidth"
+msgstr ""
+
+#: includes/modules/class-builder-module-image.php:240
+msgid "Always Center Image On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-map-item.php:20
+msgid "New Pin"
+msgstr ""
+
+#: includes/modules/class-builder-module-map-item.php:21
+msgid "Pin Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-map-item.php:30
+#: includes/modules/class-builder-module-tabs-item.php:65
+msgid "The title will be used within the tab button for this tab."
+msgstr ""
+
+#: includes/modules/class-builder-module-map-item.php:33
+msgid "Map Pin Address"
+msgstr ""
+
+#: includes/modules/class-builder-module-map-item.php:37
+msgid ""
+"Enter an address for this map pin, and the address will be geocoded and "
+"displayed on the map below."
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:4
+msgid "Map"
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:64
+msgid "Icon url"
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:67
+msgid "Upload an marker"
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:68
+msgid "Choose an Marker"
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:69
+msgid "Set As Marker"
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:70
+msgid ""
+"Upload your marker, or type in the URL to the marker you would like to "
+"display."
+msgstr ""
+
+#: includes/modules/class-builder-module-map.php:73
+msgid "Map style"
+msgstr ""
+
+#: includes/modules/class-builder-module-number-counter.php:4
+msgid "Number Counter"
+msgstr ""
+
+#: includes/modules/class-builder-module-number-counter.php:31
+msgid "Number Counter Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-number-counter.php:84
+msgid "Input a title for the counter."
+msgstr ""
+
+#: includes/modules/class-builder-module-number-counter.php:90
+msgid ""
+"Define a number for the counter. (Don't include the percentage sign, use the "
+"option below.)"
+msgstr ""
+
+#: includes/modules/class-builder-module-number-counter.php:103
+msgid "Counter Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:4
+msgid "Post Slider"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:156
+msgid "Choose how many posts you would like to display in the slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:165
+msgid "Choose which categories you would like to include in the slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:168
+msgid "Order By"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:172
+msgid "Date: new to old"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:173
+msgid "Date: old to new"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:174
+msgid "Title: a-z"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:175
+msgid "Title: z-a"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:176
+msgid "Random"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:178
+msgid "Here you can adjust the order in which posts are displayed."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:185
+#: includes/modules/class-builder-module-post-slider.php:205
+#: includes/modules/class-builder-module-post-slider.php:257
+#: includes/modules/class-builder-module-post-slider.php:282
+#: includes/modules/class-builder-module-post-slider.php:339
+#: includes/modules/class-builder-module-post-slider.php:360
+#: includes/modules/class-builder-module-slider-item.php:189
+#: includes/modules/class-builder-module-slider-item.php:209
+msgid "yes"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:188
+#: includes/modules/class-builder-module-slider.php:116
+#: includes/modules/class-builder-module-video-slider.php:63
+msgid "This setting will turn on and off the navigation arrows."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:191
+#: includes/modules/class-builder-module-slider.php:119
+msgid "Show Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:198
+#: includes/modules/class-builder-module-slider.php:126
+msgid ""
+"This setting will turn on and off the circle buttons at the bottom of the "
+"slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:201
+msgid "Show Read More Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:211
+msgid "This setting will turn on and off the read more button."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:218
+msgid ""
+"Define the text which will be displayed on \"Read More\" button. leave blank "
+"for default ( Read More )"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:221
+msgid "Content Display"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:232
+msgid ""
+"Showing the full content will not truncate your posts in the slider. Showing "
+"the excerpt will only display excerpt text."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:235
+msgid "Use Post Excerpt if Defined"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:243
+msgid ""
+"Disable this option if you want to ignore manually defined excerpts and "
+"always generate it automatically."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:246
+msgid "Automatic Excerpt Length"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:250
+msgid ""
+"Define the length of automatically generated excerpts. Leave blank for "
+"default ( 55 ) "
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:253
+msgid "Show Post Meta"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:260
+msgid "This setting will turn on and off the meta section."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:273
+msgid "Choose a Background"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:275
+msgid ""
+"Upload your desired image, or type in the URL to the image you would like to "
+"use as the background for the slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:288
+msgid "This setting will turn on and off the featured image in the slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:291
+msgid "Image Placement"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:295
+msgid "Background"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:305
+msgid "Select how you would like to display the featured image in slides"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:321
+#: includes/modules/class-builder-module-slider.php:172
+msgid ""
+"Enabling this option will give your background images a fixed position as "
+"you scroll."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:335
+#: includes/modules/class-builder-module-slider-item.php:184
+msgid "Use Background Overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:345
+#: includes/modules/class-builder-module-slider-item.php:194
+msgid ""
+"When enabled, a custom overlay color will be added above your background "
+"image and behind your slider content."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:352
+#: includes/modules/class-builder-module-slider-item.php:201
+msgid "Use the color picker to choose a color for the background overlay."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:355
+#: includes/modules/class-builder-module-slider-item.php:204
+msgid "Use Text Overlay"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:365
+#: includes/modules/class-builder-module-slider-item.php:214
+msgid ""
+"When enabled, a background color is added behind the slider text to make it "
+"more readable atop background images."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:368
+#: includes/modules/class-builder-module-slider-item.php:217
+msgid "Text Overlay Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:372
+#: includes/modules/class-builder-module-slider-item.php:221
+msgid "Use the color picker to choose a color for the text overlay."
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:479
+msgid "Show Image On Mobile"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:489
+#: includes/modules/class-builder-module-slider-item.php:311
+msgid "Text Overlay Border Radius"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:501
+#: includes/modules/class-builder-module-slider-item.php:294
+msgid "Arrows Custom Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:507
+#: includes/modules/class-builder-module-slider-item.php:300
+msgid "Dot Nav Custom Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:798
+#: includes/modules/templates/blog/meta.php:14
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:799
+#: includes/modules/templates/blog/meta.php:23
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: includes/modules/class-builder-module-post-slider.php:801
+#: includes/modules/templates/blog/meta.php:36
+#, php-format
+msgctxt "number of comments"
+msgid "1 Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/modules/class-builder-module-posts.php:4
+msgid "Posts"
+msgstr ""
+
+#: includes/modules/class-builder-module-posts.php:44
+msgid "Supertitle"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:4
+#: includes/modules/class-builder-module-pricing-tables.php:10
+msgid "Pricing Table"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:26
+msgid "New Pricing Table"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:27
+msgid "Pricing Table Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:45
+#: includes/modules/class-builder-module-pricing-tables.php:101
+msgid "Subheader"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:58
+#: includes/modules/class-builder-module-pricing-tables.php:113
+msgid "Currency &amp; Frequency"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:64
+#: includes/modules/class-builder-module-pricing-tables-item.php:127
+#: includes/modules/class-builder-module-pricing-tables-item.php:194
+#: includes/modules/class-builder-module-pricing-tables.php:56
+#: includes/modules/class-builder-module-pricing-tables.php:119
+msgid "Price"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:111
+#: includes/modules/class-builder-module-pricing-tables.php:40
+msgid "Pricing Heading"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:115
+#: includes/modules/class-builder-module-pricing-tables.php:44
+msgid "Pricing Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:119
+#: includes/modules/class-builder-module-pricing-tables.php:48
+msgid "Pricing Subtitle"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:123
+#: includes/modules/class-builder-module-pricing-tables.php:52
+msgid "Pricing Top"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:131
+#: includes/modules/class-builder-module-pricing-tables-item.php:182
+#: includes/modules/class-builder-module-pricing-tables.php:60
+msgid "Currency"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:135
+#: includes/modules/class-builder-module-pricing-tables.php:64
+msgid "Frequency"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:139
+#: includes/modules/class-builder-module-pricing-tables.php:68
+msgid "Pricing Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:143
+#: includes/modules/class-builder-module-pricing-tables.php:72
+msgid "Pricing Item"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:147
+#: includes/modules/class-builder-module-pricing-tables.php:76
+msgid "Excluded Item"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:151
+#: includes/modules/class-builder-module-pricing-tables.php:80
+msgid "Pricing Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:160
+msgid "Make This Table Featured"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:167
+msgid "Featuring a table will make it stand out from the rest."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:173
+msgid "Define a title for the pricing table."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:179
+msgid "Define a sub title for the table if desired."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:185
+msgid "Input your desired currency symbol here."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:188
+msgid "Per"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:191
+msgid ""
+"If your pricing is subscription based, input the subscription payment cycle "
+"here."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:197
+msgid "Input the value of the product here."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:203
+msgid "Input the destination URL for the signup button."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:209
+msgid "Adjust the text used from the signup button."
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:217
+msgid ""
+"Input a list of features that are/are not included in the product. Separate "
+"items on a new line, and begin with either a + or - symbol: "
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:218
+msgid "Included option"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables-item.php:219
+msgid "Excluded option"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:5
+msgid "Pricing Tables"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:84
+msgid "Featured Table"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:179
+msgid "Featured Table Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:186
+msgid "Table Header Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:192
+msgid "Featured Table Header Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:199
+msgid "Featured Table Header Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:206
+msgid "Featured Table Subheader Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:213
+msgid "Featured Table Price Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:220
+msgid "Featured Table Body Text Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:227
+msgid "Show Bullet"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:240
+msgid "Bullet Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:247
+msgid "Featured Table Bullet Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:254
+msgid "Remove Featured Table Drop Shadow"
+msgstr ""
+
+#: includes/modules/class-builder-module-pricing-tables.php:265
+msgid "Center List Items"
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:6
+msgid "Sidebar"
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:44
+msgid "Widget"
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:87
+msgid "Orientation"
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:94
+msgid ""
+"Choose which side of the page your sidebar will be on. This setting controls "
+"text orientation and border position."
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:97
+msgid "Widget Area"
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:100
+msgid ""
+"Select a widget-area that you would like to display. You can create new "
+"widget areas within the Appearances > Widgets tab."
+msgstr ""
+
+#: includes/modules/class-builder-module-sidebar.php:103
+msgid "Remove Border Separator"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:47
+msgid "New Slide"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:48
+msgid "Slide Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:115
+msgid "Heading"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:118
+msgid "Define the title text for your slide."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:124
+msgid "Define the text for the slide button"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:130
+msgid "Input a destination URL for the slide button."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:139
+#: includes/structure/class-builder-section.php:110
+msgid ""
+"If defined, this image will be used as the background for this module. To "
+"remove a background image, simply delete the URL from the settings field."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:164
+msgid "Cover"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:179
+msgid "Choose a Slide Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:180
+msgid "Set As Slide Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:181
+msgid ""
+"If defined, this slide image will appear to the left of your slide text. "
+"Upload an image, or leave blank for a text-only slide."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:224
+msgid "Slide Image Vertical Alignment"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:231
+msgid ""
+"This setting determines the vertical alignment of your slide image. Your "
+"image can either be vertically centered, or aligned to the bottom of your "
+"slide."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:234
+msgid "Slide Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:237
+msgid ""
+"If defined, this video will appear to the left of your slide text. Enter "
+"youtube or vimeo page url, or leave blank for a text-only slide."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:243
+msgid ""
+"If you have a slide image defined, input your HTML ALT text for the image "
+"here."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:246
+#: includes/structure/class-builder-row.php:255
+#: includes/structure/class-builder-section.php:133
+msgid "Background Video MP4"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:250
+#: includes/modules/class-builder-module-slider-item.php:260
+#: includes/modules/class-builder-module-video-slider-item.php:34
+#: includes/modules/class-builder-module-video-slider-item.php:44
+#: includes/modules/class-builder-module-video.php:33
+#: includes/modules/class-builder-module-video.php:43
+#: includes/structure/class-builder-row.php:259
+#: includes/structure/class-builder-row.php:269
+#: includes/structure/class-builder-section.php:137
+#: includes/structure/class-builder-section.php:147
+msgid "Upload a video"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:251
+#: includes/structure/class-builder-row.php:260
+#: includes/structure/class-builder-section.php:138
+msgid "Choose a Background Video MP4 File"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:252
+#: includes/modules/class-builder-module-slider-item.php:262
+#: includes/structure/class-builder-row.php:261
+#: includes/structure/class-builder-row.php:271
+#: includes/structure/class-builder-section.php:139
+#: includes/structure/class-builder-section.php:149
+msgid "Set As Background Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:253
+#: includes/structure/class-builder-section.php:140
+msgid ""
+"All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum "
+"compatibility in all browsers. Upload the .MP4 version here. <b>Important "
+"Note: Video backgrounds are disabled from mobile devices. Instead, your "
+"background image will be used. For this reason, you should define both a "
+"background image and a background video to ensure best results.</b>"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:256
+#: includes/structure/class-builder-row.php:265
+#: includes/structure/class-builder-section.php:143
+msgid "Background Video Webm"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:261
+#: includes/structure/class-builder-row.php:270
+#: includes/structure/class-builder-section.php:148
+msgid "Choose a Background Video WEBM File"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:263
+#: includes/structure/class-builder-section.php:150
+msgid ""
+"All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum "
+"compatibility in all browsers. Upload the .WEBM version here. <b>Important "
+"Note: Video backgrounds are disabled from mobile devices. Instead, your "
+"background image will be used. For this reason, you should define both a "
+"background image and a background video to ensure best results.</b>"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:266
+#: includes/structure/class-builder-row.php:275
+#: includes/structure/class-builder-section.php:153
+msgid "Background Video Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:269
+#: includes/structure/class-builder-section.php:156
+msgid ""
+"In order for videos to be sized correctly, you must input the exact width "
+"(in pixels) of your video here."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:272
+#: includes/structure/class-builder-row.php:281
+#: includes/structure/class-builder-section.php:159
+msgid "Background Video Height"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:275
+#: includes/structure/class-builder-section.php:162
+msgid ""
+"In order for videos to be sized correctly, you must input the exact height "
+"(in pixels) of your video here."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:278
+#: includes/structure/class-builder-row.php:287
+#: includes/structure/class-builder-section.php:165
+msgid "Pause Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:285
+#: includes/structure/class-builder-section.php:172
+msgid "Allow video to be paused by other players when they begin playing"
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:291
+msgid "Input your main slide text content here."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider-item.php:308
+msgid ""
+"This will change the label of the slide in the builder for easy "
+"identification."
+msgstr ""
+
+#: includes/modules/class-builder-module-slider.php:4
+msgid "Slider"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:4
+#: includes/modules/class-builder-module-social-media-follow.php:8
+msgid "Social Network"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:26
+msgid "New Social Network"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:27
+msgid "Social Network Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:31
+#: includes/modules/class-builder-module-social-media-follow.php:31
+msgid "Social Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:35
+#: includes/modules/class-builder-module-social-media-follow.php:35
+#: includes/modules/class-builder-module-social-media-follow.php:64
+msgid "Follow Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:44
+msgid "Social Network Label"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:48
+msgid "Set the social network label"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:62
+msgid "Choose the social network icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:69
+msgid "Account URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:72
+msgid "The URL for this social network link."
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:76
+msgid "Account Name"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:79
+msgid "The Skype account name."
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:83
+msgid "Skype Button Action"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:87
+msgid "Call"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:88
+msgid "Chat"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:91
+msgid "Here you can choose which action to execute on button click"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:97
+msgid "This will change the icon color."
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:101
+msgid "Icon Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:103
+msgid "This will change the icon background color."
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow-item.php:153
+msgid "Follow"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:4
+msgid "Social Media Follow"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:27
+msgid "Social Follow"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:44
+msgid "Link Shape"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:48
+msgid "Rounded Rectangle"
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:51
+msgid "Here you can choose the shape of your social network icons."
+msgstr ""
+
+#: includes/modules/class-builder-module-social-media-follow.php:71
+msgid ""
+"Here you can choose whether or not to include the follow button next to the "
+"icon."
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs-item.php:4
+#: includes/modules/class-builder-module-tabs-item.php:20
+#: includes/modules/class-builder-module-tabs-item.php:87
+#: includes/modules/class-builder-module-tabs.php:8
+#: includes/modules/class-builder-module-tabs.php:22
+#: includes/modules/class-builder-module-tabs.php:52
+msgid "Tab"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs-item.php:14
+msgid "New Tab"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs-item.php:15
+msgid "Tab Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:4
+msgid "Tabs"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:48
+msgid "Tabs Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:56
+msgid "Active Tab"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:60
+msgid "Tabs Content"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:69
+msgid "Active Tab Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-tabs.php:75
+msgid "Inactive Tab Background Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:10
+msgid "Person"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:70
+msgid "Member Image"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:74
+msgid "Member Description"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:82
+msgid "Member Position"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:86
+msgid "Member Social Links"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:99
+msgid "Input the name of the person"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:102
+msgid "Position"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:105
+msgid "Input the person's position."
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:108
+msgid "Custom URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:111
+msgid "Custom URL to the person's page."
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:152
+#, php-format
+msgid "%s Profile Url"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:155
+#, php-format
+msgid "Input %s Profile Url."
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:161
+msgid "Description"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:173
+msgid "Icon Hover Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:232
+msgid "Facebook"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:236
+msgid "Twitter"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:240
+msgid "Google+"
+msgstr ""
+
+#: includes/modules/class-builder-module-team-member.php:244
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:5
+msgid "Testimonial"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:67
+msgid "Testimonial Portrait"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:71
+msgid "Testimonial Description"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:75
+msgid "Testimonial Author"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:79
+msgid "Testimonial Meta"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:88
+msgid "Author Name"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:91
+msgid "Input the name of the testimonial author."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:94
+msgid "Job Title"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:97
+msgid "Input the job title."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:100
+msgid "Company Name"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:103
+msgid "Input the name of the company."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:106
+msgid "Date"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:109
+msgid "Input the testimonial date"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:112
+msgid "Author/Company URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:115
+msgid "Input the website of the author or leave blank for no link."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:118
+msgid "URLs Open"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:125
+msgid "Choose whether or not the URL should open in a new window."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:128
+msgid "Portrait Image URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:137
+msgid "Quote Icon"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:147
+msgid "Choose whether or not the quote icon should be visible."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:157
+msgid "Choose an icon to display with your testimonial."
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:192
+msgid "Quote Icon Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:198
+msgid "Portrait Border Radius"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:204
+msgid "Portrait Width"
+msgstr ""
+
+#: includes/modules/class-builder-module-testimonial.php:215
+msgid "Portrait Height"
+msgstr ""
+
+#: includes/modules/class-builder-module-text.php:4
+#: includes/modules/class-builder-module-text.php:29
+msgid "Text"
+msgstr ""
+
+#: includes/modules/class-builder-module-text.php:72
+msgid "Here you can create the content that will be used within the module."
+msgstr ""
+
+#: includes/modules/class-builder-module-toggle.php:86
+msgid "State"
+msgstr ""
+
+#: includes/modules/class-builder-module-toggle.php:90
+#: template-preview.php:113
+msgid "Close"
+msgstr ""
+
+#: includes/modules/class-builder-module-toggle.php:91
+msgid "Open"
+msgstr ""
+
+#: includes/modules/class-builder-module-toggle.php:93
+msgid ""
+"Choose whether or not this toggle should start in an open or closed state."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:4
+#: includes/modules/class-builder-module-video-slider.php:7
+#: includes/modules/class-builder-module-video.php:4
+msgid "Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:9
+msgid "New Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:10
+msgid "Video Settings"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:27
+msgid ""
+"This will change the label of the video in the builder for easy "
+"identification."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:30
+#: includes/modules/class-builder-module-video.php:29
+msgid "Video MP4/URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:35
+#: includes/modules/class-builder-module-video.php:34
+msgid "Choose a Video MP4 File"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:36
+#: includes/modules/class-builder-module-video-slider-item.php:46
+#: includes/modules/class-builder-module-video.php:35
+#: includes/modules/class-builder-module-video.php:45
+msgid "Set As Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:37
+#: includes/modules/class-builder-module-video.php:36
+msgid ""
+"Upload your desired video in .MP4 format, or type in the URL to the video "
+"you would like to display"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:40
+#: includes/modules/class-builder-module-video.php:39
+msgid "Video Webm"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:45
+#: includes/modules/class-builder-module-video.php:44
+msgid "Choose a Video WEBM File"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:47
+#: includes/modules/class-builder-module-video.php:46
+msgid ""
+"Upload the .WEBM version of your video here. All uploaded videos should be "
+"in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:50
+#: includes/modules/class-builder-module-video.php:49
+msgid "Image Overlay URL"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:58
+#: includes/modules/class-builder-module-video.php:57
+msgid "Generate From Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider-item.php:61
+#: includes/modules/class-builder-module-video.php:60
+msgid ""
+"Upload your desired image, or type in the URL to the image you would like to "
+"display over your video. You can also generate a still image from your video."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:4
+msgid "Video Slider"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:29
+msgid "Play Button"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:33
+msgid "Thumbnail Item"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:37
+msgid "Slider Arrows"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:46
+msgid "Display Image Overlays on Main Video"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:50
+msgid "Hide"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:51
+msgid "Show"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:53
+msgid ""
+"This option will cover the player UI on the main video. This image can "
+"either be uploaded in each video setting or auto-generated by Divi."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:66
+msgid "Slider Controls"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:70
+msgid "Use Thumbnail Track"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:71
+msgid "Use Dot Navigation"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:73
+msgid ""
+"This setting will let you choose to use the thumbnail track controls below "
+"the slider or dot navigation at the bottom of the slider."
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:76
+#: includes/modules/class-builder-module-video.php:63
+msgid "Play Icon Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-video-slider.php:82
+msgid "Thumbnail Overlay Color"
+msgstr ""
+
+#: includes/modules/class-builder-module-video.php:20
+msgid "Video Icon"
+msgstr ""
+
+#: includes/modules/templates/blog/no-results.php:4
+msgid "No Results Found"
+msgstr ""
+
+#: includes/modules/templates/blog/no-results.php:7
+msgid ""
+"The page you requested could not be found. Try refining your search, or use "
+"the navigation above to locate the post."
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:8
+msgid "Day"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:8
+#: includes/modules/templates/countdown-timer.php:10
+msgid "Day(s)"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:13
+msgid "Hrs"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:13
+#: includes/modules/templates/countdown-timer.php:15
+msgid "Hour(s)"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:18
+msgid "Min"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:18
+#: includes/modules/templates/countdown-timer.php:20
+msgid "Minute(s)"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:23
+msgid "Sec"
+msgstr ""
+
+#: includes/modules/templates/countdown-timer.php:23
+#: includes/modules/templates/countdown-timer.php:25
+msgid "Second(s)"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:120
+#: includes/structure/class-builder-row.php:215
+#: includes/structure/class-builder-section.php:213
+msgid ""
+"Adjust padding to specific values, or leave blank to use the default padding."
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:129
+#: includes/structure/class-builder-row.php:224
+#: includes/structure/class-builder-section.php:222
+msgid "Keep Custom Padding on Mobile"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:136
+#: includes/structure/class-builder-row.php:231
+#: includes/structure/class-builder-section.php:229
+msgid "Allow custom padding to be retained on mobile screens"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:139
+#: includes/structure/class-builder-section.php:310
+msgid "Use Custom Gutter Width"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:149
+msgid "Enable this option to define custom gutter width for this row."
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:152
+#: includes/structure/class-builder-section.php:323
+msgid "Gutter Width"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:161
+msgid "Adjust the spacing between each column in this row."
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:164
+#: includes/structure/class-builder-row.php:321
+#: includes/structure/class-builder-section.php:300
+msgid "Equalize Column Heights"
+msgstr ""
+
+#: includes/structure/class-builder-row-inner.php:179
+#: includes/structure/class-builder-row.php:336
+msgid "Keep Column Padding on Mobile"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:134
+msgid "Make This Row Fullwidth"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:142
+msgid ""
+"Enable this option to extend the width of this row to the edge of the "
+"browser window."
+msgstr ""
+
+#: includes/structure/class-builder-row.php:145
+#: includes/structure/class-builder-section.php:243
+msgid "Use Custom Width"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:157
+msgid ""
+"Change to Yes if you would like to adjust the width of this row to a non-"
+"standard width."
+msgstr ""
+
+#: includes/structure/class-builder-row.php:160
+msgid "Use grid padding"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:167
+msgid "Change to No if you would like delete grid padding."
+msgstr ""
+
+#: includes/structure/class-builder-row.php:170
+#: includes/structure/class-builder-section.php:258
+msgid "Unit"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:174
+#: includes/structure/class-builder-section.php:262
+msgid "px"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:187
+#: includes/structure/class-builder-row.php:199
+#: includes/structure/class-builder-section.php:276
+#: includes/structure/class-builder-section.php:288
+msgid "Custom Width"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:196
+#: includes/structure/class-builder-row.php:208
+msgid "Define custom width for this Row"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:297
+#: includes/structure/class-builder-section.php:185
+msgid "Use Parallax Effect"
+msgstr ""
+
+#: includes/structure/class-builder-row.php:546
+msgid ""
+"This will change the label of the row in the builder for easy identification "
+"when collapsed."
+msgstr ""
+
+#: includes/structure/class-builder-section.php:113
+msgid "Transparent Background Color"
+msgstr ""
+
+#: includes/structure/class-builder-section.php:123
+msgid ""
+"Enabling this option will remove the background color of this section, "
+"allowing the website background color or background image to show through."
+msgstr ""
+
+#: includes/structure/class-builder-section.php:175
+msgid "Show Inner Shadow"
+msgstr ""
+
+#: includes/structure/class-builder-section.php:182
+msgid ""
+"Here you can select whether or not your section has an inner shadow. This "
+"can look great when you have colored backgrounds or background images."
+msgstr ""
+
+#: includes/structure/class-builder-section.php:195
+msgid ""
+"If enabled, your background image will stay fixed as your scroll, creating a "
+"fun parallax-like effect."
+msgstr ""
+
+#: includes/structure/class-builder-section.php:232
+msgid "Make This Section Fullwidth"
+msgstr ""
+
+#: includes/structure/class-builder-section.php:483
+msgid ""
+"This will change the label of the section in the builder for easy "
+"identification when collapsed."
+msgstr ""
+
+#: layouts.php:4
+msgctxt "Layout type general name"
+msgid "Layouts"
+msgstr ""
+
+#: layouts.php:5
+msgctxt "Layout type singular name"
+msgid "Layout"
+msgstr ""
+
+#: layouts.php:6
+msgctxt "Layout item"
+msgid "Add New"
+msgstr ""
+
+#: layouts.php:7
+msgid "Add New Layout"
+msgstr ""
+
+#: layouts.php:9
+msgid "New Layout"
+msgstr ""
+
+#: layouts.php:11
+msgid "View Layout"
+msgstr ""
+
+#: layouts.php:12
+msgid "Search Layouts"
+msgstr ""
+
+#: layouts.php:13
+msgid "Nothing found"
+msgstr ""
+
+#: layouts.php:14
+msgid "Nothing found in Trash"
+msgstr ""
+
+#: layouts.php:40
+msgid "Scope"
+msgstr ""
+
+#: layouts.php:53
+msgid "Layout Type"
+msgstr ""
+
+#: layouts.php:66
+msgid "Module Width"
+msgstr ""
+
+#: layouts.php:79
+msgid "Category"
+msgstr ""
+
+#: layouts.php:142
+msgid "Built For Any"
+msgstr ""
+
+#: layouts.php:167
+msgid "Built For"
+msgstr ""
+
+#: layouts.php:168
+msgid "Global Layout"
+msgstr ""
+
+#: layouts.php:180
+msgid "Standard"
+msgstr ""
+
+#: layouts.php:421
+msgid "About Us Button"
+msgstr ""
+
+#: template-preview.php:9 template-preview.php:64
+msgid "Authentication failed. You cannot preview this item."
+msgstr ""
+
+#: template-preview.php:14
+msgid "Authentication failed. You are not logged in."
+msgstr ""
+
+#: template-preview.php:19 template-preview.php:67
+msgid "Authentication failed. You have no permission to preview this item."
+msgstr ""
+
+#: template-preview.php:101
+msgid "Loading preview..."
+msgstr ""
+
+#: template-preview.php:109
+msgid "Link Disabled"
+msgstr ""
+
+#: template-preview.php:110
+msgid "During preview, link to different page is disabled"
+msgstr ""

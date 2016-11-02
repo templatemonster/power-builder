@@ -1,0 +1,25 @@
+#tm_builder_outer_content {
+	.tm_pb_image img {
+		width: inherit;
+	}
+	.tm_pb_image {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		line-height: 0;
+
+		&.aligncenter {
+			text-align: center;
+		}
+
+		&.tm_pb_has_overlay a.tm_pb_lightbox_image {
+			display: inline-block;
+			position: relative;
+		}
+	}
+
+	.tm_pb_image_sticky {
+		margin-bottom: 0 !important;
+		display: inherit;
+	}
+}

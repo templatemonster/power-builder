@@ -1,0 +1,118 @@
+#tm_builder_outer_content {
+
+	.tm_pb_blurb{
+		.tm_pb_main_blurb_image{
+			text-align: center;
+			margin-bottom: 30px;
+				a{
+					display: inline-block;
+				}
+		}
+		.tm-pb-icon{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			height: 100%;
+			&:before{
+				vertical-align: middle;
+				@include fa-icon();
+				content: attr( data-icon );
+			}
+		}
+		.tm-pb-icon-circle {
+			width: 100px;
+			height: 100px;
+			font-size: 30px;
+			border-radius: 100px;
+		}
+
+		.tm-pb-icon-circle-border {
+			border: 3px solid;
+		}
+	}
+
+	.tm_pb_blurb img {
+		width: inherit;
+	}
+	.tm_pb_blurb_container h4 a {
+		border-bottom: none;
+	}
+	.tm_pb_blurb_content {
+		word-wrap: break-word;
+	}
+	.tm_pb_blurb_content {
+		max-width: 550px;
+		margin: 0 auto;
+		position: relative;
+
+		p:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+	.tm_pb_blurb h4 {
+		padding-bottom: 5px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+	.tm_pb_blurb_position_left .tm_pb_main_blurb_image,
+	.tm_pb_blurb_position_right .tm_pb_main_blurb_image {
+		width: 32px;
+		display: table-cell;
+	}
+
+	.tm_pb_blurb_position_left .tm_pb_main_blurb_image img,
+	.tm_pb_blurb_position_right .tm_pb_main_blurb_image img {
+		width: inherit;
+	}
+
+	.tm_pb_blurb_position_left .tm-pb-icon-circle,
+	.tm_pb_blurb_position_right .tm-pb-icon-circle {
+
+	}
+
+	.tm_pb_blurb_position_left .tm-pb-icon-circle-border,
+	.tm_pb_blurb_position_right .tm-pb-icon-circle-border {
+		border: 2px solid;
+	}
+
+	.tm_pb_blurb_position_left .tm_pb_blurb_container,
+	.tm_pb_blurb_position_right .tm_pb_blurb_container {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.tm_pb_blurb_position_left {
+		.tm_pb_blurb_container {
+			padding-left: 15px;
+		}
+
+		.tm_pb_blurb_content {
+			//text-align: left;
+		}
+	}
+
+	.tm_pb_blurb_position_right {
+		.tm_pb_blurb_container {
+			padding-right: 15px;
+		}
+
+		.tm_pb_blurb_content {
+			padding-right: 52px;
+			text-align: right;
+		}
+
+		.tm_pb_main_blurb_image {
+			left: auto;
+			right: 0;
+		}
+
+		.tm-pb-icon {
+			margin-right: 0;
+			margin-left: 20px;
+		}
+	}
+}

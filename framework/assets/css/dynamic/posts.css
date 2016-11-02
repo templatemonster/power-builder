@@ -1,0 +1,4 @@
+#tm_builder_outer_content .tm-pb-spinner-double-bounce .tm-pb-double-bounce1,
+#tm_builder_outer_content .tm-pb-spinner-double-bounce .tm-pb-double-bounce2 {
+	background: $regular_accent_color_1;
+}
