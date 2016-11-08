@@ -1229,9 +1229,6 @@ function tm_pb_process_settings_form() {
 
 	update_option( 'tm_builder_settings', $options );
 
-	wp_redirect( admin_url( sprintf( 'edit.php?post_type=%s', TM_BUILDER_LAYOUT_POST_TYPE ) ) );
-	die();
-
 }
 
 add_action( 'export_wp', 'tm_pb_edit_export_query' );
