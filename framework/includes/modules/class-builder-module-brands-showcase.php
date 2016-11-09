@@ -410,6 +410,14 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 		wp_enqueue_script( 'tm-builder-swiper' );
 	}
 
+	function pre_shortcode_content() {
+		global $tm_pb_brands_showcase;
+
+		$tm_pb_brands_showcase = array(
+			'template' => $this->shortcode_atts['template'],
+		);
+	}
+
 	function shortcode_callback( $atts, $content = null, $function_name ) {
 
 		$template = $this->shortcode_atts['template'];
@@ -417,11 +425,11 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 
 		if ( 'carousel' === $template ) {
 			$carousel_settings = htmlentities( json_encode( array(
-				'autoplay' => $this->shortcode_atts['autoplay'],
-				'navigateButton' => $this->shortcode_atts['navigate_button'],
-				'pagination' => $this->shortcode_atts['navigate_pagination'],
-				'slidesPerView' => $this->shortcode_atts['slides_per_view'],
-				'centeredSlides' => $this->shortcode_atts['centered_slides'],
+				'autoplay'           => $this->shortcode_atts['autoplay'],
+				'navigateButton'     => $this->shortcode_atts['navigate_button'],
+				'pagination'         => $this->shortcode_atts['navigate_pagination'],
+				'slidesPerView'      => $this->shortcode_atts['slides_per_view'],
+				'centeredSlides'     => $this->shortcode_atts['centered_slides'],
 				'spaceBetweenSlides' => apply_filters( 'tm_pb_module_carousel_space', 10 ),
 			) ) );
 		}
@@ -471,7 +479,6 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 		$this->init_divider_styles( $this->shortcode_atts['module_class'], $function_name );
 		$this->shortcode_content = trim( strip_tags( $this->shortcode_content, '<div></div><a></a><img><img/><span></span>' ) );
 		$output = $this->get_template_part( sprintf( 'brands-showcase/%s/brands-showcase.php', $template ) );
-
 		return $output;
 	}
 

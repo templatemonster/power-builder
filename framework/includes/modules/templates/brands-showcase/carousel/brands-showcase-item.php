@@ -3,21 +3,16 @@
  * Template part for displaying brands showcase item
  */
 
-$brand = $this->_var( 'brand' );
 
-if ( ! is_array( $brand ) ) {
-	return;
-}
-
-$brand_title = Cherry_Toolkit::get_arg( $brand, 'brand_title' );
-$brand_logo = Cherry_Toolkit::get_arg( $brand, 'brand_logo' );
-$brand_url = Cherry_Toolkit::get_arg( $brand, 'brand_url' );
-$url_new_window = Cherry_Toolkit::get_arg( $brand, 'url_new_window', 'off' );
-$brand_name = $this->html( Cherry_Toolkit::get_arg( $brand, 'brand_name' ), '<span class="tm_pb_brands_showcase_module__item__title">%s</span>' );
-$brand_description = sprintf( '<span class="tm_pb_brands_showcase_module__item__description">%s</span>', Cherry_Toolkit::get_arg( $brand, 'brand_description' ) );
+$brand_title = $this->_var( 'brand_title' );
+$brand_logo = $this->_var( 'brand_logo' );
+$brand_url = $this->_var( 'brand_url' );
+$url_new_window = $this->_var( 'url_new_window' );
+$brand_name = $this->html( $this->_var( 'brand_name' ), '<span class="tm_pb_brands_showcase_module__item__title">%s</span>' );
+$brand_description = sprintf( '<span class="tm_pb_brands_showcase_module__item__description">%s</span>', $this->_var( 'brand_description' ) );
 
 $wrapper_atts = $this->prepare_atts( array(
-	'id' => Cherry_Toolkit::get_arg( $brand, 'id' ),
+	'id'    => $this->_var( 'id' ),
 	'class' => 'swiper-slide tm_pb_brands_showcase_module__item__wrapper',
 ), true );
 
@@ -30,8 +25,8 @@ $anchor_atts = $this->prepare_atts( array(
 
 $img_atts = $this->prepare_atts( array(
 	'class' => 'tm_pb_brands_showcase_module__item__logo',
-	'src' => esc_attr( $brand_logo ),
-	'alt' => esc_attr( $brand_title ),
+	'src'   => esc_attr( $brand_logo ),
+	'alt'   => esc_attr( $brand_title ),
 ), true );
 
 ?>

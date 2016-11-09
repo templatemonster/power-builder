@@ -32,10 +32,7 @@ $swiper_atts = $this->prepare_atts( array(
 		<div<?php echo $swiper_atts; ?>>
 			<div class="swiper-container tm_pb_brands_showcase_module__brands">
 				<div class="swiper-wrapper">
-					<?php foreach( $children as $brand ) : ?>
-						<?php $this->_var( 'brand', $this->prepare_brand( $brand ) ); ?>
-						<?php echo $this->get_template_part( $this->_var( 'template' ) ); ?>
-					<?php endforeach; ?>
+					<?php echo $this->shortcode_content; ?>
 				</div>
 				<div class="swiper-pagination"></div>
 				<?php if ( 'on' === $navigate_button ) : ?>

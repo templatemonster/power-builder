@@ -29,12 +29,7 @@ $wrapper_atts = $this->prepare_atts( array(
 		<?php echo $this->esc_switcher( 'divider', sprintf( '<hr class="tm_pb_brands_showcase_module__divider%s">', $divider_hide_on_mobile ) ); ?>
 
 		<div class="row tm_pb_brands_showcase_module__brands">
-			<?php foreach( $children as $brand ) : ?>
-				<div class="<?php echo tm_builder_tools()->get_col_classes( $this ); ?>">
-					<?php $this->_var( 'brand', $brand ); ?>
-					<?php echo $this->get_template_part( $template ); ?>
-				</div>
-			<?php endforeach; ?>
+			<?php echo $this->shortcode_content; ?>
 		</div>
 
 	</div><!-- .tm_pb_brands_showcase_module__wrapper -->

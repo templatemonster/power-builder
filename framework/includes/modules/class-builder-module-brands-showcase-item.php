@@ -93,6 +93,7 @@ class Tm_Builder_Module_Brands_Showcase_Item extends Tm_Builder_Module {
 	}
 
 	function shortcode_callback( $atts, $content = null, $function_name ) {
+		global $tm_pb_brands_showcase;
 
 		$this->set_vars( array(
 			'brand_logo',
@@ -105,7 +106,7 @@ class Tm_Builder_Module_Brands_Showcase_Item extends Tm_Builder_Module {
 			'module_class',
 		) );
 
-		return $this->wrap_module( $this->shortcode_content, array(), $function_name, $atts );
+		return $this->get_template_part( sprintf( 'brands-showcase/%s/brands-showcase-item.php', $tm_pb_brands_showcase['template'] ) );
 	}
 }
 new Tm_Builder_Module_Brands_Showcase_Item;
