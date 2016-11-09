@@ -2261,15 +2261,16 @@ jQuery(document).ready( function($){
 						paginationClickable: true,
 						spaceBetween: +spaceBetweenSlides,
 						speed: 500,
-						nextButton: $('.swiper-button-next', $this),
-						prevButton: $('.swiper-button-prev', $this),
-						pagination: $('.swiper-pagination', $this),
+						nextButton: ( navigateButton ) ? $('.swiper-button-next', $this) : null,
+						prevButton: ( navigateButton ) ? $('.swiper-button-prev', $this) : null,
+						pagination: ( pagination ) ? $('.swiper-pagination', $this) : null,
 						onInit: function(){
-							if ( navigateButton ) {
-								$('.swiper-button-next, .swiper-button-prev', $this).css({ 'display': 'block' });
+							if ( ! navigateButton ) {
+								$('.swiper-button-next, .swiper-button-prev', $this).remove();
 							}
+
 							if ( ! pagination ) {
-								$('.swiper-pagination', $this).css({ 'display': 'none' });
+								$('.swiper-pagination', $this).remove();
 							}
 						},
 						breakpoints: {
