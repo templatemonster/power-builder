@@ -54,6 +54,19 @@ function tm_get_maps_api_url() {
 	return $google_maps_url;
 }
 
+/**
+ * Fix '&' encoding bug
+ */
+add_filter( 'script_loader_tag', 'tm_pb_fix_map_url', 10, 3 );
+function tm_pb_fix_map_url( $tag, $handle, $src ) {
+
+	if ( 'google-maps-api' !== $handle ) {
+		return $tag;
+	}
+
+	return str_replace( '#038;', '&', $tag );
+}
+
 // exclude predefined layouts from import
 function tm_remove_predefined_layouts_from_import( $posts ) {
 	$processed_posts = $posts;
