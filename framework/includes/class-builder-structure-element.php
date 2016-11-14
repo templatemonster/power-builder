@@ -1,4 +1,5 @@
 <?php
+
 class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 	public $is_structure_element = true;
 
@@ -69,8 +70,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_padding_tablet = typeof tm_pb_padding_%1$s_tablet !== \'undefined\' ? tm_pb_padding_%1$s_tablet : \'\',
 					current_value_padding_phone = typeof tm_pb_padding_%1$s_phone !== \'undefined\' ? tm_pb_padding_%1$s_phone : \'\',
 					last_edited_padding_field = typeof tm_pb_padding_%1$s_last_edited !== \'undefined\' ?  tm_pb_padding_%1$s_last_edited : \'\',
+					has_laptop_padding = typeof tm_pb_padding_%1$s_laptop !== \'undefined\' ? \'yes\' : \'no\',
 					has_tablet_padding = typeof tm_pb_padding_%1$s_tablet !== \'undefined\' ? \'yes\' : \'no\',
-					has_phone_padding = typeof tm_pb_padding_%1$s_tablet !== \'undefined\' ? \'yes\' : \'no\',
+					has_phone_padding = typeof tm_pb_padding_%1$s_phone !== \'undefined\' ? \'yes\' : \'no\',
 					current_value_bg_img = typeof tm_pb_bg_img_%1$s !== \'undefined\' ? tm_pb_bg_img_%1$s : \'\';
 					current_value_parallax = typeof tm_pb_parallax_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_%1$s ? \' selected="selected"\' : \'\';
 					current_value_parallax_method = typeof tm_pb_parallax_method_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_method_%1$s ? \' selected="selected"\' : \'\';
@@ -98,7 +100,7 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						current_value_bg_img,
 						current_value_parallax,
 						current_value_parallax_method,
-						has_tablet_laptop,
+						has_laptop_padding,
 						has_tablet_padding,
 						has_phone_padding;
 					switch ( counter ) {
@@ -196,28 +198,33 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						<label>
 							%9$s
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_top tm-pb-validate-unit tm_pb_setting_mobile tm_pb_setting_mobile_desktop tm_pb_setting_mobile_active" id="tm_pb_padding_top_<%%= counter %%>" name="tm_pb_padding_top_<%%= counter %%>" value="<%%= current_value_pt %%>" data-device="desktop">
+							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_top tm_pb_setting_mobile tm_pb_setting_mobile_laptop" data-device="laptop">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_top tm_pb_setting_mobile tm_pb_setting_mobile_tablet" data-device="tablet">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_top tm_pb_setting_mobile tm_pb_setting_mobile_phone" data-device="phone">
 						</label>
 						<label>
 							%10$s
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_right tm-pb-validate-unit tm_pb_setting_mobile tm_pb_setting_mobile_desktop tm_pb_setting_mobile_active" id="tm_pb_padding_right_<%%= counter %%>" name="tm_pb_padding_right_<%%= counter %%>" value="<%%= current_value_pr %%>" data-device="desktop">
+							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_right tm_pb_setting_mobile tm_pb_setting_mobile_laptop" data-device="laptop">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_right tm_pb_setting_mobile tm_pb_setting_mobile_tablet" data-device="tablet">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_right tm_pb_setting_mobile tm_pb_setting_mobile_phone" data-device="phone">
 						</label>
 						<label>
 							%11$s
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_bottom tm-pb-validate-unit tm_pb_setting_mobile tm_pb_setting_mobile_desktop tm_pb_setting_mobile_active" id="tm_pb_padding_bottom_<%%= counter %%>" name="tm_pb_padding_bottom_<%%= counter %%>" value="<%%= current_value_pb %%>" data-device="desktop">
+							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_bottom tm_pb_setting_mobile tm_pb_setting_mobile_laptop" data-device="laptop">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_bottom tm_pb_setting_mobile tm_pb_setting_mobile_tablet" data-device="tablet">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_bottom tm_pb_setting_mobile tm_pb_setting_mobile_phone" data-device="phone">
 						</label>
 						<label>
 							%12$s
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_left tm-pb-validate-unit tm_pb_setting_mobile tm_pb_setting_mobile_desktop tm_pb_setting_mobile_active" id="tm_pb_padding_left_<%%= counter %%>" name="tm_pb_padding_left_<%%= counter %%>" value="<%%= current_value_pl %%>" data-device="desktop">
+							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_left tm_pb_setting_mobile tm_pb_setting_mobile_laptop" data-device="laptop">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_left tm_pb_setting_mobile tm_pb_setting_mobile_tablet" data-device="tablet">
 							<input type="text" class="medium-text tm_custom_margin tm_custom_margin_left tm_pb_setting_mobile tm_pb_setting_mobile_phone" data-device="phone">
 						</label>
 						<input type="hidden" class="tm_custom_margin_main tm_pb_setting_mobile tm_pb_setting_mobile_desktop tm-pb-main-setting tm_pb_setting_mobile_active" value="<%%= \'\' === current_value_pt && \'\' === current_value_pr && \'\' === current_value_pb && \'\' === current_value_pl ? \'\' : current_value_pt + \'|\' + current_value_pr + \'|\' + current_value_pb + \'|\' + current_value_pl %%>" data-device="desktop">
+						<input type="hidden" class="tm_custom_margin_main tm_pb_setting_mobile tm_pb_setting_mobile_laptop tm-pb-main-setting" id="tm_pb_padding_<%%= counter %%>_laptop" name="tm_pb_padding_<%%= counter %%>_laptop" value="<%%= current_value_padding_laptop %%>" data-device="laptop" data-has_saved_value="<%%= has_laptop_padding %%>">
 						<input type="hidden" class="tm_custom_margin_main tm_pb_setting_mobile tm_pb_setting_mobile_tablet tm-pb-main-setting" id="tm_pb_padding_<%%= counter %%>_tablet" name="tm_pb_padding_<%%= counter %%>_tablet" value="<%%= current_value_padding_tablet %%>" data-device="tablet" data-has_saved_value="<%%= has_tablet_padding %%>">
 						<input type="hidden" class="tm_custom_margin_main tm_pb_setting_mobile tm_pb_setting_mobile_phone tm-pb-main-setting" id="tm_pb_padding_<%%= counter %%>_phone" name="tm_pb_padding_<%%= counter %%>_phone" value="<%%= current_value_padding_phone %%>" data-device="phone" data-has_saved_value="<%%= has_phone_padding %%>">
 						<input id="tm_pb_padding_<%%= counter %%>_last_edited" type="hidden" class="tm_pb_mobile_last_edited_field" value="<%%= last_edited_padding_field %%>">

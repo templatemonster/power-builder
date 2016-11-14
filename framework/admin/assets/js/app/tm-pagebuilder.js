@@ -221,6 +221,7 @@
 		}
 
 		function tm_pb_append_templates( start_from ) {
+
 			$.ajax({
 				type: "POST",
 				dataType: 'json',
@@ -233,10 +234,6 @@
 				},
 				error: function() {
 					var $failure_notice_template = $( '#et-builder-failure-notice-template' );
-
-					if ( tm_error_modal_shown ) {
-						return;
-					}
 
 					if ( ! $failure_notice_template.length ) {
 						return;
