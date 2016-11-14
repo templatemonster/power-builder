@@ -1415,11 +1415,13 @@ jQuery(document).ready( function($){
 						}
 					});
 
-					setTimeout(function(){
+					google.maps.event.addListener( $this_map_container.data('map'), 'bounds_changed', function() {
+
 						if ( !$this_map_container.data('map').getBounds().contains( $this_map_container.data('bounds').getNorthEast() ) || !$this_map_container.data('map').getBounds().contains( $this_map_container.data('bounds').getSouthWest() ) ) {
 							$this_map_container.data('map').fitBounds( $this_map_container.data('bounds') );
 						}
-					}, 200 );
+
+					});
 			});
 		} );
 	}
