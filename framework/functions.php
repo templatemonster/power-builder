@@ -64,7 +64,7 @@ function tm_pb_fix_map_url( $tag, $handle, $src ) {
 		return $tag;
 	}
 
-	return str_replace( '#038;', '&', $tag );
+	return str_replace( array( '#038;', '&&' ), array( '&', '&' ), $tag );
 }
 
 // exclude predefined layouts from import
