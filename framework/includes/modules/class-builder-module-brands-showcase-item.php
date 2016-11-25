@@ -106,6 +106,17 @@ class Tm_Builder_Module_Brands_Showcase_Item extends Tm_Builder_Module {
 			'module_class',
 		) );
 
+		$cols = array(
+			'columns',
+			'columns_laptop',
+			'columns_tablet',
+			'columns_phone',
+		);
+
+		foreach ( $cols as $col ) {
+			$this->_var( $col, $tm_pb_brands_showcase[ $col ] );
+		}
+
 		return $this->get_template_part( sprintf( 'brands-showcase/%s/brands-showcase-item.php', $tm_pb_brands_showcase['template'] ) );
 	}
 }

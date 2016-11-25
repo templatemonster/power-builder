@@ -414,7 +414,11 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 		global $tm_pb_brands_showcase;
 
 		$tm_pb_brands_showcase = array(
-			'template' => $this->shortcode_atts['template'],
+			'template'       => $this->shortcode_atts['template'],
+			'columns'        => $this->shortcode_atts['columns'],
+			'columns_laptop' => $this->shortcode_atts['columns_laptop'],
+			'columns_tablet' => $this->shortcode_atts['columns_tablet'],
+			'columns_phone'  => $this->shortcode_atts['columns_phone'],
 		);
 	}
 
