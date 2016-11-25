@@ -292,7 +292,31 @@ class Tm_Builder_Element {
 		return $this->_shortcode_callback_num;
 	}
 
+	/**
+	 * Fix column attributes.
+	 *
+	 * @param  array $atts Shortcode attributes.
+	 * @return array
+	 */
+	function fix_columns( $atts ) {
+
+		if ( empty( $atts['columns'] ) ) {
+			return $atts;
+		}
+
+		foreach ( array( 'columns_laptop', 'columns_tablet', 'columns_phone' ) as $attr ) {
+			if ( empty( $atts[ $attr ] ) ) {
+				$atts[ $attr ] = $atts['columns'];
+			}
+		}
+
+		return $atts;
+	}
+
 	function _shortcode_callback( $atts, $content = null, $function_name ) {
+
+		$atts = $this->fix_columns( $atts );
+
 		$this->shortcode_atts = shortcode_atts( $this->get_shortcode_fields(), $atts );
 
 		$this->_decode_double_quotes();
