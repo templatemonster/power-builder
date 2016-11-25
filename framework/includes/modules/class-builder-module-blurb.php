@@ -466,7 +466,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		if ( 'off' !== $this->_var( 'use_icon_font_size' ) ) {
 			$font_size_values = array(
 				'desktop' => $this->_var( 'icon_font_size' ),
-				'tablet'  => $this->_var( 'icon_font_size_laptop' ),
+				'laptop'  => $this->_var( 'icon_font_size_laptop' ),
 				'tablet'  => $this->_var( 'icon_font_size_tablet' ),
 				'phone'   => $this->_var( 'icon_font_size_phone' ),
 			);
