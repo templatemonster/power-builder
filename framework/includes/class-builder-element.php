@@ -2786,20 +2786,52 @@ class Tm_Builder_Element {
 
 		$custom_margin  = $this->advanced_options['custom_margin_padding']['use_margin'] ? $this->shortcode_atts['custom_margin'] : '';
 		$custom_padding = $this->advanced_options['custom_margin_padding']['use_padding'] ? $this->shortcode_atts['custom_padding'] : '';
-		$custom_margin_mobile = $this->advanced_options['custom_margin_padding']['use_margin'] && ( isset( $this->shortcode_atts['custom_margin_tablet'] ) || isset( $this->shortcode_atts['custom_margin_phone'] ) )
-			? array(
-				'laptop' => isset( $this->shortcode_atts['custom_margin_laptop'] ) ? $this->shortcode_atts['custom_margin_laptop'] : '',
-				'tablet' => isset( $this->shortcode_atts['custom_margin_tablet'] ) ? $this->shortcode_atts['custom_margin_tablet'] : '',
-				'phone' => isset( $this->shortcode_atts['custom_margin_phone'] ) ? $this->shortcode_atts['custom_margin_phone'] : '',
-			)
-			: '';
-		$custom_padding_mobile = $this->advanced_options['custom_margin_padding']['use_padding'] && ( isset( $this->shortcode_atts['custom_padding_tablet'] ) || isset( $this->shortcode_atts['custom_padding_phone'] ) )
-			? array(
-				'laptop' => isset( $this->shortcode_atts['custom_padding_laptop'] ) ? $this->shortcode_atts['custom_padding_laptop'] : '',
-				'tablet' => isset( $this->shortcode_atts['custom_padding_tablet'] ) ? $this->shortcode_atts['custom_padding_tablet'] : '',
-				'phone' => isset( $this->shortcode_atts['custom_padding_phone'] ) ? $this->shortcode_atts['custom_padding_phone'] : '',
-			)
-			: '';
+
+		$margins = array(
+			'laptop' => 'custom_margin_laptop',
+			'tablet' => 'custom_margin_tablet',
+			'phone'  => 'custom_margin_phone',
+		);
+
+		if ( $this->advanced_options['custom_margin_padding']['use_margin'] && ( isset( $this->shortcode_atts['custom_margin_tablet'] ) || isset( $this->shortcode_atts['custom_margin_phone'] ) || isset( $this->shortcode_atts['custom_margin_laptop'] ) ) ) {
+
+			$prev = '';
+
+			foreach ( $margins as $key => $attr ) {
+
+				if ( ! empty( $this->shortcode_atts[ $attr ] ) ) {
+					$prev = $this->shortcode_atts[ $attr ];
+				}
+
+				$custom_margin_mobile[ $key ] = ! empty( $this->shortcode_atts[ $attr ] ) ? $this->shortcode_atts[ $attr ] : $prev;
+			}
+
+		} else {
+			$custom_margin_mobile = '';
+		}
+
+		$paddings = array(
+			'laptop' => 'custom_padding_laptop',
+			'tablet' => 'custom_padding_tablet',
+			'phone'  => 'custom_padding_phone',
+		);
+
+		if ( $this->advanced_options['custom_margin_padding']['use_padding'] && ( isset( $this->shortcode_atts['custom_padding_phone'] ) || isset( $this->shortcode_atts['custom_padding_tablet'] ) || isset( $this->shortcode_atts['custom_padding_laptop'] ) ) ) {
+
+			$prev = '';
+
+			foreach ( $paddings as $key => $attr ) {
+
+				if ( ! empty( $this->shortcode_atts[ $attr ] ) ) {
+					$prev = $this->shortcode_atts[ $attr ];
+				}
+
+				$custom_padding_mobile[ $key ] = ! empty( $this->shortcode_atts[ $attr ] ) ? $this->shortcode_atts[ $attr ] : $prev;
+			}
+
+		} else {
+			$custom_padding_mobile = '';
+		}
 
 		$padding        = '';
 		$margin         = '';

@@ -62,6 +62,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'padding_right_4',
 			'padding_bottom_4',
 			'padding_left_4',
+			'padding_1_laptop',
+			'padding_2_laptop',
+			'padding_3_laptop',
+			'padding_4_laptop',
 			'padding_1_tablet',
 			'padding_2_tablet',
 			'padding_3_tablet',
@@ -123,6 +127,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'parallax_method_3'     => array( 'on' ),
 			'parallax_4'            => array( 'off' ),
 			'parallax_method_4'     => array( 'on' ),
+			'custom_padding_laptop' => array( '' ),
 			'custom_padding_tablet' => array( '' ),
 			'custom_padding_phone'  => array( '' ),
 		);
@@ -438,6 +443,18 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'parallax_method_4' => array(
 				'type' => 'skip',
 			),
+			'padding_1_laptop' => array(
+				'type' => 'skip',
+			),
+			'padding_2_laptop' => array(
+				'type' => 'skip',
+			),
+			'padding_3_laptop' => array(
+				'type' => 'skip',
+			),
+			'padding_4_laptop' => array(
+				'type' => 'skip',
+			),
 			'padding_1_tablet' => array(
 				'type' => 'skip',
 			),
@@ -608,6 +625,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$padding_right_4         = $this->shortcode_atts['padding_right_4'];
 		$padding_bottom_4        = $this->shortcode_atts['padding_bottom_4'];
 		$padding_left_4          = $this->shortcode_atts['padding_left_4'];
+		$padding_1_laptop        = $this->shortcode_atts['padding_1_laptop'];
+		$padding_2_laptop        = $this->shortcode_atts['padding_2_laptop'];
+		$padding_3_laptop        = $this->shortcode_atts['padding_3_laptop'];
+		$padding_4_laptop        = $this->shortcode_atts['padding_4_laptop'];
 		$padding_1_tablet        = $this->shortcode_atts['padding_1_tablet'];
 		$padding_2_tablet        = $this->shortcode_atts['padding_2_tablet'];
 		$padding_3_tablet        = $this->shortcode_atts['padding_3_tablet'];
@@ -702,20 +723,33 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			),
 		);
 
+		$padding_1_tablet = $padding_1_tablet ? $padding_1_tablet : $padding_1_laptop;
+		$padding_2_tablet = $padding_2_tablet ? $padding_2_tablet : $padding_2_laptop;
+		$padding_3_tablet = $padding_3_tablet ? $padding_3_tablet : $padding_3_laptop;
+		$padding_4_tablet = $padding_4_tablet ? $padding_4_tablet : $padding_4_laptop;
+		$padding_1_phone  = $padding_1_phone  ? $padding_1_phone  : $padding_1_tablet;
+		$padding_2_phone  = $padding_2_phone  ? $padding_2_phone  : $padding_2_tablet;
+		$padding_3_phone  = $padding_3_phone  ? $padding_3_phone  : $padding_3_tablet;
+		$padding_4_phone  = $padding_4_phone  ? $padding_4_phone  : $padding_4_tablet;
+
 		$tm_pb_column_paddings_mobile = array(
 			array(
+				'laptop' => explode( '|', $padding_1_laptop ),
 				'tablet' => explode( '|', $padding_1_tablet ),
 				'phone'  => explode( '|', $padding_1_phone ),
 			),
 			array(
+				'laptop' => explode( '|', $padding_2_laptop ),
 				'tablet' => explode( '|', $padding_2_tablet ),
 				'phone'  => explode( '|', $padding_2_phone ),
 			),
 			array(
+				'laptop' => explode( '|', $padding_3_laptop ),
 				'tablet' => explode( '|', $padding_3_tablet ),
 				'phone'  => explode( '|', $padding_3_phone ),
 			),
 			array(
+				'laptop' => explode( '|', $padding_4_laptop ),
 				'tablet' => explode( '|', $padding_4_tablet ),
 				'phone'  => explode( '|', $padding_4_phone ),
 			),
@@ -780,10 +814,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			}
 		}
 
-		if ( ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
+		if ( ! empty( $padding_mobile_values['laptop'] ) || ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
 			$padding_mobile_values_processed = array();
 
-			foreach( array( 'tablet', 'phone' ) as $device ) {
+			foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
 				if ( empty( $padding_mobile_values[$device] ) ) {
 					continue;
 				}
