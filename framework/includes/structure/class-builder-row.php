@@ -531,11 +531,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'disabled_on' => array(
 				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
 				'type'            => 'multiple_checkboxes',
-				'options'         => array(
-					'phone'   => esc_html__( 'Phone', 'tm_builder' ),
-					'tablet'  => esc_html__( 'Tablet', 'tm_builder' ),
-					'desktop' => esc_html__( 'Desktop', 'tm_builder' ),
-				),
+				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
 				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),

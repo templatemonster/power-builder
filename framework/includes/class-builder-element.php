@@ -3446,6 +3446,7 @@ class Tm_Builder_Element {
 			'max_width_980'  => '@media only screen and ( max-width: 980px )',
 			'768_980'        => '@media only screen and ( min-width: 768px ) and ( max-width: 980px )',
 			'max_width_767'  => '@media only screen and ( max-width: 767px )',
+			'min_width_1441' => '@media only screen and ( min-width: 1441px )',
 			'max_width_479'  => '@media only screen and ( max-width: 479px )',
 			'981_1440'       => '@media only screen and ( min-width: 61.9em ) and ( max-width: 1440px )',
 			'sm_up'          => '@media (min-width: 34em)',
