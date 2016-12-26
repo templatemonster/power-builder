@@ -516,7 +516,7 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 		}
 
 		if ( 'on' === $this->_var( 'use_text_overlay' ) && '' !== $this->_var( 'text_overlay_color' ) ) { TM_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%%.tm_pb_slide .tm_pb_slide_title, %%order_class%%.tm_pb_slide .tm_pb_slide_content',
+				'selector'    => '%%order_class%%.tm_pb_slide .tm_pb_slide_description_inner',
 				'declaration' => sprintf(
 					'background-color: %1$s;',
 					esc_html( $this->_var( 'text_overlay_color' ) )
@@ -650,9 +650,11 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				<div class="tm_pb_container clearfix">
 					%5$s
 					<div class="tm_pb_slide_description">
-						%1$s
-						<div class="tm_pb_slide_content%9$s">%2$s</div>
-						%3$s
+						<div class="tm_pb_slide_description_inner">
+							%1$s
+							<div class="tm_pb_slide_content%9$s">%2$s</div>
+							%3$s
+						</div>
 					</div> <!-- .tm_pb_slide_description -->
 				</div> <!-- .tm_pb_container -->
 				%7$s
