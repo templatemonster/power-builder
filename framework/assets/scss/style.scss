@@ -636,6 +636,27 @@
 		}
 	}
 
+	.tm_pb_column {
+		&.tm_pb_vertical_alligment_start {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+		}
+
+		&.tm_pb_vertical_alligment_center {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+		}
+
+		&.tm_pb_vertical_alligment_end {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-end;
+		}
+	}
+
+
 	.tm_pb_more_button:hover:after {
 		opacity: 1;
 		margin-left: 0;

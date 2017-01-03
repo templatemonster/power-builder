@@ -83,6 +83,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'parallax_method_3',
 			'parallax_4',
 			'parallax_method_4',
+			'vertical_alligment_1',
+			'vertical_alligment_2',
+			'vertical_alligment_3',
+			'vertical_alligment_4',
 			'module_id_1',
 			'module_id_2',
 			'module_id_3',
@@ -127,6 +131,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'parallax_method_3'     => array( 'on' ),
 			'parallax_4'            => array( 'off' ),
 			'parallax_method_4'     => array( 'on' ),
+			'vertical_alligment_1'  => array( 'top' ),
+			'vertical_alligment_2'  => array( 'top' ),
+			'vertical_alligment_3'  => array( 'top' ),
+			'vertical_alligment_4'  => array( 'top' ),
 			'custom_padding_laptop' => array( '' ),
 			'custom_padding_tablet' => array( '' ),
 			'custom_padding_phone'  => array( '' ),
@@ -443,6 +451,18 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'parallax_method_4' => array(
 				'type' => 'skip',
 			),
+			'vertical_alligment_1' => array(
+				'type' => 'skip',
+			),
+			'vertical_alligment_2' => array(
+				'type' => 'skip',
+			),
+			'vertical_alligment_3' => array(
+				'type' => 'skip',
+			),
+			'vertical_alligment_4' => array(
+				'type' => 'skip',
+			),
 			'padding_1_laptop' => array(
 				'type' => 'skip',
 			),
@@ -651,6 +671,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$parallax_method_3       = $this->shortcode_atts['parallax_method_3'];
 		$parallax_4              = $this->shortcode_atts['parallax_4'];
 		$parallax_method_4       = $this->shortcode_atts['parallax_method_4'];
+		$vertical_alligment_1    = $this->shortcode_atts['vertical_alligment_1'];
+		$vertical_alligment_2    = $this->shortcode_atts['vertical_alligment_2'];
+		$vertical_alligment_3    = $this->shortcode_atts['vertical_alligment_3'];
+		$vertical_alligment_4    = $this->shortcode_atts['vertical_alligment_4'];
 		$module_id_1             = $this->shortcode_atts['module_id_1'];
 		$module_id_2             = $this->shortcode_atts['module_id_2'];
 		$module_id_3             = $this->shortcode_atts['module_id_3'];
@@ -672,7 +696,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$custom_css_after_3      = $this->shortcode_atts['custom_css_after_3'];
 		$custom_css_after_4      = $this->shortcode_atts['custom_css_after_4'];
 
-		global $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_columns_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_column_css, $tm_pb_column_paddings_mobile;
+		global $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_columns_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_column_css, $tm_pb_column_paddings_mobile;
 
 		$keep_column_padding_mobile = $column_padding_mobile;
 
@@ -760,6 +784,13 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			array( $parallax_2, $parallax_method_2 ),
 			array( $parallax_3, $parallax_method_3 ),
 			array( $parallax_4, $parallax_method_4 ),
+		);
+
+		$tm_pb_vertical_alligment = array(
+			$vertical_alligment_1,
+			$vertical_alligment_2,
+			$vertical_alligment_3,
+			$vertical_alligment_4,
 		);
 
 		$tm_pb_column_css = array(

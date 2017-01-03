@@ -40,7 +40,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 		$specialty_columns           = $this->shortcode_atts['specialty_columns'];
 		$saved_specialty_column_type = $this->shortcode_atts['saved_specialty_column_type'];
 
-		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
+		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
 
 		if ( 'tm_pb_column_inner' !== $function_name ) {
 			$tm_specialty_column_type = $type;
@@ -69,6 +69,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 		$custom_css_before = isset( $column_css_array['custom_css_before'][$array_index] ) ? $column_css_array['custom_css_before'][$array_index] : '';
 		$custom_css_main = isset( $column_css_array['custom_css_main'][$array_index] ) ? $column_css_array['custom_css_main'][$array_index] : '';
 		$custom_css_after = isset( $column_css_array['custom_css_after'][$array_index] ) ? $column_css_array['custom_css_after'][$array_index] : '';
+
+		$vertical_alligment =  isset( $tm_pb_vertical_alligment[ $array_index ] ) ? $tm_pb_vertical_alligment[ $array_index ] : 'top';
 
 		if ( '' !== $background_color && 'rgba(0,0,0,0)' !== $background_color ) { TM_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%%',
@@ -184,6 +186,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 		$class .= 'tm_pb_column_inner' !== $function_name && '' !== $specialty_columns ? ' tm_pb_specialty_column' : '';
 
 		$class .= isset( $grid_class ) ? $grid_class: '';
+
+		$class .= isset( $vertical_alligment ) ? ' tm_pb_vertical_alligment_' . $vertical_alligment: '';
 
 		$output = sprintf(
 			'<div class="tm_pb_column %1$s%3$s"%5$s>

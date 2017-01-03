@@ -76,6 +76,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_bg_img = typeof tm_pb_bg_img_%1$s !== \'undefined\' ? tm_pb_bg_img_%1$s : \'\';
 					current_value_parallax = typeof tm_pb_parallax_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_%1$s ? \' selected="selected"\' : \'\';
 					current_value_parallax_method = typeof tm_pb_parallax_method_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_method_%1$s ? \' selected="selected"\' : \'\';
+					current_value_vertical_alligment_start = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'start\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+					current_value_vertical_alligment_center = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'center\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+					current_value_vertical_alligment_end = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'end\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					break; ',
 				esc_attr( $i )
 			);
@@ -100,6 +103,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						current_value_bg_img,
 						current_value_parallax,
 						current_value_parallax_method,
+						current_value_vertical_alligment_start,
+						current_value_vertical_alligment_center,
+						current_value_vertical_alligment_end,
 						has_laptop_padding,
 						has_tablet_padding,
 						has_phone_padding;
@@ -234,6 +240,24 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 				</div><!-- .tm-pb-option-container -->
 			</div><!-- .tm-pb-option -->
 
+			<div class="tm-pb-option">
+				<label for="tm_pb_padding_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%20$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_vertical_alligment_<%%= counter %%>" id="tm_pb_vertical_alligment_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="start" <%%= current_value_vertical_alligment_start %%>>%9$s</option>
+						<option value="center" <%%= current_value_vertical_alligment_center %%>>%21$s</option>
+						<option value="end" <%%= current_value_vertical_alligment_end %%>>%11$s</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
 			<%% counter++;
 			}); %%>',
 			esc_html__( 'Column', 'tm_builder' ),
@@ -254,7 +278,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			esc_html__( 'Parallax Method', 'tm_builder' ),
 			esc_html__( 'CSS', 'tm_builder' ),
 			esc_html__( 'True Parallax', 'tm_builder' ),
-			tm_pb_generate_mobile_options_tabs() // #19
+			tm_pb_generate_mobile_options_tabs(), // #19
+			esc_html__( 'Vertical Alligment', 'tm_builder' ), // #20
+			esc_html__( 'Center', 'tm_builder' ) // #21
 		);
 
 		return $output;
