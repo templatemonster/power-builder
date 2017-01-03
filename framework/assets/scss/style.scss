@@ -637,11 +637,8 @@
 	}
 
 	.tm_pb_column {
-		&.tm_pb_vertical_alligment_start {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-		}
+
+		&.tm_pb_vertical_alligment_start {}
 
 		&.tm_pb_vertical_alligment_center {
 			display: flex;
