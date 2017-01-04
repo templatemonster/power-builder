@@ -38,6 +38,8 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 		return $output;
 	}
 
+
+
 	function generate_column_vars_css() {
 		$output = '';
 		for ( $i = 1; $i < 5; $i++ ) {
@@ -76,9 +78,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_bg_img = typeof tm_pb_bg_img_%1$s !== \'undefined\' ? tm_pb_bg_img_%1$s : \'\';
 					current_value_parallax = typeof tm_pb_parallax_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_%1$s ? \' selected="selected"\' : \'\';
 					current_value_parallax_method = typeof tm_pb_parallax_method_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_method_%1$s ? \' selected="selected"\' : \'\';
-					current_value_vertical_alligment_start = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'start\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
-					current_value_vertical_alligment_center = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'center\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
-					current_value_vertical_alligment_end = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'end\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+					current_value_vertical_alligment[0] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'start\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+					current_value_vertical_alligment[1] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'center\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+					current_value_vertical_alligment[2] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'end\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					break; ',
 				esc_attr( $i )
 			);
@@ -103,9 +105,7 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						current_value_bg_img,
 						current_value_parallax,
 						current_value_parallax_method,
-						current_value_vertical_alligment_start,
-						current_value_vertical_alligment_center,
-						current_value_vertical_alligment_end,
+						current_value_vertical_alligment = [],
 						has_laptop_padding,
 						has_tablet_padding,
 						has_phone_padding;
@@ -250,9 +250,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 				</label>
 				<div class="tm-pb-option-container">
 					<select name="tm_pb_vertical_alligment_<%%= counter %%>" id="tm_pb_vertical_alligment_<%%= counter %%>" class="tm-pb-main-setting">
-						<option value="start" <%%= current_value_vertical_alligment_start %%>>%9$s</option>
-						<option value="center" <%%= current_value_vertical_alligment_center %%>>%21$s</option>
-						<option value="end" <%%= current_value_vertical_alligment_end %%>>%11$s</option>
+						<option value="start" <%%= current_value_vertical_alligment[0] %%>>%9$s</option>
+						<option value="center" <%%= current_value_vertical_alligment[1] %%>>%21$s</option>
+						<option value="end" <%%= current_value_vertical_alligment[2] %%>>%11$s</option>
 					</select>
 					<span class="tm-pb-reset-setting" style="display: none;"></span>
 				</div><!-- .tm-pb-option-container -->
