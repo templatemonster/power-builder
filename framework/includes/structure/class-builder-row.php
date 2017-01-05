@@ -87,6 +87,18 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'vertical_alligment_2',
 			'vertical_alligment_3',
 			'vertical_alligment_4',
+			'responsive_laptop_1',
+			'responsive_laptop_2',
+			'responsive_laptop_3',
+			'responsive_laptop_4',
+			'responsive_tablet_1',
+			'responsive_tablet_2',
+			'responsive_tablet_3',
+			'responsive_tablet_4',
+			'responsive_phone_1',
+			'responsive_phone_2',
+			'responsive_phone_3',
+			'responsive_phone_4',
 			'module_id_1',
 			'module_id_2',
 			'module_id_3',
@@ -135,6 +147,18 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'vertical_alligment_2'  => array( 'start' ),
 			'vertical_alligment_3'  => array( 'start' ),
 			'vertical_alligment_4'  => array( 'start' ),
+			'responsive_laptop_1'   => array( 'inherit' ),
+			'responsive_laptop_2'   => array( 'inherit' ),
+			'responsive_laptop_3'   => array( 'inherit' ),
+			'responsive_laptop_4'   => array( 'inherit' ),
+			'responsive_tablet_1'   => array( 'inherit' ),
+			'responsive_tablet_2'   => array( 'inherit' ),
+			'responsive_tablet_3'   => array( 'inherit' ),
+			'responsive_tablet_4'   => array( 'inherit' ),
+			'responsive_phone_1'    => array( 'inherit' ),
+			'responsive_phone_2'    => array( 'inherit' ),
+			'responsive_phone_3'    => array( 'inherit' ),
+			'responsive_phone_4'    => array( 'inherit' ),
 			'custom_padding_laptop' => array( '' ),
 			'custom_padding_tablet' => array( '' ),
 			'custom_padding_phone'  => array( '' ),
@@ -463,6 +487,42 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'vertical_alligment_4' => array(
 				'type' => 'skip',
 			),
+			'responsive_laptop_1' => array(
+				'type' => 'skip',
+			),
+			'responsive_laptop_2' => array(
+				'type' => 'skip',
+			),
+			'responsive_laptop_3' => array(
+				'type' => 'skip',
+			),
+			'responsive_laptop_4' => array(
+				'type' => 'skip',
+			),
+			'responsive_tablet_1' => array(
+				'type' => 'skip',
+			),
+			'responsive_tablet_2' => array(
+				'type' => 'skip',
+			),
+			'responsive_tablet_3' => array(
+				'type' => 'skip',
+			),
+			'responsive_tablet_4' => array(
+				'type' => 'skip',
+			),
+			'responsive_phone_1' => array(
+				'type' => 'skip',
+			),
+			'responsive_phone_2' => array(
+				'type' => 'skip',
+			),
+			'responsive_phone_3' => array(
+				'type' => 'skip',
+			),
+			'responsive_phone_4' => array(
+				'type' => 'skip',
+			),
 			'padding_1_laptop' => array(
 				'type' => 'skip',
 			),
@@ -675,6 +735,18 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$vertical_alligment_2    = $this->shortcode_atts['vertical_alligment_2'];
 		$vertical_alligment_3    = $this->shortcode_atts['vertical_alligment_3'];
 		$vertical_alligment_4    = $this->shortcode_atts['vertical_alligment_4'];
+		$responsive_laptop_1     = $this->shortcode_atts['responsive_laptop_1'];
+		$responsive_laptop_2     = $this->shortcode_atts['responsive_laptop_2'];
+		$responsive_laptop_3     = $this->shortcode_atts['responsive_laptop_3'];
+		$responsive_laptop_4     = $this->shortcode_atts['responsive_laptop_4'];
+		$responsive_tablet_1     = $this->shortcode_atts['responsive_tablet_1'];
+		$responsive_tablet_2     = $this->shortcode_atts['responsive_tablet_2'];
+		$responsive_tablet_3     = $this->shortcode_atts['responsive_tablet_3'];
+		$responsive_tablet_4     = $this->shortcode_atts['responsive_tablet_4'];
+		$responsive_phone_1      = $this->shortcode_atts['responsive_phone_1'];
+		$responsive_phone_2      = $this->shortcode_atts['responsive_phone_2'];
+		$responsive_phone_3      = $this->shortcode_atts['responsive_phone_3'];
+		$responsive_phone_4      = $this->shortcode_atts['responsive_phone_4'];
 		$module_id_1             = $this->shortcode_atts['module_id_1'];
 		$module_id_2             = $this->shortcode_atts['module_id_2'];
 		$module_id_3             = $this->shortcode_atts['module_id_3'];
@@ -696,7 +768,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$custom_css_after_3      = $this->shortcode_atts['custom_css_after_3'];
 		$custom_css_after_4      = $this->shortcode_atts['custom_css_after_4'];
 
-		global $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_columns_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_column_css, $tm_pb_column_paddings_mobile;
+		global $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_columns_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_responsive, $tm_pb_column_css, $tm_pb_column_paddings_mobile;
 
 		$keep_column_padding_mobile = $column_padding_mobile;
 
@@ -791,6 +863,27 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			$vertical_alligment_2,
 			$vertical_alligment_3,
 			$vertical_alligment_4,
+		);
+
+		$tm_pb_responsive = array(
+			'laptop' => array(
+				$responsive_laptop_1,
+				$responsive_laptop_2,
+				$responsive_laptop_3,
+				$responsive_laptop_4,
+			),
+			'tablet' => array(
+				$responsive_tablet_1,
+				$responsive_tablet_2,
+				$responsive_tablet_3,
+				$responsive_tablet_4,
+			),
+			'phone' => array(
+				$responsive_phone_1,
+				$responsive_phone_2,
+				$responsive_phone_3,
+				$responsive_phone_4,
+			),
 		);
 
 		$tm_pb_column_css = array(

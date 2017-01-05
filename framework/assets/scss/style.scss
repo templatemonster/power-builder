@@ -1452,21 +1452,8 @@
 
 		position: relative;
 		background: #464646 !important;
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			background: url("../images/preloader.gif") no-repeat;
-			-moz-border-radius: 32px;
-			-webkit-border-radius: 32px;
-			border-radius: 32px;
-			width: 32px;
-			height: 32px;
-			margin: -16px 0 0 -16px;
-		}
 	}
+
 
 	.tm_pb_text p:last-of-type {
 		padding-bottom: 0;

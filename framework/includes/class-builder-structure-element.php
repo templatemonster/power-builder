@@ -81,6 +81,25 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_vertical_alligment[0] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'start\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					current_value_vertical_alligment[1] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'center\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					current_value_vertical_alligment[2] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'end\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
+
+					current_value_responsive_laptop[0] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[1] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[2] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[3] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[4] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+
+					current_value_responsive_tablet[0] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[1] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[2] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[3] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[4] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+
+					current_value_responsive_phone[0] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[1] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[2] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[3] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[4] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+
 					break; ',
 				esc_attr( $i )
 			);
@@ -106,6 +125,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						current_value_parallax,
 						current_value_parallax_method,
 						current_value_vertical_alligment = [],
+						current_value_responsive_laptop = [],
+						current_value_responsive_tablet = [],
+						current_value_responsive_phone = [],
 						has_laptop_padding,
 						has_tablet_padding,
 						has_phone_padding;
@@ -241,7 +263,7 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			</div><!-- .tm-pb-option -->
 
 			<div class="tm-pb-option">
-				<label for="tm_pb_padding_<%%= counter %%>">
+				<label for="tm_pb_vertical_alligment_<%%= counter %%>">
 					%1$s
 					<%% if ( "4_4" !== column_type ) { %%>
 						<%%= counter + " " %%>
@@ -253,6 +275,66 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						<option value="start" <%%= current_value_vertical_alligment[0] %%>>%9$s</option>
 						<option value="center" <%%= current_value_vertical_alligment[1] %%>>%21$s</option>
 						<option value="end" <%%= current_value_vertical_alligment[2] %%>>%11$s</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
+			<div class="tm-pb-option">
+				<label for="tm_pb_responsive_laptop_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%22$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_responsive_laptop_<%%= counter %%>" id="tm_pb_responsive_laptop_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="inherit" <%%= current_value_responsive_laptop[0] %%>>%23$s</option>
+						<option value="12" <%%= current_value_responsive_laptop[1] %%>>%24$s</option>
+						<option value="6" <%%= current_value_responsive_laptop[2] %%>>%25$s</option>
+						<option value="4" <%%= current_value_responsive_laptop[3] %%>>%26$s</option>
+						<option value="3" <%%= current_value_responsive_laptop[4] %%>>%27$s</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
+			<div class="tm-pb-option">
+				<label for="tm_pb_responsive_tablet_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%28$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_responsive_tablet_<%%= counter %%>" id="tm_pb_responsive_tablet_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="inherit" <%%= current_value_responsive_tablet[0] %%>>%23$s</option>
+						<option value="12" <%%= current_value_responsive_tablet[1] %%>>%24$s</option>
+						<option value="6" <%%= current_value_responsive_tablet[2] %%>>%25$s</option>
+						<option value="4" <%%= current_value_responsive_tablet[3] %%>>%26$s</option>
+						<option value="3" <%%= current_value_responsive_tablet[4] %%>>%27$s</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
+			<div class="tm-pb-option">
+				<label for="tm_pb_responsive_phone_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%29$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_responsive_phone_<%%= counter %%>" id="tm_pb_responsive_phone_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="inherit" <%%= current_value_responsive_phone[0] %%>>%23$s</option>
+						<option value="12" <%%= current_value_responsive_phone[1] %%>>%24$s</option>
+						<option value="6" <%%= current_value_responsive_phone[2] %%>>%25$s</option>
+						<option value="4" <%%= current_value_responsive_phone[3] %%>>%26$s</option>
+						<option value="3" <%%= current_value_responsive_phone[4] %%>>%27$s</option>
 					</select>
 					<span class="tm-pb-reset-setting" style="display: none;"></span>
 				</div><!-- .tm-pb-option-container -->
@@ -280,7 +362,15 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			esc_html__( 'True Parallax', 'tm_builder' ),
 			tm_pb_generate_mobile_options_tabs(), // #19
 			esc_html__( 'Vertical Alligment', 'tm_builder' ), // #20
-			esc_html__( 'Center', 'tm_builder' ) // #21
+			esc_html__( 'Center', 'tm_builder' ), // #21
+			esc_html__( 'Laptop responsive', 'tm_builder' ), // #22
+			esc_html__( 'Inherit', 'tm_builder' ), // #23
+			esc_html__( 'Fullwidth', 'tm_builder' ), // #24
+			esc_html__( '2 Columns', 'tm_builder' ), // #25
+			esc_html__( '3 Columns', 'tm_builder' ), // #26
+			esc_html__( '4 Columns', 'tm_builder' ), // #27
+			esc_html__( 'Tablet responsive', 'tm_builder' ), // #28
+			esc_html__( 'Phone responsive', 'tm_builder' ) // #29
 		);
 
 		return $output;

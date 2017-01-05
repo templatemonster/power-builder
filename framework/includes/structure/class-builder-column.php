@@ -35,12 +35,33 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 		return $fields;
 	}
 
+	function generate_column_grid( $args = array() ) {
+		$grid_class = '';
+
+		$default_args = array(
+			'col-xs' => 12,
+			'col-sm' => 12,
+			'col-md' => 12,
+			'col-lg' => 12,
+		);
+
+		$args = wp_parse_args( $args, $default_args );
+
+		foreach ( $args as $key => $value ) {
+			$grid[] = $key . '-' . $value;
+		}
+
+		$grid_class = implode( ' ', $grid );
+
+		return $grid_class;
+	}
+
 	function shortcode_callback( $atts, $content = null, $function_name ) {
 		$type                        = $this->shortcode_atts['type'];
 		$specialty_columns           = $this->shortcode_atts['specialty_columns'];
 		$saved_specialty_column_type = $this->shortcode_atts['saved_specialty_column_type'];
 
-		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
+		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_responsive, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
 
 		if ( 'tm_pb_column_inner' !== $function_name ) {
 			$tm_specialty_column_type = $type;
@@ -152,25 +173,84 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			$tm_specialty_column_type = '' !== $saved_specialty_column_type ? $saved_specialty_column_type : $tm_specialty_column_type;
 		}
 
-
 		switch ( $type ) {
 			case '4_4':
-				$grid_class = ' ' . apply_filters( 'tm_builder_4_4_column_layout', 'col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 12,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 12,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_4_4_column_layout', $grid );
+
 				break;
 			case '1_2':
-				$grid_class = ' ' . apply_filters( 'tm_builder_1_2_column_layout', 'col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 6,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_1_2_column_layout', $grid );
+
 				break;
 			case '1_3':
-				$grid_class = ' ' . apply_filters( 'tm_builder_1_3_column_layout', 'col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 4,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 4,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_1_3_column_layout', $grid );
+
 				break;
 			case '1_4':
-				$grid_class = ' ' . apply_filters( 'tm_builder_1_4_column_layout', 'col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 3,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_1_4_column_layout', $grid );
+
 				break;
 			case '2_3':
-				$grid_class = ' ' . apply_filters( 'tm_builder_2_3_column_layout', 'col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 8,
+						'col-lg' => 8,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_2_3_column_layout', $grid );
+
 				break;
 			case '3_4':
-				$grid_class = ' ' . apply_filters( 'tm_builder_3_4_column_layout', 'col-xs-12 col-sm-6 col-md-6 col-lg-9 col-xl-9' );
+				$grid = $this->generate_column_grid(
+					array(
+						'col-xs' => 12,
+						'col-sm' => 12,
+						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
+						'col-lg' => 9,
+					)
+				);
+
+				$grid_class = ' ' . apply_filters( 'tm_builder_3_4_column_layout', $grid );
+
 				break;
 		}
 
