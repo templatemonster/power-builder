@@ -604,36 +604,48 @@ function tm_pb_extract_items( $content ) {
 endif;
 
 if ( ! function_exists( 'tm_builder_process_range_value' ) ) :
-function tm_builder_process_range_value( $range, $option_type = '' ) {
-	$range = trim( $range );
-	$range_digit = floatval( $range );
-	$range_string = str_replace( $range_digit, '', (string) $range );
+	function tm_builder_process_range_value( $range, $option_type = '' ) {
+		$range = trim( $range );
+		$range_digit = floatval( $range );
+		$range_string = str_replace( $range_digit, '', (string) $range );
 
-	if ( '' === $range_string ) {
-		$range_string = 'line_height' === $option_type && 3 >= $range_digit ? 'em' : 'px';
+		if ( '' === $range_string ) {
+			switch ( $option_type ) {
+				case 'line_height':
+					$range_string = 3 >= $range_digit ? 'em' : 'px';
+					break;
+
+				case 'order':
+					$range_string = '';
+					break;
+
+				default:
+					$range_string = 'px';
+					break;
+			}
+		}
+
+		$result = $range_digit . $range_string;
+
+		return apply_filters( 'tm_builder_processed_range_value', $result, $range, $range_string );
 	}
-
-	$result = $range_digit . $range_string;
-
-	return apply_filters( 'tm_builder_processed_range_value', $result, $range, $range_string );
-}
 endif;
 
 if ( ! function_exists( 'tm_builder_get_border_styles' ) ) :
-function tm_builder_get_border_styles() {
-	$styles = array(
-		'solid'  => esc_html__( 'Solid', 'tm_builder' ),
-		'dotted' => esc_html__( 'Dotted', 'tm_builder' ),
-		'dashed' => esc_html__( 'Dashed', 'tm_builder' ),
-		'double' => esc_html__( 'Double', 'tm_builder' ),
-		'groove' => esc_html__( 'Groove', 'tm_builder' ),
-		'ridge'  => esc_html__( 'Ridge', 'tm_builder' ),
-		'inset'  => esc_html__( 'Inset', 'tm_builder' ),
-		'outset' => esc_html__( 'Outset', 'tm_builder' ),
-	);
+	function tm_builder_get_border_styles() {
+		$styles = array(
+			'solid'  => esc_html__( 'Solid', 'tm_builder' ),
+			'dotted' => esc_html__( 'Dotted', 'tm_builder' ),
+			'dashed' => esc_html__( 'Dashed', 'tm_builder' ),
+			'double' => esc_html__( 'Double', 'tm_builder' ),
+			'groove' => esc_html__( 'Groove', 'tm_builder' ),
+			'ridge'  => esc_html__( 'Ridge', 'tm_builder' ),
+			'inset'  => esc_html__( 'Inset', 'tm_builder' ),
+			'outset' => esc_html__( 'Outset', 'tm_builder' ),
+		);
 
-	return apply_filters( 'tm_builder_border_styles', $styles );
-}
+		return apply_filters( 'tm_builder_border_styles', $styles );
+	}
 endif;
 
 if ( ! function_exists( 'tm_builder_get_websafe_fonts' ) ) :
@@ -4899,7 +4911,7 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 					$declaration .= sprintf(
 						'%1$s: %2$s%3$s',
 						$this_property,
-						esc_html( tm_builder_process_range_value( $this_value ) ),
+						esc_html( tm_builder_process_range_value( $this_value, $css_property ) ),
 						'' !== $additional_css ? $additional_css : ';'
 					);
 				}
@@ -4907,7 +4919,7 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 				$declaration = sprintf(
 					'%1$s: %2$s%3$s',
 					$css_property,
-					esc_html( tm_builder_process_range_value( $current_value ) ),
+					esc_html( tm_builder_process_range_value( $current_value, $css_property ) ),
 					'' !== $additional_css ? $additional_css : ';'
 				);
 			}
@@ -4924,11 +4936,11 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 			if ( 'desktop' !== $device ) {
 				switch ( $device ) {
 					case 'tablet':
-						$current_media_query = 'max_width_980';
+						$current_media_query = 'max_width_991';
 						break;
 
 					case 'laptop':
-						$current_media_query = '981_1440';
+						$current_media_query = '992_1440';
 						break;
 
 					default:

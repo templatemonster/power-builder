@@ -517,7 +517,7 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 					);
 
 					if ( 'on' !== $padding_mobile ) {
-						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_981' );
+						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
 					} TM_Builder_Element::set_style( $function_name, $element_style );
 				}
 			}

@@ -61,7 +61,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 		$specialty_columns           = $this->shortcode_atts['specialty_columns'];
 		$saved_specialty_column_type = $this->shortcode_atts['saved_specialty_column_type'];
 
-		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_responsive, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
+		global $tm_specialty_column_type, $tm_pb_column_backgrounds, $tm_pb_column_paddings, $tm_pb_column_inner_backgrounds, $tm_pb_column_inner_paddings, $tm_pb_columns_counter, $tm_pb_columns_inner_counter, $keep_column_padding_mobile, $tm_pb_column_parallax, $tm_pb_vertical_alligment, $tm_pb_responsive, $tm_pb_order, $tm_pb_column_css, $tm_pb_column_inner_css, $tm_pb_column_paddings_mobile;
 
 		if ( 'tm_pb_column_inner' !== $function_name ) {
 			$tm_specialty_column_type = $type;
@@ -124,16 +124,16 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 					);
 
 					if ( 'on' !== $keep_column_padding_mobile ) {
-						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_981' );
+						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
 					} TM_Builder_Element::set_style( $function_name, $element_style );
 				}
 			}
 		}
 
-		if ( ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
+		if ( ! empty( $padding_mobile_values['laptop'] ) || ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
 			$padding_mobile_values_processed = array();
 
-			foreach( array( 'tablet', 'phone' ) as $device ) {
+			foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
 				if ( empty( $padding_mobile_values[$device] ) ) {
 					continue;
 				}
@@ -145,10 +145,28 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 					'padding-left'   => isset( $padding_mobile_values[$device][3] ) ? $padding_mobile_values[$device][3] : '',
 				);
 			}
-
+			//var_dump($padding_mobile_values_processed);
 			if ( ! empty( $padding_mobile_values_processed ) ) {
 				tm_pb_generate_responsive_css( $padding_mobile_values_processed, '%%order_class%%', '', $function_name );
 			}
+		}
+
+		// Order mobile css generation
+		if ( ! empty( $tm_pb_order['laptop'] ) || ! empty( $tm_pb_order['tablet'] ) || ! empty( $tm_pb_order['phone'] ) ) {
+			$order_values = array();
+
+			$order_values = array(
+				'laptop'  => isset( $tm_pb_order[ 'laptop' ][ $array_index ] ) ? $tm_pb_order[ 'laptop' ][ $array_index ] : $array_index + 1,
+				'tablet'  => isset( $tm_pb_order[ 'tablet' ][ $array_index ] ) ? $tm_pb_order[ 'tablet' ][ $array_index ] : $array_index + 1,
+				'phone'   => isset( $tm_pb_order[ 'phone' ][ $array_index ] ) ? $tm_pb_order[ 'phone' ][ $array_index ] : $array_index + 1,
+			);
+
+			tm_pb_generate_responsive_css(
+				$order_values,
+				'%%order_class%%',
+				'order',
+				$function_name
+			);
 		}
 
 		if ( '' !== $custom_css_before ) { TM_Builder_Element::set_style( $function_name, array(
@@ -181,6 +199,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 12,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 12,
+						'col-xl' => 12,
 					)
 				);
 
@@ -194,6 +213,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 6,
+						'col-xl' => 6,
 					)
 				);
 
@@ -207,6 +227,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 4,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 4,
+						'col-xl' => 4,
 					)
 				);
 
@@ -220,6 +241,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 3,
+						'col-xl' => 3,
 					)
 				);
 
@@ -230,9 +252,10 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 				$grid = $this->generate_column_grid(
 					array(
 						'col-xs' => 12,
-						'col-sm' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 8,
-						'col-lg' => 8,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 8,
+						'col-xl' => 8,
 					)
 				);
 
@@ -243,9 +266,10 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 				$grid = $this->generate_column_grid(
 					array(
 						'col-xs' => 12,
-						'col-sm' => 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
-						'col-lg' => 9,
+						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 9,
+						'col-xl' => 9,
 					)
 				);
 

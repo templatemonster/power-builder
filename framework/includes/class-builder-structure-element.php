@@ -38,8 +38,6 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 		return $output;
 	}
 
-
-
 	function generate_column_vars_css() {
 		$output = '';
 		for ( $i = 1; $i < 5; $i++ ) {
@@ -100,6 +98,21 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_responsive_phone[3] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
 					current_value_responsive_phone[4] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
 
+					current_value_order_laptop[0] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'1\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[1] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'2\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[2] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'3\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[3] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'4\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+
+					current_value_order_tablet[0] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'1\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[1] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'2\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[2] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'3\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[3] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'4\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+
+					current_value_order_phone[0] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'1\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[1] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'2\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[2] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'3\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[3] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'4\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+
 					break; ',
 				esc_attr( $i )
 			);
@@ -128,6 +141,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 						current_value_responsive_laptop = [],
 						current_value_responsive_tablet = [],
 						current_value_responsive_phone = [],
+						current_value_order_tablet = [],
+						current_value_order_laptop = [],
+						current_value_order_phone = [],
 						has_laptop_padding,
 						has_tablet_padding,
 						has_phone_padding;
@@ -340,6 +356,63 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 				</div><!-- .tm-pb-option-container -->
 			</div><!-- .tm-pb-option -->
 
+			<div class="tm-pb-option">
+				<label for="tm_pb_order_laptop_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%30$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_order_laptop_<%%= counter %%>" id="tm_pb_order_laptop_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="1" <%%= current_value_order_laptop[0] %%>>1</option>
+						<option value="2" <%%= current_value_order_laptop[1] %%>>2</option>
+						<option value="3" <%%= current_value_order_laptop[2] %%>>3</option>
+						<option value="4" <%%= current_value_order_laptop[3] %%>>4</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
+			<div class="tm-pb-option">
+				<label for="tm_pb_order_tablet_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%31$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_order_tablet_<%%= counter %%>" id="tm_pb_order_tablet_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="1" <%%= current_value_order_tablet[0] %%>>1</option>
+						<option value="2" <%%= current_value_order_tablet[1] %%>>2</option>
+						<option value="3" <%%= current_value_order_tablet[2] %%>>3</option>
+						<option value="4" <%%= current_value_order_tablet[3] %%>>4</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
+			<div class="tm-pb-option">
+				<label for="tm_pb_order_phone_<%%= counter %%>">
+					%1$s
+					<%% if ( "4_4" !== column_type ) { %%>
+						<%%= counter + " " %%>
+					<%% } %%>
+					%32$s:
+				</label>
+				<div class="tm-pb-option-container">
+					<select name="tm_pb_order_phone_<%%= counter %%>" id="tm_pb_order_phone_<%%= counter %%>" class="tm-pb-main-setting">
+						<option value="1" <%%= current_value_order_phone[0] %%>>1</option>
+						<option value="2" <%%= current_value_order_phone[1] %%>>2</option>
+						<option value="3" <%%= current_value_order_phone[2] %%>>3</option>
+						<option value="4" <%%= current_value_order_phone[3] %%>>4</option>
+					</select>
+					<span class="tm-pb-reset-setting" style="display: none;"></span>
+				</div><!-- .tm-pb-option-container -->
+			</div><!-- .tm-pb-option -->
+
 			<%% counter++;
 			}); %%>',
 			esc_html__( 'Column', 'tm_builder' ),
@@ -370,7 +443,10 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			esc_html__( '3 Columns', 'tm_builder' ), // #26
 			esc_html__( '4 Columns', 'tm_builder' ), // #27
 			esc_html__( 'Tablet responsive', 'tm_builder' ), // #28
-			esc_html__( 'Phone responsive', 'tm_builder' ) // #29
+			esc_html__( 'Phone responsive', 'tm_builder' ), // #29
+			esc_html__( 'Laptop order', 'tm_builder' ), // #30
+			esc_html__( 'Tablet order', 'tm_builder' ), // #31
+			esc_html__( 'Phone order', 'tm_builder' ) // #32
 		);
 
 		return $output;

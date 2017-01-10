@@ -2438,6 +2438,7 @@ class Tm_Builder_Element {
 			$is_placeholder = isset( $option_settings['css']['placeholder'] );
 
 			$use_global_important = $is_important_set && 'all' === $option_settings['css']['important'];
+
 			if ( $is_important_set && is_array( $option_settings['css']['important'] ) ) {
 				$important_options = $option_settings['css']['important'];
 			}
@@ -2594,7 +2595,7 @@ class Tm_Builder_Element {
 					} elseif ( false !== strpos( $mobile_option, 'tablet' ) ) {
 						$current_media_query = 'md_down';
 					} elseif ( false !== strpos( $mobile_option, 'laptop' ) ) {
-						$current_media_query = '981_1440';
+						$current_media_query = '992_1440';
 					}
 
 					$main_option_name = str_replace( array( '_laptop', '_tablet', '_phone' ), '', $mobile_option );
@@ -2898,7 +2899,7 @@ class Tm_Builder_Element {
 					switch ( $device ) {
 
 						case 'laptop':
-							$current_media_query = '981_1440';
+							$current_media_query = '992_1440';
 							break;
 
 						case 'tablet':
@@ -3179,7 +3180,7 @@ class Tm_Builder_Element {
 				}
 
 				foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
-					$current_media_query = 'tablet' === $device ? 'max_width_980' : 'max_width_767';
+					$current_media_query = 'tablet' === $device ? 'max_width_991' : 'max_width_767';
 					$current_text_size = 'tablet' === $device ? tm_builder_process_range_value( $button_text_size_tablet ) : tm_builder_process_range_value( $button_text_size_phone );
 					$current_letter_spacing = 'tablet' === $device ? tm_builder_process_range_value( $button_letter_spacing_tablet ) : tm_builder_process_range_value( $button_letter_spacing_phone );
 					$current_letter_spacing_hover = 'tablet' === $device ? tm_builder_process_range_value( $button_letter_spacing_hover_tablet ) : tm_builder_process_range_value( $button_letter_spacing_hover_phone );
@@ -3470,24 +3471,24 @@ class Tm_Builder_Element {
 
 	static function set_media_queries() {
 		$media_queries = array(
-			'min_width_1405' => '@media only screen and ( min-width: 1405px )',
-			'1100_1405'      => '@media only screen and ( min-width: 1100px ) and ( max-width: 1405px)',
-			'981_1405'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1405px)',
-			'981_1100'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1100px )',
-			'min_width_981'  => '@media only screen and ( min-width: 981px )',
-			'max_width_980'  => '@media only screen and ( max-width: 980px )',
+			//'min_width_1405' => '@media only screen and ( min-width: 1405px )',
+			//'1100_1405'      => '@media only screen and ( min-width: 1100px ) and ( max-width: 1405px)',
+			//'981_1405'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1405px)',
+			//'981_1100'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1100px )',
+			'992_1440'       => '@media only screen and ( min-width: 992px ) and ( max-width: 1440px )',
+			'min_width_991'  => '@media only screen and ( min-width: 991px )',
+			'max_width_991'  => '@media only screen and ( max-width: 991px )',
 			'768_980'        => '@media only screen and ( min-width: 768px ) and ( max-width: 980px )',
 			'max_width_767'  => '@media only screen and ( max-width: 767px )',
 			'min_width_1441' => '@media only screen and ( min-width: 1441px )',
-			'max_width_479'  => '@media only screen and ( max-width: 479px )',
-			'981_1440'       => '@media only screen and ( min-width: 61.9em ) and ( max-width: 1440px )',
+			//'max_width_479'  => '@media only screen and ( max-width: 479px )',
 			'sm_up'          => '@media (min-width: 34em)',
 			'md_up'          => '@media (min-width: 48em)',
 			'lg_up'          => '@media (min-width: 62em)',
 			'xl_up'          => '@media (min-width: 75em)',
 			'xs_down'        => '@media (max-width: 33.9em)',
-			'sm_down'        => '@media (max-width: 47.9em)',
-			'md_down'        => '@media (max-width: 61.9em)',
+			'sm_down'        => '@media (max-width: 767px)',
+			'md_down'        => '@media (max-width: 991px)',
 			'lg_down'        => '@media (max-width: 74.9em)',
 			'sm'             => '@media (min-width: 34em) and (max-width: 47.9em)',
 			'md'             => '@media (min-width: 48em) and (max-width: 61.9em)',
