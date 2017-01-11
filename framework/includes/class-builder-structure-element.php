@@ -76,42 +76,67 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 					current_value_bg_img = typeof tm_pb_bg_img_%1$s !== \'undefined\' ? tm_pb_bg_img_%1$s : \'\';
 					current_value_parallax = typeof tm_pb_parallax_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_%1$s ? \' selected="selected"\' : \'\';
 					current_value_parallax_method = typeof tm_pb_parallax_method_%1$s !== \'undefined\' && \'on\' === tm_pb_parallax_method_%1$s ? \' selected="selected"\' : \'\';
+
 					current_value_vertical_alligment[0] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'start\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					current_value_vertical_alligment[1] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'center\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 					current_value_vertical_alligment[2] = typeof tm_pb_vertical_alligment_%1$s !== \'undefined\' && \'end\' === tm_pb_vertical_alligment_%1$s ? \' selected="selected" \' : \'\';
 
-					current_value_responsive_laptop[0] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_laptop[1] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_laptop[2] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_laptop[3] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_laptop[4] = typeof tm_pb_responsive_laptop_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					if ( \'undefined\' == typeof tm_pb_responsive_laptop_%1$s ) {
+						tm_pb_responsive_laptop_%1$s = \'default\';
+					}
 
-					current_value_responsive_tablet[0] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_tablet[1] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_tablet[2] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_tablet[3] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_tablet[4] = typeof tm_pb_responsive_tablet_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[0] = \'default\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[1] = \'12\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[2] = \'6\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[3] = \'4\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_laptop[4] = \'3\' === tm_pb_responsive_laptop_%1$s ? \' selected="selected" \' : \'\';
 
-					current_value_responsive_phone[0] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'default\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_phone[1] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'12\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_phone[2] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'6\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_phone[3] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'4\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_responsive_phone[4] = typeof tm_pb_responsive_phone_%1$s !== \'undefined\' && \'3\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					if ( \'undefined\' == typeof tm_pb_responsive_tablet_%1$s ) {
+						tm_pb_responsive_tablet_%1$s = \'default\';
+					}
 
-					current_value_order_laptop[0] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'1\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_laptop[1] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'2\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_laptop[2] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'3\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_laptop[3] = typeof tm_pb_order_laptop_%1$s !== \'undefined\' && \'4\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[0] = \'default\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[1] = \'12\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[2] = \'6\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[3] = \'4\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_tablet[4] = \'3\' === tm_pb_responsive_tablet_%1$s ? \' selected="selected" \' : \'\';
 
-					current_value_order_tablet[0] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'1\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_tablet[1] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'2\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_tablet[2] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'3\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_tablet[3] = typeof tm_pb_order_tablet_%1$s !== \'undefined\' && \'4\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					if ( \'undefined\' == typeof tm_pb_responsive_phone_%1$s ) {
+						tm_pb_responsive_phone_%1$s = \'default\';
+					}
 
-					current_value_order_phone[0] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'1\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_phone[1] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'2\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_phone[2] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'3\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
-					current_value_order_phone[3] = typeof tm_pb_order_phone_%1$s !== \'undefined\' && \'4\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[0] = \'default\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[1] = \'12\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[2] = \'6\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[3] = \'4\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_responsive_phone[4] = \'3\' === tm_pb_responsive_phone_%1$s ? \' selected="selected" \' : \'\';
+
+					if ( \'undefined\' == typeof tm_pb_order_laptop_%1$s ) {
+						tm_pb_order_laptop_%1$s = %1$s + \'\';
+					}
+
+					current_value_order_laptop[0] = \'1\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[1] = \'2\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[2] = \'3\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_laptop[3] = \'4\' === tm_pb_order_laptop_%1$s ? \' selected="selected" \' : \'\';
+
+					if ( \'undefined\' == typeof tm_pb_order_tablet_%1$s ) {
+						tm_pb_order_tablet_%1$s = %1$s + \'\';
+					}
+
+					current_value_order_tablet[0] = \'1\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[1] = \'2\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[2] = \'3\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_tablet[3] = \'4\' === tm_pb_order_tablet_%1$s ? \' selected="selected" \' : \'\';
+
+					if ( \'undefined\' == typeof tm_pb_order_phone_%1$s ) {
+						tm_pb_order_phone_%1$s = %1$s + \'\';
+					}
+
+					current_value_order_phone[0] = \'1\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[1] = \'2\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[2] = \'3\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
+					current_value_order_phone[3] =\'4\' === tm_pb_order_phone_%1$s ? \' selected="selected" \' : \'\';
 
 					break; ',
 				esc_attr( $i )
