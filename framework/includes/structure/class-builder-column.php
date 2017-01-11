@@ -145,11 +145,16 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 					'padding-left'   => isset( $padding_mobile_values[$device][3] ) ? $padding_mobile_values[$device][3] : '',
 				);
 			}
-			//var_dump($padding_mobile_values_processed);
+
 			if ( ! empty( $padding_mobile_values_processed ) ) {
 				tm_pb_generate_responsive_css( $padding_mobile_values_processed, '%%order_class%%', '', $function_name );
 			}
 		}
+
+		TM_Builder_Element::set_style( $function_name, array(
+				'selector'    => '%%order_class%%',
+				'declaration' => sprintf( 'order: %s;', $array_index + 1 ),
+		) );
 
 		// Order mobile css generation
 		if ( ! empty( $tm_pb_order['laptop'] ) || ! empty( $tm_pb_order['tablet'] ) || ! empty( $tm_pb_order['phone'] ) ) {

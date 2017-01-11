@@ -2462,6 +2462,7 @@ class Tm_Builder_Element {
 			$size_option_name = "{$option_name}_{$slugs[1]}";
 			$default_size     = isset( $this->fields_unprocessed[ $size_option_name ]['default'] ) ? $this->fields_unprocessed[ $size_option_name ]['default'] : '';
 
+
 			if ( ! in_array( trim( $font_options[ $size_option_name ] ), array( '', 'px', $default_size ) ) ) {
 				$important = in_array( 'size', $important_options ) || $use_global_important ? ' !important' : '';
 
@@ -2545,7 +2546,6 @@ class Tm_Builder_Element {
 
 			if ( '' !== $style ) {
 				$css_element = ! empty( $option_settings['css']['main'] ) ? $option_settings['css']['main'] : $this->main_css_element;
-
 				// $css_element might be an array, for example to apply the css for placeholders
 				if ( is_array( $css_element ) ) {
 					foreach( $css_element as $selector ) {
@@ -2586,6 +2586,7 @@ class Tm_Builder_Element {
 
 			// process mobile options
 			foreach( $mobile_options_slugs as $mobile_option ) {
+
 				$current_option_name = "{$option_name}_{$mobile_option}";
 
 				if ( isset( $font_options[ $current_option_name ] ) && '' !== $font_options[ $current_option_name ] ) {
