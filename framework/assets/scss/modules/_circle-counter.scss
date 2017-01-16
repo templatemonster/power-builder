@@ -3,9 +3,12 @@
 		word-wrap: break-word;
 	}
 	.tm_pb_circle_counter {
-		margin: 0 auto 30px;
-		position: relative;
 		text-align: center;
+
+		.tm_pb_circle_counter_bar {
+			margin: 0 auto 30px;
+			position: relative;
+		}
 
 		canvas {
 			position: absolute;
@@ -31,6 +34,7 @@
 		line-height: 0.1em;
 		padding: 49% 0;
 	}
+
 	.tm_pb_circle_counter h3 {
 		padding: 20px 0 0;
 		font-size: 18px;

@@ -211,7 +211,7 @@ class Tm_Builder_Module_Circle_Counter extends Tm_Builder_Module {
 		}
 
 		TM_Builder_Element::set_style( $function_name, array(
-			'selector'    => '%%order_class%%',
+			'selector'    => '%%order_class%% .tm_pb_circle_counter_bar',
 			'declaration' => sprintf(
 				'width: %1$spx;',
 				intval( $this->_var( 'circle_size' ) )

@@ -868,7 +868,7 @@
     width: auto;
     height: 100%;
     padding-bottom: 60%; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       #tm_builder_outer_content .tm_pb_column_1_2 .tm_pb_audio_cover_art {
         position: absolute;
         width: 240px;
@@ -879,7 +879,7 @@
   #tm_builder_outer_content .tm_pb_column_1_2 .tm_pb_audio_module_content {
     padding: 30px;
     margin-left: 0; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       #tm_builder_outer_content .tm_pb_column_1_2 .tm_pb_audio_module_content {
         margin-left: 240px; } }
   #tm_builder_outer_content .tm_pb_column_1_3 .tm_pb_audio_cover_art {
@@ -1416,9 +1416,10 @@
   word-wrap: break-word; }
 
 #tm_builder_outer_content .tm_pb_circle_counter {
-  margin: 0 auto 30px;
-  position: relative;
   text-align: center; }
+  #tm_builder_outer_content .tm_pb_circle_counter .tm_pb_circle_counter_bar {
+    margin: 0 auto 30px;
+    position: relative; }
   #tm_builder_outer_content .tm_pb_circle_counter canvas {
     position: absolute;
     top: 0;
@@ -1841,7 +1842,7 @@
 
 #tm_builder_outer_content .tm_pb_column_1_2 .tm_pb_pricing_table {
   width: 100%; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     #tm_builder_outer_content .tm_pb_column_1_2 .tm_pb_pricing_table {
       width: 33.33%; } }
 

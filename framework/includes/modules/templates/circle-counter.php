@@ -9,5 +9,7 @@
 			<span class="percent-value"></span><?php echo $this->circle_sign( '%' ); ?>
 		</p>
 	</div>
+</div>
+<div class="tm_pb_circle_counter_content">
 	<?php echo $this->html( $this->_var( 'title' ), '<h3>%s</h3>' ); ?>
 </div>
