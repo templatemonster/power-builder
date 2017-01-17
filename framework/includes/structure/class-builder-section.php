@@ -774,10 +774,12 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 		$output = sprintf(
 			'<div%7$s class="tm_pb_section%3$s%4$s%5$s%6$s%8$s%12$s%13$s">
 				%11$s
-				%9$s
-					%2$s
-					%1$s
-				%10$s
+				%14$s
+					%9$s
+						%2$s
+						%1$s
+					%10$s
+				%15$s
 			</div> <!-- .tm_pb_section -->',
 			do_shortcode( tm_pb_fix_shortcodes( $content ) ),
 			$background_video,
@@ -787,9 +789,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			( 'off' !== $fullwidth ? ' tm_pb_fullwidth_section' : '' ),
 			( '' !== $module_id ? sprintf( ' id="%1$s"', esc_attr( $module_id ) ) : '' ),
 			( '' !== $module_class ? sprintf( ' %1$s', esc_attr( $module_class ) ) : '' ),
-			( 'on' === $specialty ?
-				sprintf( '<div class="row tm_pb_row%1$s">', $gutter_class )
-				: '' ),
+			( 'on' === $specialty ? sprintf( '<div class="row tm_pb_row%1$s">', $gutter_class ) : '' ),
 			( 'on' === $specialty ? '</div> <!-- .tm_pb_row -->' : '' ),
 			( '' !== $background_image && 'on' === $parallax
 				? sprintf(
@@ -801,7 +801,9 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				: ''
 			),
 			( 'on' === $specialty ? ' tm_section_specialty' : ' tm_section_regular' ),
-			( 'on' === $transparent_background ? ' tm_section_transparent' : '' )
+			( 'on' === $transparent_background ? ' tm_section_transparent' : '' ),
+			( 'off' === $make_fullwidth && 'on' === $specialty ) ? '<div class="container">' : '',
+			( 'off' === $make_fullwidth && 'on' === $specialty ) ? '</div>' : ''
 		);
 
 		return $output;
