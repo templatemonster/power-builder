@@ -17,6 +17,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			'parallax',
 			'parallax_method',
 			'custom_padding',
+			'custom_padding_laptop',
 			'custom_padding_tablet',
 			'custom_padding_phone',
 			'padding_mobile',
@@ -93,6 +94,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			'gutter_width'           => array( '3', 'only_default_setting' ),
 			'fullwidth'              => array( 'off' ),
 			'specialty'              => array( 'off' ),
+			'custom_padding_laptop'  => array( '' ),
 			'custom_padding_tablet'  => array( '' ),
 			'custom_padding_phone'   => array( '' ),
 		);
@@ -211,6 +213,9 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'mobile_options'  => true,
 				'option_category' => 'layout',
 				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'tm_builder' ),
+			),
+			'custom_padding_laptop' => array(
+				'type' => 'skip',
 			),
 			'custom_padding_tablet' => array(
 				'type' => 'skip',
@@ -519,6 +524,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 		$specialty               = $this->shortcode_atts['specialty'];
 		$transparent_background  = $this->shortcode_atts['transparent_background'];
 		$custom_padding          = $this->shortcode_atts['custom_padding'];
+		$custom_padding_laptop   = $this->shortcode_atts['custom_padding_laptop'];
 		$custom_padding_tablet   = $this->shortcode_atts['custom_padding_tablet'];
 		$custom_padding_phone    = $this->shortcode_atts['custom_padding_phone'];
 		$padding_mobile          = $this->shortcode_atts['padding_mobile'];
@@ -583,6 +589,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 		$gutter_class = '';
 
 		$padding_mobile_values = array(
+			'laptop' => explode( '|', $custom_padding_laptop ),
 			'tablet' => explode( '|', $custom_padding_tablet ),
 			'phone'  => explode( '|', $custom_padding_phone ),
 		);
@@ -746,10 +753,10 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			}
 		}
 
-		if ( ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
+		if ( ! empty( $padding_mobile_values['laptop'] ) || ! empty( $padding_mobile_values['tablet'] ) || ! empty( $padding_values['phone'] ) ) {
 			$padding_mobile_values_processed = array();
 
-			foreach( array( 'tablet', 'phone' ) as $device ) {
+			foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
 				if ( empty( $padding_mobile_values[$device] ) ) {
 					continue;
 				}
