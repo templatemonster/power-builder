@@ -40,13 +40,13 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 				'form_field'   => array(
 					'label'    => esc_html__( 'Form Field', 'tm_builder' ),
 					'css'      => array(
-						'main' => "{$this->main_css_element} .input",
+						'main' => "{$this->main_css_element} .tm_pb_contact_form_input",
 					),
 				),
 			),
 			'border' => array(
 				'css'      => array(
-					'main' => "{$this->main_css_element} .input",
+					'main' => "{$this->main_css_element} .tm_pb_contact_form_input",
 				),
 				'settings' => array(
 					'color' => 'alpha',
@@ -244,7 +244,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 			TM_Builder_Element::set_style(
 				$function_name,
 				array(
-					'selector'    => '%%order_class%% .input',
+					'selector'    => '%%order_class%% .tm_pb_contact_form_input',
 					'declaration' => sprintf(
 						'background-color: %1$s;',
 						esc_html( $this->_var( 'form_background_color' ) )
@@ -257,7 +257,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 			TM_Builder_Element::set_style(
 				$function_name,
 				array(
-					'selector'    => '%%order_class%% .input',
+					'selector'    => '%%order_class%% .tm_pb_contact_form_input',
 					'declaration' => sprintf(
 						'-moz-border-radius: %1$s; -webkit-border-radius: %1$s; border-radius: %1$s;',
 						esc_html( tm_builder_process_range_value( $this->_var( 'input_border_radius' ) ) )
