@@ -3,7 +3,7 @@
  * Plugin Name: Power Builder
  * Plugin URI: https://github.com/templatemonster/power-builder
  * Description: A drag and drop page builder for any WordPress theme.
- * Version: 1.3.1
+ * Version: 1.4.0
  * Author: TemplateMonster
  * Author URI: http://templatemonster.com/
  * License: GPLv2 or later
@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-defined( 'TM_BUILDER_VERSION' ) or define( 'TM_BUILDER_VERSION', '1.3.1' );
+defined( 'TM_BUILDER_VERSION' ) or define( 'TM_BUILDER_VERSION', '1.4.0' );
 defined( 'TM_BUILDER_DIR' ) or define( 'TM_BUILDER_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 defined( 'TM_BUILDER_URI' ) or define( 'TM_BUILDER_URI', plugins_url( '', __FILE__ ) );
 
