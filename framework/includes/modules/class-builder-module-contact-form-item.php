@@ -236,6 +236,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 				break;
 			case 'select':
 				$input_field = $this->get_template_part( 'contact-form/select.php' );
+				break;
 		}
 
 		$this->_var( 'input_field', $input_field );
@@ -308,6 +309,17 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 	 */
 	public function cf_is_required() {
 		return ( 'off' === $this->_var( 'required_mark' ) ? 'not_required' : 'required' );
+	}
+
+	/**
+	 * Returns multiple select value
+	 *
+	 * @return string
+	 */
+	public function cf_is_multiple() {
+		$multiple = filter_var( $this->_var( 'select_multiple' ), FILTER_VALIDATE_BOOLEAN ) ? ' multiple' : '';
+
+		return $multiple;
 	}
 
 	/**
