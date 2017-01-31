@@ -9,10 +9,19 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 			'src',
 			'src_webm',
 			'image_src',
+			'auto_play',
+			'loop_play',
+			'mute',
 			'play_icon_color',
 			'admin_label',
 			'module_id',
 			'module_class',
+		);
+
+		$this->fields_defaults = array(
+			'auto_play' => array( 'off' ),
+			'loop_play' => array( 'off' ),
+			'mute'      => array( 'off' ),
 		);
 
 		$this->custom_css_options = array(
@@ -59,6 +68,36 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 				'classes'            => 'tm_pb_video_overlay',
 				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'tm_builder' ),
 			),
+			'auto_play' => array(
+				'label'           => esc_html__( 'Auto play', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'tm_builder' ),
+				),
+				'description'        => esc_html__( 'Here you can choose whether to automatically play video when the page loads', 'tm_builder' ),
+			),
+			'loop_play' => array(
+				'label'           => esc_html__( 'Loop', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'tm_builder' ),
+				),
+				'description'        => esc_html__( 'Here you can choose whether or not to loop the video', 'tm_builder' ),
+			),
+			'mute' => array(
+				'label'           => esc_html__( 'Mute', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'tm_builder' ),
+				),
+				'description'        => esc_html__( 'Here you can choose whether or not to mute the video', 'tm_builder' ),
+			),
 			'play_icon_color' => array(
 				'label'             => esc_html__( 'Play Icon Color', 'tm_builder' ),
 				'type'              => 'color',
@@ -103,6 +142,9 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 		$src             = $this->shortcode_atts['src'];
 		$src_webm        = $this->shortcode_atts['src_webm'];
 		$image_src       = $this->shortcode_atts['image_src'];
+		$auto_play       = $this->shortcode_atts['auto_play'];
+		$loop_play       = $this->shortcode_atts['loop_play'];
+		$mute            = $this->shortcode_atts['mute'];
 		$play_icon_color = $this->shortcode_atts['play_icon_color'];
 		$video_src       = '';
 
