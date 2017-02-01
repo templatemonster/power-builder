@@ -9,6 +9,7 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 			'src',
 			'src_webm',
 			'image_src',
+			'controls',
 			'auto_play',
 			'loop_play',
 			'mute',
@@ -19,6 +20,7 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 		);
 
 		$this->fields_defaults = array(
+			'controls'  => array( 'on' ),
 			'auto_play' => array( 'off' ),
 			'loop_play' => array( 'off' ),
 			'mute'      => array( 'off' ),
@@ -67,6 +69,16 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 				),
 				'classes'            => 'tm_pb_video_overlay',
 				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'tm_builder' ),
+			),
+			'controls' => array(
+				'label'           => esc_html__( 'Controls', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'tm_builder' ),
+				),
+				'description'        => esc_html__( 'Here you can choose whether or not visible video controls', 'tm_builder' ),
 			),
 			'auto_play' => array(
 				'label'           => esc_html__( 'Auto play', 'tm_builder' ),
@@ -142,6 +154,7 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 		$src             = $this->shortcode_atts['src'];
 		$src_webm        = $this->shortcode_atts['src_webm'];
 		$image_src       = $this->shortcode_atts['image_src'];
+		$controls        = $this->shortcode_atts['controls'];
 		$auto_play       = $this->shortcode_atts['auto_play'];
 		$loop_play       = $this->shortcode_atts['loop_play'];
 		$mute            = $this->shortcode_atts['mute'];
@@ -164,13 +177,16 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 				$video_src = wp_oembed_get( esc_url( $src ) );
 			} else {
 				$video_src = sprintf( '
-					<video controls="controls"%3$s>
+					<video %3$s%4$s%5$s%6$s>
 						%1$s
 						%2$s
 					</video>',
 					( '' !== $src ? sprintf( '<source type="video/mp4" src="%s" />', esc_url( $src ) ) : '' ),
 					( '' !== $src_webm ? sprintf( '<source type="video/webm" src="%s" />', esc_url( $src_webm ) ) : '' ),
-					( 'on' === $auto_play ? ' autoplay' : '' )
+					( 'on' === $controls ? ' controls' : '' ),
+					( 'on' === $auto_play ? ' data-autoplay="true"' : ' data-autoplay="false"' ),
+					( 'on' === $loop_play ? ' loop' : '' ),
+					( 'on' === $mute ? ' muted' : '' )
 				);
 
 				wp_enqueue_style( 'wp-mediaelement' );

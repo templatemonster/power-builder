@@ -48,7 +48,8 @@ var $tm_pb_slider  = jQuery( '.tm_pb_slider' ),
 	$tm_sticky_image = jQuery('.tm_pb_image_sticky'),
 	$tm_pb_counter_amount = jQuery('.tm_pb_counter_amount'),
 	$tm_pb_carousel = jQuery( '.tm_pb_carousel' ),
-	$tm_menu_selector = tm_pb_custom.is_divi_theme_used ? jQuery( 'ul.nav' ) : jQuery( '.tm_pb_fullwidth_menu ul.nav' );
+	$tm_menu_selector = tm_pb_custom.is_divi_theme_used ? jQuery( 'ul.nav' ) : jQuery( '.tm_pb_fullwidth_menu ul.nav' ),
+	$tm_pb_video = jQuery( '.tm_pb_video' );
 
 jQuery(document).ready( function($){
 	var $tm_top_menu = $tm_menu_selector,
@@ -1733,6 +1734,26 @@ jQuery(document).ready( function($){
 
 		return false;
 	} );
+
+	if ( $tm_pb_video[0] ) {
+		$tm_pb_video.each( function() {
+			var $this = $( this ),
+				$video_tag = $( 'video', $this ),
+				autoPlay = $video_tag.data( 'autoplay' );
+
+			if ( autoPlay ) {
+				$this.waypoint( function( direction ) {
+					console.log(direction);
+					if ( $video_tag.get(0).paused ) {
+						$video_tag.get(0).play();
+					}
+				}, {
+					offset: 'bottom-in-view'
+				} );
+			}
+
+		} );
+	}
 
 	function tm_pb_resize_section_video_bg( $video ) {
 		$element = typeof $video !== 'undefined' ? $video.closest( '.tm_pb_section_video_bg' ) : $( '.tm_pb_section_video_bg' );
