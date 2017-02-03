@@ -102,6 +102,8 @@
 
 				event.preventDefault();
 
+				console.log($this_el.data( 'update' ));
+
 				tm_pb_file_frame = wp.media.frames.tm_pb_file_frame = wp.media({
 					title: $this_el.data( 'choose' ),
 					library: {

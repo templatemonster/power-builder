@@ -1743,7 +1743,6 @@ jQuery(document).ready( function($){
 
 			if ( autoPlay ) {
 				$this.waypoint( function( direction ) {
-					console.log(direction);
 					if ( $video_tag.get(0).paused ) {
 						$video_tag.get(0).play();
 					}
