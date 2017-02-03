@@ -1,5 +1,7 @@
 <?php
 class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
+	public static $module_class = '';
+
 	function init() {
 		$this->name            = esc_html__( 'Field', 'tm_builder' );
 		$this->slug            = 'tm_pb_contact_field';
@@ -23,7 +25,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 
 		$this->advanced_setting_title_text = esc_html__( 'New Field', 'tm_builder' );
 		$this->settings_text               = esc_html__( 'Field Settings', 'tm_builder' );
-		$this->main_css_element = '%%order_class%%.tm_pb_contact_field .input';
+		$this->main_css_element = '%%order_class%%.tm_pb_contact_field .tm_pb_contact_form_input';
 		$this->advanced_options = array(
 			'fonts' => array(
 				'form_field'   => array(
@@ -194,7 +196,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 		$current_module_num = '' === $tm_pb_contact_form_num ? 0 : intval( $tm_pb_contact_form_num ) + 1;
 		$this->_var( 'current_module_num', $current_module_num );
 
-		$module_class = TM_Builder_Element::add_module_order_class( '', $function_name );
+		self::$module_class = TM_Builder_Element::add_module_order_class( '', $function_name );
 
 		if ( ! $this->_var( 'field_width' ) ) {
 			$this->_var( 'field_width', 'col-md-12' );
@@ -204,7 +206,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 
 		if ( '' !== $this->_var( 'field_background_color' ) ) {
 			TM_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%% .input',
+				'selector'    => '%%order_class%% .tm_pb_contact_form_input',
 				'declaration' => sprintf(
 					'background-color: %1$s;',
 					esc_html( $this->_var( 'field_background_color' ) )
@@ -214,7 +216,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 
 		if ( ! in_array( $this->_var( 'input_border_radius' ), array( '', '0' ) ) ) {
 			TM_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%% .input',
+				'selector'    => '%%order_class%% .tm_pb_contact_form_input',
 				'declaration' => sprintf(
 					'-moz-border-radius: %1$s; -webkit-border-radius: %1$s; border-radius: %1$s;',
 					esc_html(
@@ -331,9 +333,8 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 		$classes = array(
 			'tm_pb_contact_field',
 			$this->_var( 'field_width' ),
-			esc_attr( $this->_var( 'module_class' ) )
+			esc_attr( self::$module_class )
 		);
-
 		return implode( ' ', $classes );
 	}
 
