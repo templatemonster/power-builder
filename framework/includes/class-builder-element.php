@@ -368,7 +368,6 @@ class Tm_Builder_Element {
 
 		// Hide module on specific screens if needed
 		if ( isset( $this->shortcode_atts['disabled_on'] ) && '' !== $this->shortcode_atts['disabled_on'] ) {
-
 			$disabled_on_array = explode( '|', $this->shortcode_atts['disabled_on'] );
 			$i = 0;
 

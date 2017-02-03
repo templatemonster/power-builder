@@ -21,6 +21,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 			'custom_width_px',
 			'custom_width_percent',
 			'custom_padding',
+			'custom_padding_laptop',
 			'custom_padding_tablet',
 			'custom_padding_phone',
 			'padding_mobile',
@@ -274,6 +275,9 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				'mobile_options'  => true,
 				'option_category' => 'layout',
 				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'tm_builder' ),
+			),
+			'custom_padding_laptop' => array(
+				'type' => 'skip',
 			),
 			'custom_padding_tablet' => array(
 				'type' => 'skip',
@@ -726,6 +730,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		$module_id               = $this->shortcode_atts['module_id'];
 		$module_class            = $this->shortcode_atts['module_class'];
 		$custom_padding          = $this->shortcode_atts['custom_padding'];
+		$custom_padding_laptop   = $this->shortcode_atts['custom_padding_laptop'];
 		$custom_padding_tablet   = $this->shortcode_atts['custom_padding_tablet'];
 		$custom_padding_phone    = $this->shortcode_atts['custom_padding_phone'];
 		$padding_mobile          = $this->shortcode_atts['padding_mobile'];
@@ -853,6 +858,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 		}
 
 		$padding_mobile_values = array(
+			'laptop' => explode( '|', $custom_padding_laptop ),
 			'tablet' => explode( '|', $custom_padding_tablet ),
 			'phone'  => explode( '|', $custom_padding_phone ),
 		);
