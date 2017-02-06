@@ -3518,6 +3518,13 @@ class Tm_Builder_Element {
 		$styles_by_media_queries = self::$styles;
 		$styles_count            = (int) count( $styles_by_media_queries );
 
+		if ( isset( $styles_by_media_queries['general'] ) ) {
+			$general = array( 'general' => $styles_by_media_queries['general'] );
+			unset( $styles_by_media_queries['general'] );
+
+			$styles_by_media_queries = array_merge( $general, $styles_by_media_queries );
+		}
+
 		foreach ( $styles_by_media_queries as $media_query => $styles ) {
 			$media_query_output    = '';
 			$wrap_into_media_query = 'general' !== $media_query;
