@@ -1,0 +1,7 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="copy">_tm_pb_use_builder</custom-field>
+		<custom-field action="copy">_tm_pb_old_content</custom-field>
+		<custom-field action="copy">_tm_pb_built_for_post_type</custom-field>
+	</custom-fields>
+</wpml-config>

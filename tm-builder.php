@@ -58,8 +58,7 @@ class Tm_Builder_Plugin {
 		defined( 'TM_BUILDER_ACTIVE' ) or define( 'TM_BUILDER_ACTIVE', true );
 		defined( 'TM_BUILDER_LAYOUT_POST_TYPE' ) or define( 'TM_BUILDER_LAYOUT_POST_TYPE', 'tm_pb_layout' );
 
-		load_theme_textdomain( 'tm_builder', TM_BUILDER_DIR . '/framework/languages/' );
-		load_plugin_textdomain( 'tm_builder_plugin', false, TM_BUILDER_DIR . '/languages/' );
+		load_plugin_textdomain( 'tm_builder', false, TM_BUILDER_DIR . '/languages/' );
 
 		require TM_BUILDER_DIR . '/functions.php';
 		require TM_BUILDER_DIR . '/framework/framework.php';
@@ -339,8 +338,8 @@ class Tm_Builder_Plugin {
 		wp_localize_script( 'tm-builder-js', 'builder_settings', array(
 			'tm_builder_nonce'           => wp_create_nonce( 'tm_builder_nonce' ),
 			'ajaxurl'                    => admin_url( 'admin-ajax.php', $this->getProtocol() ),
-			'authorize_text'             => esc_html__( 'Authorize', 'tm_builder_plugin' ),
-			'reauthorize_text'           => esc_html__( 'Re-Authorize', 'tm_builder_plugin' ),
+			'authorize_text'             => esc_html__( 'Authorize', 'tm_builder' ),
+			'reauthorize_text'           => esc_html__( 'Re-Authorize', 'tm_builder' ),
 			'save_settings'              => wp_create_nonce( 'save_settings' ),
 		) );
 
@@ -553,7 +552,7 @@ class Tm_Builder_Plugin {
 			if ( 'true' === $full_content ) {
 				$output .= sprintf(
 					'<li class="tm_dashboard_no_res">%1$s</li>',
-					esc_html__( 'No results found', 'bloom' )
+					esc_html__( 'No results found', 'tm_builder' )
 				);
 			}
 		} else {
