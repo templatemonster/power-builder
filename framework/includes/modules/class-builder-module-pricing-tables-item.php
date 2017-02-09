@@ -1,14 +1,15 @@
 <?php
 class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Pricing Table', 'tm_builder' );
-		$this->slug                        = 'tm_pb_pricing_table';
-		$this->main_css_element 		   = '%%order_class%%.tm_pb_pricing';
-		$this->type                        = 'child';
-		$this->child_title_var             = 'title';
+		$this->name             = esc_html__( 'Pricing Table', 'tm_builder' );
+		$this->slug             = 'tm_pb_pricing_table';
+		$this->main_css_element = '%%order_class%%.tm_pb_pricing';
+		$this->type             = 'child';
+		$this->child_title_var  = 'title';
 
 		$this->whitelisted_fields = array(
 			'featured',
+			'sticker',
 			'title',
 			'subtitle',
 			'currency',
@@ -21,6 +22,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 
 		$this->fields_defaults = array(
 			'featured' => array( 'off' ),
+			'sticker'  => array( 'off' ),
 		);
 
 		$this->advanced_setting_title_text = esc_html__( 'New Pricing Table', 'tm_builder' );
@@ -165,6 +167,16 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					'on'  => esc_html__( 'Yes', 'tm_builder' ),
 				),
 				'description' => esc_html__( 'Featuring a table will make it stand out from the rest.', 'tm_builder' ),
+			),
+			'sticker' => array(
+				'label'           => esc_html__( 'Use sticker', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'basic_option',
+				'options'         => array(
+					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+				),
+				'description' => esc_html__( 'Option determines whether or not to display the sticker', 'tm_builder' ),
 			),
 			'title' => array(
 				'label'           => esc_html__( 'Title', 'tm_builder' ),
