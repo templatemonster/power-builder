@@ -4,6 +4,7 @@
  */
 ?>
 <div class="<?php echo $this->pricing_table_item_classes(); ?>">
+	<?php echo $this->get_template_part( 'pricing-table/sticker.php' ); ?>
 	<div class="tm_pb_pricing_heading"><?php
 		echo $this->html( esc_html( $this->_var( 'title' ) ), '<h2 class="tm_pb_pricing_title">%s</h2>' );
 		echo $this->html( esc_html( $this->_var( 'subtitle' ) ), '<span class="tm_pb_best_value">%s</span>' );

@@ -1819,6 +1819,7 @@
   width: 100%;
   padding-bottom: 30px;
   text-align: center;
+  position: relative;
   margin: 30px -1px 0 0; }
   @media (min-width: 768px) {
     #tm_builder_outer_content .tm_pb_pricing_table {
@@ -1876,6 +1877,22 @@
 #tm_builder_outer_content .tm_pb_tm_price {
   color: #999;
   font-size: 16px; }
+
+#tm_builder_outer_content .tm_pb_pricing_sticker {
+  position: absolute;
+  display: block;
+  min-width: 80px;
+  min-height: 80px;
+  background-color: #000; }
+  #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-right {
+    top: 0;
+    right: 0; }
+  #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-center {
+    top: 0;
+    right: 0; }
+  #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-left {
+    top: 0;
+    right: 0; }
 
 #tm_builder_outer_content .tm_pb_dollar_sign {
   font-size: 18px;
@@ -3177,6 +3194,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   -webkit-box-pack: center;
@@ -3187,6 +3206,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   -webkit-box-pack: end;
@@ -3869,6 +3890,8 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-flow: row wrap;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -3878,6 +3901,8 @@
 
 #tm_builder_outer_content .tm_pb_fullscreen .tm_pb_fullwidth_header_container.center.bottom-bottom {
   -ms-flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-flow: column wrap;
   -moz-justify-content: flex-end;
   -ms-justify-content: flex-end;
@@ -3887,6 +3912,8 @@
 
 #tm_builder_outer_content .tm_pb_fullscreen .tm_pb_fullwidth_header_container.center.center-center {
   -ms-flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-flow: column wrap; }
 
 #tm_builder_outer_content .tm_pb_fullscreen .tm_pb_fullwidth_header_container.center.center-bottom .header-content-container {
@@ -3896,6 +3923,8 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-flow: row wrap; }
   #tm_builder_outer_content .tm_pb_fullscreen .tm_pb_fullwidth_header_container.center.center-bottom .header-content-container .header-content {
     -webkit-align-self: center;
@@ -3939,10 +3968,10 @@
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
   -ms-flex-flow: row;
   -ms-flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-flow: row; }
 
 #tm_builder_outer_content .tm_pb_fullwidth_header .tm_pb_fullwidth_header_container.right {
@@ -3950,10 +3979,10 @@
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-flex-flow: row-reverse;
-  -moz-flex-flow: row-reverse;
   -ms-flex-flow: row-reverse;
   -ms-flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   flex-flow: row-reverse; }
 
 #tm_builder_outer_content .tm_pb_fullwidth_header .tm_pb_fullwidth_header_container.left .header-content-container,

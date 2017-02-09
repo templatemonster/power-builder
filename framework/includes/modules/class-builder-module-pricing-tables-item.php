@@ -10,6 +10,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 		$this->whitelisted_fields = array(
 			'featured',
 			'sticker',
+			'sticker_position',
 			'title',
 			'subtitle',
 			'currency',
@@ -21,8 +22,9 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 		);
 
 		$this->fields_defaults = array(
-			'featured' => array( 'off' ),
-			'sticker'  => array( 'off' ),
+			'featured'         => array( 'off' ),
+			'sticker'          => array( 'off' ),
+			'sticker_position' => array( 'top-right' ),
 		);
 
 		$this->advanced_setting_title_text = esc_html__( 'New Pricing Table', 'tm_builder' );
@@ -178,6 +180,17 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 				),
 				'description' => esc_html__( 'Option determines whether or not to display the sticker', 'tm_builder' ),
 			),
+			'sticker_position' => array(
+				'label'             => esc_html__( 'Sticker position', 'tm_builder' ),
+				'type'              => 'select',
+				'option_category'   => 'configuration',
+				'options'           => array(
+					'top-left'   => esc_html__( 'Top left', 'tm_builder' ),
+					'top-center' => esc_html__( 'Top center', 'tm_builder' ),
+					'top-right'  => esc_html__( 'Top right', 'tm_builder' ),
+				),
+				'description'       => esc_html__( 'Define sticker position', 'tm_builder' ),
+			),
 			'title' => array(
 				'label'           => esc_html__( 'Title', 'tm_builder' ),
 				'type'            => 'text',
@@ -242,6 +255,8 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 		$this->set_vars(
 			array(
 				'featured',
+				'sticker',
+				'sticker_position',
 				'title',
 				'subtitle',
 				'currency',
@@ -318,6 +333,21 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 		if ( 'off' !== $this->_var( 'featured' ) ) {
 			$classes[] = 'tm_pb_featured_table';
 		}
+
+		return implode( ' ', $classes );
+	}
+
+	/**
+	 * Returns pricing sticker classes
+	 *
+	 * @return string
+	 */
+	public function pricing_sticker_classes() {
+
+		$classes = array(
+			'tm_pb_pricing_sticker',
+			esc_attr( 'sticker-' . $this->_var( 'sticker_position' ) )
+		);
 
 		return implode( ' ', $classes );
 	}
