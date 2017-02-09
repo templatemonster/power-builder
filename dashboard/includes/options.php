@@ -7,9 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 //Array of all sections. All sections will be added into sidebar navigation except for the 'header' section.
 $all_sections = array(
 	'newsletter'  => array(
-		'title'    => esc_html__( 'Newsletter Settings', 'tm_builder_plugin' ),
+		'title'    => esc_html__( 'Newsletter Settings', 'tm_builder' ),
 		'contents' => array(
-			'main'   => esc_html__( 'Main', 'bloom' ),
+			'main'   => esc_html__( 'Main', 'tm_builder' ),
 		),
 	),
 );
@@ -35,7 +35,7 @@ $dashboard_options_all = array(
 
 	'newsletter_title' => array(
 		'type'  => 'main_title',
-		'title' => esc_html__( 'Newsletter Settings', 'tm_builder_plugin' ),
+		'title' => esc_html__( 'Newsletter Settings', 'tm_builder' ),
 	),
 
 	'end_of_section' => array(

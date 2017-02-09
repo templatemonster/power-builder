@@ -374,7 +374,7 @@ class Tm_Dashboard_v2 {
 			if ( 'true' === $full_content ) {
 				$output .= sprintf(
 					'<li class="tm_dashboard_no_res">%1$s</li>',
-					esc_html__( 'No results found', 'bloom' )
+					esc_html__( 'No results found', 'tm_builder' )
 				);
 			}
 		} else {
