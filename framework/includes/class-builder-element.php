@@ -1543,7 +1543,7 @@ class Tm_Builder_Element {
 				$field_el = sprintf(
 					'<div id="%1$s"><%%= typeof( %2$s ) !== \'undefined\' ? %2$s : \'\' %%></div>',
 					esc_attr( $main_content_field_name ),
-					esc_html( $main_content_property_name )
+					$main_content_property_name
 				);
 
 				break;
