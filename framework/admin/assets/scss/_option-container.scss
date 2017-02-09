@@ -79,6 +79,9 @@
 		border-radius: 0;
 		background-color: $form_control_color;
 		padding: 7px;
+			& .wp-picker-holder{
+				position: absolute;
+			}
 			&.wp-picker-active{
 				.wp-picker-input-wrap{
 					margin-top: 5px;
