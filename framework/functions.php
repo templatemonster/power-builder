@@ -433,7 +433,7 @@ function tm_builder_accent_color( $default_color = '#7EBEC5' ) {
 endif;
 
 if ( ! function_exists( 'tm_builder_secondary_color' ) ) :
-function tm_builder_secondary_color( $default_color = '#7EBEC5' ) {
+function tm_builder_secondary_color( $default_color = '#FFFFFF' ) {
 	$accent_color = tm_get_option( 'regular_accent_color_2', $default_color );
 	return apply_filters( 'tm_builder_secondary_color', $accent_color );
 }

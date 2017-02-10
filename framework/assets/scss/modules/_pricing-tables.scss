@@ -98,23 +98,38 @@
 		font-size: 16px;
 	}
 
+	.tm_pb_sticker_inner {
+		position: relative;
+			.tm-pb-icon {
+				line-height: 0;
+			}
+	}
+
 	.tm_pb_pricing_sticker {
 		position: absolute;
-		display: block;
-		min-width: 80px;
-		min-height: 80px;
-		background-color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90px;
+		height: 90px;
+		padding: 20px;
+		margin-top: -45px;
+		margin-left: -45px;
+		border-radius: 50%;
+		background-size: contain;
 		&.sticker-top-right {
 			top: 0;
 			right: 0;
 		}
+
 		&.sticker-top-center {
 			top: 0;
-			right: 0;
+			left: 50%;
 		}
+
 		&.sticker-top-left {
 			top: 0;
-			right: 0;
+			left: 0;
 		}
 	}
 
