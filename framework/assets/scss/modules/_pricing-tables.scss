@@ -114,9 +114,10 @@
 		height: 90px;
 		padding: 20px;
 		margin-top: -45px;
-		margin-left: -45px;
 		border-radius: 50%;
-		background-size: contain;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50%;
 		&.sticker-top-right {
 			top: 0;
 			right: 0;
@@ -125,6 +126,7 @@
 		&.sticker-top-center {
 			top: 0;
 			left: 50%;
+			margin-left: -45px;
 		}
 
 		&.sticker-top-left {

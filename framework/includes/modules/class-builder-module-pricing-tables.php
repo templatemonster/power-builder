@@ -147,6 +147,12 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 						'default' => '0px',
 					),
 				),
+				'sticker' => array(
+					'label'    => esc_html__( 'Sticker text', 'tm_builder' ),
+					'css'      => array(
+						'main' => "{$this->main_css_element} .tm_pb_pricing_sticker .tm_pb_sticker_text",
+					),
+				),
 			),
 			'background' => array(
 				'use_background_image' => false,

@@ -85,6 +85,10 @@ class Tm_Global_Settings {
 			'tm_pb_pricing_tables-price_line_height'          => '82px',
 			'tm_pb_pricing_tables-body_line_height'           => '24px',
 
+			'tm_pb_pricing_tables-sticker_font_size'          => '22px',
+			'tm_pb_pricing_tables-sticker_line_height'        => '1.7em',
+			'tm_pb_pricing_tables-sticker_letter_spacing'     => '0',
+
 			'tm_pb_fullwidth_post_title-title_font_size'      => '26px',
 			'tm_pb_fullwidth_post_title-title_line_height'    => '1em',
 			'tm_pb_fullwidth_post_title-title_letter_spacing' => $font_defaults['letter_spacing'],
@@ -145,6 +149,11 @@ class Tm_Global_Settings {
 			'tm_pb_pricing_table-price_line_height'           => '82px',
 			'tm_pb_pricing_table-body_line_height'            => '24px',
 			'tm_pb_audio-title_font_size'                     => '26',
+
+			'tm_pb_pricing_table-sticker_font_size'           => '22px',
+			'tm_pb_pricing_table-sticker_line_height'         => '1.7em',
+			'tm_pb_pricing_table-sticker_letter_spacing'      => '0',
+
 			'tm_pb_audio-title_letter_spacing'                => $font_defaults['letter_spacing'],
 			'tm_pb_audio-title_line_height'                   => $font_defaults['line_height'],
 			'tm_pb_audio-title_font_style'                    => '',

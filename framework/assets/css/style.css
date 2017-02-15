@@ -1892,15 +1892,17 @@
   height: 90px;
   padding: 20px;
   margin-top: -45px;
-  margin-left: -45px;
   border-radius: 50%;
-  background-size: contain; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
   #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-right {
     top: 0;
     right: 0; }
   #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-center {
     top: 0;
-    left: 50%; }
+    left: 50%;
+    margin-left: -45px; }
   #tm_builder_outer_content .tm_pb_pricing_sticker.sticker-top-left {
     top: 0;
     left: 0; }
