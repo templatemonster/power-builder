@@ -2030,7 +2030,8 @@ Copyright (c) 2015 Daniel Eden
   background-color: #f1f1f1;
   padding: 7px; }
   .tm-pb-option-container .wp-picker-container .wp-picker-holder {
-    position: absolute; }
+    position: absolute;
+    z-index: 1; }
   .tm-pb-option-container .wp-picker-container.wp-picker-active .wp-picker-input-wrap {
     margin-top: 5px; }
   .tm-pb-option-container .wp-picker-container .wp-picker-input-wrap {

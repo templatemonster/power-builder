@@ -38,12 +38,11 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 		$this->slug					= 'tm_pb_taxonomy';
 		$this->main_css_element		= '%%order_class%%.tm_pb_taxonomy';
 
-		$this->whitelisted_fields	= $this->settings;
-
 		$this->taxonomies_source = $this->get_taxonomies_source();
-
 		$taxonomies_source_key = array_keys( $this->taxonomies_source );
 		$this->settings = array_merge( $this->settings, $taxonomies_source_key );
+
+		$this->whitelisted_fields	= $this->settings;
 
 		$this->fields_defaults		= array(
 			'terms_type'			=> array( 'category_name' ),
@@ -66,6 +65,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 		$exclude_taxonomies = apply_filters( 'tm_builder_exclude_source_taxonomies', array( 'nav_menu', 'link_category', 'scope', 'layout_type', 'module_width', 'layout_category' ) );
 		$taxonomies = get_taxonomies( array(), 'objects ' );
 		$output_taxonomies = array();
+
 
 		foreach ( $taxonomies as $key => $value ) {
 			if ( ! in_array( $key, $exclude_taxonomies ) ) {

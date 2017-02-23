@@ -81,6 +81,7 @@
 		padding: 7px;
 			& .wp-picker-holder{
 				position: absolute;
+				z-index: 1;
 			}
 			&.wp-picker-active{
 				.wp-picker-input-wrap{

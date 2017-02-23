@@ -34,7 +34,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 				'title' => array(
 					'label'    => esc_html__( 'Title', 'tm_builder' ),
 					'css'      => array(
-						'main' => "{$this->main_css_element} h1",
+						'main' => "{$this->main_css_element} h2",
 					),
 				),
 				'form_field'   => array(
