@@ -3478,7 +3478,7 @@ class Tm_Builder_Element {
 			'992_1440'       => '@media only screen and ( min-width: 992px ) and ( max-width: 1440px )',
 			'min_width_991'  => '@media only screen and ( min-width: 991px )',
 			'max_width_991'  => '@media only screen and ( max-width: 991px )',
-			'768_980'        => '@media only screen and ( min-width: 768px ) and ( max-width: 980px )',
+			'768_991'        => '@media only screen and ( min-width: 768px ) and ( max-width: 991px )',
 			'max_width_767'  => '@media only screen and ( max-width: 767px )',
 			'min_width_1441' => '@media only screen and ( min-width: 1441px )',
 			//'max_width_479'  => '@media only screen and ( max-width: 479px )',

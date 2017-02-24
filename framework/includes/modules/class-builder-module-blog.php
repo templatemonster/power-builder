@@ -423,7 +423,7 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 		$queries = array(
 			'desktop' => 'min_width_1441',
 			'laptop'  => '992_1440',
-			'tablet'  => '768_980',
+			'tablet'  => '768_991',
 			'phone'   => 'max_width_767',
 		);
 
