@@ -18,7 +18,7 @@ function tm_pb_media_breakpoints() {
 function tm_pb_media_breakpoint_values() {
 	return apply_filters( 'tm_pb_media_breakpoint_values', array(
 		'phone'   => 'max_width_767',
-		'tablet'  => '768_980',
+		'tablet'  => '768_991',
 		'laptop'  => '992_1440',
 		'desktop' => 'min_width_1441',
 	) );
