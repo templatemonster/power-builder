@@ -4935,12 +4935,12 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 
 			if ( 'desktop' !== $device ) {
 				switch ( $device ) {
-					case 'tablet':
-						$current_media_query = 'max_width_991';
-						break;
-
 					case 'laptop':
 						$current_media_query = '992_1440';
+						break;
+
+					case 'tablet':
+						$current_media_query = 'max_width_991';
 						break;
 
 					default:
@@ -4950,6 +4950,7 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 
 				$style['media_query'] = TM_Builder_Element::get_media_query( $current_media_query );
 			}
+
 			TM_Builder_Element::set_style( $function_name, $style );
 		}
 	}
@@ -5232,3 +5233,4 @@ function get_map_style_json( $map_style ){
 
 	return '';
 }
+

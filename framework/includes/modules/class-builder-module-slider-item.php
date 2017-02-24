@@ -35,15 +35,18 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 			'bg_overlay_color',
 			'text_overlay_color',
 			'text_border_radius',
+			'use_heading_bg_image',
+			'heading_bg_image',
 		);
 
 		$this->fields_defaults = array(
-			'button_link'         => array( '#' ),
-			'background_position' => array( 'default' ),
-			'background_size'     => array( 'default' ),
-			'background_color'    => array( '#ffffff', 'only_default_setting' ),
-			'alignment'           => array( 'center' ),
-			'allow_player_pause'  => array( 'off' ),
+			'button_link'          => array( '#' ),
+			'background_position'  => array( 'default' ),
+			'background_size'      => array( 'default' ),
+			'background_color'     => array( '#ffffff', 'only_default_setting' ),
+			'alignment'            => array( 'center' ),
+			'allow_player_pause'   => array( 'off' ),
+			'use_heading_bg_image' => array( 'off' ),
 		);
 
 		$this->advanced_setting_title_text = esc_html__( 'New Slide', 'tm_builder' );
@@ -244,6 +247,28 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				'depends_show_if'   => 'on',
 				'description'       => esc_html__( 'Use the color picker to choose a color for the text overlay.', 'tm_builder' ),
 			),
+			'use_heading_bg_image'      => array(
+				'label'           => esc_html__( 'Use heading background image', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'yes', 'tm_builder' ),
+				),
+				'affects'           => array(
+					'#tm_pb_heading_bg_image',
+				),
+				'description'     => esc_html__( 'When enabled, a background color is added behind the slider text to make it more readable atop background images.', 'tm_builder' ),
+			),
+			'heading_bg_image' => array(
+				'label'              => esc_html__( 'Heading background Image', 'tm_builder' ),
+				'type'               => 'upload',
+				'option_category'    => 'basic_option',
+				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Heading Background Image', 'tm_builder' ),
+				'update_text'        => esc_attr__( 'Set As Heading Background', 'tm_builder' ),
+				'description'        => esc_html__( 'If defined, this image will be used as the background for this module. To remove a Heading background image, simply delete the URL from the settings field.', 'tm_builder' ),
+			),
 			'alignment' => array(
 				'label'           => esc_html__( 'Slide Image Vertical Alignment', 'tm_builder' ),
 				'type'            => 'select',
@@ -380,6 +405,8 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				'use_text_overlay',
 				'text_overlay_color',
 				'text_border_radius',
+				'use_heading_bg_image',
+				'heading_bg_image',
 			)
 		);
 
@@ -515,7 +542,8 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 			) );
 		}
 
-		if ( 'on' === $this->_var( 'use_text_overlay' ) && '' !== $this->_var( 'text_overlay_color' ) ) { TM_Builder_Element::set_style( $function_name, array(
+		if ( 'on' === $this->_var( 'use_text_overlay' ) && '' !== $this->_var( 'text_overlay_color' ) ) {
+			TM_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%%.tm_pb_slide .tm_pb_slide_description_inner',
 				'declaration' => sprintf(
 					'background-color: %1$s;',
@@ -552,6 +580,17 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				),
 			) );
 		}
+
+		if ( 'on' === $this->_var( 'use_heading_bg_image' ) && '' !== $this->_var( 'heading_bg_image' ) ) {
+			TM_Builder_Element::set_style( $function_name, array(
+				'selector'    => '%%order_class%%.tm_pb_slide .tm_pb_slide_title',
+				'declaration' => sprintf(
+					'background: url( %1$s ) center;',
+					esc_url( $this->_var( 'heading_bg_image' ) )
+				),
+			) );
+		}
+
 
 		$style = '' !== $style ? " style='{$style}'" : '';
 		$this->_var( 'style', $style );
@@ -648,14 +687,16 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				%8$s
 				%12$s
 				<div class="tm_pb_container clearfix">
-					%5$s
-					<div class="tm_pb_slide_description">
-						<div class="tm_pb_slide_description_inner">
-							%1$s
-							<div class="tm_pb_slide_content%9$s">%2$s</div>
-							%3$s
-						</div>
-					</div> <!-- .tm_pb_slide_description -->
+					<div class="tm_pb_container_inner">
+						%5$s
+						<div class="tm_pb_slide_description">
+							<div class="tm_pb_slide_description_inner">
+								%1$s
+								<div class="tm_pb_slide_content%9$s">%2$s</div>
+								%3$s
+							</div>
+						</div> <!-- .tm_pb_slide_description -->
+					</div>
 				</div> <!-- .tm_pb_container -->
 				%7$s
 			</div> <!-- .tm_pb_slide -->

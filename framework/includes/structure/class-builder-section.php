@@ -83,7 +83,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			'inner_shadow'           => array( 'off' ),
 			'parallax'               => array( 'off' ),
 			'parallax_method'        => array( 'on' ),
-			'padding_mobile'         => array( 'off' ),
+			'padding_mobile'         => array( 'on' ),
 			'make_fullwidth'         => array( 'off' ),
 			'use_custom_width'       => array( 'off' ),
 			'width_unit'             => array( 'off' ),
@@ -223,7 +223,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			'custom_padding_phone' => array(
 				'type' => 'skip',
 			),
-			'padding_mobile' => array(
+			/*'padding_mobile' => array(
 				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'tm_builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
@@ -232,7 +232,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 					'on'  => esc_html__( 'Yes', 'tm_builder' ),
 				),
 				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'tm_builder' ),
-			),
+			),*/
 			'make_fullwidth' => array(
 				'label'             => esc_html__( 'Make This Section Fullwidth', 'tm_builder' ),
 				'type'              => 'yes_no_button',
@@ -747,8 +747,10 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 					);
 
 					if ( 'on' !== $padding_mobile ) {
-						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
-					} TM_Builder_Element::set_style( $function_name, $element_style );
+						//$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
+					}
+
+					TM_Builder_Element::set_style( $function_name, $element_style );
 				}
 			}
 		}

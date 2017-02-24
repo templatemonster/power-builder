@@ -11,6 +11,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 		$this->whitelisted_fields = array(
 			'show_arrows',
 			'show_pagination',
+			'always_fullscreen',
 			'auto',
 			'auto_speed',
 			'auto_ignore_hover',
@@ -38,6 +39,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 		$this->fields_defaults = array(
 			'show_arrows'             => array( 'on' ),
 			'show_pagination'         => array( 'on' ),
+			'always_fullscreen'       => array( 'off' ),
 			'auto'                    => array( 'off' ),
 			'auto_speed'              => array( '7000' ),
 			'auto_ignore_hover'       => array( 'off' ),
@@ -126,6 +128,17 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 					'off' => esc_html__( 'No', 'tm_builder' ),
 				),
 				'description'       => esc_html__( 'This setting will turn on and off the circle buttons at the bottom of the slider.', 'tm_builder' ),
+			),
+			'always_fullscreen' => array(
+				'label'           => esc_html__( 'Slider fullscreen', 'tm_builder' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'default'         => 'off',
+				'options'         => array(
+					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'tm_builder' ),
+				),
+				'description'     => esc_html__( 'This setting will turn on and off slider fullscreen.', 'tm_builder' ),
 			),
 			'auto' => array(
 				'label'           => esc_html__( 'Automatic Animation', 'tm_builder' ),
@@ -348,6 +361,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 			array(
 				'show_arrows',
 				'show_pagination',
+				'always_fullscreen',
 				'parallax',
 				'parallax_method',
 				'auto',
@@ -371,7 +385,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 			)
 		);
 
-		global $tm_pb_slider_has_video, $tm_pb_slider_parallax, $tm_pb_slider_parallax_method, $tm_pb_slider_hide_mobile, $tm_pb_slider_custom_icon;
+		global $tm_pb_slider_has_video, $tm_pb_slider_parallax, $tm_pb_slider_parallax_method, $tm_pb_slider_hide_mobile, $tm_pb_slider_custom_icon, $tm_pb_slider_full_height;
 
 		$this->shortcode_content;
 
@@ -442,6 +456,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 
 		$classes = array(
 			( 'off' === $fullwidth ? ' tm_pb_slider_fullwidth_off' : '' ),
+			( 'on' === $this->_var( 'always_fullscreen' ) ? ' tm_pb_slider_full_height' : '' ),
 			( 'off' === $this->_var( 'show_arrows' ) ? ' tm_pb_slider_no_arrows' : '' ),
 			( 'off' === $this->_var( 'show_pagination' ) ? ' tm_pb_slider_no_pagination' : '' ),
 			( 'on'  === $this->_var( 'parallax' ) ? ' tm_pb_slider_parallax' : '' ),

@@ -26,7 +26,7 @@ $anchor_atts = $this->prepare_atts( array(
 $img_atts = $this->prepare_atts( array(
 	'class' => 'tm_pb_brands_showcase_module__item__logo',
 	'src'   => esc_attr( $brand_logo ),
-	'alt'   => esc_attr( $brand_title ),
+	'alt'   => ( '' !== $brand_title ) ? esc_attr( $brand_title ) : 'none-title',
 ), true );
 
 ?>
