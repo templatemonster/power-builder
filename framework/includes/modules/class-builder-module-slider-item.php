@@ -585,7 +585,10 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 			TM_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%%.tm_pb_slide .tm_pb_slide_title',
 				'declaration' => sprintf(
-					'background: url( %1$s ) center;',
+					'background: url( %1$s ) center;
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;',
 					esc_url( $this->_var( 'heading_bg_image' ) )
 				),
 			) );
@@ -689,7 +692,7 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				<div class="tm_pb_container clearfix">
 					<div class="tm_pb_container_inner">
 						%5$s
-						<div class="tm_pb_slide_description">
+						<div class="tm_pb_slide_description%13$s">
 							<div class="tm_pb_slide_description_inner">
 								%1$s
 								<div class="tm_pb_slide_content%9$s">%2$s</div>
@@ -699,8 +702,7 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 					</div>
 				</div> <!-- .tm_pb_container -->
 				%7$s
-			</div> <!-- .tm_pb_slide -->
-			',
+			</div> <!-- .tm_pb_slide -->',
 			$this->_var( 'heading' ),
 			$this->shortcode_content,
 			$this->_var( 'button' ) . $this->_var( 'button_2' ),
@@ -713,7 +715,8 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 			( 'on' === $tm_pb_slider_hide_mobile['hide_content_on_mobile'] ? esc_attr( " {$hide_on_mobile_class}" ) : '' ),
 			$data_dot_nav_custom_color,
 			$data_arrows_custom_color,
-			'on' === $this->_var( 'use_bg_overlay' ) ? '<div class="tm_pb_slide_overlay_container"></div>' : ''
+			'on' === $this->_var( 'use_bg_overlay' ) ? '<div class="tm_pb_slide_overlay_container"></div>' : '',
+			'on' === $this->_var( 'use_heading_bg_image' ) ? ' tm_pb_heading_image' : ''
 		);
 
 		return $output;

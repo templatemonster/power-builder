@@ -305,14 +305,16 @@
 	}
 
 	.tm_pb_slide_description {
+		&.tm_pb_heading_image {
+			.tm_pb_slide_title {
+				color: transparent;
+			}
+		}
+
 		.tm_pb_slide_title {
 			font-weight: 300;
 			font-size: 46px;
 			margin-top: 0;
-			color: transparent;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			background-clip: text;
 		}
 
 		padding: 16% 8%;
