@@ -10,7 +10,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 			'divider_width'   => '100',
 			'height'          => '1',
 			'height_laptop'   => '1',
-			'height_tablet'   => '10',
+			'height_tablet'   => '1',
 			'height_phone'    => '1',
 		);
 
@@ -46,7 +46,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 			'show_divider'    => array( $show_divider_default ),
 			'height'          => array( '1' ),
 			'height_laptop'   => array( '1' ),
-			'height_tablet'   => array( '10' ),
+			'height_tablet'   => array( '1' ),
 			'height_phone'    => array( '1' ),
 			'divider_width'   => array( '100' ),
 		);
