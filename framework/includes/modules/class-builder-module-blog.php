@@ -780,9 +780,10 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 	 */
 	public function open_posts_list() {
 		return sprintf(
-			'<div class="tm_pb_blog_%1$s_wrapper %2$s" data-columns>',
+			'<div class="tm_pb_blog_%1$s_wrapper %2$s" %3$s>',
 			esc_attr( $this->_var( 'blog_layout' ) ),
-			'list' !== $this->_var( 'blog_layout' ) ? 'row' : ''
+			'list' !== $this->_var( 'blog_layout' ) ? 'row' : '',
+			'masonry' === $this->_var( 'blog_layout' ) ? 'data-columns' : ''
 		);
 	}
 
