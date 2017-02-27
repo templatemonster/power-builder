@@ -8,6 +8,10 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 		$this->child_item_text  = esc_html__( 'Slide', 'tm_builder' );
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
 
+		$this->defaults = array(
+			'fullheight' => 'off',
+		);
+
 		$this->whitelisted_fields = array(
 			'show_arrows',
 			'show_pagination',

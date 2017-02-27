@@ -176,7 +176,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 				'tablet'  => $height_tablet,
 				'phone'   => $height_phone,
 			);
-			var_dump($height_values);
+
 			tm_pb_generate_responsive_css(
 				$height_values,
 				'%%order_class%%',
