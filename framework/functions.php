@@ -1392,6 +1392,8 @@ function _tm_pb_sanitize_code_module_content_regex( $matches ) {
 }
 
 function tm_pb_builder_post_content_capability_check( $content) {
+	var_dump($content);
+	//exit();
 	if ( ! current_user_can( 'unfiltered_html' ) ) {
 		$content = preg_replace_callback('/\[tm_pb_code .*\](.*)\[\/tm-pb_code\]/mis', '_tm_pb_sanitize_code_module_content_regex', $content );
 		$content = preg_replace_callback('/\[tm_pb_fullwidth_code .*\](.*)\[\/tm-pb_fullwidth_code\]/mis', '_tm_pb_sanitize_code_module_content_regex', $content );
