@@ -39,7 +39,7 @@ if ( ! class_exists( 'TM_Builder_Core' ) ) {
 		 */
 		function __construct() {
 			// Load the installer core.
-			add_action( 'after_setup_theme', require( trailingslashit( __DIR__ ) . 'cherry-framework/setup.php' ), 0 );
+			add_action( 'after_setup_theme', require( trailingslashit( dirname( __FILE__ ) ) . 'cherry-framework/setup.php' ), 0 );
 			add_action( 'after_setup_theme', array( $this, 'init_core' ), 1 );
 			add_action( 'after_setup_theme', array( 'Cherry_Core', 'load_all_modules' ), 2 );
 
