@@ -432,10 +432,10 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 		$cols = $this->get_cols();
 
 		$queries = array(
-			'desktop' => 'min_width_1441',
-			'laptop'  => '992_1440',
-			'tablet'  => '768_991',
-			'phone'   => 'max_width_767',
+			'desktop' => 'min_width_1600',
+			'laptop'  => 'lg_down',
+			'tablet'  => 'md_down',
+			'phone'   => 'sm_down',
 		);
 
 		foreach ( $cols as $device => $data ) {

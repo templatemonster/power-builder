@@ -130,7 +130,7 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 			'custom_padding_phone' => array(
 				'type' => 'skip',
 			),
-			'padding_mobile' => array(
+			/*'padding_mobile' => array(
 				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'tm_builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
@@ -139,7 +139,7 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 					'on'  => esc_html__( 'Yes', 'tm_builder' ),
 				),
 				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'tm_builder' ),
-			),
+			),*/
 			'use_custom_gutter' => array(
 				'label'             => esc_html__( 'Use Custom Gutter Width', 'tm_builder' ),
 				'type'              => 'yes_no_button',
@@ -180,7 +180,7 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 				'option_category' => 'configuration',
 				'tab_slug'        => 'advanced',
 			),
-			'column_padding_mobile' => array(
+			/*'column_padding_mobile' => array(
 				'label'             => esc_html__( 'Keep Column Padding on Mobile', 'tm_builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
@@ -188,7 +188,7 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 					'on'  => esc_html__( 'Yes', 'tm_builder' ),
 					'off' => esc_html__( 'No', 'tm_builder' ),
 				),
-			),
+			),*/
 			'background_color_1' => array(
 				'type' => 'skip',
 			),
@@ -517,8 +517,9 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 					);
 
 					if ( 'on' !== $padding_mobile ) {
-						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
-					} TM_Builder_Element::set_style( $function_name, $element_style );
+						//$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
+					}
+					TM_Builder_Element::set_style( $function_name, $element_style );
 				}
 			}
 		}

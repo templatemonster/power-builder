@@ -16,7 +16,7 @@ $image = tm_builder_core()->utility()->media->get_image(
 );
 ?>
 <!-- div.tm_pb_taxonomy__holder start -->
-<div class="tm_pb_taxonomy__holder col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" >
+<div class="tm_pb_taxonomy__holder col-xs-12 col-sm-12 col-md-12 col-xl-4" >
 	<div class="tiles-item tiles-item-type-2 tm_pb_taxonomy__inner">
 		<figure>
 			<?php echo $image ?>

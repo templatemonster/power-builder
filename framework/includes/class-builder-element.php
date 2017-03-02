@@ -2595,7 +2595,7 @@ class Tm_Builder_Element {
 					} elseif ( false !== strpos( $mobile_option, 'tablet' ) ) {
 						$current_media_query = 'md_down';
 					} elseif ( false !== strpos( $mobile_option, 'laptop' ) ) {
-						$current_media_query = '992_1440';
+						$current_media_query = 'lg_down';
 					}
 
 					$main_option_name = str_replace( array( '_laptop', '_tablet', '_phone' ), '', $mobile_option );
@@ -2899,7 +2899,7 @@ class Tm_Builder_Element {
 					switch ( $device ) {
 
 						case 'laptop':
-							$current_media_query = '992_1440';
+							$current_media_query = 'lg_down';
 							break;
 
 						case 'tablet':
@@ -3180,7 +3180,7 @@ class Tm_Builder_Element {
 				}
 
 				foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
-					$current_media_query = 'tablet' === $device ? 'max_width_991' : 'max_width_767';
+					$current_media_query = 'tablet' === $device ? 'md_down' : 'sm_down';
 					$current_text_size = 'tablet' === $device ? tm_builder_process_range_value( $button_text_size_tablet ) : tm_builder_process_range_value( $button_text_size_phone );
 					$current_letter_spacing = 'tablet' === $device ? tm_builder_process_range_value( $button_letter_spacing_tablet ) : tm_builder_process_range_value( $button_letter_spacing_phone );
 					$current_letter_spacing_hover = 'tablet' === $device ? tm_builder_process_range_value( $button_letter_spacing_hover_tablet ) : tm_builder_process_range_value( $button_letter_spacing_hover_phone );
@@ -3471,31 +3471,18 @@ class Tm_Builder_Element {
 
 	static function set_media_queries() {
 		$media_queries = array(
-			//'min_width_1405' => '@media only screen and ( min-width: 1405px )',
-			//'1100_1405'      => '@media only screen and ( min-width: 1100px ) and ( max-width: 1405px)',
-			//'981_1405'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1405px)',
-			//'981_1100'       => '@media only screen and ( min-width: 981px ) and ( max-width: 1100px )',
-			'992_1440'       => '@media only screen and ( min-width: 992px ) and ( max-width: 1440px )',
-			'min_width_991'  => '@media only screen and ( min-width: 991px )',
-			'max_width_991'  => '@media only screen and ( max-width: 991px )',
-			'768_991'        => '@media only screen and ( min-width: 768px ) and ( max-width: 991px )',
-			'max_width_767'  => '@media only screen and ( max-width: 767px )',
-			'min_width_1441' => '@media only screen and ( min-width: 1441px )',
-			//'max_width_479'  => '@media only screen and ( max-width: 479px )',
-			'sm_up'          => '@media (min-width: 34em)',
-			'md_up'          => '@media (min-width: 48em)',
-			'lg_up'          => '@media (min-width: 62em)',
-			'xl_up'          => '@media (min-width: 75em)',
-			'xs_down'        => '@media (max-width: 33.9em)',
-			'sm_down'        => '@media (max-width: 767px)',
-			'md_down'        => '@media (max-width: 991px)',
-			'lg_down'        => '@media (max-width: 74.9em)',
+			'min_width_1600' => '@media screen and ( min-width: 1601px )',
+
+			'sm_down'        => '@media screen and (max-width: 767px)',
+			'md_down'        => '@media screen and (max-width: 1199px)',
+			'lg_down'        => '@media screen and (max-width: 1600px)',
+
 			'sm'             => '@media (min-width: 34em) and (max-width: 47.9em)',
 			'md'             => '@media (min-width: 48em) and (max-width: 61.9em)',
 			'lg'             => '@media (min-width: 62em) and (max-width: 74.9em)',
 		);
 
-		$media_queries['mobile'] = $media_queries['max_width_767'];
+		$media_queries['mobile'] = $media_queries['sm_down'];
 
 		self::$media_queries = apply_filters( 'tm_builder_media_queries', $media_queries );
 	}

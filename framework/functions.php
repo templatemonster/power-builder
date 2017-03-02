@@ -17,10 +17,10 @@ function tm_pb_media_breakpoints() {
  */
 function tm_pb_media_breakpoint_values() {
 	return apply_filters( 'tm_pb_media_breakpoint_values', array(
-		'phone'   => 'max_width_767',
-		'tablet'  => '768_991',
-		'laptop'  => '992_1440',
-		'desktop' => 'min_width_1441',
+		'phone'   => 'sm_down',
+		'tablet'  => 'md_down',
+		'laptop'  => 'lg_down',
+		'desktop' => 'min_width_1600',
 	) );
 }
 
@@ -4937,20 +4937,24 @@ function tm_pb_generate_responsive_css( $values_array, $css_selector, $css_prope
 			if ( 'desktop' !== $device ) {
 				switch ( $device ) {
 					case 'laptop':
-						$current_media_query = '992_1440';
+						$current_media_query = 'lg_down';
 						break;
 
 					case 'tablet':
-						$current_media_query = 'max_width_991';
+						$current_media_query = 'md_down';
 						break;
 
 					default:
-						$current_media_query = 'max_width_767';
+						$current_media_query = 'sm_down';
 						break;
 				}
 
 				$style['media_query'] = TM_Builder_Element::get_media_query( $current_media_query );
 			}
+
+				//$current_media_query = '992_1440';
+				//$current_media_query = 'max_width_991';
+				//$current_media_query = 'max_width_767';
 
 			TM_Builder_Element::set_style( $function_name, $style );
 		}

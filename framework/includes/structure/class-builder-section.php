@@ -83,7 +83,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 			'inner_shadow'           => array( 'off' ),
 			'parallax'               => array( 'off' ),
 			'parallax_method'        => array( 'on' ),
-			'padding_mobile'         => array( 'on' ),
+			'padding_mobile'         => array( 'off' ),
 			'make_fullwidth'         => array( 'off' ),
 			'use_custom_width'       => array( 'off' ),
 			'width_unit'             => array( 'off' ),

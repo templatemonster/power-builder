@@ -42,7 +42,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			'col-xs' => 12,
 			'col-sm' => 12,
 			'col-md' => 12,
-			'col-lg' => 12,
+			'col-xl' => 12,
 		);
 
 		$args = wp_parse_args( $args, $default_args );
@@ -124,8 +124,9 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 					);
 
 					if ( 'on' !== $keep_column_padding_mobile ) {
-						$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
-					} TM_Builder_Element::set_style( $function_name, $element_style );
+						//$element_style['media_query'] = TM_Builder_Element::get_media_query( 'min_width_991' );
+					}
+					TM_Builder_Element::set_style( $function_name, $element_style );
 				}
 			}
 		}
@@ -203,8 +204,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 12,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 12,
-						'col-xl' => 12,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 12,
 					)
 				);
 
@@ -217,8 +217,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 6,
-						'col-xl' => 6,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 6,
 					)
 				);
 
@@ -231,8 +230,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 4,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 4,
-						'col-xl' => 4,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 4,
 					)
 				);
 
@@ -245,8 +243,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 3,
-						'col-xl' => 3,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 3,
 					)
 				);
 
@@ -259,8 +256,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 8,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 8,
-						'col-xl' => 8,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 8,
 					)
 				);
 
@@ -273,8 +269,7 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 						'col-xs' => 12,
 						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
-						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 9,
-						'col-xl' => 9,
+						'col-xl' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 9,
 					)
 				);
 
