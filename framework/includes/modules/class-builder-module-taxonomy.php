@@ -329,7 +329,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 				apply_filters( 'tm_pb_module_taxonomy_content_settings',
 					array(
 						'visible'		=> $post_count,
-						'sufix'			=> _n_noop( '%s post', '%s posts', '__tm' ),
+						'sufix'			=> _n_noop( '%s post', '%s posts', 'tm_builder' ),
 						'html'			=> '%1$s<span %4$s>%5$s%6$s</span>',
 					)
 				),
