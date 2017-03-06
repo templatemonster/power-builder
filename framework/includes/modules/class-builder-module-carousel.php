@@ -257,11 +257,11 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 				'label'					=> esc_html__( 'Display post meta data', 'tm_builder' ),
 				'type'					=> 'multiple_checkboxes',
 				'options'				=> array(
-					'date'			=> esc_html__( 'Date', '__tm' ),
-					'author'		=> esc_html__( 'Author', '__tm' ),
-					'comment_count'	=> esc_html__( 'Comment count', '__tm' ),
-					'category'		=> esc_html__( 'Category', '__tm' ),
-					'post_tag'		=> esc_html__( 'Tag', '__tm' ),
+					'date'			=> esc_html__( 'Date', 'tm_builder' ),
+					'author'		=> esc_html__( 'Author', 'tm_builder' ),
+					'comment_count'	=> esc_html__( 'Comment count', 'tm_builder' ),
+					'category'		=> esc_html__( 'Category', 'tm_builder' ),
+					'post_tag'		=> esc_html__( 'Tag', 'tm_builder' ),
 				),
 				'option_category' => 'configuration',
 			),
@@ -455,7 +455,7 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 						'visible'		=> $comment_count_visible,
 						'html'			=> '<div class="post-meta post-comments">%1$s<a href="%2$s" %3$s %4$s>%5$s%6$s</a></div>',
 						'class'			=> 'post__comments-link',
-						'sufix'			=> _n_noop( '%s comment', '%s comments', '__tm' ),
+						'sufix'			=> _n_noop( '%s comment', '%s comments', 'tm_builder' ),
 					)
 				)
 			);

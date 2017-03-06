@@ -31,7 +31,7 @@
 
 		tm_builder_core()->utility()->attributes->get_button( array(
 			'visible'   => true,
-			'text'      => __( 'Read More', '__tm' ),
+			'text'      => __( 'Read More', 'tm_builder' ),
 			'icon'      => apply_filters( '__tm_button_icon', '<i class="material-icons">arrow_forward</i>' ),
 			'class'     => 'btn',
 			'html'      => '<a href="%1$s" %2$s %3$s><span class="btn__text">%4$s</span>%5$s</a>',
