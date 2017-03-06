@@ -373,15 +373,20 @@ class Tm_Builder_Element {
 
 			foreach( $disabled_on_array as $value ) {
 				if ( 'on' === $value && isset( self::$media_breakpoints[ $i ] ) ) {
-					TM_Builder_Module::set_style(
-						$function_name,
-						array(
-							'selector'    => '%%order_class%%',
-							'declaration' => 'display: none !important;',
-							'media_query' => TM_Builder_Element::get_media_query( self::$media_breakpoints[ $i ] ),
-						)
-					);
+					$declaration = 'display: none;';
+				} else {
+					$declaration = 'display: block;';
 				}
+
+				TM_Builder_Module::set_style(
+					$function_name,
+					array(
+						'selector'    => '%%order_class%%',
+						'declaration' => $declaration,
+						'media_query' => TM_Builder_Element::get_media_query( self::$media_breakpoints[ $i ] ),
+					)
+				);
+
 				$i++;
 			}
 		}

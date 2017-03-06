@@ -276,7 +276,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 		$columns = $this->_var( 'columns' );
 		$columns_class = ( int ) ( 12 / $columns ) ;
 		$items_grid_class = apply_filters( 'tm_pb_module_taxonomy_items_class', 'col-xs-12 col-sm-12 col-md-6 ');
-		$items_class = $items_grid_class . ' col-lg-' . $columns_class . ' col-xl-' . $columns_class;
+		$items_class = $items_grid_class . ' col-xl-' . $columns_class;
 		$columns = $this->_var( 'items_class', $items_class );
 
 		$title_length = $this->_var( 'title_length' );
