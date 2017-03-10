@@ -192,7 +192,7 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 			( '' !== $video_src ? $video_src : '' ),
 			( '' !== $module_id ? sprintf( ' id="%1$s"', esc_attr( $module_id ) ) : '' ),
 			( '' !== $module_class ? sprintf( ' %1$s', esc_attr( $module_class ) ) : '' ),
-			( '' !== $image_src || 'off' === $auto_play ? sprintf(
+			( '' !== $image_src && 'off' === $auto_play ? sprintf(
 					'<div class="tm_pb_video_overlay" style="background-image: url(%1$s);">
 						<div class="tm_pb_video_overlay_hover">
 							<a href="#" class="tm_pb_video_play"></a>

@@ -1724,12 +1724,17 @@ jQuery(document).ready( function($){
 
 	$( '.tm_pb_video .tm_pb_video_overlay, .tm_pb_video_wrap .tm_pb_video_overlay' ).click( function() {
 		var $this        = $(this),
-			$video_image = $this.closest( '.tm_pb_video_overlay' );
+			$video_image = $this.closest( '.tm_pb_video_overlay' ),
+			$video_tag = $( 'video', $this.parent( '.tm_pb_video, .tm_pb_video_wrap' ) );
 
-		$video_image.fadeTo( 500, 0, function() {
+		$this.fadeTo( 500, 0, function() {
 			var $image = $(this);
 
 			$image.css( 'display', 'none' );
+
+			if ( $video_tag.get(0).paused ) {
+				$video_tag.get(0).play();
+			}
 		} );
 
 		return false;
