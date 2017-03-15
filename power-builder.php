@@ -63,6 +63,9 @@ class Tm_Builder_Plugin {
 		require TM_BUILDER_DIR . '/functions.php';
 		require TM_BUILDER_DIR . '/framework/framework.php';
 
+		// Internationalize the text strings used.
+		$this->lang();
+
 		$this->options = new stdClass();
 
 		$this->options->pagename = 'tm_builder_options';
@@ -83,8 +86,7 @@ class Tm_Builder_Plugin {
 
 		add_filter( 'tm_builder_inner_content_class', array( $this, 'add_builder_inner_content_class' ) );
 
-		// Internationalize the text strings used.
-		add_action( 'plugins_loaded', array( $this, 'lang' ) );
+
 	}
 
 	/**
@@ -917,7 +919,8 @@ class Tm_Builder_Plugin {
 	 * @since 1.0.0
 	 */
 	function lang() {
-		load_plugin_textdomain( 'power-builder', false, TM_BUILDER_DIR . '/languages' );
+
+		load_plugin_textdomain( 'power-builder', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 }
