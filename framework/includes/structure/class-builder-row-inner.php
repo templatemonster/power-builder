@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 	function init() {
-		$this->name = esc_html__( 'Row', 'tm_builder' );
+		$this->name = esc_html__( 'Row', 'power-builder' );
 		$this->slug = 'tm_pb_row_inner';
 
 		$this->advanced_options = array(
@@ -115,11 +115,11 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 	function get_fields() {
 		$fields = array(
 			'custom_padding' => array(
-				'label'           => esc_html__( 'Custom Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Padding', 'power-builder' ),
 				'type'            => 'custom_padding',
 				'mobile_options'  => true,
 				'option_category' => 'layout',
-				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'tm_builder' ),
+				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'power-builder' ),
 			),
 			'custom_padding_laptop' => array(
 				'type' => 'skip',
@@ -131,30 +131,30 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 				'type' => 'skip',
 			),
 			/*'padding_mobile' => array(
-				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'tm_builder' ),
+				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'power-builder' ),
 			),*/
 			'use_custom_gutter' => array(
-				'label'             => esc_html__( 'Use Custom Gutter Width', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Custom Gutter Width', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_gutter_width',
 				),
-				'description'       => esc_html__( 'Enable this option to define custom gutter width for this row.', 'tm_builder' ),
+				'description'       => esc_html__( 'Enable this option to define custom gutter width for this row.', 'power-builder' ),
 			),
 			'gutter_width' => array(
-				'label'           => esc_html__( 'Gutter Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Gutter Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'range_settings'  => array(
@@ -163,15 +163,15 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 					'step' => 1,
 				),
 				'depends_show_if' => 'on',
-				'description'     => esc_html__( 'Adjust the spacing between each column in this row.', 'tm_builder' ),
+				'description'     => esc_html__( 'Adjust the spacing between each column in this row.', 'power-builder' ),
 			),
 			'make_equal' => array(
-				'label'             => esc_html__( 'Equalize Column Heights', 'tm_builder' ),
+				'label'             => esc_html__( 'Equalize Column Heights', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'          => 'advanced',
 			),
@@ -181,12 +181,12 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 				'tab_slug'        => 'advanced',
 			),
 			/*'column_padding_mobile' => array(
-				'label'             => esc_html__( 'Keep Column Padding on Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Keep Column Padding on Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),*/
 			'background_color_1' => array(
@@ -331,22 +331,22 @@ class Tm_Builder_Row_Inner extends Tm_Builder_Structure_Element {
 				'priority'        => '20',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

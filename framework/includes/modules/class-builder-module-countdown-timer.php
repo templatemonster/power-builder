@@ -4,7 +4,7 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 	public $function_name;
 
 	function init() {
-		$this->name = esc_html__( 'Countdown Timer', 'tm_builder' );
+		$this->name = esc_html__( 'Countdown Timer', 'power-builder' );
 		$this->slug = 'tm_pb_countdown_timer';
 		$this->icon = 'f073';
 
@@ -33,13 +33,13 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h4",
 					),
 				),
 				'numbers' => array(
-					'label'    => esc_html__( 'Numbers', 'tm_builder' ),
+					'label'    => esc_html__( 'Numbers', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .section span.value",
 					),
@@ -52,7 +52,7 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 					),
 				),
 				'label' => array(
-					'label'    => esc_html__( 'Label', 'tm_builder' ),
+					'label'    => esc_html__( 'Label', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .section span.label",
 					),
@@ -76,15 +76,15 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'container' => array(
-				'label'    => esc_html__( 'Container', 'tm_builder' ),
+				'label'    => esc_html__( 'Container', 'power-builder' ),
 				'selector' => '.tm_pb_countdown_timer_container',
 			),
 			'title' => array(
-				'label'    => esc_html__( 'Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Title', 'power-builder' ),
 				'selector' => '.title',
 			),
 			'timer_section' => array(
-				'label'    => esc_html__( 'Timer Section', 'tm_builder' ),
+				'label'    => esc_html__( 'Timer Section', 'power-builder' ),
 				'selector' => '.section',
 			),
 		);
@@ -93,42 +93,42 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'title' => array(
-				'label'           => esc_html__( 'Countdown Timer Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Countdown Timer Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'This is the title displayed for the countdown timer.', 'tm_builder' ),
+				'description'     => esc_html__( 'This is the title displayed for the countdown timer.', 'power-builder' ),
 			),
 			'date_time' => array(
-				'label'           => esc_html__( 'Countdown To', 'tm_builder' ),
+				'label'           => esc_html__( 'Countdown To', 'power-builder' ),
 				'type'            => 'date_picker',
 				'option_category' => 'basic_option',
-				'description'     => tm_get_safe_localization( sprintf( __( 'This is the date the countdown timer is counting down to. Your countdown timer is based on your timezone settings in your <a href="%1$s" target="_blank" title="WordPress General Settings">WordPress General Settings</a>', 'tm_builder' ), esc_url( admin_url( 'options-general.php' ) ) ) ),
+				'description'     => tm_get_safe_localization( sprintf( __( 'This is the date the countdown timer is counting down to. Your countdown timer is based on your timezone settings in your <a href="%1$s" target="_blank" title="WordPress General Settings">WordPress General Settings</a>', 'power-builder' ), esc_url( admin_url( 'options-general.php' ) ) ) ),
 			),
 			'use_background_color' => array(
-				'label'           => esc_html__( 'Use Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Background Color', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'color_option',
 				'options'         => array(
-					'on' => esc_html__( 'Yes', 'tm_builder' ),
-					'off'  => esc_html__( 'No', 'tm_builder' ),
+					'on' => esc_html__( 'Yes', 'power-builder' ),
+					'off'  => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_background_color',
 				),
-				'description' => esc_html__( 'Here you can choose whether background color setting below should be used or not.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether background color setting below should be used or not.', 'power-builder' ),
 			),
 			'background_color' => array(
-				'label'             => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'depends_default'   => true,
-				'description'       => esc_html__( 'Here you can define a custom background color for your countdown timer.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom background color for your countdown timer.', 'power-builder' ),
 			),
 			'timer_layout' => array(
-				'label'             => esc_html__( 'Layout', 'tm_builder' ),
+				'label'             => esc_html__( 'Layout', 'power-builder' ),
 				'type'              => 'select',
 				'options'           => array(
-					'flat'   => esc_html__( 'Flat', 'tm_builder' ),
-					'circle' => esc_html__( 'Circle', 'tm_builder' ),
+					'flat'   => esc_html__( 'Flat', 'power-builder' ),
+					'circle' => esc_html__( 'Circle', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_circle_background',
@@ -136,7 +136,7 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 				),
 			),
 			'circle_background' => array(
-				'label'               => esc_html__( 'Circle Background Color', 'tm_builder' ),
+				'label'               => esc_html__( 'Circle Background Color', 'power-builder' ),
 				'type'                => 'color-alpha',
 				'depends_show_if_not' => 'flat',
 			),
@@ -164,27 +164,27 @@ class Tm_Builder_Module_Countdown_Timer extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

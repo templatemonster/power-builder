@@ -1,11 +1,11 @@
 <?php
 class Tm_Builder_Module_Fullwidth_Map extends Tm_Builder_Module {
 	function init() {
-		$this->name            = esc_html__( 'Fullwidth Map', 'tm_builder' );
+		$this->name            = esc_html__( 'Fullwidth Map', 'power-builder' );
 		$this->slug            = 'tm_pb_fullwidth_map';
 		$this->fullwidth       = true;
 		$this->child_slug      = 'tm_pb_map_pin';
-		$this->child_item_text = esc_html__( 'Pin', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Pin', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'address',
@@ -28,15 +28,15 @@ class Tm_Builder_Module_Fullwidth_Map extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'address' => array(
-				'label'             => esc_html__( 'Map Center Address', 'tm_builder' ),
+				'label'             => esc_html__( 'Map Center Address', 'power-builder' ),
 				'type'              => 'text',
 				'option_category'   => 'basic_option',
 				'additional_button' => sprintf(
 					' <a href="#" class="tm_pb_find_address button">%1$s</a>',
-					esc_html__( 'Find', 'tm_builder' )
+					esc_html__( 'Find', 'power-builder' )
 				),
 				'class'       => array( 'tm_pb_address' ),
-				'description' => esc_html__( 'Enter an address for the map center point, and the address will be geocoded and displayed on the map below.', 'tm_builder' ),
+				'description' => esc_html__( 'Enter an address for the map center point, and the address will be geocoded and displayed on the map below.', 'power-builder' ),
 			),
 			'zoom_level' => array(
 				'type'    => 'hidden',
@@ -56,41 +56,41 @@ class Tm_Builder_Module_Fullwidth_Map extends Tm_Builder_Module {
 				'option_category'       => 'basic_option',
 			),
 			'mouse_wheel' => array(
-				'label'           => esc_html__( 'Mouse Wheel Zoom', 'tm_builder' ),
+				'label'           => esc_html__( 'Mouse Wheel Zoom', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Here you can choose whether the zoom level will be controlled by mouse wheel or not.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether the zoom level will be controlled by mouse wheel or not.', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => array(
-					'phone'   => esc_html__( 'Phone', 'tm_builder' ),
-					'tablet'  => esc_html__( 'Tablet', 'tm_builder' ),
-					'desktop' => esc_html__( 'Desktop', 'tm_builder' ),
+					'phone'   => esc_html__( 'Phone', 'power-builder' ),
+					'tablet'  => esc_html__( 'Tablet', 'power-builder' ),
+					'desktop' => esc_html__( 'Desktop', 'power-builder' ),
 				),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

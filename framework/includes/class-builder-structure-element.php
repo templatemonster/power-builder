@@ -440,38 +440,38 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 
 			<%% counter++;
 			}); %%>',
-			esc_html__( 'Column', 'tm_builder' ),
-			esc_html__( 'Background Image', 'tm_builder' ),
-			esc_html__( 'Upload an image', 'tm_builder' ),
-			esc_html__( 'Choose a Background Image', 'tm_builder' ),
-			esc_html__( 'Set As Background', 'tm_builder' ), // #5
-			esc_html__( 'Background Color', 'tm_builder' ),
-			esc_html__( 'Hex Value', 'tm_builder' ),
-			esc_html__( 'Padding', 'tm_builder' ),
-			esc_html__( 'Top', 'tm_builder' ),
-			esc_html__( 'Right', 'tm_builder' ), // #10
-			esc_html__( 'Bottom', 'tm_builder' ),
-			esc_html__( 'Left', 'tm_builder' ),
-			esc_html__( 'Parallax Effect', 'tm_builder' ),
-			esc_html__( 'Yes', 'tm_builder' ),
-			esc_html__( 'No', 'tm_builder' ), // #15
-			esc_html__( 'Parallax Method', 'tm_builder' ),
-			esc_html__( 'CSS', 'tm_builder' ),
-			esc_html__( 'True Parallax', 'tm_builder' ),
+			esc_html__( 'Column', 'power-builder' ),
+			esc_html__( 'Background Image', 'power-builder' ),
+			esc_html__( 'Upload an image', 'power-builder' ),
+			esc_html__( 'Choose a Background Image', 'power-builder' ),
+			esc_html__( 'Set As Background', 'power-builder' ), // #5
+			esc_html__( 'Background Color', 'power-builder' ),
+			esc_html__( 'Hex Value', 'power-builder' ),
+			esc_html__( 'Padding', 'power-builder' ),
+			esc_html__( 'Top', 'power-builder' ),
+			esc_html__( 'Right', 'power-builder' ), // #10
+			esc_html__( 'Bottom', 'power-builder' ),
+			esc_html__( 'Left', 'power-builder' ),
+			esc_html__( 'Parallax Effect', 'power-builder' ),
+			esc_html__( 'Yes', 'power-builder' ),
+			esc_html__( 'No', 'power-builder' ), // #15
+			esc_html__( 'Parallax Method', 'power-builder' ),
+			esc_html__( 'CSS', 'power-builder' ),
+			esc_html__( 'True Parallax', 'power-builder' ),
 			tm_pb_generate_mobile_options_tabs(), // #19
-			esc_html__( 'Vertical Alligment', 'tm_builder' ), // #20
-			esc_html__( 'Center', 'tm_builder' ), // #21
-			esc_html__( 'Laptop responsive', 'tm_builder' ), // #22
-			esc_html__( 'Inherit', 'tm_builder' ), // #23
-			esc_html__( 'Fullwidth', 'tm_builder' ), // #24
-			esc_html__( '2 Columns', 'tm_builder' ), // #25
-			esc_html__( '3 Columns', 'tm_builder' ), // #26
-			esc_html__( '4 Columns', 'tm_builder' ), // #27
-			esc_html__( 'Tablet responsive', 'tm_builder' ), // #28
-			esc_html__( 'Phone responsive', 'tm_builder' ), // #29
-			esc_html__( 'Laptop order', 'tm_builder' ), // #30
-			esc_html__( 'Tablet order', 'tm_builder' ), // #31
-			esc_html__( 'Phone order', 'tm_builder' ) // #32
+			esc_html__( 'Vertical Alligment', 'power-builder' ), // #20
+			esc_html__( 'Center', 'power-builder' ), // #21
+			esc_html__( 'Laptop responsive', 'power-builder' ), // #22
+			esc_html__( 'Inherit', 'power-builder' ), // #23
+			esc_html__( 'Fullwidth', 'power-builder' ), // #24
+			esc_html__( '2 Columns', 'power-builder' ), // #25
+			esc_html__( '3 Columns', 'power-builder' ), // #26
+			esc_html__( '4 Columns', 'power-builder' ), // #27
+			esc_html__( 'Tablet responsive', 'power-builder' ), // #28
+			esc_html__( 'Phone responsive', 'power-builder' ), // #29
+			esc_html__( 'Laptop order', 'power-builder' ), // #30
+			esc_html__( 'Tablet order', 'power-builder' ), // #31
+			esc_html__( 'Phone order', 'power-builder' ) // #32
 		);
 
 		return $output;
@@ -538,10 +538,10 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			<%% counter_css++;
 			}); %%>',
 			$this->generate_column_vars_css(),
-			esc_html__( 'Column', 'tm_builder' ),
-			esc_html__( 'Before', 'tm_builder' ),
-			esc_html__( 'Main Element', 'tm_builder' ),
-			esc_html__( 'After', 'tm_builder' )
+			esc_html__( 'Column', 'power-builder' ),
+			esc_html__( 'Before', 'power-builder' ),
+			esc_html__( 'Main Element', 'power-builder' ),
+			esc_html__( 'After', 'power-builder' )
 		);
 
 		return $output;
@@ -590,9 +590,9 @@ class Tm_Builder_Structure_Element extends Tm_Builder_Element {
 			<%% counter_css++;
 			}); %%>',
 			$this->generate_column_vars_css(),
-			esc_html__( 'Column', 'tm_builder' ),
-			esc_html__( 'CSS ID', 'tm_builder' ),
-			esc_html__( 'CSS Class', 'tm_builder' )
+			esc_html__( 'Column', 'power-builder' ),
+			esc_html__( 'CSS ID', 'power-builder' ),
+			esc_html__( 'CSS Class', 'power-builder' )
 		);
 
 		return $output;

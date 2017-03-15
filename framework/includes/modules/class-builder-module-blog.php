@@ -8,7 +8,7 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 	);
 
 	function init() {
-		$this->name = esc_html__( 'Blog', 'tm_builder' );
+		$this->name = esc_html__( 'Blog', 'power-builder' );
 		$this->slug = 'tm_pb_blog';
 		$this->icon = 'f181';
 
@@ -70,20 +70,20 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h2",
 						'important' => 'all',
 					),
 				),
 				'meta' => array(
-					'label'    => esc_html__( 'Meta', 'tm_builder' ),
+					'label'    => esc_html__( 'Meta', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_post_meta",
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'line_height' => "{$this->main_css_element} p",
 					),
@@ -93,27 +93,27 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'post_item' => array(
-				'label'    => esc_html__( 'Post item', 'tm_builder' ),
+				'label'    => esc_html__( 'Post item', 'power-builder' ),
 				'selector' => '.tm_pb_post',
 			),
 			'title' => array(
-				'label'    => esc_html__( 'Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Title', 'power-builder' ),
 				'selector' => '.tm_pb_post h2',
 			),
 			'post_meta' => array(
-				'label'    => esc_html__( 'Post Meta', 'tm_builder' ),
+				'label'    => esc_html__( 'Post Meta', 'power-builder' ),
 				'selector' => '.tm_pb_post .post-meta',
 			),
 			'pagenavi' => array(
-				'label'    => esc_html__( 'Pagenavi', 'tm_builder' ),
+				'label'    => esc_html__( 'Pagenavi', 'power-builder' ),
 				'selector' => '.wp_pagenavi',
 			),
 			'featured_image' => array(
-				'label'    => esc_html__( 'Featured Image', 'tm_builder' ),
+				'label'    => esc_html__( 'Featured Image', 'power-builder' ),
 				'selector' => '.tm_pb_image_container',
 			),
 			'read_more' => array(
-				'label'    => esc_html__( 'Read More Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Read More Button', 'power-builder' ),
 				'selector' => '.tm_pb_post .more-link',
 			),
 		);
@@ -123,9 +123,9 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 
 		$options = apply_filters( 'tm_builder_blog_module_options', array(
 			'blog_layout' => array(
-				'list'    => esc_html__( 'List', 'tm_builder' ),
-				'grid'    => esc_html__( 'Grid', 'tm_builder' ),
-				'masonry' => esc_html__( 'Masonry', 'tm_builder' ),
+				'list'    => esc_html__( 'List', 'power-builder' ),
+				'grid'    => esc_html__( 'Grid', 'power-builder' ),
+				'masonry' => esc_html__( 'Masonry', 'power-builder' ),
 			),
 			'columns' => array(
 				'min'  => '1',
@@ -136,7 +136,7 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 
 		$fields = array(
 			'blog_layout' => array(
-				'label'             => esc_html__( 'Layout', 'tm_builder' ),
+				'label'             => esc_html__( 'Layout', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => $options['blog_layout'],
@@ -145,16 +145,16 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 					'#tm_pb_masonry_tile_background_color',
 					'#tm_pb_columns',
 				),
-				'description'        => esc_html__( 'Toggle between the various blog layout types.', 'tm_builder' ),
+				'description'        => esc_html__( 'Toggle between the various blog layout types.', 'power-builder' ),
 			),
 			'posts_number' => array(
-				'label'             => esc_html__( 'Posts Number', 'tm_builder' ),
+				'label'             => esc_html__( 'Posts Number', 'power-builder' ),
 				'type'              => 'text',
 				'option_category'   => 'configuration',
-				'description'       => esc_html__( 'Choose how much posts you would like to display per page.', 'tm_builder' ),
+				'description'       => esc_html__( 'Choose how much posts you would like to display per page.', 'power-builder' ),
 			),
 			'columns' => array(
-				'label'           => esc_html__( 'Columns', 'tm_builder' ),
+				'label'           => esc_html__( 'Columns', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '4',
@@ -168,58 +168,58 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 				'mobile_global'       => true,
 			),
 			'include_categories' => array(
-				'label'            => esc_html__( 'Include Categories', 'tm_builder' ),
+				'label'            => esc_html__( 'Include Categories', 'power-builder' ),
 				'renderer'         => 'tm_builder_include_categories_option',
 				'option_category'  => 'basic_option',
 				'renderer_options' => array(
 					'use_terms' => false,
 				),
-				'description'      => esc_html__( 'Choose which categories you would like to include in the feed.', 'tm_builder' ),
+				'description'      => esc_html__( 'Choose which categories you would like to include in the feed.', 'power-builder' ),
 			),
 			'meta_date' => array(
-				'label'             => esc_html__( 'Meta Date Format', 'tm_builder' ),
+				'label'             => esc_html__( 'Meta Date Format', 'power-builder' ),
 				'type'              => 'text',
 				'option_category'   => 'configuration',
-				'description'       => esc_html__( 'If you would like to adjust the date format, input the appropriate PHP date format here.', 'tm_builder' ),
+				'description'       => esc_html__( 'If you would like to adjust the date format, input the appropriate PHP date format here.', 'power-builder' ),
 			),
 			'show_thumbnail' => array(
-				'label'             => esc_html__( 'Show Featured Image', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Featured Image', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_image_size',
 				),
-				'description'        => esc_html__( 'This will turn thumbnails on and off.', 'tm_builder' ),
+				'description'        => esc_html__( 'This will turn thumbnails on and off.', 'power-builder' ),
 			),
 			'image_size' => array(
-				'label'             => esc_html__( 'Featured Image Size', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Image Size', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => tm_builder_tools()->get_image_sizes(),
 				'depends_show_if'   => 'on',
-				'description'        => esc_html__( 'Select featured thumbnail size.', 'tm_builder' ),
+				'description'        => esc_html__( 'Select featured thumbnail size.', 'power-builder' ),
 			),
 			'show_content' => array(
-				'label'             => esc_html__( 'Content', 'tm_builder' ),
+				'label'             => esc_html__( 'Content', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'excerpt' => esc_html__( 'Show Excerpt', 'tm_builder' ),
-					'content' => esc_html__( 'Show Content', 'tm_builder' ),
-					'none'    => esc_html__( 'Hide Content', 'tm_builder' ),
+					'excerpt' => esc_html__( 'Show Excerpt', 'power-builder' ),
+					'content' => esc_html__( 'Show Content', 'power-builder' ),
+					'none'    => esc_html__( 'Hide Content', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_show_more',
 					'#tm_pb_excerpt',
 				),
-				'description'        => esc_html__( 'Showing the full content will not truncate your posts on the index page. Showing the excerpt will only display your excerpt text.', 'tm_builder' ),
+				'description'        => esc_html__( 'Showing the full content will not truncate your posts on the index page. Showing the excerpt will only display your excerpt text.', 'power-builder' ),
 			),
 			'excerpt' => array(
-				'label'           => esc_html__( 'Excerpt length', 'tm_builder' ),
+				'label'           => esc_html__( 'Excerpt length', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '55',
@@ -231,122 +231,122 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 				'depends_show_if' => 'excerpt',
 			),
 			'show_more' => array(
-				'label'               => esc_html__( 'Read More Button', 'tm_builder' ),
+				'label'               => esc_html__( 'Read More Button', 'power-builder' ),
 				'type'                => 'yes_no_button',
 				'option_category'     => 'configuration',
 				'options'             => array(
-					'off' => esc_html__( 'Off', 'tm_builder' ),
-					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
 				),
 				'depends_show_if_not' => 'content',
 				'affects'             => array(
 					'#tm_pb_more_text',
 				),
-				'description'         => esc_html__( 'Here you can define whether to show "read more" link after the excerpts or not.', 'tm_builder' ),
+				'description'         => esc_html__( 'Here you can define whether to show "read more" link after the excerpts or not.', 'power-builder' ),
 			),
 			'more_text' => array(
-				'label'           => esc_html__( 'Read More Button Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Read More Button Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'Define text for read more button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define text for read more button.', 'power-builder' ),
 			),
 			'show_author' => array(
-				'label'             => esc_html__( 'Show Author', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Author', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Turn on or off the author link.', 'tm_builder' ),
+				'description'        => esc_html__( 'Turn on or off the author link.', 'power-builder' ),
 			),
 			'show_date' => array(
-				'label'             => esc_html__( 'Show Date', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Date', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Turn the date on or off.', 'tm_builder' ),
+				'description'        => esc_html__( 'Turn the date on or off.', 'power-builder' ),
 			),
 			'show_categories' => array(
-				'label'             => esc_html__( 'Show Categories', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Categories', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Turn the category links on or off.', 'tm_builder' ),
+				'description'        => esc_html__( 'Turn the category links on or off.', 'power-builder' ),
 			),
 			'show_comments' => array(
-				'label'             => esc_html__( 'Show Comment Count', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Comment Count', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Turn comment count on and off.', 'tm_builder' ),
+				'description'        => esc_html__( 'Turn comment count on and off.', 'power-builder' ),
 			),
 			'show_pagination' => array(
-				'label'             => esc_html__( 'Show Pagination', 'tm_builder' ),
+				'label'             => esc_html__( 'Show Pagination', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Turn pagination on and off.', 'tm_builder' ),
+				'description'        => esc_html__( 'Turn pagination on and off.', 'power-builder' ),
 			),
 			'offset_number' => array(
-				'label'           => esc_html__( 'Offset Number', 'tm_builder' ),
+				'label'           => esc_html__( 'Offset Number', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'Choose how many posts you would like to offset by', 'tm_builder' ),
+				'description'     => esc_html__( 'Choose how many posts you would like to offset by', 'power-builder' ),
 			),
 			'use_overlay' => array(
-				'label'             => esc_html__( 'Featured Image Overlay', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Image Overlay', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'Off', 'tm_builder' ),
-					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_overlay_icon_color',
 					'#tm_pb_hover_overlay_color',
 					'#tm_pb_hover_icon',
 				),
-				'description'       => esc_html__( 'If enabled, an overlay color and icon will be displayed when a visitors hovers over the featured image of a post.', 'tm_builder' ),
+				'description'       => esc_html__( 'If enabled, an overlay color and icon will be displayed when a visitors hovers over the featured image of a post.', 'power-builder' ),
 			),
 			'overlay_icon_color' => array(
-				'label'             => esc_html__( 'Overlay Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Overlay Icon Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Here you can define a custom color for the overlay icon', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom color for the overlay icon', 'power-builder' ),
 			),
 			'hover_overlay_color' => array(
-				'label'             => esc_html__( 'Hover Overlay Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Hover Overlay Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Here you can define a custom color for the overlay', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom color for the overlay', 'power-builder' ),
 			),
 			'hover_icon' => array(
-				'label'               => esc_html__( 'Hover Icon Picker', 'tm_builder' ),
+				'label'               => esc_html__( 'Hover Icon Picker', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'configuration',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_icon_list',
 				'renderer_with_field' => true,
 				'depends_show_if'     => 'on',
-				'description'         => esc_html__( 'Here you can define a custom icon for the overlay', 'tm_builder' ),
+				'description'         => esc_html__( 'Here you can define a custom icon for the overlay', 'power-builder' ),
 			),
 			'masonry_tile_background_color' => array(
-				'label'               => esc_html__( 'Grid Tile Background Color', 'tm_builder' ),
+				'label'               => esc_html__( 'Grid Tile Background Color', 'power-builder' ),
 				'type'                => 'color-alpha',
 				'custom_color'        => true,
 				'tab_slug'            => 'advanced',
@@ -362,27 +362,27 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
@@ -732,7 +732,7 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 						return sprintf( $format, get_the_content() );
 					} else {
 						$more = null;
-						return sprintf( $format, get_the_content( esc_html__( 'read more...', 'tm_builder' ) ) );
+						return sprintf( $format, get_the_content( esc_html__( 'read more...', 'power-builder' ) ) );
 					}
 
 					break;

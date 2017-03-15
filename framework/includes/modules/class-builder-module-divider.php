@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Divider', 'tm_builder' );
+		$this->name = esc_html__( 'Divider', 'power-builder' );
 		$this->slug = 'tm_pb_divider';
 		$this->icon = 'f07d';
 
@@ -16,8 +16,8 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 
 		// Show divider options is modifieable via customizer
 		$this->show_divider_options = array(
-			'off' => esc_html__( "Don't Show Divider", 'tm_builder' ),
-			'on'  => esc_html__( 'Show Divider', 'tm_builder' ),
+			'off' => esc_html__( "Don't Show Divider", 'power-builder' ),
+			'on'  => esc_html__( 'Show Divider', 'power-builder' ),
 		);
 
 		if ( ! tm_is_builder_plugin_active() && true === tm_get_option( 'tm_pb_divider-show_divider', false ) ) {
@@ -64,12 +64,12 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'color' => array(
-				'label'       => esc_html__( 'Color', 'tm_builder' ),
+				'label'       => esc_html__( 'Color', 'power-builder' ),
 				'type'        => 'color-alpha',
-				'description' => esc_html__( 'This will adjust the color of the 1px divider line.', 'tm_builder' ),
+				'description' => esc_html__( 'This will adjust the color of the 1px divider line.', 'power-builder' ),
 			),
 			'show_divider' => array(
-				'label'             => esc_html__( 'Visibility', 'tm_builder' ),
+				'label'             => esc_html__( 'Visibility', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => $this->show_divider_options,
@@ -77,10 +77,10 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 					'#tm_pb_divider_style',
 					'#tm_pb_divider_width',
 				),
-				'description'        => esc_html__( 'This settings turns on and off the 1px divider line, but does not affect the divider height.', 'tm_builder' ),
+				'description'        => esc_html__( 'This settings turns on and off the 1px divider line, but does not affect the divider height.', 'power-builder' ),
 			),
 			'height' => array(
-				'label'           => esc_html__( 'Height', 'tm_builder' ),
+				'label'           => esc_html__( 'Height', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -92,7 +92,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 				),
 				'mobile_options'      => true,
 				'mobile_global'       => true,
-				'description'     => esc_html__( 'Define how much space should be added below the divider.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define how much space should be added below the divider.', 'power-builder' ),
 			),
 			'height_laptop' => array(
 				'type' => 'skip',
@@ -104,7 +104,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'divider_style' => array(
-				'label'             => esc_html__( 'Divider Style', 'tm_builder' ),
+				'label'             => esc_html__( 'Divider Style', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => tm_builder_get_border_styles(),
@@ -112,7 +112,7 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 				'tab_slug'          => 'advanced',
 			),
 			'divider_width' => array(
-				'label'             => esc_html__( 'Divider Width', 'tm_builder' ),
+				'label'             => esc_html__( 'Divider Width', 'power-builder' ),
 				'type'              => 'range',
 				'option_category'   => 'layout',
 				'depends_show_if'   => 'on',
@@ -125,27 +125,27 @@ class Tm_Builder_Module_Divider extends Tm_Builder_Module {
 				),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

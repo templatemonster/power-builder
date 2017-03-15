@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Social_Media_Follow_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Social Network', 'tm_builder' );
+		$this->name                        = esc_html__( 'Social Network', 'power-builder' );
 		$this->slug                        = 'tm_pb_social_media_follow_network';
 		$this->type                        = 'child';
 		$this->child_title_var             = 'content_new';
@@ -26,16 +26,16 @@ class Tm_Builder_Module_Social_Media_Follow_Item extends Tm_Builder_Module {
 			'skype_action'   => array( 'call' ),
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Social Network', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Social Network Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Social Network', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Social Network Settings', 'power-builder' );
 
 		$this->custom_css_options = array(
 			'social_icon' => array(
-				'label'    => esc_html__( 'Social Icon', 'tm_builder' ),
+				'label'    => esc_html__( 'Social Icon', 'power-builder' ),
 				'selector' => 'a.icon',
 			),
 			'follow_button' => array(
-				'label'    => esc_html__( 'Follow Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Follow Button', 'power-builder' ),
 				'selector' => 'a.follow_button',
 			),
 		);
@@ -44,14 +44,14 @@ class Tm_Builder_Module_Social_Media_Follow_Item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'social_network' => array(
-				'label'           => esc_html__( 'Social Network Label', 'tm_builder' ),
+				'label'           => esc_html__( 'Social Network Label', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'class'           => 'tm-pb-social-network',
-				'description'     => esc_html__( 'Set the social network label', 'tm_builder' ),
+				'description'     => esc_html__( 'Set the social network label', 'power-builder' ),
 			),
 			'social_icon' => array(
-				'label'               => esc_html__( 'Icon', 'tm_builder' ),
+				'label'               => esc_html__( 'Icon', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'basic_option',
 				'class'               => array( 'tm-pb-font-icon', 'tm-pb-trigger' ),
@@ -62,60 +62,60 @@ class Tm_Builder_Module_Social_Media_Follow_Item extends Tm_Builder_Module {
 					'#tm_pb_skype_url',
 					'#tm_pb_skype_action',
 				),
-				'description' => esc_html__( 'Choose the social network icon', 'tm_builder' ),
+				'description' => esc_html__( 'Choose the social network icon', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label' => esc_html__( 'Content', 'tm_builder' ),
+				'label' => esc_html__( 'Content', 'power-builder' ),
 				'type'  => 'hidden',
 			),
 			'url' => array(
-				'label'               => esc_html__( 'Account URL', 'tm_builder' ),
+				'label'               => esc_html__( 'Account URL', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'basic_option',
-				'description'         => esc_html__( 'The URL for this social network link.', 'tm_builder' ),
+				'description'         => esc_html__( 'The URL for this social network link.', 'power-builder' ),
 				'depends_show_if_not' => 'f17e',
 			),
 			'skype_url' => array(
-				'label'           => esc_html__( 'Account Name', 'tm_builder' ),
+				'label'           => esc_html__( 'Account Name', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'The Skype account name.', 'tm_builder' ),
+				'description'     => esc_html__( 'The Skype account name.', 'power-builder' ),
 				'depends_show_if' => 'f17e',
 			),
 			'skype_action' => array(
-				'label'           => esc_html__( 'Skype Button Action', 'tm_builder' ),
+				'label'           => esc_html__( 'Skype Button Action', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'call' => esc_html__( 'Call', 'tm_builder' ),
-					'chat' => esc_html__( 'Chat', 'tm_builder' ),
+					'call' => esc_html__( 'Call', 'power-builder' ),
+					'chat' => esc_html__( 'Chat', 'power-builder' ),
 				),
 				'depends_show_if' => 'f17e',
-				'description'     => esc_html__( 'Here you can choose which action to execute on button click', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can choose which action to execute on button click', 'power-builder' ),
 			),
 			'color' => array(
-				'label'           => esc_html__( 'Icon Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon Color', 'power-builder' ),
 				'type'            => 'color-alpha',
 				'default'         => '#ffffff',
-				'description'     => esc_html__( 'This will change the icon color.', 'tm_builder' ),
+				'description'     => esc_html__( 'This will change the icon color.', 'power-builder' ),
 				'additional_code' => '<span class="tm-pb-reset-setting reset-default-color" style="display: none;"></span>',
 			),
 			'bg_color' => array(
-				'label'           => esc_html__( 'Icon Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon Background Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'This will change the icon background color.', 'tm_builder' ),
+				'description'     => esc_html__( 'This will change the icon background color.', 'power-builder' ),
 				'additional_code' => '<span class="tm-pb-reset-setting reset-default-color" style="display: none;"></span>',
 			),
 			'hover_icon_color' => array(
-				'label'           => esc_html__( 'Icon Hover Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon Hover Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'This will change the icon hover background color.', 'tm_builder' ),
+				'description'     => esc_html__( 'This will change the icon hover background color.', 'power-builder' ),
 				'additional_code' => '<span class="tm-pb-reset-setting reset-default-color" style="display: none;"></span>',
 			),
 			'hover_bg_color' => array(
-				'label'           => esc_html__( 'Hover Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Hover Background Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'This will change hover background color.', 'tm_builder' ),
+				'description'     => esc_html__( 'This will change hover background color.', 'power-builder' ),
 				'additional_code' => '<span class="tm-pb-reset-setting reset-default-color" style="display: none;"></span>',
 			),
 		);
@@ -187,7 +187,7 @@ class Tm_Builder_Module_Social_Media_Follow_Item extends Tm_Builder_Module {
 				! $is_skype ? esc_url( $this->_var( 'url' ) ) : $this->_var( 'skype_url' ),
 				esc_attr( trim( wp_strip_all_tags( $content ) ) ),
 				( 'on' === $tm_pb_social_media_follow_link['url_new_window'] ? ' target="_blank"' : '' ),
-				esc_html__( 'Follow', 'tm_builder' )
+				esc_html__( 'Follow', 'power-builder' )
 			);
 		}
 

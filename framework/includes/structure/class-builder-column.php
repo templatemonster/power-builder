@@ -2,7 +2,7 @@
 
 class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 	function init() {
-		$this->name                       = esc_html__( 'Column', 'tm_builder' );
+		$this->name                       = esc_html__( 'Column', 'power-builder' );
 		$this->slug                       = 'tm_pb_column';
 		$this->additional_shortcode_slugs = array( 'tm_pb_column_inner' );
 

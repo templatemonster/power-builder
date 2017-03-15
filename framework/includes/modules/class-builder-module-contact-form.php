@@ -1,11 +1,11 @@
 <?php
 class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Contact Form', 'tm_builder' );
+		$this->name = esc_html__( 'Contact Form', 'power-builder' );
 		$this->slug = 'tm_pb_contact_form';
 		$this->icon = 'f003';
 		$this->child_slug      = 'tm_pb_contact_field';
-		$this->child_item_text = esc_html__( 'Field', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Field', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'captcha',
@@ -32,13 +32,13 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'title' => array(
-					'label'    => esc_html__( 'Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Title', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h2",
 					),
 				),
 				'form_field'   => array(
-					'label'    => esc_html__( 'Form Field', 'tm_builder' ),
+					'label'    => esc_html__( 'Form Field', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_contact_form_input",
 					),
@@ -54,33 +54,33 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 			),
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 				),
 			),
 		);
 		$this->custom_css_options = array(
 			'contact_title' => array(
-				'label'    => esc_html__( 'Contact Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Contact Title', 'power-builder' ),
 				'selector' => '.tm_pb_contact_main_title',
 			),
 			'contact_button' => array(
-				'label'    => esc_html__( 'Contact Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Contact Button', 'power-builder' ),
 				'selector' => '.tm_pb_contact_submit',
 			),
 			'contact_fields' => array(
-				'label'    => esc_html__( 'Form Fields', 'tm_builder' ),
+				'label'    => esc_html__( 'Form Fields', 'power-builder' ),
 				'selector' => '.tm_pb_contact_left input',
 			),
 			'text_field' => array(
-				'label'    => esc_html__( 'Message Field', 'tm_builder' ),
+				'label'    => esc_html__( 'Message Field', 'power-builder' ),
 				'selector' => 'textarea.tm_pb_contact_message',
 			),
 			'captcha_field' => array(
-				'label'    => esc_html__( 'Captcha Field', 'tm_builder' ),
+				'label'    => esc_html__( 'Captcha Field', 'power-builder' ),
 				'selector' => 'input.tm_pb_contact_captcha',
 			),
 			'captcha_label' => array(
-				'label'    => esc_html__( 'Captcha Text', 'tm_builder' ),
+				'label'    => esc_html__( 'Captcha Text', 'power-builder' ),
 				'selector' => '.tm_pb_contact_right p',
 			),
 		);
@@ -89,73 +89,73 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'captcha' => array(
-				'label'           => esc_html__( 'Display Captcha', 'tm_builder' ),
+				'label'           => esc_html__( 'Display Captcha', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Turn the captcha on or off using this option.', 'tm_builder' ),
+				'description' => esc_html__( 'Turn the captcha on or off using this option.', 'power-builder' ),
 			),
 			'email' => array(
-				'label'           => esc_html__( 'Email', 'tm_builder' ),
+				'label'           => esc_html__( 'Email', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the email address where messages should be sent.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the email address where messages should be sent.', 'power-builder' ),
 			),
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define a title for your contact form.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a title for your contact form.', 'power-builder' ),
 			),
 			'custom_message' => array(
-				'label'           => esc_html__( 'Message Pattern', 'tm_builder' ),
+				'label'           => esc_html__( 'Message Pattern', 'power-builder' ),
 				'type'            => 'textarea',
 				'option_category' => 'configuration',
-				'description'     => tm_get_safe_localization( __( 'Here you can define the custom pattern for the email Message. Fields should be included in following format - <strong>%%field_id%%</strong>. For example if you want to include the field with id = <strong>phone</strong> and field with id = <strong>message</strong>, then you can use the following pattern: <strong>My message is %%message%% and phone number is %%phone%%</strong>. Leave blank for default.', 'tm_builder' ) ),
+				'description'     => tm_get_safe_localization( __( 'Here you can define the custom pattern for the email Message. Fields should be included in following format - <strong>%%field_id%%</strong>. For example if you want to include the field with id = <strong>phone</strong> and field with id = <strong>message</strong>, then you can use the following pattern: <strong>My message is %%message%% and phone number is %%phone%%</strong>. Leave blank for default.', 'power-builder' ) ),
 			),
 			'use_redirect' => array(
-				'label'           => esc_html__( 'Enable Redirect URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Enable Redirect URL', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects' => array(
 					'#tm_pb_redirect_url',
 				),
-				'description' => esc_html__( 'Redirect users after successful form submission.', 'tm_builder' ),
+				'description' => esc_html__( 'Redirect users after successful form submission.', 'power-builder' ),
 			),
 			'redirect_url' => array(
-				'label'           => esc_html__( 'Redirect URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Redirect URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'on',
-				'description'     => esc_html__( 'Type the Redirect URL', 'tm_builder' ),
+				'description'     => esc_html__( 'Type the Redirect URL', 'power-builder' ),
 			),
 			'success_message' => array(
-				'label'           => esc_html__( 'Success Message', 'tm_builder' ),
+				'label'           => esc_html__( 'Success Message', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'Type the message you want to display after successful form submission. Leave blank for default', 'tm_builder' ),
+				'description'     => esc_html__( 'Type the message you want to display after successful form submission. Leave blank for default', 'power-builder' ),
 			),
 			'submit_text' => array(
-				'label'           => esc_html__( 'Submit button text', 'tm_builder' ),
+				'label'           => esc_html__( 'Submit button text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'Input the label for submit button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the label for submit button.', 'power-builder' ),
 			),
 			'form_background_color' => array(
-				'label'             => esc_html__( 'Form Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Form Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'input_border_radius'   => array(
-				'label'             => esc_html__( 'Input Border Radius', 'tm_builder' ),
+				'label'             => esc_html__( 'Input Border Radius', 'power-builder' ),
 				'type'              => 'range',
 				'default'           => '0',
 				'range_settings'    => array(
@@ -167,27 +167,27 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 				'tab_slug'          => 'advanced',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
@@ -200,9 +200,9 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 	function predefined_child_modules() {
 		$output = sprintf(
 			'[tm_pb_contact_field field_title="%1$s" field_type="input" field_id="Name" required_mark="on" fullwidth_field="off" /][tm_pb_contact_field field_title="%2$s" field_type="email" field_id="Email" required_mark="on" fullwidth_field="off" /][tm_pb_contact_field field_title="%3$s" field_type="text" field_id="Message" required_mark="on" /]',
-			esc_attr__( 'Name', 'tm_builder' ),
-			esc_attr__( 'Email Address', 'tm_builder' ),
-			esc_attr__( 'Message', 'tm_builder' )
+			esc_attr__( 'Name', 'power-builder' ),
+			esc_attr__( 'Email Address', 'power-builder' ),
+			esc_attr__( 'Message', 'power-builder' )
 		);
 
 		return $output;
@@ -237,7 +237,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 		}
 
 		if ( ! $this->_var( 'submit_text' ) ) {
-			$this->_var( 'submit_text', esc_html__( 'Submit', 'tm_builder' ) );
+			$this->_var( 'submit_text', esc_html__( 'Submit', 'power-builder' ) );
 		}
 
 		if ( '' !== $this->_var( 'form_background_color' ) ) {
@@ -267,7 +267,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 		}
 
 		if ( '' == $this->_var( 'success_message' ) ) {
-			$this->_var( 'success_message', esc_html__( 'Thanks for contacting us', 'tm_builder' ) );
+			$this->_var( 'success_message', esc_html__( 'Thanks for contacting us', 'power-builder' ) );
 		}
 
 		$content = $this->shortcode_content;
@@ -290,7 +290,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 
 				// check whether captcha field is not empty
 				if ( 'on' === $this->_var( 'captcha' ) && ( ! isset( $_POST['tm_pb_contact_captcha_' . $tm_pb_contact_form_num] ) || empty( $_POST['tm_pb_contact_captcha_' . $tm_pb_contact_form_num] ) ) ) {
-					$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you entered the captcha.', 'tm_builder' ) );
+					$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you entered the captcha.', 'power-builder' ) );
 					$tm_contact_error = true;
 				}
 
@@ -299,7 +299,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 					foreach( $fields_data_array as $index => $value ) {
 						// check all the required fields, generate error message if required field is empty
 						if ( 'required' === $value['required_mark'] && empty( $_POST[ $value['field_id'] ] ) ) {
-							$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you fill in all required fields.', 'tm_builder' ) );
+							$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you fill in all required fields.', 'power-builder' ) );
 							$tm_contact_error = true;
 							continue;
 						}
@@ -308,7 +308,7 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 						if ( 'email' === $value['field_type'] && ! empty( $_POST[ $value['field_id'] ] ) ) {
 							$contact_email = sanitize_email( $_POST[ $value['field_id'] ] );
 							if ( ! is_email( $contact_email ) ) {
-								$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Invalid Email.', 'tm_builder' ) );
+								$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Invalid Email.', 'power-builder' ) );
 								$tm_contact_error = true;
 							}
 						}
@@ -321,12 +321,12 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 					}
 				}
 			} else {
-				$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you fill in all required fields.', 'tm_builder' ) );
+				$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Make sure you fill in all required fields.', 'power-builder' ) );
 				$tm_contact_error = true;
 			}
 		} else {
 			if ( false === $nonce_result && isset( $_POST['tm_pb_contactform_submit_' . $tm_pb_contact_form_num] ) && empty( $_POST['tm_pb_contactform_validate_' . $tm_pb_contact_form_num] ) ) {
-				$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Please refresh the page and try again.', 'tm_builder' ) );
+				$tm_error_message .= sprintf( '<p class="tm_pb_contact_error_text">%1$s</p>', esc_html__( 'Please refresh the page and try again.', 'power-builder' ) );
 			}
 			$tm_contact_error = true;
 		}
@@ -372,9 +372,9 @@ class Tm_Builder_Module_Contact_Form extends Tm_Builder_Module {
 			$headers[] = "Reply-To: <{$contact_email}>";
 
 			$safe_loc = tm_get_safe_localization( sprintf(
-				__( 'New Message From %1$s%2$s', 'tm_builder' ),
+				__( 'New Message From %1$s%2$s', 'power-builder' ),
 				sanitize_text_field( html_entity_decode( $tm_site_name ) ),
-				( '' !== $this->_var( 'title' ) ? tm_get_safe_localization( sprintf( _x( ' - %s', 'contact form title separator', 'tm_builder' ), sanitize_text_field( html_entity_decode( $this->_var( 'title' ) ) ) ) ) : '' )
+				( '' !== $this->_var( 'title' ) ? tm_get_safe_localization( sprintf( _x( ' - %s', 'contact form title separator', 'power-builder' ), sanitize_text_field( html_entity_decode( $this->_var( 'title' ) ) ) ) ) : '' )
 			) );
 
 			$mess = stripslashes( $message_pattern );

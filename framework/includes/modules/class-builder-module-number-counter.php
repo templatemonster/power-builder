@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Number_Counter extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Number Counter', 'tm_builder' );
+		$this->name = esc_html__( 'Number Counter', 'power-builder' );
 		$this->slug = 'tm_pb_number_counter';
 		$this->icon = 'f295';
 
@@ -24,11 +24,11 @@ class Tm_Builder_Module_Number_Counter extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'percent' => array(
-				'label'    => esc_html__( 'Percent', 'tm_builder' ),
+				'label'    => esc_html__( 'Percent', 'power-builder' ),
 				'selector' => '.percent',
 			),
 			'number_counter_title' => array(
-				'label'    => esc_html__( 'Number Counter Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Number Counter Title', 'power-builder' ),
 				'selector' => 'h3',
 			),
 		);
@@ -37,13 +37,13 @@ class Tm_Builder_Module_Number_Counter extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'title' => array(
-					'label'    => esc_html__( 'Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Title', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h3",
 					),
 				),
 				'number'   => array(
-					'label'    => esc_html__( 'Number', 'tm_builder' ),
+					'label'    => esc_html__( 'Number', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .percent",
 					),
@@ -78,54 +78,54 @@ class Tm_Builder_Module_Number_Counter extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input a title for the counter.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input a title for the counter.', 'power-builder' ),
 			),
 			'number' => array(
-				'label'           => esc_html__( 'Number', 'tm_builder' ),
+				'label'           => esc_html__( 'Number', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( "Define a number for the counter. (Don't include the percentage sign, use the option below.)", 'tm_builder' ),
+				'description'     => esc_html__( "Define a number for the counter. (Don't include the percentage sign, use the option below.)", 'power-builder' ),
 			),
 			'percent_sign' => array(
-				'label'             => esc_html__( 'Percent Sign', 'tm_builder' ),
+				'label'             => esc_html__( 'Percent Sign', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Here you can choose whether the percent sign should be added after the number set above.', 'tm_builder' ),
+				'description'        => esc_html__( 'Here you can choose whether the percent sign should be added after the number set above.', 'power-builder' ),
 			),
 			'counter_color' => array(
-				'label'             => esc_html__( 'Counter Text Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Counter Text Color', 'power-builder' ),
 				'type'              => 'color',
-				'description'       => esc_html__( 'This will change the fill color for the bar.', 'tm_builder' ),
+				'description'       => esc_html__( 'This will change the fill color for the bar.', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

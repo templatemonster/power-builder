@@ -2,7 +2,7 @@
 class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 	function init() {
 
-		$this->name             = esc_html__( 'Testimonial', 'tm_builder' );
+		$this->name             = esc_html__( 'Testimonial', 'power-builder' );
 		$this->slug             = 'tm_pb_testimonial';
 		$this->icon             = 'f10d';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -42,7 +42,7 @@ class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'body'   => array(
-					'label' => esc_html__( 'Body', 'tm_builder' ),
+					'label' => esc_html__( 'Body', 'power-builder' ),
 					'css'   => array(
 						'main' => "{$this->main_css_element} *",
 					),
@@ -64,19 +64,19 @@ class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'testimonial_portrait' => array(
-				'label'    => esc_html__( 'Testimonial Portrait', 'tm_builder' ),
+				'label'    => esc_html__( 'Testimonial Portrait', 'power-builder' ),
 				'selector' => '.tm_pb_testimonial_portrait',
 			),
 			'testimonial_description' => array(
-				'label'    => esc_html__( 'Testimonial Description', 'tm_builder' ),
+				'label'    => esc_html__( 'Testimonial Description', 'power-builder' ),
 				'selector' => '.tm_pb_testimonial_description',
 			),
 			'testimonial_author' => array(
-				'label'    => esc_html__( 'Testimonial Author', 'tm_builder' ),
+				'label'    => esc_html__( 'Testimonial Author', 'power-builder' ),
 				'selector' => 'tm_pb_testimonial_author',
 			),
 			'testimonial_meta' => array(
-				'label'    => esc_html__( 'Testimonial Meta', 'tm_builder' ),
+				'label'    => esc_html__( 'Testimonial Meta', 'power-builder' ),
 				'selector' => '.tm_pb_testimonial p:last-of-type',
 			),
 		);
@@ -85,123 +85,123 @@ class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'author' => array(
-				'label'           => esc_html__( 'Author Name', 'tm_builder' ),
+				'label'           => esc_html__( 'Author Name', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the name of the testimonial author.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the name of the testimonial author.', 'power-builder' ),
 			),
 			'job_title' => array(
-				'label'           => esc_html__( 'Job Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Job Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the job title.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the job title.', 'power-builder' ),
 			),
 			'company_name' => array(
-				'label'           => esc_html__( 'Company Name', 'tm_builder' ),
+				'label'           => esc_html__( 'Company Name', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the name of the company.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the name of the company.', 'power-builder' ),
 			),
 			'testi_date' => array(
-				'label'           => esc_html__( 'Date', 'tm_builder' ),
+				'label'           => esc_html__( 'Date', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the testimonial date', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the testimonial date', 'power-builder' ),
 			),
 			'url' => array(
-				'label'           => esc_html__( 'Author/Company URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Author/Company URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the website of the author or leave blank for no link.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the website of the author or leave blank for no link.', 'power-builder' ),
 			),
 			'url_new_window' => array(
-				'label'           => esc_html__( 'URLs Open', 'tm_builder' ),
+				'label'           => esc_html__( 'URLs Open', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'In The Same Window', 'tm_builder' ),
-					'on'  => esc_html__( 'In The New Tab', 'tm_builder' ),
+					'off' => esc_html__( 'In The Same Window', 'power-builder' ),
+					'on'  => esc_html__( 'In The New Tab', 'power-builder' ),
 				),
-				'description'     => esc_html__( 'Choose whether or not the URL should open in a new window.', 'tm_builder' ),
+				'description'     => esc_html__( 'Choose whether or not the URL should open in a new window.', 'power-builder' ),
 			),
 			'portrait_url' => array(
-				'label'              => esc_html__( 'Portrait Image URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Portrait Image URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'power-builder' ),
 			),
 			'quote_icon' => array(
-				'label'           => esc_html__( 'Quote Icon', 'tm_builder' ),
+				'label'           => esc_html__( 'Quote Icon', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_font_icon',
 				),
-				'description'     => esc_html__( 'Choose whether or not the quote icon should be visible.', 'tm_builder' ),
+				'description'     => esc_html__( 'Choose whether or not the quote icon should be visible.', 'power-builder' ),
 			),
 			'font_icon' => array(
-				'label'               => esc_html__( 'Icon', 'tm_builder' ),
+				'label'               => esc_html__( 'Icon', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'basic_option',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_icon_list',
 				'renderer_with_field' => true,
 				'depends_default'     => true,
-				'description'         => esc_html__( 'Choose an icon to display with your testimonial.', 'tm_builder' ),
+				'description'         => esc_html__( 'Choose an icon to display with your testimonial.', 'power-builder' ),
 			),
 			'use_background_color' => array(
-				'label'           => esc_html__( 'Use Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Background Color', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_background_color',
 				),
-				'description'     => esc_html__( 'Here you can choose whether background color setting below should be used or not.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can choose whether background color setting below should be used or not.', 'power-builder' ),
 			),
 			'background_color' => array(
-				'label'             => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
-				'description'       => esc_html__( 'Here you can define a custom background color for your CTA.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom background color for your CTA.', 'power-builder' ),
 				'depends_default'   => true,
 			),
 			'text_orientation' => array(
-				'label'             => esc_html__( 'Text Orientation', 'tm_builder' ),
+				'label'             => esc_html__( 'Text Orientation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => tm_builder_get_text_orientation_options(),
-				'description'       => esc_html__( 'This will adjust the alignment of the module text.', 'tm_builder' ),
+				'description'       => esc_html__( 'This will adjust the alignment of the module text.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'           => esc_html__( 'Content', 'tm_builder' ),
+				'label'           => esc_html__( 'Content', 'power-builder' ),
 				'type'            => 'tiny_mce',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the main text content for your module here.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the main text content for your module here.', 'power-builder' ),
 			),
 			'quote_icon_color' => array(
-				'label'             => esc_html__( 'Quote Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Quote Icon Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'portrait_border_radius' => array(
-				'label'           => esc_html__( 'Portrait Border Radius', 'tm_builder' ),
+				'label'           => esc_html__( 'Portrait Border Radius', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
 			),
 			'portrait_width' => array(
-				'label'           => esc_html__( 'Portrait Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Portrait Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -212,7 +212,7 @@ class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 				),
 			),
 			'portrait_height' => array(
-				'label'           => esc_html__( 'Portrait Height', 'tm_builder' ),
+				'label'           => esc_html__( 'Portrait Height', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -223,27 +223,27 @@ class Tm_Builder_Module_Testimonial extends Tm_Builder_Module {
 				),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

@@ -5,7 +5,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 
 	function init() {
 
-		$this->name = esc_html__( 'Posts', 'tm_builder' );
+		$this->name = esc_html__( 'Posts', 'power-builder' );
 		$this->slug = 'tm_pb_posts';
 		$this->icon = 'f009';
 
@@ -59,7 +59,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'supertitle' => array(
-					'label'     => esc_html__( 'Supertitle', 'tm_builder' ),
+					'label'     => esc_html__( 'Supertitle', 'power-builder' ),
 					'font_size' => array(
 						'default' => '20px',
 					),
@@ -71,7 +71,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					),
 				),
 				'title' => array(
-					'label'    => esc_html__( 'Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Title', 'power-builder' ),
 					'font_size' => array(
 						'default' => '24px',
 					),
@@ -83,7 +83,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					),
 				),
 				'subtitle' => array(
-					'label'    => esc_html__( 'Subtitle', 'tm_builder' ),
+					'label'    => esc_html__( 'Subtitle', 'power-builder' ),
 					'font_size' => array(
 						'default' => '18px',
 					),
@@ -95,7 +95,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					),
 				),
 				'item_title' => array(
-					'label'    => esc_html__( 'Item Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Item Title', 'power-builder' ),
 					'font_size' => array(
 						'default' => '18px',
 					),
@@ -107,7 +107,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					),
 				),
 				'item_meta' => array(
-					'label'    => esc_html__( 'Item Meta', 'tm_builder' ),
+					'label'    => esc_html__( 'Item Meta', 'power-builder' ),
 					'font_size' => array(
 						'default' => '14px',
 					),
@@ -119,7 +119,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'font_size' => array(
 						'default' => '14px',
 					),
@@ -142,7 +142,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 			),
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 					'css' => array(
 						'main' => "{$this->main_css_element} .tm-posts_button_wrap .btn",
 					),
@@ -158,7 +158,7 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'columns' => array(
-				'label'           => esc_html__( 'Columns', 'tm_builder' ),
+				'label'           => esc_html__( 'Columns', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '4',
@@ -171,14 +171,14 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 				'mobile_global'       => true,
 			),
 			'terms_type' => array(
-				'label'					=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+				'label'					=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 				'type'					=> 'select',
 				'option_category'		=> 'basic_option',
 				'options'				=> array(
-					'categories'		=> esc_html__( 'Categories', 'tm_builder' ),
-					'post_tag'			=> esc_html__( 'Tag', 'tm_builder' ),
-					'post_format'		=> esc_html__( 'Post Format', 'tm_builder' ),
-					'post_id'			=> esc_html__( 'Post id', 'tm_builder' )
+					'categories'		=> esc_html__( 'Categories', 'power-builder' ),
+					'post_tag'			=> esc_html__( 'Tag', 'power-builder' ),
+					'post_format'		=> esc_html__( 'Post Format', 'power-builder' ),
+					'post_id'			=> esc_html__( 'Post id', 'power-builder' )
 				),
 				'affects'			=> array(
 					'#tm_pb_categories',
@@ -188,10 +188,10 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					'#tm_pb_posts_per_page',
 					'#tm_pb_post_offset',
 				),
-				'description'			=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 			),
 			'categories' => array(
-				'label'					=> esc_html__( 'Include categories', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include categories', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'categories',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -199,10 +199,10 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					'use_terms'  => false,
 					'input_name' => 'tm_pb_categories',
 				),
-				'description'			=> esc_html__( 'Choose which categories you would like to include.', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose which categories you would like to include.', 'power-builder' ),
 			),
 			'post_tag' => array(
-				'label'					=> esc_html__( 'Include tags', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include tags', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'post_tag',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -211,10 +211,10 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					'term_name'  => 'post_tag',
 					'input_name' => 'tm_pb_post_tag',
 				),
-				'description'		=> esc_html__( 'Choose which categories you would like to include.', 'tm_builder' ),
+				'description'		=> esc_html__( 'Choose which categories you would like to include.', 'power-builder' ),
 			),
 			'post_format' => array(
-				'label'					=> esc_html__( 'Include post format', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include post format', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'post_format',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -223,17 +223,17 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					'term_name'  => 'post_format',
 					'input_name' => 'tm_pb_post_format',
 				),
-				'description'			=> esc_html__( 'Choose which post format you would like to include.', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose which post format you would like to include.', 'power-builder' ),
 			),
 			'post_id' => array(
-				'label'           => esc_html__( 'Include post id', 'tm_builder' ),
+				'label'           => esc_html__( 'Include post id', 'power-builder' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'depends_show_if' => 'post_id',
-				'description'     => esc_html__( 'Enter post id you would like to include. The separator gap. Example: 256 472 23 6', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter post id you would like to include. The separator gap. Example: 256 472 23 6', 'power-builder' ),
 			),
 			'posts_per_page' => array(
-				'label'               => esc_html__( 'Posts count ( Set 0 to show all ) ', 'tm_builder' ),
+				'label'               => esc_html__( 'Posts count ( Set 0 to show all ) ', 'power-builder' ),
 				'option_category'     => 'basic_option',
 				'type'                => 'range',
 				'range_settings'      => array(
@@ -245,43 +245,43 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 				'depends_show_if_not' => 'post_id',
 			),
 			'post_offset' => array(
-				'label'               => esc_html__( 'Offset post', 'tm_builder' ),
+				'label'               => esc_html__( 'Offset post', 'power-builder' ),
 				'option_category'     => 'basic_option',
 				'type'                => 'range',
 				'default'             => '0',
 				'depends_show_if_not' => 'post_id',
 			),
 			'super_title' => array(
-				'label'           => esc_html__( 'Super Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Super Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'subtitle' => array(
-				'label'           => esc_html__( 'Sub Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Sub Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'title_delimiter' => array(
-				'label'           => esc_html__( 'Display title delimiter', 'tm_builder' ),
+				'label'           => esc_html__( 'Display title delimiter', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'more' => array(
-				'label'           => esc_html__( 'Display more button', 'tm_builder' ),
+				'label'           => esc_html__( 'Display more button', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'         => array(
 					'#tm_pb_more_text',
@@ -289,31 +289,31 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 				),
 			),
 			'more_text' => array(
-				'label'           => esc_html__( 'More button text', 'tm_builder' ),
+				'label'           => esc_html__( 'More button text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'on',
 			),
 			'ajax_more' => array(
-				'label'   => esc_html__( 'AJAX load more', 'tm_builder' ),
+				'label'   => esc_html__( 'AJAX load more', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'         => array(
 					'#tm_pb_more_url',
 				),
 			),
 			'more_url' => array(
-				'label'           => esc_html__( 'More button URL', 'tm_builder' ),
+				'label'           => esc_html__( 'More button URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'off',
 			),
 			'excerpt' => array(
-				'label'           => esc_html__( 'Excerpt length', 'tm_builder' ),
+				'label'           => esc_html__( 'Excerpt length', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '25',
@@ -322,50 +322,50 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 					'max'  => 200,
 					'step' => 1,
 				),
-				'description'     => esc_html__( 'Set words number in excerpt (set 0 to hide excerpt)', 'tm_builder' ),
+				'description'     => esc_html__( 'Set words number in excerpt (set 0 to hide excerpt)', 'power-builder' ),
 			),
 			'image_size' => array(
-				'label'           => esc_html__( 'Featured Image Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Featured Image Size', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => tm_builder_tools()->get_image_sizes(),
-				'description'     => esc_html__( 'Select featured thumbnail size.', 'tm_builder' ),
+				'description'     => esc_html__( 'Select featured thumbnail size.', 'power-builder' ),
 			),
 			'meta_data' => array(
-				'label'   => esc_html__( 'Display post meta data', 'tm_builder' ),
+				'label'   => esc_html__( 'Display post meta data', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'post_layout' => array(
-				'label'   => esc_html__( 'Layout', 'tm_builder' ),
+				'label'   => esc_html__( 'Layout', 'power-builder' ),
 				'type'    => 'select',
 				'options' => array(
-					'layout-1' => esc_html__( 'Layout 1', 'tm_builder' ),
-					'layout-2' => esc_html__( 'Layout 2', 'tm_builder' ),
-					'layout-3' => esc_html__( 'Layout 3', 'tm_builder' ),
+					'layout-1' => esc_html__( 'Layout 1', 'power-builder' ),
+					'layout-2' => esc_html__( 'Layout 2', 'power-builder' ),
+					'layout-3' => esc_html__( 'Layout 3', 'power-builder' ),
 				),
 				'option_category' => 'configuration',
 			),
 			'use_space' => array(
-				'label'             => esc_html__( 'Use gutter between columns', 'tm_builder' ),
+				'label'             => esc_html__( 'Use gutter between columns', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'use_rows_space' => array(
-				'label'             => esc_html__( 'Use gutter between rows', 'tm_builder' ),
+				'label'             => esc_html__( 'Use gutter between rows', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'columns_laptop' => array(
@@ -378,27 +378,27 @@ class Tm_Builder_Module_Posts extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

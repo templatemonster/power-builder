@@ -4,7 +4,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 	public $function_name;
 
 	function init() {
-		$this->name = esc_html__( 'Blurb', 'tm_builder' );
+		$this->name = esc_html__( 'Blurb', 'power-builder' );
 		$this->icon = 'f27b';
 		$this->slug = 'tm_pb_blurb';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -68,13 +68,13 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h4, {$this->main_css_element} h4 a",
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'line_height' => "{$this->main_css_element} p",
 					),
@@ -94,15 +94,15 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'blurb_image' => array(
-				'label'    => esc_html__( 'Blurb Image', 'tm_builder' ),
+				'label'    => esc_html__( 'Blurb Image', 'power-builder' ),
 				'selector' => '.tm_pb_main_blurb_image',
 			),
 			'blurb_title' => array(
-				'label'    => esc_html__( 'Blurb Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Blurb Title', 'power-builder' ),
 				'selector' => 'h4',
 			),
 			'blurb_content' => array(
-				'label'    => esc_html__( 'Blurb Content', 'tm_builder' ),
+				'label'    => esc_html__( 'Blurb Content', 'power-builder' ),
 				'selector' => '.tm_pb_blurb_content',
 			),
 		);
@@ -112,45 +112,45 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		$tm_accent_color = tm_builder_accent_color();
 
 		$image_icon_placement = array(
-			'top' => esc_html__( 'Top', 'tm_builder' ),
+			'top' => esc_html__( 'Top', 'power-builder' ),
 		);
 
 		if ( ! is_rtl() ) {
-			$image_icon_placement['left'] = esc_html__( 'Left', 'tm_builder' );
+			$image_icon_placement['left'] = esc_html__( 'Left', 'power-builder' );
 		} else {
-			$image_icon_placement['right'] = esc_html__( 'Right', 'tm_builder' );
+			$image_icon_placement['right'] = esc_html__( 'Right', 'power-builder' );
 		}
 
 		$fields = array(
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'The title of your blurb will appear in bold below your blurb image.', 'tm_builder' ),
+				'description'     => esc_html__( 'The title of your blurb will appear in bold below your blurb image.', 'power-builder' ),
 			),
 			'url' => array(
-				'label'           => esc_html__( 'Url', 'tm_builder' ),
+				'label'           => esc_html__( 'Url', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'If you would like to make your blurb a link, input your destination URL here.', 'tm_builder' ),
+				'description'     => esc_html__( 'If you would like to make your blurb a link, input your destination URL here.', 'power-builder' ),
 			),
 			'url_new_window' => array(
-				'label'           => esc_html__( 'Url Opens', 'tm_builder' ),
+				'label'           => esc_html__( 'Url Opens', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'In The Same Window', 'tm_builder' ),
-					'on'  => esc_html__( 'In The New Tab', 'tm_builder' ),
+					'off' => esc_html__( 'In The Same Window', 'power-builder' ),
+					'on'  => esc_html__( 'In The New Tab', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'power-builder' ),
 			),
 			'use_icon' => array(
-				'label'           => esc_html__( 'Use Icon', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Icon', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_font_icon',
@@ -159,149 +159,149 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 					'#tm_pb_image',
 					'#tm_pb_alt',
 				),
-				'description' => esc_html__( 'Here you can choose whether icon set below should be used.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether icon set below should be used.', 'power-builder' ),
 			),
 			'font_icon' => array(
-				'label'               => esc_html__( 'Icon', 'tm_builder' ),
+				'label'               => esc_html__( 'Icon', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'basic_option',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_icon_list',
 				'renderer_with_field' => true,
-				'description'         => esc_html__( 'Choose an icon to display with your blurb.', 'tm_builder' ),
+				'description'         => esc_html__( 'Choose an icon to display with your blurb.', 'power-builder' ),
 				'depends_default'     => true,
 			),
 			'icon_color' => array(
-				'label'             => esc_html__( 'Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Icon Color', 'power-builder' ),
 				'type'              => 'color-alpha',
-				'description'       => esc_html__( 'Here you can define a custom color for your icon.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom color for your icon.', 'power-builder' ),
 				'depends_default'   => true,
 			),
 			'use_circle' => array(
-				'label'           => esc_html__( 'Circle Icon', 'tm_builder' ),
+				'label'           => esc_html__( 'Circle Icon', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_use_circle_border',
 					'#tm_pb_circle_color',
 					'#tm_pb_circle_size',
 				),
-				'description' => esc_html__( 'Here you can choose whether icon set above should display within a circle.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether icon set above should display within a circle.', 'power-builder' ),
 				'depends_default'   => true,
 			),
 			'circle_color' => array(
-				'label'           => esc_html__( 'Circle Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Circle Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'Here you can define a custom color for the icon circle.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom color for the icon circle.', 'power-builder' ),
 				'depends_default' => true,
 			),
 			'use_circle_border' => array(
-				'label'           => esc_html__( 'Show Circle Border', 'tm_builder' ),
+				'label'           => esc_html__( 'Show Circle Border', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'layout',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_circle_border_color',
 					'#tm_pb_circle_border_width',
 				),
-				'description' => esc_html__( 'Here you can choose whether if the icon circle border should display.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether if the icon circle border should display.', 'power-builder' ),
 				'depends_default'   => true,
 			),
 			'circle_border_color' => array(
-				'label'           => esc_html__( 'Circle Border Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Circle Border Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'Here you can define a custom color for the icon circle border.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom color for the icon circle border.', 'power-builder' ),
 				'depends_default' => true,
 			),
 			'image' => array(
-				'label'              => esc_html__( 'Image', 'tm_builder' ),
+				'label'              => esc_html__( 'Image', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
 				'depends_show_if'    => 'off',
-				'description'        => esc_html__( 'Upload an image to display at the top of your blurb.', 'tm_builder' ),
+				'description'        => esc_html__( 'Upload an image to display at the top of your blurb.', 'power-builder' ),
 			),
 			'alt' => array(
-				'label'           => esc_html__( 'Image Alt Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Alt Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define the HTML ALT text for your image here.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define the HTML ALT text for your image here.', 'power-builder' ),
 				'depends_show_if' => 'off',
 			),
 			'icon_placement' => array(
-				'label'             => esc_html__( 'Image/Icon Placement', 'tm_builder' ),
+				'label'             => esc_html__( 'Image/Icon Placement', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => $image_icon_placement,
-				'description'       => esc_html__( 'Here you can choose where to place the icon.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose where to place the icon.', 'power-builder' ),
 			),
 			'animation' => array(
-				'label'             => esc_html__( 'Image/Icon Animation', 'tm_builder' ),
+				'label'             => esc_html__( 'Image/Icon Animation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'top'    => esc_html__( 'Top To Bottom', 'tm_builder' ),
-					'left'   => esc_html__( 'Left To Right', 'tm_builder' ),
-					'right'  => esc_html__( 'Right To Left', 'tm_builder' ),
-					'bottom' => esc_html__( 'Bottom To Top', 'tm_builder' ),
-					'off'    => esc_html__( 'No Animation', 'tm_builder' ),
+					'top'    => esc_html__( 'Top To Bottom', 'power-builder' ),
+					'left'   => esc_html__( 'Left To Right', 'power-builder' ),
+					'right'  => esc_html__( 'Right To Left', 'power-builder' ),
+					'bottom' => esc_html__( 'Bottom To Top', 'power-builder' ),
+					'off'    => esc_html__( 'No Animation', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'This controls the direction of the lazy-loading animation.', 'tm_builder' ),
+				'description'       => esc_html__( 'This controls the direction of the lazy-loading animation.', 'power-builder' ),
 			),
 			'text_orientation' => array(
-				'label'             => esc_html__( 'Text Orientation', 'tm_builder' ),
+				'label'             => esc_html__( 'Text Orientation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => tm_builder_get_text_orientation_options(),
-				'description'       => esc_html__( 'This will control how your blurb text is aligned.', 'tm_builder' ),
+				'description'       => esc_html__( 'This will control how your blurb text is aligned.', 'power-builder' ),
 			),
 			'use_button' => array(
-				'label'           => esc_html__( 'Use Read More button', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Read More button', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_button_type',
 					'#tm_pb_button_text',
 				),
-				'description' => esc_html__( 'Here you can choose show or hide read more button.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose show or hide read more button.', 'power-builder' ),
 			),
 			'button_type' => array(
-				'label'             => esc_html__( 'Button type', 'tm_builder' ),
+				'label'             => esc_html__( 'Button type', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'link'   => esc_html__( 'Link', 'tm_builder' ),
-					'button' => esc_html__( 'Button', 'tm_builder' ),
+					'link'   => esc_html__( 'Link', 'power-builder' ),
+					'button' => esc_html__( 'Button', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Select button display type.', 'tm_builder' ),
+				'description'       => esc_html__( 'Select button display type.', 'power-builder' ),
 			),
 			'button_text' => array(
-				'label'           => esc_html__( 'Button text', 'tm_builder' ),
+				'label'           => esc_html__( 'Button text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define button text.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define button text.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'             => esc_html__( 'Content', 'tm_builder' ),
+				'label'             => esc_html__( 'Content', 'power-builder' ),
 				'type'              => 'tiny_mce',
 				'option_category'   => 'basic_option',
-				'description'       => esc_html__( 'Input the main text content for your module here.', 'tm_builder' ),
+				'description'       => esc_html__( 'Input the main text content for your module here.', 'power-builder' ),
 			),
 			'max_width' => array(
-				'label'           => esc_html__( 'Image Max Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Max Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -309,12 +309,12 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 				'validate_unit'   => true,
 			),
 			'use_icon_font_size' => array(
-				'label'           => esc_html__( 'Use Icon Font Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Icon Font Size', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'font_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_icon_font_size',
@@ -322,7 +322,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 				'tab_slug' => 'advanced',
 			),
 			'icon_font_size' => array(
-				'label'           => esc_html__( 'Icon Font Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon Font Size', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'font_option',
 				'tab_slug'        => 'advanced',
@@ -336,7 +336,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 				'depends_default' => true,
 			),
 			'circle_size' => array(
-				'label'           => esc_html__( 'Circle Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Circle Size', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -346,12 +346,12 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 					'max'  => '260',
 					'step' => '1',
 				),
-				'description'     => esc_html__( 'Here you can define a custom diameter for the icon circle.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom diameter for the icon circle.', 'power-builder' ),
 				'mobile_options'  => true,
 				'depends_default' => true,
 			),
 			'circle_border_width' => array(
-				'label'           => esc_html__( 'Circle Border Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Circle Border Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -361,7 +361,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 					'max'  => '20',
 					'step' => '1',
 				),
-				'description'     => esc_html__( 'Here you can define a custom width for the icon circle border.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom width for the icon circle border.', 'power-builder' ),
 				'depends_default' => true,
 			),
 			'circle_size_laptop' => array(
@@ -392,27 +392,27 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
@@ -605,7 +605,7 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		}
 
 		$text  = $this->_var( 'button_text' );
-		$text  = ! empty( $text ) ? esc_html( $text ) : esc_html__( 'Read More', 'tm_builder' );
+		$text  = ! empty( $text ) ? esc_html( $text ) : esc_html__( 'Read More', 'power-builder' );
 		$url   = esc_url( $this->_var( 'url' ) );
 		$class = ( 'link' === $this->_var( 'button_type' ) ) ? 'tm_pb_link' : 'tm_pb_button';
 

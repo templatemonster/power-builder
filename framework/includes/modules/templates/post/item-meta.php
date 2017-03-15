@@ -21,7 +21,7 @@ if ( ! $this->_var( 'meta_data' ) || 'off' === $this->_var( 'meta_data' ) ) {
 
 	tm_builder_core()->utility()->meta_data->get_comment_count( array(
 		'icon'    => apply_filters( 'cherry_comment_icon', '<i class="fa fa-comment-o" aria-hidden="true"></i>' ),
-		'sufix'   => _n_noop( '%s comment', '%s comments', 'tm_builder' ),
+		'sufix'   => _n_noop( '%s comment', '%s comments', 'power-builder' ),
 		'echo'    => true,
 	) );
 

@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 	function init() {
-		$this->name = esc_html__( 'Row', 'tm_builder' );
+		$this->name = esc_html__( 'Row', 'power-builder' );
 		$this->slug = 'tm_pb_row';
 
 		$this->advanced_options = array(
@@ -193,47 +193,47 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 	function get_fields() {
 		$fields = array(
 			'make_fullwidth' => array(
-				'label'             => esc_html__( 'Make This Row Fullwidth', 'tm_builder' ),
+				'label'             => esc_html__( 'Make This Row Fullwidth', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'depends_show_if'   => 'off',
-				'description'       => esc_html__( 'Enable this option to extend the width of this row to the edge of the browser window.', 'tm_builder' ),
+				'description'       => esc_html__( 'Enable this option to extend the width of this row to the edge of the browser window.', 'power-builder' ),
 			),
 			'use_custom_width' => array(
-				'label'             => esc_html__( 'Use Custom Width', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Custom Width', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_make_fullwidth',
 					'#tm_pb_custom_width',
 					'#tm_pb_width_unit',
 				),
-				'description'       => esc_html__( 'Change to Yes if you would like to adjust the width of this row to a non-standard width.', 'tm_builder' ),
+				'description'       => esc_html__( 'Change to Yes if you would like to adjust the width of this row to a non-standard width.', 'power-builder' ),
 			),
 			'use_grid_padding' => array(
-				'label'             => esc_html__( 'Use grid padding', 'tm_builder' ),
+				'label'             => esc_html__( 'Use grid padding', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Change to No if you would like delete grid padding.', 'tm_builder' ),
+				'description'       => esc_html__( 'Change to No if you would like delete grid padding.', 'power-builder' ),
 			),
 			'width_unit' => array(
-				'label'             => esc_html__( 'Unit', 'tm_builder' ),
+				'label'             => esc_html__( 'Unit', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'px', 'tm_builder' ),
+					'on'  => esc_html__( 'px', 'power-builder' ),
 					'off' => '%',
 				),
 				'button_options' => array(
@@ -246,7 +246,7 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				),
 			),
 			'custom_width_px' => array(
-				'label'           => esc_html__( 'Custom Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'depends_show_if' => 'on',
@@ -255,10 +255,10 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 					'max'  => 2600,
 					'step' => 1,
 				),
-				'description'     => esc_html__( 'Define custom width for this Row', 'tm_builder' ),
+				'description'     => esc_html__( 'Define custom width for this Row', 'power-builder' ),
 			),
 			'custom_width_percent' => array(
-				'label'           => esc_html__( 'Custom Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'depends_show_if' => 'off',
@@ -267,14 +267,14 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 					'max'  => 100,
 					'step' => 1,
 				),
-				'description'     => esc_html__( 'Define custom width for this Row', 'tm_builder' ),
+				'description'     => esc_html__( 'Define custom width for this Row', 'power-builder' ),
 			),
 			'custom_padding' => array(
-				'label'           => esc_html__( 'Custom Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Padding', 'power-builder' ),
 				'type'            => 'custom_padding',
 				'mobile_options'  => true,
 				'option_category' => 'layout',
-				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'tm_builder' ),
+				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'power-builder' ),
 			),
 			'custom_padding_laptop' => array(
 				'type' => 'skip',
@@ -286,85 +286,85 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				'type' => 'skip',
 			),
 			/*'padding_mobile' => array(
-				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'tm_builder' ),
+				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'power-builder' ),
 			),*/
 			'custom_margin' => array(
-				'label'           => esc_html__( 'Custom Margin', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Margin', 'power-builder' ),
 				'type'            => 'custom_margin',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
 			),
 			'background_image' => array(
-				'label'              => esc_html__( 'Background Image', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Image', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'configuration',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background', 'power-builder' ),
 				'tab_slug'           => 'advanced',
 			),
 			'background_color' => array(
-				'label'        => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'        => esc_html__( 'Background Color', 'power-builder' ),
 				'type'         => 'color-alpha',
 				'custom_color' => true,
 				'tab_slug'     => 'advanced',
 			),
 			'background_video_mp4' => array(
-				'label'              => esc_html__( 'Background Video MP4', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Video MP4', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Video MP4 File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background Video', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Video MP4 File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background Video', 'power-builder' ),
 				'tab_slug'           => 'advanced',
 			),
 			'background_video_webm' => array(
-				'label'              => esc_html__( 'Background Video Webm', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Video Webm', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Video WEBM File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background Video', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Video WEBM File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background Video', 'power-builder' ),
 				'tab_slug'           => 'advanced',
 			),
 			'background_video_width' => array(
-				'label'           => esc_html__( 'Background Video Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Video Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'tab_slug'        => 'advanced',
 			),
 			'background_video_height' => array(
-				'label'           => esc_html__( 'Background Video Height', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Video Height', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'tab_slug'        => 'advanced',
 			),
 			'allow_player_pause' => array(
-				'label'           => esc_html__( 'Pause Video', 'tm_builder' ),
+				'label'           => esc_html__( 'Pause Video', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'          => 'advanced',
 			),
 			'parallax' => array(
-				'label'             => esc_html__( 'Use Parallax Effect', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Parallax Effect', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_parallax_method',
@@ -372,23 +372,23 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				'tab_slug'          => 'advanced',
 			),
 			'parallax_method' => array(
-				'label'             => esc_html__( 'Parallax Method', 'tm_builder' ),
+				'label'             => esc_html__( 'Parallax Method', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( 'CSS', 'tm_builder' ),
-					'on'  => esc_html__( 'True Parallax', 'tm_builder' ),
+					'off' => esc_html__( 'CSS', 'power-builder' ),
+					'on'  => esc_html__( 'True Parallax', 'power-builder' ),
 				),
 				'depends_show_if'   => 'on',
 				'tab_slug'          => 'advanced',
 			),
 			'make_equal' => array(
-				'label'             => esc_html__( 'Equalize Column Heights', 'tm_builder' ),
+				'label'             => esc_html__( 'Equalize Column Heights', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'          => 'advanced',
 			),
@@ -398,13 +398,13 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				'tab_slug'        => 'advanced',
 			),
 			/*'column_padding_mobile' => array(
-				'label'             => esc_html__( 'Keep Column Padding on Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Keep Column Padding on Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'tab_slug'          => 'advanced',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),*/
 			'background_color_1' => array(
@@ -690,27 +690,27 @@ class Tm_Builder_Row extends Tm_Builder_Structure_Element {
 				'priority'        => '20',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the row in the builder for easy identification when collapsed.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the row in the builder for easy identification when collapsed.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

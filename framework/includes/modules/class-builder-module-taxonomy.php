@@ -33,7 +33,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 	private $taxonomies_slugs = null;
 
 	public function init() {
-		$this->name					= esc_html__( 'Taxonomy', 'tm_builder' );
+		$this->name					= esc_html__( 'Taxonomy', 'power-builder' );
 		$this->icon					= 'f02c';
 		$this->slug					= 'tm_pb_taxonomy';
 		$this->main_css_element		= '%%order_class%%.tm_pb_taxonomy';
@@ -87,7 +87,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 
 			foreach ( $this->taxonomies_source as $key => $value ) {
 				$output_array[ $key ] = array(
-					'label'					=> esc_html__( 'Include ', 'tm_builder' ) . $value,
+					'label'					=> esc_html__( 'Include ', 'power-builder' ) . $value,
 					'option_category'		=> 'basic_option',
 					'depends_show_if'		=> $key,
 					'renderer'				=> 'tm_builder_include_categories_option',
@@ -96,7 +96,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 						'term_name'  => $this->taxonomies_slugs[ $key ],
 						'input_name' => 'tm_pb_' . $key,
 					),
-					'description'			=> esc_html__( 'Choose which taxonomies you would like to include.', 'tm_builder' ),
+					'description'			=> esc_html__( 'Choose which taxonomies you would like to include.', 'power-builder' ),
 				);
 			}
 
@@ -111,94 +111,94 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 	public function get_fields() {
 
 		$output_array['terms_type'] = array(
-			'label'					=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+			'label'					=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 			'type'					=> 'select',
 			'option_category'		=> 'basic_option',
 			'options'				=> $this->taxonomies_source,
 			'affects'				=> array_map( array( $this, 'get_taxonomies_html_id' ), array_keys( $this->taxonomies_source ) ),
-			'description'			=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+			'description'			=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 		);
 
 		$output_array = array_merge( $output_array, $this->get_taxonomies_options() );
 
 		$output_array['super_title'] = array(
-			'label'					=> esc_html__( 'Super Title', 'tm_builder' ),
+			'label'					=> esc_html__( 'Super Title', 'power-builder' ),
 			'type'					=> 'text',
 			'option_category'		=> 'configuration',
 			'default'				=> $this->fields_defaults['super_title'][0],
 		);
 		$output_array['title'] = array(
-			'label'					=> esc_html__( 'Title', 'tm_builder' ),
+			'label'					=> esc_html__( 'Title', 'power-builder' ),
 			'type'					=> 'text',
 			'option_category'		=> 'configuration',
 			'default'				=> $this->fields_defaults['title'][0],
 		);
 		$output_array['subtitle'] =array(
-			'label'					=> esc_html__( 'Sub Title', 'tm_builder' ),
+			'label'					=> esc_html__( 'Sub Title', 'power-builder' ),
 			'type'					=> 'text',
 			'option_category'		=> 'configuration',
 			'default'				=> $this->fields_defaults['subtitle'][0],
 		);
 		$output_array['title_delimiter'] =array(
-			'label'					=> esc_html__( 'Display title delimiter', 'tm_builder' ),
+			'label'					=> esc_html__( 'Display title delimiter', 'power-builder' ),
 			'type'					=> 'yes_no_button',
 			'option_category'		=> 'configuration',
 			'options'				=> array(
-				'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-				'off'		=> esc_html__( 'No', 'tm_builder' ),
+				'on'		=> esc_html__( 'Yes', 'power-builder' ),
+				'off'		=> esc_html__( 'No', 'power-builder' ),
 			),
 			'affects'				=> array(
 				'#tm_pb_background_color',
 			),
 		);
 		$output_array['title_length'] =array(
-			'label'					=> esc_html__( 'Title words length ( Set 0 to hide title. )', 'tm_builder' ),
+			'label'					=> esc_html__( 'Title words length ( Set 0 to hide title. )', 'power-builder' ),
 			'option_category'		=> 'basic_option',
 			'type'					=> 'range',
 			'default'				=> '5',
 		);
 		$output_array['description_length'] = array(
-			'label'					=> esc_html__( 'Description words length ( Set 0 to hide excerpt. )', 'tm_builder' ),
+			'label'					=> esc_html__( 'Description words length ( Set 0 to hide excerpt. )', 'power-builder' ),
 			'option_category'		=> 'basic_option',
 			'type'					=> 'range',
 			'default'				=> '5',
 		);
 		$output_array['post_count'] = array(
-			'label'					=> esc_html__( 'Display post count in terms', 'tm_builder' ),
+			'label'					=> esc_html__( 'Display post count in terms', 'power-builder' ),
 			'type'					=> 'yes_no_button',
 			'option_category'		=> 'configuration',
 			'options'				=> array(
-				'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-				'off'		=> esc_html__( 'No', 'tm_builder' ),
+				'on'		=> esc_html__( 'Yes', 'power-builder' ),
+				'off'		=> esc_html__( 'No', 'power-builder' ),
 			),
 		);
 		$output_array['more'] = array(
-			'label'					=> esc_html__( 'Display more button', 'tm_builder' ),
+			'label'					=> esc_html__( 'Display more button', 'power-builder' ),
 			'type'					=> 'yes_no_button',
 			'option_category'		=> 'configuration',
 			'options'				=> array(
-				'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-				'off'		=> esc_html__( 'No', 'tm_builder' ),
+				'on'		=> esc_html__( 'Yes', 'power-builder' ),
+				'off'		=> esc_html__( 'No', 'power-builder' ),
 			),
 			'affects'				=> array(
 				'#tm_pb_more_text',
 			),
 		);
 		$output_array['more_text'] = array(
-			'label'					=> esc_html__( 'More button text', 'tm_builder' ),
+			'label'					=> esc_html__( 'More button text', 'power-builder' ),
 			'type'					=> 'text',
 			'option_category'		=> 'configuration',
 			'depends_show_if'		=> 'on',
 			'default'				=> $this->fields_defaults['more_text'][0],
 		);
 		$output_array['layout_type'] = array(
-			'label'					=> esc_html__( 'Choose Layout Type', 'tm_builder' ),
+			'label'					=> esc_html__( 'Choose Layout Type', 'power-builder' ),
 			'type'					=> 'select',
 			'option_category'		=> 'basic_option',
 			'options'				=> apply_filters( 'tm_pb_module_taxonomy_layout_type',
 				array(
-					'grid'			=> esc_html__( 'Grid', 'tm_builder' ),
-					'tiles'			=> esc_html__( 'Tiles', 'tm_builder' ),
+					'grid'			=> esc_html__( 'Grid', 'power-builder' ),
+					'tiles'			=> esc_html__( 'Tiles', 'power-builder' ),
 				)
 			),
 			'affects'				=> array(
@@ -207,7 +207,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 			),
 		);
 		$output_array['columns'] = array(
-			'label'					=> esc_html__( 'Columns number', 'tm_builder' ),
+			'label'					=> esc_html__( 'Columns number', 'power-builder' ),
 			'option_category'		=> 'configuration',
 			'type'					=> 'range',
 			'default'				=> '3',
@@ -219,7 +219,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 			),
 		);
 		$output_array['padding'] = array(
-			'label'					=> esc_html__( 'Items padding ( size in pixels )', 'tm_builder' ),
+			'label'					=> esc_html__( 'Items padding ( size in pixels )', 'power-builder' ),
 			'option_category'		=> 'configuration',
 			'type'					=> 'range',
 			'default'				=> '20',
@@ -230,28 +230,28 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 			),
 		);
 		$output_array['disabled_on'] = array(
-			'label'					=> esc_html__( 'Disable on', 'tm_builder' ),
+			'label'					=> esc_html__( 'Disable on', 'power-builder' ),
 			'type'					=> 'multiple_checkboxes',
 			'options'				=> tm_pb_media_breakpoints(),
 			'additional_att'		=> 'disable_on',
 			'option_category'		=> 'configuration',
-			'description'			=> esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+			'description'			=> esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 		);
 		$output_array['admin_label'] = array(
-			'label'           => esc_html__( 'Admin Label', 'tm_builder' ),
+			'label'           => esc_html__( 'Admin Label', 'power-builder' ),
 			'type'            => 'text',
 			'option_category' => 'configuration',
-			'description'     => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+			'description'     => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 		);
 		$output_array['module_id'] = array(
-			'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+			'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 			'type'            => 'text',
 			'option_category' => 'configuration',
 			'tab_slug'        => 'custom_css',
 			'option_class'    => 'tm_pb_custom_css_regular',
 		);
 		$output_array['module_class'] = array(
-			'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+			'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 			'type'            => 'text',
 			'option_category' => 'configuration',
 			'tab_slug'        => 'custom_css',
@@ -329,7 +329,7 @@ class Tm_Builder_Module_Taxonomy extends Tm_Builder_Module {
 				apply_filters( 'tm_pb_module_taxonomy_content_settings',
 					array(
 						'visible'		=> $post_count,
-						'sufix'			=> _n_noop( '%s post', '%s posts', 'tm_builder' ),
+						'sufix'			=> _n_noop( '%s post', '%s posts', 'power-builder' ),
 						'html'			=> '%1$s<span %4$s>%5$s%6$s</span>',
 					)
 				),

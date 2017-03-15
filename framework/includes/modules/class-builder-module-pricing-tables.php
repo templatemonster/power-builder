@@ -2,12 +2,12 @@
 class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 	function init() {
 
-		$this->name             = esc_html__( 'Pricing Tables', 'tm_builder' );
+		$this->name             = esc_html__( 'Pricing Tables', 'power-builder' );
 		$this->slug             = 'tm_pb_pricing_tables';
 		$this->icon             = 'f0ce';
 		$this->main_css_element = '%%order_class%%.tm_pb_pricing';
 		$this->child_slug       = 'tm_pb_pricing_table';
-		$this->child_item_text  = esc_html__( 'Pricing Table', 'tm_builder' );
+		$this->child_item_text  = esc_html__( 'Pricing Table', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'admin_label',
@@ -37,58 +37,58 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 		$this->main_css_element = '%%order_class%%';
 		$this->custom_css_options = array(
 			'pricing_heading' => array(
-				'label'    => esc_html__( 'Pricing Heading', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Heading', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading',
 			),
 			'pricing_title' => array(
-				'label'    => esc_html__( 'Pricing Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Title', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading h2',
 			),
 			'pricing_subtitle' => array(
-				'label'    => esc_html__( 'Pricing Subtitle', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Subtitle', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading .tm_pb_best_value',
 			),
 			'pricing_top' => array(
-				'label'    => esc_html__( 'Pricing Top', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Top', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_content_top',
 			),
 			'price' => array(
-				'label'    => esc_html__( 'Price', 'tm_builder' ),
+				'label'    => esc_html__( 'Price', 'power-builder' ),
 				'selector' => '.tm_pb_tm_price',
 			),
 			'currency' => array(
-				'label'    => esc_html__( 'Currency', 'tm_builder' ),
+				'label'    => esc_html__( 'Currency', 'power-builder' ),
 				'selector' => '.tm_pb_dollar_sign',
 			),
 			'frequency' => array(
-				'label'    => esc_html__( 'Frequency', 'tm_builder' ),
+				'label'    => esc_html__( 'Frequency', 'power-builder' ),
 				'selector' => '.tm_pb_frequency',
 			),
 			'pricing_content' => array(
-				'label'    => esc_html__( 'Pricing Content', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Content', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_content',
 			),
 			'pricing_item' => array(
-				'label'    => esc_html__( 'Pricing Item', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Item', 'power-builder' ),
 				'selector' => 'ul.tm_pb_pricing li',
 			),
 			'pricing_item_excluded' => array(
-				'label'    => esc_html__( 'Excluded Item', 'tm_builder' ),
+				'label'    => esc_html__( 'Excluded Item', 'power-builder' ),
 				'selector' => 'ul.tm_pb_pricing li.tm_pb_not_available',
 			),
 			'pricing_button' => array(
-				'label'    => esc_html__( 'Pricing Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Button', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_table_button',
 			),
 			'featured_table' => array(
-				'label'    => esc_html__( 'Featured Table', 'tm_builder' ),
+				'label'    => esc_html__( 'Featured Table', 'power-builder' ),
 				'selector' => '.tm_pb_featured_table',
 			),
 		);
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing_heading h2",
 						'important' => 'all',
@@ -98,7 +98,7 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 					),
 				),
 				'subheader' => array(
-					'label'    => esc_html__( 'Subheader', 'tm_builder' ),
+					'label'    => esc_html__( 'Subheader', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_best_value",
 					),
@@ -110,13 +110,13 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 					),
 				),
 				'currency_frequency' => array(
-					'label'    => esc_html__( 'Currency &amp; Frequency', 'tm_builder' ),
+					'label'    => esc_html__( 'Currency &amp; Frequency', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_dollar_sign, {$this->main_css_element} .tm_pb_frequency",
 					),
 				),
 				'price' => array(
-					'label'    => esc_html__( 'Price', 'tm_builder' ),
+					'label'    => esc_html__( 'Price', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_sum",
 					),
@@ -129,7 +129,7 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing li",
 					),
@@ -148,7 +148,7 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 					),
 				),
 				'sticker' => array(
-					'label'    => esc_html__( 'Sticker text', 'tm_builder' ),
+					'label'    => esc_html__( 'Sticker text', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing_sticker .tm_pb_sticker_text",
 					),
@@ -173,7 +173,7 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 			),
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 				),
 			),
 		);
@@ -182,60 +182,60 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'featured_table_background_color' => array(
-				'label'             => esc_html__( 'Featured Table Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 23,
 			),
 			'header_background_color' => array(
-				'label'             => esc_html__( 'Table Header Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Table Header Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'featured_table_header_background_color' => array(
-				'label'             => esc_html__( 'Featured Table Header Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Header Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 21,
 			),
 			'featured_table_header_text_color' => array(
-				'label'             => esc_html__( 'Featured Table Header Text Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Header Text Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 20,
 			),
 			'featured_table_subheader_text_color' => array(
-				'label'             => esc_html__( 'Featured Table Subheader Text Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Subheader Text Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 20,
 			),
 			'featured_table_price_color' => array(
-				'label'             => esc_html__( 'Featured Table Price Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Price Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 20,
 			),
 			'featured_table_text_color' => array(
-				'label'             => esc_html__( 'Featured Table Body Text Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Body Text Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 22,
 			),
 			'show_bullet' => array(
-				'label'           => esc_html__( 'Show Bullet', 'tm_builder' ),
+				'label'           => esc_html__( 'Show Bullet', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'layout',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug' => 'advanced',
 				'affects'           => array(
@@ -243,62 +243,62 @@ class Tm_Builder_Module_Pricing_Tables extends Tm_Builder_Module {
 				),
 			),
 			'bullet_color' => array(
-				'label'             => esc_html__( 'Bullet Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Bullet Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'depends_show_if'   => 'on',
 			),
 			'featured_table_bullet_color' => array(
-				'label'             => esc_html__( 'Featured Table Bullet Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Featured Table Bullet Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'priority'          => 22,
 			),
 			'remove_featured_drop_shadow' => array(
-				'label'           => esc_html__( 'Remove Featured Table Drop Shadow', 'tm_builder' ),
+				'label'           => esc_html__( 'Remove Featured Table Drop Shadow', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'layout',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug' => 'advanced',
 				'priority'          => 24,
 			),
 			'center_list_items' => array(
-				'label'           => esc_html__( 'Center List Items', 'tm_builder' ),
+				'label'           => esc_html__( 'Center List Items', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'layout',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug' => 'advanced',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

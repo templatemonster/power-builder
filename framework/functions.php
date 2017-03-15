@@ -5,10 +5,10 @@
  */
 function tm_pb_media_breakpoints() {
 	return apply_filters( 'tm_pb_media_breakpoints', array(
-		'phone'   => esc_html__( 'Phone', 'tm_builder' ),
-		'tablet'  => esc_html__( 'Tablet', 'tm_builder' ),
-		'laptop'  => esc_html__( 'Laptop', 'tm_builder' ),
-		'desktop' => esc_html__( 'Desktop', 'tm_builder' ),
+		'phone'   => esc_html__( 'Phone', 'power-builder' ),
+		'tablet'  => esc_html__( 'Tablet', 'power-builder' ),
+		'laptop'  => esc_html__( 'Laptop', 'power-builder' ),
+		'desktop' => esc_html__( 'Desktop', 'power-builder' ),
 	) );
 }
 
@@ -148,7 +148,7 @@ function tm_pb_add_layout_filters() {
 	if ( isset( $_GET['post_type'] ) && 'tm_pb_layout' === $_GET['post_type'] ) {
 		$layout_categories = get_terms( 'layout_category' );
 		$filter_category = array();
-		$filter_category[''] = esc_html__( 'All Categories', 'tm_builder' );
+		$filter_category[''] = esc_html__( 'All Categories', 'power-builder' );
 
 		if ( is_array( $layout_categories ) && ! empty( $layout_categories ) ) {
 			foreach( $layout_categories as $category ) {
@@ -157,17 +157,17 @@ function tm_pb_add_layout_filters() {
 		}
 
 		$filter_layout_type = array(
-			''        => esc_html__( 'All Layouts', 'tm_builder' ),
-			'module'  => esc_html__( 'Modules', 'tm_builder' ),
-			'row'     => esc_html__( 'Rows', 'tm_builder' ),
-			'section' => esc_html__( 'Sections', 'tm_builder' ),
-			'layout'  => esc_html__( 'Layouts', 'tm_builder' ),
+			''        => esc_html__( 'All Layouts', 'power-builder' ),
+			'module'  => esc_html__( 'Modules', 'power-builder' ),
+			'row'     => esc_html__( 'Rows', 'power-builder' ),
+			'section' => esc_html__( 'Sections', 'power-builder' ),
+			'layout'  => esc_html__( 'Layouts', 'power-builder' ),
 		);
 
 		$filter_scope = array(
-			''           => esc_html__( 'Global/not Global', 'tm_builder' ),
-			'global'     => esc_html__( 'Global', 'tm_builder' ),
-			'not_global' => esc_html__( 'not Global', 'tm_builder' )
+			''           => esc_html__( 'Global/not Global', 'power-builder' ),
+			'global'     => esc_html__( 'Global', 'power-builder' ),
+			'not_global' => esc_html__( 'not Global', 'power-builder' )
 		);
 		?>
 
@@ -220,7 +220,7 @@ function tm_pb_load_export_section(){
 	if ( 'edit-tm_pb_layout' === $current_screen->id ) {
 		// display wp error screen if library is disabled for current user
 		if ( ! tm_pb_is_allowed( 'divi_library' ) || ! tm_pb_is_allowed( 'add_library' ) || ! tm_pb_is_allowed( 'save_library' ) ) {
-			wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'tm_builder' ) );
+			wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'power-builder' ) );
 		}
 
 		add_action( 'all_admin_notices', 'tm_pb_export_layouts_interface' );
@@ -235,7 +235,7 @@ function tm_pb_check_library_permissions(){
 
 	if ( 'tm_pb_layout' === $current_screen->id && ( ! tm_pb_is_allowed( 'divi_library' ) || ! tm_pb_is_allowed( 'save_library' ) ) ) {
 		// display wp error screen if library is disabled for current user
-		wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'tm_builder' ) );
+		wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'power-builder' ) );
 	}
 }
 add_action( 'load-post.php', 'tm_pb_check_library_permissions' );
@@ -442,16 +442,16 @@ endif;
 if ( ! function_exists( 'tm_builder_get_text_orientation_options' ) ) :
 function tm_builder_get_text_orientation_options() {
 	$text_orientation_options = array(
-		'left'      => esc_html__( 'Left', 'tm_builder' ),
-		'center'    => esc_html__( 'Center', 'tm_builder' ),
-		'right'     => esc_html__( 'Right', 'tm_builder' ),
-		'justified' => esc_html__( 'Justified', 'tm_builder' ),
+		'left'      => esc_html__( 'Left', 'power-builder' ),
+		'center'    => esc_html__( 'Center', 'power-builder' ),
+		'right'     => esc_html__( 'Right', 'power-builder' ),
+		'justified' => esc_html__( 'Justified', 'power-builder' ),
 	);
 
 	if ( is_rtl() ) {
 		$text_orientation_options = array(
-			'right'  => esc_html__( 'Right', 'tm_builder' ),
-			'center' => esc_html__( 'Center', 'tm_builder' ),
+			'right'  => esc_html__( 'Right', 'power-builder' ),
+			'center' => esc_html__( 'Center', 'power-builder' ),
 		);
 	}
 
@@ -463,7 +463,7 @@ if ( ! function_exists( 'tm_builder_get_gallery_settings' ) ) :
 function tm_builder_get_gallery_settings() {
 	$output = sprintf(
 		'<input type="button" class="button button-upload tm-pb-gallery-button" value="%1$s" />',
-		esc_attr__( 'Update Gallery', 'tm_builder' )
+		esc_attr__( 'Update Gallery', 'power-builder' )
 	);
 
 	return $output;
@@ -472,7 +472,7 @@ endif;
 
 if ( ! function_exists( 'tm_builder_get_nav_menus_options' ) ) :
 function tm_builder_get_nav_menus_options() {
-	$nav_menus_options = array( 'none' => esc_html__( 'Select a menu', 'tm_builder' ) );
+	$nav_menus_options = array( 'none' => esc_html__( 'Select a menu', 'power-builder' ) );
 
 	$nav_menus = wp_get_nav_menus( array( 'orderby' => 'name' ) );
 	foreach ( (array) $nav_menus as $_nav_menu ) {
@@ -516,7 +516,7 @@ function tm_builder_include_categories_option( $args = array() ) {
 	}
 
 	if ( empty( $cats_array ) ) {
-		$output = '<p>' . esc_html__( "You currently don't have any projects assigned to a category.", 'tm_builder' ) . '</p>';
+		$output = '<p>' . esc_html__( "You currently don't have any projects assigned to a category.", 'power-builder' ) . '</p>';
 	}
 
 	foreach ( $cats_array as $category ) {
@@ -634,14 +634,14 @@ endif;
 if ( ! function_exists( 'tm_builder_get_border_styles' ) ) :
 	function tm_builder_get_border_styles() {
 		$styles = array(
-			'solid'  => esc_html__( 'Solid', 'tm_builder' ),
-			'dotted' => esc_html__( 'Dotted', 'tm_builder' ),
-			'dashed' => esc_html__( 'Dashed', 'tm_builder' ),
-			'double' => esc_html__( 'Double', 'tm_builder' ),
-			'groove' => esc_html__( 'Groove', 'tm_builder' ),
-			'ridge'  => esc_html__( 'Ridge', 'tm_builder' ),
-			'inset'  => esc_html__( 'Inset', 'tm_builder' ),
-			'outset' => esc_html__( 'Outset', 'tm_builder' ),
+			'solid'  => esc_html__( 'Solid', 'power-builder' ),
+			'dotted' => esc_html__( 'Dotted', 'power-builder' ),
+			'dashed' => esc_html__( 'Dashed', 'power-builder' ),
+			'double' => esc_html__( 'Double', 'power-builder' ),
+			'groove' => esc_html__( 'Groove', 'power-builder' ),
+			'ridge'  => esc_html__( 'Ridge', 'power-builder' ),
+			'inset'  => esc_html__( 'Inset', 'power-builder' ),
+			'outset' => esc_html__( 'Outset', 'power-builder' ),
 		);
 
 		return apply_filters( 'tm_builder_border_styles', $styles );
@@ -726,7 +726,7 @@ function tm_builder_font_options() {
 	$options         = array();
 
 	$default_options = array( 'default' => array(
-		'name' => esc_html__( 'Default', 'tm_builder' ),
+		'name' => esc_html__( 'Default', 'power-builder' ),
 	) );
 	$fonts           = array_merge( $default_options, tm_builder_get_fonts() );
 
@@ -1070,15 +1070,15 @@ endif;
 if ( ! function_exists( 'tm_pb_export_layouts_interface' ) ) :
 function tm_pb_export_layouts_interface() {
 	if ( ! current_user_can( 'export' ) )
-		wp_die( esc_html__( 'You do not have sufficient permissions to export the content of this site.', 'tm_builder' ) );
+		wp_die( esc_html__( 'You do not have sufficient permissions to export the content of this site.', 'power-builder' ) );
 
 ?>
 	<div class="tm_pb_export_section">
-		<h2 id="tm_page_title"><?php esc_html_e( 'Export Builder Layouts', 'tm_builder' ); ?></h2>
-		<p><?php esc_html_e( 'When you click the button below WordPress will create an XML file for you to save to your computer.', 'tm_builder' ); ?></p>
-		<p><?php esc_html_e( 'This format, which we call WordPress eXtended RSS or WXR, will contain all layouts you created using the Page Builder.', 'tm_builder' ); ?></p>
-		<p><?php esc_html_e( 'Once you&#8217;ve saved the download file, you can use the Import function in another WordPress installation to import all layouts from this site.', 'tm_builder' ); ?></p>
-		<p><?php esc_html_e( 'Select Templates you want to export:', 'tm_builder' ); ?></p>
+		<h2 id="tm_page_title"><?php esc_html_e( 'Export Builder Layouts', 'power-builder' ); ?></h2>
+		<p><?php esc_html_e( 'When you click the button below WordPress will create an XML file for you to save to your computer.', 'power-builder' ); ?></p>
+		<p><?php esc_html_e( 'This format, which we call WordPress eXtended RSS or WXR, will contain all layouts you created using the Page Builder.', 'power-builder' ); ?></p>
+		<p><?php esc_html_e( 'Once you&#8217;ve saved the download file, you can use the Import function in another WordPress installation to import all layouts from this site.', 'power-builder' ); ?></p>
+		<p><?php esc_html_e( 'Select Templates you want to export:', 'power-builder' ); ?></p>
 
 		<form action="<?php echo esc_url( admin_url( 'export.php' ) ); ?>" method="get" id="tm-pb-export-layouts">
 			<input type="hidden" name="download" value="true" />
@@ -1086,10 +1086,10 @@ function tm_pb_export_layouts_interface() {
 
 		<?php
 			$all_template_types = array(
-				'layout'  => esc_html__( 'Layouts', 'tm_builder' ),
-				'section' => esc_html__( 'Sections', 'tm_builder' ),
-				'row'     => esc_html__( 'Rows', 'tm_builder' ),
-				'module'  => esc_html__( 'Modules', 'tm_builder' )
+				'layout'  => esc_html__( 'Layouts', 'power-builder' ),
+				'section' => esc_html__( 'Sections', 'power-builder' ),
+				'row'     => esc_html__( 'Rows', 'power-builder' ),
+				'module'  => esc_html__( 'Modules', 'power-builder' )
 			);
 
 			foreach( $all_template_types as $template_type => $template_name ) {
@@ -1111,16 +1111,16 @@ function tm_pb_export_layouts_interface() {
 				);
 			}
 
-			submit_button( esc_html__( 'Download Export File', 'tm_builder' ) );
+			submit_button( esc_html__( 'Download Export File', 'power-builder' ) );
 		?>
 		</form>
 	</div>
 	<div class="tm_export_section_link_wrap">
-		<a href="#" id="tm_show_export_section"><?php esc_html_e( 'Export Layouts', 'tm_builder' ); ?></a>
+		<a href="#" id="tm_show_export_section"><?php esc_html_e( 'Export Layouts', 'power-builder' ); ?></a>
 	</div>
 	<div class="clearfix"></div>
 	<div class="tm_manage_library_cats">
-		<a href="<?php echo esc_url( admin_url( 'edit-tags.php?taxonomy=layout_category' ) ); ?>" id="tm_load_category_page"><?php esc_html_e( 'Manage Categories', 'tm_builder' ); ?></a>
+		<a href="<?php echo esc_url( admin_url( 'edit-tags.php?taxonomy=layout_category' ) ); ?>" id="tm_load_category_page"><?php esc_html_e( 'Manage Categories', 'power-builder' ); ?></a>
 	</div>
 	<?php tm_pb_settings_form(); ?>
 <?php }
@@ -1152,7 +1152,7 @@ function tm_pb_settings_form() {
 			'tm_builder' => array(
 				'type'   => 'section',
 				'parent' => 'tm_builder_settings',
-				'title'  => esc_html__( 'Additional settings', 'tm_builder' ),
+				'title'  => esc_html__( 'Additional settings', 'power-builder' ),
 			),
 		)
 	);
@@ -1170,13 +1170,13 @@ function tm_pb_settings_form() {
 			'id'          => 'api_key',
 			'name'        => 'api_key',
 			'parent'      => 'tm_pb_settings',
-			'title'       => esc_html__( 'Google maps API key', 'tm_builder' ),
+			'title'       => esc_html__( 'Google maps API key', 'power-builder' ),
 			'description' => sprintf(
-				esc_html__( 'Create own API key here %s', 'tm_builder' ),
+				esc_html__( 'Create own API key here %s', 'power-builder' ),
 				make_clickable( 'https://developers.google.com/maps/documentation/javascript/get-api-key' )
 			),
 			'value'       => $api_key,
-			'placeholder' => esc_html__( 'Google maps API key', 'tm_builder' ),
+			'placeholder' => esc_html__( 'Google maps API key', 'power-builder' ),
 		)
 	);
 
@@ -1195,7 +1195,7 @@ function tm_pb_settings_form() {
 			'type'    => 'checkbox',
 			'id'      => 'allowed_post_types',
 			'name'    => 'allowed_post_types',
-			'title'   => esc_html__( 'Allowed post types', 'tm_builder' ),
+			'title'   => esc_html__( 'Allowed post types', 'power-builder' ),
 			'parent'  => 'tm_pb_settings',
 			'value'   => $saved_types,
 			'options' => $post_types_opt,
@@ -1210,7 +1210,7 @@ function tm_pb_settings_form() {
 				'class'  => 'cherry-control form-button',
 				'html'   => '<div class="custom-button save-button">
 					<input type="hidden" name="tm_pb_process_settings" value="1">
-					<button type="submit" class="button button-primary">' . esc_html__( 'Save', 'tm_builder' ) . '</button>
+					<button type="submit" class="button button-primary">' . esc_html__( 'Save', 'power-builder' ) . '</button>
 					</div>',
 			),
 		)
@@ -1417,9 +1417,9 @@ function tm_pb_before_main_editor( $post ) {
 	// Add button only if current user is allowed to use it otherwise display placeholder with all required data
 	if ( tm_pb_is_allowed( 'divi_builder_control' ) ) {
 		printf( '<div class="tm_pb_toggle_builder_wrapper%5$s"><a href="#" id="tm_pb_toggle_builder" data-builder="%2$s" data-editor="%3$s" class="button button-primary button-large%5$s%6$s">%1$s</a></div><div id="tm_pb_main_editor_wrap"%4$s>',
-			( $is_builder_used ? esc_html__( 'Use Default Editor', 'tm_builder' ) : esc_html__( 'Use Power builder', 'tm_builder' ) ),
-			esc_html__( 'Use Power builder', 'tm_builder' ),
-			esc_html__( 'Use Default Editor', 'tm_builder' ),
+			( $is_builder_used ? esc_html__( 'Use Default Editor', 'power-builder' ) : esc_html__( 'Use Power builder', 'power-builder' ) ),
+			esc_html__( 'Use Power builder', 'power-builder' ),
+			esc_html__( 'Use Default Editor', 'power-builder' ),
 			( $is_builder_used ? ' class="tm_pb_hidden"' : '' ),
 			( $is_builder_used ? ' tm_pb_builder_is_used' : '' ),
 			( $builder_always_enabled ? ' tm_pb_hidden' : '' )
@@ -1517,7 +1517,7 @@ function tm_pb_show_all_layouts() {
 			<input name="tm_pb_load_layout_replace" type="checkbox" id="tm_pb_load_layout_replace" %2$s/>
 			%1$s
 		</label>',
-		esc_html__( 'Replace the existing content with loaded layout', 'tm_builder' ),
+		esc_html__( 'Replace the existing content with loaded layout', 'power-builder' ),
 		checked( get_theme_mod( 'tm_pb_replace_content', 'on' ), 'on', false )
 	);
 
@@ -1565,10 +1565,10 @@ function tm_pb_show_all_layouts() {
 			printf( '<li class="tm_pb_text" data-layout_id="%2$s">%1$s<span class="tm_pb_layout_buttons"><a href="#" class="button-primary tm_pb_layout_button_load">%3$s</a>%4$s</span></li>',
 				esc_html( get_the_title() ),
 				esc_attr( get_the_ID() ),
-				esc_html__( 'Load', 'tm_builder' ),
+				esc_html__( 'Load', 'power-builder' ),
 				'predefined' !== $layouts_type ?
 					sprintf( '<a href="#" class="button tm_pb_layout_button_delete">%1$s</a>',
-						esc_html__( 'Delete', 'tm_builder' )
+						esc_html__( 'Delete', 'power-builder' )
 					)
 					: ''
 			);
@@ -1685,7 +1685,7 @@ function tm_pb_get_saved_templates() {
 		}
 	}
 	if ( empty( $templates_data ) ) {
-		$templates_data = array( 'error' => esc_html__( 'You have not saved any items to your library yet. Once an item has been saved to your library, it will appear here for easy use.', 'tm_builder' ) );
+		$templates_data = array( 'error' => esc_html__( 'You have not saved any items to your library yet. Once an item has been saved to your library, it will appear here for easy use.', 'power-builder' ) );
 	}
 
 	$json_templates = json_encode( $templates_data );
@@ -1720,19 +1720,19 @@ if ( ! function_exists( 'tm_pb_generate_new_layout_modal' ) ) {
 		$layout_cat_option_output = '';
 
 		$template_type_options = apply_filters( 'tm_pb_new_layout_template_types', array(
-			'module'            => esc_html__( 'Module', 'tm_builder' ),
-			'fullwidth_module'  => esc_html__( 'Fullwidth Module', 'tm_builder' ),
-			'row'               => esc_html__( 'Row', 'tm_builder' ),
-			'section'           => esc_html__( 'Section', 'tm_builder' ),
-			'fullwidth_section' => esc_html__( 'Fullwidth Section', 'tm_builder' ),
-			'specialty_section' => esc_html__( 'Specialty Section', 'tm_builder' ),
-			'layout'            => esc_html__( 'Layout', 'tm_builder' ),
+			'module'            => esc_html__( 'Module', 'power-builder' ),
+			'fullwidth_module'  => esc_html__( 'Fullwidth Module', 'power-builder' ),
+			'row'               => esc_html__( 'Row', 'power-builder' ),
+			'section'           => esc_html__( 'Section', 'power-builder' ),
+			'fullwidth_section' => esc_html__( 'Fullwidth Section', 'power-builder' ),
+			'specialty_section' => esc_html__( 'Specialty Section', 'power-builder' ),
+			'layout'            => esc_html__( 'Layout', 'power-builder' ),
 		) );
 
 		$template_module_tabs_options = apply_filters( 'tm_pb_new_layout_module_tabs', array(
-			'general'  => esc_html__( 'Include General Settings', 'tm_builder' ),
-			'advanced' => esc_html__( 'Include Advanced Design Settings', 'tm_builder' ),
-			'css'      => esc_html__( 'Include Custom CSS', 'tm_builder' ),
+			'general'  => esc_html__( 'Include General Settings', 'power-builder' ),
+			'advanced' => esc_html__( 'Include Advanced Design Settings', 'power-builder' ),
+			'css'      => esc_html__( 'Include Custom CSS', 'power-builder' ),
 		) );
 
 		// construct output for the template type option
@@ -1740,7 +1740,7 @@ if ( ! function_exists( 'tm_pb_generate_new_layout_modal' ) ) {
 			$template_type_option_output = sprintf(
 				'<br><label>%1$s:</label>
 				<select id="new_template_type">',
-				esc_html__( 'Template Type', 'tm_builder' )
+				esc_html__( 'Template Type', 'power-builder' )
 			);
 
 			foreach( $template_type_options as $option_id => $option_name ) {
@@ -1771,13 +1771,13 @@ if ( ! function_exists( 'tm_pb_generate_new_layout_modal' ) ) {
 
 		$template_global_option_output = apply_filters( 'tm_pb_new_layout_global_option', sprintf(
 			'<br><label>%1$s<input type="checkbox" value="global" id="tm_pb_template_global"></label>',
-			esc_html__( 'Global', 'tm_builder' )
+			esc_html__( 'Global', 'power-builder' )
 		) );
 
 		// construct output for the layout category option
 		$layout_cat_option_output .= sprintf(
 			'<br><label>%1$s</label>',
-			esc_html__( 'Select category(ies) for new template or type a new name ( optional )', 'tm_builder' )
+			esc_html__( 'Select category(ies) for new template or type a new name ( optional )', 'power-builder' )
 		);
 
 		$layout_categories = apply_filters( 'tm_pb_new_layout_cats_array', get_terms( 'layout_category', array( 'hide_empty' => false ) ) );
@@ -1819,8 +1819,8 @@ if ( ! function_exists( 'tm_pb_generate_new_layout_modal' ) ) {
 					</div>
 				</div>
 			</div>',
-			esc_html__( 'New Template Settings', 'tm_builder' ),
-			esc_html__( 'Template Name', 'tm_builder' ),
+			esc_html__( 'New Template Settings', 'power-builder' ),
+			esc_html__( 'Template Name', 'power-builder' ),
 			$template_type_option_output,
 			$template_module_tabs_option_output,
 			$template_global_option_output, //#5
@@ -2262,7 +2262,7 @@ if ( ! function_exists( 'tm_pb_add_builder_page_js_css' ) ) {
 
 			// Check whether it's a Global item's page and display wp error if Global items disabled for current user
 			if ( ! tm_pb_is_allowed( 'edit_global_library' ) && 'global' === $is_global_template ) {
-				wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'tm_builder' ) );
+				wp_die( esc_html__( "you don't have sufficient permissions to access this page", 'power-builder' ) );
 			}
 
 			$built_for_post_type = get_post_meta( get_the_ID(), '_tm_pb_built_for_post_type', true );
@@ -2378,77 +2378,77 @@ if ( ! function_exists( 'tm_pb_add_builder_page_js_css' ) ) {
 			'tm_builder_templates_amount'              => TM_BUILDER_AJAX_TEMPLATES_AMOUNT,
 			'default_initial_column_type'              => apply_filters( 'tm_builder_default_initial_column_type', '4_4' ),
 			'default_initial_text_module'              => apply_filters( 'tm_builder_default_initial_text_module', 'tm_pb_text' ),
-			'section_only_row_dragged_away'            => esc_html__( 'The section should have at least one row.', 'tm_builder' ),
-			'fullwidth_module_dragged_away'            => esc_html__( 'Fullwidth module can\'t be used outside of the Fullwidth Section.', 'tm_builder' ),
-			'stop_dropping_3_col_row'                  => esc_html__( '3 column row can\'t be used in this column.', 'tm_builder' ),
-			'preview_image'                            => esc_html__( 'Preview', 'tm_builder' ),
-			'empty_admin_label'                        => esc_html__( 'Module', 'tm_builder' ),
-			'video_module_image_error'                 => esc_html__( 'Still images cannot be generated from this video service and/or this video format', 'tm_builder' ),
-			'geocode_error'                            => esc_html__( 'Geocode was not successful for the following reason', 'tm_builder' ),
-			'geocode_error_2'                          => esc_html__( 'Geocoder failed due to', 'tm_builder' ),
-			'no_results'                               => esc_html__( 'No results found', 'tm_builder' ),
-			'all_tab_options_hidden'                   => esc_html__( 'No available options for this configuration.', 'tm_builder' ),
-			'update_global_module'                     => esc_html__( 'You\'re about to update global module. This change will be applied to all pages where you use this module. Press OK if you want to update this module', 'tm_builder' ),
-			'global_row_alert'                         => esc_html__( 'You cannot add global rows into global sections', 'tm_builder' ),
-			'global_module_alert'                      => esc_html__( 'You cannot add global modules into global sections or rows', 'tm_builder' ),
-			'all_cat_text'                             => esc_html__( 'All Categories', 'tm_builder' ),
+			'section_only_row_dragged_away'            => esc_html__( 'The section should have at least one row.', 'power-builder' ),
+			'fullwidth_module_dragged_away'            => esc_html__( 'Fullwidth module can\'t be used outside of the Fullwidth Section.', 'power-builder' ),
+			'stop_dropping_3_col_row'                  => esc_html__( '3 column row can\'t be used in this column.', 'power-builder' ),
+			'preview_image'                            => esc_html__( 'Preview', 'power-builder' ),
+			'empty_admin_label'                        => esc_html__( 'Module', 'power-builder' ),
+			'video_module_image_error'                 => esc_html__( 'Still images cannot be generated from this video service and/or this video format', 'power-builder' ),
+			'geocode_error'                            => esc_html__( 'Geocode was not successful for the following reason', 'power-builder' ),
+			'geocode_error_2'                          => esc_html__( 'Geocoder failed due to', 'power-builder' ),
+			'no_results'                               => esc_html__( 'No results found', 'power-builder' ),
+			'all_tab_options_hidden'                   => esc_html__( 'No available options for this configuration.', 'power-builder' ),
+			'update_global_module'                     => esc_html__( 'You\'re about to update global module. This change will be applied to all pages where you use this module. Press OK if you want to update this module', 'power-builder' ),
+			'global_row_alert'                         => esc_html__( 'You cannot add global rows into global sections', 'power-builder' ),
+			'global_module_alert'                      => esc_html__( 'You cannot add global modules into global sections or rows', 'power-builder' ),
+			'all_cat_text'                             => esc_html__( 'All Categories', 'power-builder' ),
 			'is_global_template'                       => $is_global_template,
 			'template_post_id'                         => $post_id,
 			'layout_categories'                        => $layout_cat_data_json,
-			'map_pin_address_error'                    => esc_html__( 'Map Pin Address cannot be empty', 'tm_builder' ),
-			'map_pin_address_invalid'                  => esc_html__( 'Invalid Pin and address data. Please try again.', 'tm_builder' ),
-			'locked_section_permission_alert'          => esc_html__( 'You do not have permission to unlock this section.', 'tm_builder' ),
-			'locked_row_permission_alert'              => esc_html__( 'You do not have permission to unlock this row.', 'tm_builder' ),
-			'locked_module_permission_alert'           => esc_html__( 'You do not have permission to unlock this module.', 'tm_builder' ),
-			'locked_item_permission_alert'             => esc_html__( 'You do not have permission to perform this task.', 'tm_builder' ),
-			'localstorage_unavailability_alert'        => esc_html__( 'Unable to perform copy/paste process due to inavailability of localStorage feature in your browser. Please use latest modern browser (Chrome, Firefox, or Safari) to perform copy/paste process', 'tm_builder' ),
+			'map_pin_address_error'                    => esc_html__( 'Map Pin Address cannot be empty', 'power-builder' ),
+			'map_pin_address_invalid'                  => esc_html__( 'Invalid Pin and address data. Please try again.', 'power-builder' ),
+			'locked_section_permission_alert'          => esc_html__( 'You do not have permission to unlock this section.', 'power-builder' ),
+			'locked_row_permission_alert'              => esc_html__( 'You do not have permission to unlock this row.', 'power-builder' ),
+			'locked_module_permission_alert'           => esc_html__( 'You do not have permission to unlock this module.', 'power-builder' ),
+			'locked_item_permission_alert'             => esc_html__( 'You do not have permission to perform this task.', 'power-builder' ),
+			'localstorage_unavailability_alert'        => esc_html__( 'Unable to perform copy/paste process due to inavailability of localStorage feature in your browser. Please use latest modern browser (Chrome, Firefox, or Safari) to perform copy/paste process', 'power-builder' ),
 			'product_version'                          => TM_BUILDER_VERSION,
 			'modules_count'                            => tm_builder_modules_loader()->modules_count(),
 			'verb'          => array(
-				'did'       => esc_html__( 'Did', 'tm_builder' ),
-				'added'     => esc_html__( 'Added', 'tm_builder' ),
-				'edited'    => esc_html__( 'Edited', 'tm_builder' ),
-				'removed'   => esc_html__( 'Removed', 'tm_builder' ),
-				'moved'     => esc_html__( 'Moved', 'tm_builder' ),
-				'expanded'  => esc_html__( 'Expanded', 'tm_builder' ),
-				'collapsed' => esc_html__( 'Collapsed', 'tm_builder' ),
-				'locked'    => esc_html__( 'Locked', 'tm_builder' ),
-				'unlocked'  => esc_html__( 'Unlocked', 'tm_builder' ),
-				'cloned'    => esc_html__( 'Cloned', 'tm_builder' ),
-				'cleared'   => esc_html__( 'Cleared', 'tm_builder' ),
-				'enabled'   => esc_html__( 'Enabled', 'tm_builder' ),
-				'disabled'  => esc_html__( 'Disabled', 'tm_builder' ),
-				'copied'    => esc_html__( 'Copied', 'tm_builder' ),
-				'renamed'   => esc_html__( 'Renamed', 'tm_builder' ),
-				'loaded'    => esc_html__( 'Loaded', 'tm_builder' ),
+				'did'       => esc_html__( 'Did', 'power-builder' ),
+				'added'     => esc_html__( 'Added', 'power-builder' ),
+				'edited'    => esc_html__( 'Edited', 'power-builder' ),
+				'removed'   => esc_html__( 'Removed', 'power-builder' ),
+				'moved'     => esc_html__( 'Moved', 'power-builder' ),
+				'expanded'  => esc_html__( 'Expanded', 'power-builder' ),
+				'collapsed' => esc_html__( 'Collapsed', 'power-builder' ),
+				'locked'    => esc_html__( 'Locked', 'power-builder' ),
+				'unlocked'  => esc_html__( 'Unlocked', 'power-builder' ),
+				'cloned'    => esc_html__( 'Cloned', 'power-builder' ),
+				'cleared'   => esc_html__( 'Cleared', 'power-builder' ),
+				'enabled'   => esc_html__( 'Enabled', 'power-builder' ),
+				'disabled'  => esc_html__( 'Disabled', 'power-builder' ),
+				'copied'    => esc_html__( 'Copied', 'power-builder' ),
+				'renamed'   => esc_html__( 'Renamed', 'power-builder' ),
+				'loaded'    => esc_html__( 'Loaded', 'power-builder' ),
 			),
 			'noun'                  => array(
-				'section'           => esc_html__( 'Section', 'tm_builder' ),
-				'saved_section'     => esc_html__( 'Saved Section', 'tm_builder' ),
-				'fullwidth_section' => esc_html__( 'Fullwidth Section', 'tm_builder' ),
-				'specialty_section' => esc_html__( 'Specialty Section', 'tm_builder' ),
-				'column'            => esc_html__( 'Column', 'tm_builder' ),
-				'row'               => esc_html__( 'Row', 'tm_builder' ),
-				'saved_row'         => esc_html__( 'Saved Row', 'tm_builder' ),
-				'module'            => esc_html__( 'Module', 'tm_builder' ),
-				'saved_module'      => esc_html__( 'Saved Module', 'tm_builder' ),
-				'page'              => esc_html__( 'Page', 'tm_builder' ),
-				'layout'            => esc_html__( 'Layout', 'tm_builder' ),
+				'section'           => esc_html__( 'Section', 'power-builder' ),
+				'saved_section'     => esc_html__( 'Saved Section', 'power-builder' ),
+				'fullwidth_section' => esc_html__( 'Fullwidth Section', 'power-builder' ),
+				'specialty_section' => esc_html__( 'Specialty Section', 'power-builder' ),
+				'column'            => esc_html__( 'Column', 'power-builder' ),
+				'row'               => esc_html__( 'Row', 'power-builder' ),
+				'saved_row'         => esc_html__( 'Saved Row', 'power-builder' ),
+				'module'            => esc_html__( 'Module', 'power-builder' ),
+				'saved_module'      => esc_html__( 'Saved Module', 'power-builder' ),
+				'page'              => esc_html__( 'Page', 'power-builder' ),
+				'layout'            => esc_html__( 'Layout', 'power-builder' ),
 			),
 			'addition' => array(
-				'phone' => esc_html__( 'on Phone', 'tm_builder' ),
-				'tablet' => esc_html__( 'on Tablet', 'tm_builder' ),
-				'desktop' => esc_html__( 'on Desktop', 'tm_builder' ),
+				'phone' => esc_html__( 'on Phone', 'power-builder' ),
+				'tablet' => esc_html__( 'on Tablet', 'power-builder' ),
+				'desktop' => esc_html__( 'on Desktop', 'power-builder' ),
 			),
-			'invalid_color'    => esc_html__( 'Invalid Color', 'tm_builder' ),
+			'invalid_color'    => esc_html__( 'Invalid Color', 'power-builder' ),
 			'tm_pb_preview_nonce' => wp_create_nonce( 'tm_pb_preview_nonce' ),
 			'is_divi_library'  => 'tm_pb_layout' === $typenow ? 1 : 0,
 			'layout_type'      => 'tm_pb_layout' === $typenow ? tm_pb_get_layout_type( get_the_ID() ) : 0,
 			'is_plugin_used'   => tm_is_builder_plugin_active(),
 			'yoast_content'    => tm_is_yoast_seo_plugin_active() ? $post_content_processed : '',
-			'standart_section_name' => esc_html__( 'Standart Section', 'tm_builder' ),
-			'fullwidth_section_name' => esc_html__( 'Fullwidth Section', 'tm_builder' ),
-			'specialty_section_name' => esc_html__( 'Specialty Section', 'tm_builder' ),
+			'standart_section_name' => esc_html__( 'Standart Section', 'power-builder' ),
+			'fullwidth_section_name' => esc_html__( 'Fullwidth Section', 'power-builder' ),
+			'specialty_section_name' => esc_html__( 'Specialty Section', 'power-builder' ),
 		) ) );
 
 		wp_enqueue_style( 'tm_pb_admin_css', TM_BUILDER_URI .'/framework/admin/assets/css/style.css', array(), TM_BUILDER_VERSION );
@@ -2461,7 +2461,7 @@ function tm_pb_add_custom_box() {
 	$post_types = tm_builder_get_builder_post_types();
 
 	foreach ( $post_types as $post_type ){
-		add_meta_box( TM_BUILDER_LAYOUT_POST_TYPE, esc_html__( 'Power builder', 'tm_builder' ), 'tm_pb_pagebuilder_meta_box', $post_type, 'normal', 'high' );
+		add_meta_box( TM_BUILDER_LAYOUT_POST_TYPE, esc_html__( 'Power builder', 'power-builder' ), 'tm_pb_pagebuilder_meta_box', $post_type, 'normal', 'high' );
 	}
 }
 
@@ -2482,7 +2482,7 @@ function tm_pb_get_the_author_posts_link(){
 	$link = sprintf(
 		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
 		esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) ),
-		esc_attr( sprintf( __( 'Posts by %s', 'tm_builder' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'Posts by %s', 'power-builder' ), get_the_author() ) ),
 		get_the_author()
 	);
 	return apply_filters( 'the_author_posts_link', $link );
@@ -2499,9 +2499,9 @@ function tm_pb_get_comments_popup_link( $zero = false, $one = false, $more = fal
 	if ( $number > 1 )
 		$output = str_replace( '%', number_format_i18n( $number ), ( false === $more ) ? __( '% Comments', $themename ) : $more );
 	elseif ( $number == 0 )
-		$output = ( false === $zero ) ? __( 'No Comments', 'tm_builder' ) : $zero;
+		$output = ( false === $zero ) ? __( 'No Comments', 'power-builder' ) : $zero;
 	else // must be one
-		$output = ( false === $one ) ? __( '1 Comment', 'tm_builder' ) : $one;
+		$output = ( false === $one ) ? __( '1 Comment', 'power-builder' ) : $one;
 
 	return '<span class="comments-number">' . '<a href="' . esc_url( get_permalink() . '#respond' ) . '">' . apply_filters( 'comments_number', esc_html( $output ), esc_html( $number ) ) . '</a>' . '</span>';
 }
@@ -2512,7 +2512,7 @@ function tm_pb_postinfo_meta( $postinfo, $date_format, $comment_zero, $comment_o
 	$postinfo_meta = '';
 
 	if ( in_array( 'author', $postinfo ) )
-		$postinfo_meta .= ' ' . esc_html__( 'by', 'tm_builder' ) . ' <span class="author vcard">' . tm_pb_get_the_author_posts_link() . '</span>';
+		$postinfo_meta .= ' ' . esc_html__( 'by', 'power-builder' ) . ' <span class="author vcard">' . tm_pb_get_the_author_posts_link() . '</span>';
 
 	if ( in_array( 'date', $postinfo ) ) {
 		if ( in_array( 'author', $postinfo ) ) $postinfo_meta .= ' | ';
@@ -2809,44 +2809,44 @@ function tm_pb_pagebuilder_meta_box() {
 		'<%% if ( this.hasOption( "rename" ) ) { %%>
 			<li><a class="tm-pb-right-click-rename" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Rename', 'tm_builder' )
+		esc_html__( 'Rename', 'power-builder' )
 	);
 	$copy_module_menu = sprintf(
 		'<%% if ( this.hasOption( "copy" ) ) { %%>
 			<li><a class="tm-pb-right-click-copy" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Copy', 'tm_builder' )
+		esc_html__( 'Copy', 'power-builder' )
 	);
 	$paste_after_menu = sprintf(
 		'<%% if ( this.hasOption( "paste-after" ) ) { %%>
 			<li><a class="tm-pb-right-click-paste-after" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Paste After', 'tm_builder' )
+		esc_html__( 'Paste After', 'power-builder' )
 	);
 	$paste_menu_item = sprintf(
 		'<%% if ( this.hasOption( "paste-column" ) ) { %%>
 			<li><a class="tm-pb-right-click-paste-column" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Paste', 'tm_builder' )
+		esc_html__( 'Paste', 'power-builder' )
 	);
 	$paste_app_menu_item = sprintf(
 		'<%% if ( this.hasOption( "paste-app" ) ) { %%>
 			<li><a class="tm-pb-right-click-paste-app" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Paste', 'tm_builder' )
+		esc_html__( 'Paste', 'power-builder' )
 	);
 	$save_to_lib_menu = sprintf(
 		'<%% if ( this.hasOption( "save-to-library") ) { %%>
 			<li><a class="tm-pb-right-click-save-to-library" href="#">%1$s</a></li>
 		<%% } %%>',
-		esc_html__( 'Save to Library', 'tm_builder' )
+		esc_html__( 'Save to Library', 'power-builder' )
 	);
 	$lock_unlock_menu = sprintf(
 		'<%% if ( this.hasOption( "lock" ) ) { %%>
 			<li><a class="tm-pb-right-click-lock" href="#"><span class="unlock">%1$s</span><span class="lock">%2$s</span></a></li>
 		<%% } %%>',
-		esc_html__( 'Unlock', 'tm_builder' ),
-		esc_html__( 'Lock', 'tm_builder' )
+		esc_html__( 'Unlock', 'power-builder' ),
+		esc_html__( 'Lock', 'power-builder' )
 	);
 	$enable_disable_menu = sprintf(
 		'<%% if ( this.hasOption( "disable" ) ) { %%>
@@ -2854,8 +2854,8 @@ function tm_pb_pagebuilder_meta_box() {
 				<span class="tm_pb_disable_on_options"><span class="tm_pb_disable_on_option tm_pb_disable_on_phone"></span><span class="tm_pb_disable_on_option tm_pb_disable_on_tablet"></span><span class="tm_pb_disable_on_option tm_pb_disable_on_desktop"></span></span>
 			</li>
 		<%% } %%>',
-		esc_html__( 'Enable', 'tm_builder' ),
-		esc_html__( 'Disable', 'tm_builder' )
+		esc_html__( 'Enable', 'power-builder' ),
+		esc_html__( 'Disable', 'power-builder' )
 	);
 	// Right click options Template
 	printf(
@@ -2900,17 +2900,17 @@ function tm_pb_pagebuilder_meta_box() {
 		tm_pb_is_allowed( 'edit_module' ) && ( tm_pb_is_allowed( 'general_settings' ) || tm_pb_is_allowed( 'advanced_settings' ) || tm_pb_is_allowed( 'custom_css_settings' ) ) ? $rename_module_menu : '',
 		tm_pb_is_allowed( 'disable_module' ) ? $enable_disable_menu : '',
 		tm_pb_is_allowed( 'lock_module' ) ? $lock_unlock_menu : '',
-		esc_html__( 'Expand', 'tm_builder' ),
-		esc_html__( 'Collapse', 'tm_builder' ), //#5
+		esc_html__( 'Expand', 'power-builder' ),
+		esc_html__( 'Collapse', 'power-builder' ), //#5
 		tm_pb_is_allowed( 'add_module' ) ? $copy_module_menu : '',
 		tm_pb_is_allowed( 'add_module' ) ? $paste_after_menu : '',
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'save_library' ) ? $save_to_lib_menu : '',
-		esc_html__( 'Undo', 'tm_builder' ),
-		esc_html__( 'Redo', 'tm_builder' ), //#10
+		esc_html__( 'Undo', 'power-builder' ),
+		esc_html__( 'Redo', 'power-builder' ), //#10
 		tm_pb_is_allowed( 'add_module' ) ? $paste_menu_item : '',
 		tm_pb_is_allowed( 'add_module' ) ? $paste_app_menu_item : '',
 		tm_pb_allowed_modules_list(),
-		esc_html__( 'Settings', 'tm_builder' )
+		esc_html__( 'Settings', 'power-builder' )
 	);
 
 	// "Rename Module Admin Label" Modal Window Template
@@ -2925,8 +2925,8 @@ function tm_pb_pagebuilder_meta_box() {
 				</div>
 			</div>
 		</script>',
-		esc_html__( 'Cancel', 'tm_builder' ),
-		esc_attr__( 'Save', 'tm_builder' )
+		esc_html__( 'Cancel', 'power-builder' ),
+		esc_attr__( 'Save', 'power-builder' )
 	);
 
 	// "Rename Module Admin Label" Modal Content Template
@@ -2937,30 +2937,30 @@ function tm_pb_pagebuilder_meta_box() {
 
 			<input type="text" value="" id="tm_pb_new_admin_label" class="regular-text" />
 		</script>',
-		esc_html__( 'Rename', 'tm_builder' ),
-		esc_html__( 'Enter a new name for this module', 'tm_builder' )
+		esc_html__( 'Rename', 'power-builder' ),
+		esc_html__( 'Enter a new name for this module', 'power-builder' )
 	);
 
 	$save_to_lib_button = sprintf(
 		'<a href="#" class="tm-pb-layout-buttons tm-pb-layout-buttons-save" title="%1$s">
 			<span>%2$s</span>
 		</a>',
-		esc_attr__( 'Save to Library', 'tm_builder' ),
-		esc_html__( 'Save to Library', 'tm_builder' )
+		esc_attr__( 'Save to Library', 'power-builder' ),
+		esc_html__( 'Save to Library', 'power-builder' )
 	);
 	$load_from_lib_button = sprintf(
 		'<a href="#" class="tm-pb-layout-buttons tm-pb-layout-buttons-load" title="%1$s">
 			<span>%2$s</span>
 		</a>',
-		esc_attr__( 'Load From Library', 'tm_builder' ),
-		esc_html__( 'Load From Library', 'tm_builder' )
+		esc_attr__( 'Load From Library', 'power-builder' ),
+		esc_html__( 'Load From Library', 'power-builder' )
 	);
 	$clear_layout_button = sprintf(
 		'<a href="#" class="tm-pb-layout-buttons tm-pb-layout-buttons-clear" title="%1$s">
 			<span>%2$s</span>
 		</a>',
-		esc_attr__( 'Clear Layout', 'tm_builder' ),
-		esc_html__( 'Clear Layout', 'tm_builder' )
+		esc_attr__( 'Clear Layout', 'power-builder' ),
+		esc_html__( 'Clear Layout', 'power-builder' )
 	);
 	// App Template
 	printf(
@@ -2992,12 +2992,12 @@ function tm_pb_pagebuilder_meta_box() {
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'save_library' ) ? $save_to_lib_button : '',
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'load_layout' ) && tm_pb_is_allowed( 'add_library' ) && tm_pb_is_allowed( 'add_module' ) ? $load_from_lib_button : '',
 		tm_pb_is_allowed( 'add_module' ) ? $clear_layout_button : '',
-		esc_attr__( 'Redo', 'tm_builder' ),
-		esc_html__( 'Redo', 'tm_builder' ),
-		esc_attr__( 'Undo', 'tm_builder' ),
-		esc_html__( 'Undo', 'tm_builder' ),
-		esc_attr__( 'See History', 'tm_builder' ),
-		esc_html__( 'See History', 'tm_builder' ),
+		esc_attr__( 'Redo', 'power-builder' ),
+		esc_html__( 'Redo', 'power-builder' ),
+		esc_attr__( 'Undo', 'power-builder' ),
+		esc_html__( 'Undo', 'power-builder' ),
+		esc_attr__( 'See History', 'power-builder' ),
+		esc_html__( 'See History', 'power-builder' ),
 		TM_BUILDER_URI . '/assets/images/power-logo.png'
 	);
 
@@ -3005,24 +3005,24 @@ function tm_pb_pagebuilder_meta_box() {
 		'<%% if ( ( typeof tm_pb_template_type === \'undefined\' || \'section\' === tm_pb_template_type || \'\' === tm_pb_template_type )%3$s ) { %%>
 			<a href="#" class="tm-pb-settings tm-pb-settings-section" title="%1$s"><span>%2$s</span></a>
 		<%% } %%>',
-		esc_attr__( 'Settings', 'tm_builder' ),
-		esc_html__( 'Settings', 'tm_builder' ),
+		esc_attr__( 'Settings', 'power-builder' ),
+		esc_html__( 'Settings', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' && typeof tm_pb_global_module === "undefined"' : '' // do not display settings on global sections if not allowed for current user
 	);
 	$section_clone_button = sprintf(
 		'<a href="#" class="tm-pb-clone tm-pb-clone-section" title="%1$s"><span>%2$s</span></a>',
-		esc_attr__( 'Clone Section', 'tm_builder' ),
-		esc_html__( 'Clone Section', 'tm_builder' )
+		esc_attr__( 'Clone Section', 'power-builder' ),
+		esc_html__( 'Clone Section', 'power-builder' )
 	);
 	$section_remove_button = sprintf(
 		'<a href="#" class="tm-pb-remove tm-pb-remove-section" title="%1$s"><span>%2$s</span></a>',
-		esc_attr__( 'Delete Section', 'tm_builder' ),
-		esc_html__( 'Delete Section', 'tm_builder' )
+		esc_attr__( 'Delete Section', 'power-builder' ),
+		esc_html__( 'Delete Section', 'power-builder' )
 	);
 	$section_unlock_button = sprintf(
 		'<a href="#" class="tm-pb-unlock" title="%1$s"><span>%2$s</span></a>',
-		esc_attr__( 'Unlock Section', 'tm_builder' ),
-		esc_html__( 'Unlock Section', 'tm_builder' )
+		esc_attr__( 'Unlock Section', 'power-builder' ),
+		esc_html__( 'Unlock Section', 'power-builder' )
 	);
 	// Section Template
 	$settings_controls = sprintf(
@@ -3041,31 +3041,31 @@ function tm_pb_pagebuilder_meta_box() {
 		tm_pb_is_allowed( 'edit_module' ) && ( tm_pb_is_allowed( 'general_settings' ) || tm_pb_is_allowed( 'advanced_settings' ) || tm_pb_is_allowed( 'custom_css_settings' ) ) ? $section_settings_button : '',
 		tm_pb_is_allowed( 'add_module' ) ? $section_clone_button : '',
 		tm_pb_is_allowed( 'add_module' ) ? $section_remove_button : '',
-		esc_attr__( 'Expand Section', 'tm_builder' ),
-		esc_html__( 'Expand Section', 'tm_builder' ),
+		esc_attr__( 'Expand Section', 'power-builder' ),
+		esc_html__( 'Expand Section', 'power-builder' ),
 		tm_pb_is_allowed( 'lock_module' ) ? $section_unlock_button : ''
 	);
 
 	$add_from_lib_section = sprintf(
 		'<span class="tm-pb-section-add-saved">%1$s</span>',
-		esc_html__( 'Add From Library', 'tm_builder' )
+		esc_html__( 'Add From Library', 'power-builder' )
 	);
 
 	$add_standard_section_button = sprintf(
 		'<span class="tm-pb-section-add-main">%1$s</span>',
-		esc_html__( 'Standard Section', 'tm_builder' )
+		esc_html__( 'Standard Section', 'power-builder' )
 	);
 	$add_standard_section_button = apply_filters( 'tm_builder_add_main_section_button', $add_standard_section_button );
 
 	$add_fullwidth_section_button = sprintf(
 		'<span class="tm-pb-section-add-fullwidth">%1$s</span>',
-		esc_html__( 'Fullwidth Section', 'tm_builder' )
+		esc_html__( 'Fullwidth Section', 'power-builder' )
 	);
 	$add_fullwidth_section_button = apply_filters( 'tm_builder_add_fullwidth_section_button', $add_fullwidth_section_button );
 
 	$add_specialty_section_button = sprintf(
 		'<span class="tm-pb-section-add-specialty">%1$s</span>',
-		esc_html__( 'Specialty Section', 'tm_builder' )
+		esc_html__( 'Specialty Section', 'power-builder' )
 	);
 	$add_specialty_section_button = apply_filters( 'tm_builder_add_specialty_section_button', $add_specialty_section_button );
 
@@ -3119,16 +3119,16 @@ function tm_pb_pagebuilder_meta_box() {
 		'<%% if ( ( typeof tm_pb_template_type === \'undefined\' || tm_pb_template_type !== \'module\' )%3$s ) { %%>
 			<a href="#" class="tm-pb-settings tm-pb-settings-row" title="%1$s"><span>%2$s</span></a>
 		<%% } %%>',
-		esc_attr__( 'Settings', 'tm_builder' ),
-		esc_html__( 'Settings', 'tm_builder' ),
+		esc_attr__( 'Settings', 'power-builder' ),
+		esc_html__( 'Settings', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' && ( typeof tm_pb_global_module === "undefined" || "" === tm_pb_global_module ) && ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent )' : '' // do not display settings button on global rows if not allowed for current user
 	);
 	$row_clone_button = sprintf(
 		'%3$s
 			<a href="#" class="tm-pb-clone tm-pb-clone-row" title="%1$s"><span>%2$s</span></a>
 		%4$s',
-		esc_attr__( 'Clone Row', 'tm_builder' ),
-		esc_html__( 'Clone Row', 'tm_builder' ),
+		esc_attr__( 'Clone Row', 'power-builder' ),
+		esc_html__( 'Clone Row', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% if ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent ) { %>' : '', // do not display clone button on rows within global sections if not allowed for current user
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% } %>' : ''
 	);
@@ -3136,8 +3136,8 @@ function tm_pb_pagebuilder_meta_box() {
 		'%3$s
 			<a href="#" class="tm-pb-remove tm-pb-remove-row" title="%1$s"><span>%2$s</span></a>
 		%4$s',
-		esc_attr__( 'Delete Row', 'tm_builder' ),
-		esc_html__( 'Delete Row', 'tm_builder' ),
+		esc_attr__( 'Delete Row', 'power-builder' ),
+		esc_html__( 'Delete Row', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% if ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent ) { %>' : '', // do not display clone button on rows within global sections if not allowed for current user
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% } %>' : ''
 	);
@@ -3145,15 +3145,15 @@ function tm_pb_pagebuilder_meta_box() {
 		'%3$s
 			<a href="#" class="tm-pb-change-structure" title="%1$s"><span>%2$s</span></a>
 		%4$s',
-		esc_attr__( 'Change Structure', 'tm_builder' ),
-		esc_html__( 'Change Structure', 'tm_builder' ),
+		esc_attr__( 'Change Structure', 'power-builder' ),
+		esc_html__( 'Change Structure', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% if ( ( typeof tm_pb_global_module === "undefined" || "" === tm_pb_global_module ) && ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent ) ) { %>' : '', // do not display change structure button on global rows if not allowed for current user
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% } %>' : ''
 	);
 	$row_unlock_button = sprintf(
 		'<a href="#" class="tm-pb-unlock" title="%1$s"><span>%2$s</span></a>',
-		esc_attr__( 'Unlock Row', 'tm_builder' ),
-		esc_html__( 'Unlock Row', 'tm_builder' )
+		esc_attr__( 'Unlock Row', 'power-builder' ),
+		esc_html__( 'Unlock Row', 'power-builder' )
 	);
 	// Row Template
 	$settings = sprintf(
@@ -3178,8 +3178,8 @@ function tm_pb_pagebuilder_meta_box() {
 		tm_pb_is_allowed( 'add_module' ) ? $row_clone_button : '',
 		tm_pb_is_allowed( 'add_module' ) ? $row_remove_button : '',
 		tm_pb_is_allowed( 'edit_module' ) && ( tm_pb_is_allowed( 'general_settings' ) || tm_pb_is_allowed( 'advanced_settings' ) || tm_pb_is_allowed( 'custom_css_settings' ) ) ? $row_change_structure_button : '',
-		esc_attr__( 'Expand Row', 'tm_builder' ),
-		esc_html__( 'Expand Row', 'tm_builder' ),
+		esc_attr__( 'Expand Row', 'power-builder' ),
+		esc_html__( 'Expand Row', 'power-builder' ),
 		tm_pb_is_allowed( 'lock_module' ) ? $row_unlock_button : ''
 	);
 
@@ -3199,7 +3199,7 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%1$s</span>
 			</a>
 		<%% } %%>',
-		esc_html__( 'Add Row', 'tm_builder' ),
+		esc_html__( 'Add Row', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' && typeof tm_pb_global_parent === "undefined"' : '' // do not display add row buton on global sections if not allowed for current user
 	);
 
@@ -3207,7 +3207,7 @@ function tm_pb_pagebuilder_meta_box() {
 		'<a href="#" class="tm-pb-insert-column">
 			<span>%1$s</span>
 		</a>',
-		esc_html__( 'Insert Column(s)', 'tm_builder' )
+		esc_html__( 'Insert Column(s)', 'power-builder' )
 	);
 
 	printf(
@@ -3237,8 +3237,8 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%2$s</span>
 			</a>
 		<%% } %%>',
-		esc_attr__( 'Clone Module', 'tm_builder' ),
-		esc_html__( 'Clone Module', 'tm_builder' ),
+		esc_attr__( 'Clone Module', 'power-builder' ),
+		esc_html__( 'Clone Module', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' &&  ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent )' : '',
 		tm_pb_allowed_modules_list()
 	);
@@ -3248,8 +3248,8 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%2$s</span>
 			</a>
 		<%% } %%>',
-		esc_attr__( 'Remove Module', 'tm_builder' ),
-		esc_html__( 'Remove Module', 'tm_builder' ),
+		esc_attr__( 'Remove Module', 'power-builder' ),
+		esc_html__( 'Remove Module', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' &&  ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent )' : '',
 		tm_pb_allowed_modules_list()
 	);
@@ -3259,8 +3259,8 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%2$s</span>
 			</a>
 		<%% } %%>',
-		esc_html__( 'Unlock Module', 'tm_builder' ),
-		esc_attr__( 'Unlock Module', 'tm_builder' )
+		esc_html__( 'Unlock Module', 'power-builder' ),
+		esc_attr__( 'Unlock Module', 'power-builder' )
 	);
 	$settings_button = sprintf(
 		'<%% if (%3$s _.contains( %4$s, module_type ) ) { %%>
@@ -3268,8 +3268,8 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%2$s</span>
 			</a>
 		<%% } %%>',
-		esc_attr__( 'Module Settings', 'tm_builder' ),
-		esc_html__( 'Module Settings', 'tm_builder' ),
+		esc_attr__( 'Module Settings', 'power-builder' ),
+		esc_html__( 'Module Settings', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? ' ( typeof tm_pb_global_parent === "undefined" || "" === tm_pb_global_parent ) && ( typeof tm_pb_global_module === "undefined" || "" === tm_pb_global_module ) &&' : '',
 		tm_pb_allowed_modules_list()
 	);
@@ -3294,7 +3294,7 @@ function tm_pb_pagebuilder_meta_box() {
 		'<a href="#" class="tm-pb-modal-save button button-primary">
 			<span>%1$s</span>
 		</a>',
-		esc_html__( 'Save & Exit', 'tm_builder' )
+		esc_html__( 'Save & Exit', 'power-builder' )
 	);
 
 	$save_template_button = sprintf(
@@ -3303,7 +3303,7 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%1$s</span>
 			</a>
 		<%% } %%>',
-		esc_html__( 'Save & Add To Library', 'tm_builder' )
+		esc_html__( 'Save & Add To Library', 'power-builder' )
 	);
 
 	$can_edit_or_has_modal_view_tab = tm_pb_is_allowed( 'edit_module' ) && ( tm_pb_is_allowed( 'general_settings' ) || tm_pb_is_allowed( 'advanced_settings' ) || tm_pb_is_allowed( 'custom_css_settings' ) );
@@ -3325,7 +3325,7 @@ function tm_pb_pagebuilder_meta_box() {
 
 			</div>
 		</script>',
-		esc_html__( 'Cancel', 'tm_builder' ),
+		esc_html__( 'Cancel', 'power-builder' ),
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'save_library' ) ? $save_template_button : '',
 		$can_edit_or_has_modal_view_tab ? $save_exit_button : '',
 		! tm_pb_is_allowed( 'divi_library' ) || ! tm_pb_is_allowed( 'save_library' ) ? ' tm_pb_single_button' : '',
@@ -3351,7 +3351,7 @@ function tm_pb_pagebuilder_meta_box() {
 		'<li class="tm-pb-saved-module" data-open_tab="tm-pb-saved-modules-tab">
 			<a href="#">%1$s</a>
 		</li>',
-		esc_html__( 'Add From Library', 'tm_builder' )
+		esc_html__( 'Add From Library', 'power-builder' )
 	);
 	$saved_row_container = '<% if ( ( typeof change_structure === \'undefined\' || \'true\' !== change_structure ) && ( typeof tm_pb_specialty === \'undefined\' || tm_pb_specialty !== \'on\' ) ) { %>
 								<div class="tm-pb-main-settings tm-pb-main-settings-full tm-pb-saved-modules-tab"></div>
@@ -3379,9 +3379,9 @@ function tm_pb_pagebuilder_meta_box() {
 			%6$s
 
 		</script>',
-		esc_html__( 'Insert Columns Preset', 'tm_builder' ),
+		esc_html__( 'Insert Columns Preset', 'power-builder' ),
 		$data_specialty_columns,
-		esc_html__( 'New Row', 'tm_builder' ),
+		esc_html__( 'New Row', 'power-builder' ),
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'add_library' ) ? $saved_row_tab : '',
 		tm_builder_get_columns_layout(),
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'add_library' ) ? $saved_row_container : ''
@@ -3394,7 +3394,7 @@ function tm_pb_pagebuilder_meta_box() {
 		'<li class="tm-pb-saved-module" data-open_tab="tm-pb-saved-modules-tab">
 			<a href="#">%1$s</a>
 		</li>',
-		esc_html__( 'Add From Library', 'tm_builder' )
+		esc_html__( 'Add From Library', 'power-builder' )
 	);
 	$saved_modules_container = '<div class="tm-pb-main-settings tm-pb-main-settings-full tm-pb-saved-modules-tab"></div>';
 	printf(
@@ -3423,8 +3423,8 @@ function tm_pb_pagebuilder_meta_box() {
 
 			%5$s
 		</script>',
-		esc_html__( 'Insert Module', 'tm_builder' ),
-		esc_html__( 'New Module', 'tm_builder' ),
+		esc_html__( 'Insert Module', 'power-builder' ),
+		esc_html__( 'New Module', 'power-builder' ),
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'add_library' ) ? $saved_modules_tab : '',
 		$fullwidth_class,
 		tm_pb_is_allowed( 'divi_library' ) && tm_pb_is_allowed( 'add_library' ) ? $saved_modules_container : '',
@@ -3455,9 +3455,9 @@ function tm_pb_pagebuilder_meta_box() {
 			<div class="tm-pb-main-settings tm-pb-main-settings-full tm-pb-saved-modules-tab active-container"></div>
 		<%% } %%>
 		</script>',
-		esc_html__( 'Load Layout', 'tm_builder' ),
-		esc_html__( 'Predefined Layouts', 'tm_builder' ),
-		esc_html__( 'Add From Library', 'tm_builder' )
+		esc_html__( 'Load Layout', 'power-builder' ),
+		esc_html__( 'Predefined Layouts', 'power-builder' ),
+		esc_html__( 'Add From Library', 'power-builder' )
 	);
 
 	$insert_module_button = sprintf(
@@ -3466,7 +3466,7 @@ function tm_pb_pagebuilder_meta_box() {
 			<span>%1$s</span>
 		</a>
 		%3$s',
-		esc_html__( 'Insert Module(s)', 'tm_builder' ),
+		esc_html__( 'Insert Module(s)', 'power-builder' ),
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% if ( typeof tm_pb_global_parent === "undefined" ) { %>' : '',
 		! tm_pb_is_allowed( 'edit_global_library' ) ? '<% } %>' : ''
 	);
@@ -3494,9 +3494,9 @@ function tm_pb_pagebuilder_meta_box() {
 				<span>%3$s</span>
 			</a>
 		</script>',
-		esc_html__( 'Delete', 'tm_builder' ),
-		esc_html__( 'Settings', 'tm_builder' ),
-		esc_html__( 'Clone Module', 'tm_builder' )
+		esc_html__( 'Delete', 'power-builder' ),
+		esc_html__( 'Settings', 'power-builder' ),
+		esc_html__( 'Clone Module', 'power-builder' )
 	);
 
 	// Advanced Settings Modal Buttons Template
@@ -3514,8 +3514,8 @@ function tm_pb_pagebuilder_meta_box() {
 				</div>
 			</div>
 		</script>',
-		esc_html__( 'Cancel', 'tm_builder' ),
-		esc_html__( 'Save', 'tm_builder' )
+		esc_html__( 'Cancel', 'power-builder' ),
+		esc_html__( 'Save', 'power-builder' )
 	);
 
 
@@ -3526,9 +3526,9 @@ function tm_pb_pagebuilder_meta_box() {
 			<p>%2$s</p>
 			<p>%3$s</p>
 		</script>',
-		esc_html__( 'Disable Builder', 'tm_builder' ),
-		esc_html__( 'All content created in the Builder will be lost. Previous content will be restored.', 'tm_builder' ),
-		esc_html__( 'Do you wish to proceed?', 'tm_builder' )
+		esc_html__( 'Disable Builder', 'power-builder' ),
+		esc_html__( 'All content created in the Builder will be lost. Previous content will be restored.', 'power-builder' ),
+		esc_html__( 'Do you wish to proceed?', 'power-builder' )
 	);
 
 
@@ -3539,9 +3539,9 @@ function tm_pb_pagebuilder_meta_box() {
 			<p>%2$s</p>
 			<p>%3$s</p>
 		</script>',
-		esc_html__( 'Clear Layout', 'tm_builder' ),
-		esc_html__( 'All of your current page content will be lost.', 'tm_builder' ),
-		esc_html__( 'Do you wish to proceed?', 'tm_builder' )
+		esc_html__( 'Clear Layout', 'power-builder' ),
+		esc_html__( 'All of your current page content will be lost.', 'power-builder' ),
+		esc_html__( 'Do you wish to proceed?', 'power-builder' )
 	);
 
 
@@ -3551,8 +3551,8 @@ function tm_pb_pagebuilder_meta_box() {
 			<p>%1$s</p>
 			<p>%2$s</p>
 		</script>',
-		esc_html__( 'All advanced module settings in will be lost.', 'tm_builder' ),
-		esc_html__( 'Do you wish to proceed?', 'tm_builder' )
+		esc_html__( 'All advanced module settings in will be lost.', 'power-builder' ),
+		esc_html__( 'Do you wish to proceed?', 'power-builder' )
 	);
 
 
@@ -3568,8 +3568,8 @@ function tm_pb_pagebuilder_meta_box() {
 				</div>
 			</div>
 		</script>',
-		esc_html__( 'Cancel', 'tm_builder' ),
-		esc_html__( 'Save', 'tm_builder' )
+		esc_html__( 'Cancel', 'power-builder' ),
+		esc_html__( 'Save', 'power-builder' )
 	);
 
 
@@ -3582,9 +3582,9 @@ function tm_pb_pagebuilder_meta_box() {
 			<label>%3$s</label>
 			<input type="text" value="" id="tm_pb_new_layout_name" class="regular-text" />
 		</script>',
-		esc_html__( 'Save To Library', 'tm_builder' ),
-		esc_html__( 'Save your current page to the Library for later use.', 'tm_builder' ),
-		esc_html__( 'Layout Name:', 'tm_builder' )
+		esc_html__( 'Save To Library', 'power-builder' ),
+		esc_html__( 'Save your current page to the Library for later use.', 'power-builder' ),
+		esc_html__( 'Layout Name:', 'power-builder' )
 	);
 
 
@@ -3597,14 +3597,14 @@ function tm_pb_pagebuilder_meta_box() {
 				</div>
 			</div>
 		</script>',
-		esc_attr__( 'Save And Add To Library', 'tm_builder' )
+		esc_attr__( 'Save And Add To Library', 'power-builder' )
 	);
 
 
 	// "Save Template" Content Layout
 	$layout_categories = get_terms( 'layout_category', array( 'hide_empty' => false ) );
 	$categories_output = sprintf( '<div class="tm-pb-option"><label>%1$s</label>',
-		esc_html__( 'Add To Categories:', 'tm_builder' )
+		esc_html__( 'Add To Categories:', 'power-builder' )
 	);
 
 	if ( is_array( $layout_categories ) && ! empty( $layout_categories ) ) {
@@ -3625,26 +3625,26 @@ function tm_pb_pagebuilder_meta_box() {
 				<input type="text" value="" id="tm_pb_new_cat_name" class="regular-text" />
 			</div>
 		</div>',
-		esc_html__( 'Create New Category', 'tm_builder' )
+		esc_html__( 'Create New Category', 'power-builder' )
 	);
 
 	$general_checkbox = sprintf(
 		'<label>
 			%1$s <input type="checkbox" value="general" id="tm_pb_template_general" checked />
 		</label>',
-		esc_html__( 'Include General settings', 'tm_builder' )
+		esc_html__( 'Include General settings', 'power-builder' )
 	);
 	$advanced_checkbox = sprintf(
 		'<label>
 			%1$s <input type="checkbox" value="advanced" id="tm_pb_template_advanced" checked />
 		</label>',
-		esc_html__( 'Include Advanced Design settings', 'tm_builder' )
+		esc_html__( 'Include Advanced Design settings', 'power-builder' )
 	);
 	$css_checkbox = sprintf(
 		'<label>
 			%1$s <input type="checkbox" value="css" id="tm_pb_template_css" checked />
 		</label>',
-		esc_html__( 'Include Custom CSS', 'tm_builder' )
+		esc_html__( 'Include Custom CSS', 'power-builder' )
 	);
 
 	printf(
@@ -3691,15 +3691,15 @@ function tm_pb_pagebuilder_meta_box() {
 				%10$s
 			</div>
 		</script>',
-		esc_html__( 'Here you can save the current item and add it to your Library for later use as well.', 'tm_builder' ),
-		esc_html__( 'Template Name', 'tm_builder' ),
-		esc_html__( 'Selective Sync', 'tm_builder' ),
+		esc_html__( 'Here you can save the current item and add it to your Library for later use as well.', 'power-builder' ),
+		esc_html__( 'Template Name', 'power-builder' ),
+		esc_html__( 'Selective Sync', 'power-builder' ),
 		tm_pb_is_allowed( 'general_settings' ) ? $general_checkbox : '',
 		tm_pb_is_allowed( 'advanced_settings' ) ? $advanced_checkbox : '',
 		tm_pb_is_allowed( 'custom_css_settings' ) ? $css_checkbox : '',
-		esc_html__( 'Please select at least 1 tab to save', 'tm_builder' ),
-		esc_html__( 'Save as Global:', 'tm_builder' ),
-		esc_html__( 'Make this a global item', 'tm_builder' ),
+		esc_html__( 'Please select at least 1 tab to save', 'power-builder' ),
+		esc_html__( 'Save as Global:', 'power-builder' ),
+		esc_html__( 'Make this a global item', 'power-builder' ),
 		$categories_output
 	);
 
@@ -3717,8 +3717,8 @@ function tm_pb_pagebuilder_meta_box() {
 				</div>
 			</div>
 		</script>',
-		esc_html__( 'No', 'tm_builder' ),
-		esc_html__( 'Yes', 'tm_builder' )
+		esc_html__( 'No', 'power-builder' ),
+		esc_html__( 'Yes', 'power-builder' )
 	);
 
 
@@ -3727,7 +3727,7 @@ function tm_pb_pagebuilder_meta_box() {
 		'<script type="text/template" id="tm-builder-add-specialty-section-button">
 			<a href="#" class="tm-pb-section-add-specialty tm-pb-add-specialty-template" data-is_template="true">%1$s</a>
 		</script>',
-		esc_html__( 'Add Specialty Section', 'tm_builder' )
+		esc_html__( 'Add Specialty Section', 'power-builder' )
 	);
 
 
@@ -3793,9 +3793,9 @@ function tm_pb_pagebuilder_meta_box() {
 				<li><a href="#" class="tm-pb-preview-desktop active"><span class="label">%3$s</span></a></li>
 			</ul>
 		</script>',
-		esc_html__( 'Mobile', 'tm_builder' ),
-		esc_html__( 'Tablet', 'tm_builder' ),
-		esc_html__( 'Desktop', 'tm_builder' )
+		esc_html__( 'Mobile', 'power-builder' ),
+		esc_html__( 'Tablet', 'power-builder' ),
+		esc_html__( 'Desktop', 'power-builder' )
 	);
 
 	printf(
@@ -3827,10 +3827,10 @@ function tm_pb_pagebuilder_meta_box() {
 				</a>
 			</div>
 		</script>',
-		esc_html__( 'Desktop', 'tm_builder' ),
-		esc_html__( 'Laptop', 'tm_builder' ),
-		esc_html__( 'Tablet', 'tm_builder' ),
-		esc_html__( 'Phone', 'tm_builder' )
+		esc_html__( 'Desktop', 'power-builder' ),
+		esc_html__( 'Laptop', 'power-builder' ),
+		esc_html__( 'Tablet', 'power-builder' ),
+		esc_html__( 'Phone', 'power-builder' )
 	);
 
 	printf(
@@ -3989,7 +3989,7 @@ function tm_divi_post_format_content() {
 				</div> <!-- .tm_quote_content -->',
 				tm_get_blockquote_in_content(),
 				esc_url( get_permalink() ),
-				esc_html__( 'Read more', 'tm_builder' ),
+				esc_html__( 'Read more', 'power-builder' ),
 				esc_attr( $text_color_class ),
 				$inline_style
 			);
@@ -4354,17 +4354,17 @@ function tm_pb_all_role_options() {
 	$theme_only_options = ! tm_is_builder_plugin_active()
 		? array(
 			'theme_customizer' => array(
-				'name'           => esc_html__( 'Theme Customizer', 'tm_builder' ),
+				'name'           => esc_html__( 'Theme Customizer', 'power-builder' ),
 				'default'        => 'on',
 				'applicability'  => array( 'administrator' ),
 			),
 			'module_customizer' => array(
-				'name'           => esc_html__( 'Module Customizer', 'tm_builder' ),
+				'name'           => esc_html__( 'Module Customizer', 'power-builder' ),
 				'default'        => 'on',
 				'applicability'  => array( 'administrator' ),
 			),
 			'page_options' => array(
-				'name'    => esc_html__( 'Page Options', 'tm_builder' ),
+				'name'    => esc_html__( 'Page Options', 'power-builder' ),
 				'default' => 'on',
 			),
 		)
@@ -4375,12 +4375,12 @@ function tm_pb_all_role_options() {
 			'section_title' => '',
 			'options'       => array(
 				'theme_options' => array(
-					'name'           => tm_is_builder_plugin_active() ? esc_html__( 'Plugin Options', 'tm_builder' ) : esc_html__( 'Theme Options', 'tm_builder' ),
+					'name'           => tm_is_builder_plugin_active() ? esc_html__( 'Plugin Options', 'power-builder' ) : esc_html__( 'Theme Options', 'power-builder' ),
 					'default'        => 'on',
 					'applicability'  => array( 'administrator' ),
 				),
 				'divi_library' => array(
-					'name'    => esc_html__( 'Library', 'tm_builder' ),
+					'name'    => esc_html__( 'Library', 'power-builder' ),
 					'default' => 'on',
 				),
 			),
@@ -4389,100 +4389,100 @@ function tm_pb_all_role_options() {
 			'section_title' => esc_html__( 'Builder Interface', 'tm_builder'),
 			'options'       => array(
 				'add_module' => array(
-					'name'    => esc_html__( 'Add/Delete Item', 'tm_builder' ),
+					'name'    => esc_html__( 'Add/Delete Item', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_module' => array(
-					'name'    => esc_html__( 'Edit Item', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Item', 'power-builder' ),
 					'default' => 'on',
 				),
 				'move_module' => array(
-					'name'    => esc_html__( 'Move Item', 'tm_builder' ),
+					'name'    => esc_html__( 'Move Item', 'power-builder' ),
 					'default' => 'on',
 				),
 				'disable_module' => array(
-					'name'    => esc_html__( 'Disable Item', 'tm_builder' ),
+					'name'    => esc_html__( 'Disable Item', 'power-builder' ),
 					'default' => 'on',
 				),
 				'lock_module' => array(
-					'name'    => esc_html__( 'Lock Item', 'tm_builder' ),
+					'name'    => esc_html__( 'Lock Item', 'power-builder' ),
 					'default' => 'on',
 				),
 				'divi_builder_control' => array(
-					'name'    => esc_html__( 'Toggle Builder', 'tm_builder' ),
+					'name'    => esc_html__( 'Toggle Builder', 'power-builder' ),
 					'default' => 'on',
 				),
 				'load_layout' => array(
-					'name'    => esc_html__( 'Load Layout', 'tm_builder' ),
+					'name'    => esc_html__( 'Load Layout', 'power-builder' ),
 					'default' => 'on',
 				),
 			),
 		),
 		'library_capabilities' => array(
-			'section_title' => esc_html__( 'Library Settings', 'tm_builder' ),
+			'section_title' => esc_html__( 'Library Settings', 'power-builder' ),
 			'options'       => array(
 				'save_library' => array(
-					'name'    => esc_html__( 'Save To Library', 'tm_builder' ),
+					'name'    => esc_html__( 'Save To Library', 'power-builder' ),
 					'default' => 'on',
 				),
 				'add_library' => array(
-					'name'    => esc_html__( 'Add From Library', 'tm_builder' ),
+					'name'    => esc_html__( 'Add From Library', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_global_library' => array(
-					'name'    => esc_html__( 'Edit Global Items', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Global Items', 'power-builder' ),
 					'default' => 'on',
 				),
 			),
 		),
 		'module_tabs' => array(
-			'section_title' => esc_html__( 'Settings Tabs', 'tm_builder' ),
+			'section_title' => esc_html__( 'Settings Tabs', 'power-builder' ),
 			'options'       => array(
 				'general_settings' => array(
-					'name'    => esc_html__( 'General Settings', 'tm_builder' ),
+					'name'    => esc_html__( 'General Settings', 'power-builder' ),
 					'default' => 'on',
 				),
 				'advanced_settings' => array(
-					'name'    => esc_html__( 'Advanced Settings', 'tm_builder' ),
+					'name'    => esc_html__( 'Advanced Settings', 'power-builder' ),
 					'default' => 'on',
 				),
 				'custom_css_settings' => array(
-					'name'    => esc_html__( 'Custom CSS', 'tm_builder' ),
+					'name'    => esc_html__( 'Custom CSS', 'power-builder' ),
 					'default' => 'on',
 				),
 			),
 		),
 		'general_module_capabilities' => array(
-			'section_title' => esc_html__( 'Settings Types', 'tm_builder' ),
+			'section_title' => esc_html__( 'Settings Types', 'power-builder' ),
 			'options'       => array(
 				'edit_colors' => array(
-					'name'    => esc_html__( 'Edit Colors', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Colors', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_content' => array(
-					'name'    => esc_html__( 'Edit Content', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Content', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_fonts' => array(
-					'name'    => esc_html__( 'Edit Fonts', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Fonts', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_buttons' => array(
-					'name'    => esc_html__( 'Edit Buttons', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Buttons', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_layout' => array(
-					'name'    => esc_html__( 'Edit Layout', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Layout', 'power-builder' ),
 					'default' => 'on',
 				),
 				'edit_configuration' => array(
-					'name'    => esc_html__( 'Edit Configuration', 'tm_builder' ),
+					'name'    => esc_html__( 'Edit Configuration', 'power-builder' ),
 					'default' => 'on',
 				),
 			),
 		),
 		'module_capabilies' => array(
-			'section_title' => esc_html__( 'Module Use', 'tm_builder' ),
+			'section_title' => esc_html__( 'Module Use', 'power-builder' ),
 			'options'       => $module_capabilies,
 		),
 	);
@@ -4522,10 +4522,10 @@ function tm_pb_display_role_editor() {
 	// fill the builder roles array with default roles if it's empty
 	if ( empty( $builder_roles_array ) ) {
 		$builder_roles_array = array(
-			'administrator' => esc_html__( 'Administrator', 'tm_builder' ),
-			'editor'        => esc_html__( 'Editor', 'tm_builder' ),
-			'author'        => esc_html__( 'Author', 'tm_builder' ),
-			'contributor'   => esc_html__( 'Contributor', 'tm_builder' ),
+			'administrator' => esc_html__( 'Administrator', 'power-builder' ),
+			'editor'        => esc_html__( 'Editor', 'power-builder' ),
+			'author'        => esc_html__( 'Author', 'power-builder' ),
+			'contributor'   => esc_html__( 'Contributor', 'power-builder' ),
 		);
 	}
 
@@ -4560,8 +4560,8 @@ function tm_pb_display_role_editor() {
 			</div>
 		</div>',
 		$menu_tabs,
-		esc_html__( 'Role Editor', 'tm_builder' ),
-		esc_html__( 'Save Roles', 'tm_builder' ),
+		esc_html__( 'Role Editor', 'power-builder' ),
+		esc_html__( 'Save Roles', 'power-builder' ),
 		$option_tabs
 	);
 }
@@ -4600,7 +4600,7 @@ function tm_pb_generate_roles_tab( $all_role_options, $role ) {
 				%4$s
 			</form>
 		</div>',
-		esc_html__( 'Using the Role Editor, you can limit the types of actions that can be taken by WordPress users of different roles. This is a great way to limit the functionality available to your customers or guest authors to ensure that they only have the necessary options available to them.', 'tm_builder' ),
+		esc_html__( 'Using the Role Editor, you can limit the types of actions that can be taken by WordPress users of different roles. This is a great way to limit the functionality available to your customers or guest authors to ensure that they only have the necessary options available to them.', 'power-builder' ),
 		esc_attr( $role ),
 		'administrator' === $role ? ' active-container' : '',
 		$form_sections // #4
@@ -4637,8 +4637,8 @@ function tm_pb_generate_capabilities_output( $cap_array, $role ) {
 							</select>
 						</div>
 					</div>',
-					esc_html__( 'Enable', 'tm_builder' ),
-					esc_html__( 'Disable', 'tm_builder' ),
+					esc_html__( 'Enable', 'power-builder' ),
+					esc_html__( 'Disable', 'power-builder' ),
 					esc_attr( $capability ),
 					esc_html( $capability_details['name'] ),
 					! empty( $saved_capabilities[$role][$capability] ) ? selected( 'on', $saved_capabilities[$role][$capability], false ) : selected( 'on', $capability_details['default'], false ),
@@ -4668,10 +4668,10 @@ function tm_pb_load_roles_admin( $hook ) {
 	wp_localize_script( 'builder-roles-editor-scripts', 'tm_pb_roles_options', array(
 		'ajaxurl'        => admin_url( 'admin-ajax.php' ),
 		'tm_roles_nonce' => wp_create_nonce( 'tm_roles_nonce' ),
-		'modal_title'    => esc_html__( 'Reset Roles', 'tm_builder' ),
-		'modal_message'  => esc_html__( 'All of your current role settings will be set to defaults. Do you wish to proceed?', 'tm_builder' ),
-		'modal_yes'      => esc_html__( 'Yes', 'tm_builder' ),
-		'modal_no'       => esc_html__( 'no', 'tm_builder' ),
+		'modal_title'    => esc_html__( 'Reset Roles', 'power-builder' ),
+		'modal_message'  => esc_html__( 'All of your current role settings will be set to defaults. Do you wish to proceed?', 'power-builder' ),
+		'modal_yes'      => esc_html__( 'Yes', 'power-builder' ),
+		'modal_no'       => esc_html__( 'no', 'power-builder' ),
 	) );
 }
 add_action( 'admin_enqueue_scripts', 'tm_pb_load_roles_admin' );
@@ -4999,13 +4999,13 @@ function tm_custom_comments_display( $comment, $args, $depth ) {
 				<span class="comment_date">
 				<?php
 					/* translators: 1: date, 2: time */
-					printf( esc_html__( 'on %1$s at %2$s', 'tm_builder' ), get_comment_date(), get_comment_time() );
+					printf( esc_html__( 'on %1$s at %2$s', 'power-builder' ), get_comment_date(), get_comment_time() );
 				?>
 				</span>
-				<?php edit_comment_link( esc_html__( '(Edit)', 'tm_builder' ), ' ' ); ?>
+				<?php edit_comment_link( esc_html__( '(Edit)', 'power-builder' ), ' ' ); ?>
 			<?php
 				$tm_comment_reply_link = get_comment_reply_link( array_merge( $args, array(
-					'reply_text' => esc_html__( 'Reply', 'tm_builder' ),
+					'reply_text' => esc_html__( 'Reply', 'power-builder' ),
 					'depth'      => (int) $depth,
 					'max_depth'  => (int) $args['max_depth'],
 				) ) );
@@ -5014,7 +5014,7 @@ function tm_custom_comments_display( $comment, $args, $depth ) {
 
 			<div class="comment_area">
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-					<em class="moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'tm_builder' ) ?></em>
+					<em class="moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'power-builder' ) ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -5081,12 +5081,12 @@ function tm_pb_maybe_display_cache_notice() {
 	if ( current_user_can( 'manage_options' ) && 'post' === $screen->base && 'ignore' !== $ignore_this_notice && false !== $plugin_page ) {
 		$hide_button = sprintf(
 			' <br> <a class="tm_pb_hide_cache_notice" href="%3$s">%2$s</a> <a class="tm_pb_hide_cache_notice" href="#">%1$s</a>',
-			esc_html__( 'Hide Notice', 'tm_builder' ),
-			esc_html__( 'Clear Cache', 'tm_builder' ),
+			esc_html__( 'Hide Notice', 'power-builder' ),
+			esc_html__( 'Clear Cache', 'power-builder' ),
 			esc_url( $plugin_page )
 		);
 
-		$notice_text = tm_get_safe_localization( __( 'The Builder has been updated, but you are currently using a caching plugin. Please clear your plugin cache <strong>and</strong> clear your browser cache (in that order) to make sure you are loading the updated builder files. Loading cached files may cause the builder to malfunction.', 'tm_builder' ) );
+		$notice_text = tm_get_safe_localization( __( 'The Builder has been updated, but you are currently using a caching plugin. Please clear your plugin cache <strong>and</strong> clear your browser cache (in that order) to make sure you are loading the updated builder files. Loading cached files may cause the builder to malfunction.', 'power-builder' ) );
 
 		printf( '<div class="update-nag tm-pb-update-nag"><p>%1$s%2$s</p></div>', $notice_text, $hide_button );
 	}

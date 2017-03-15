@@ -1,11 +1,11 @@
 <?php
 class Tm_Builder_Module_Tabs extends Tm_Builder_Module {
 	function init() {
-		$this->name            = esc_html__( 'Tabs', 'tm_builder' );
+		$this->name            = esc_html__( 'Tabs', 'power-builder' );
 		$this->slug            = 'tm_pb_tabs';
 		$this->child_slug      = 'tm_pb_tab';
 		$this->icon            = 'f085';
-		$this->child_item_text = esc_html__( 'Tab', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Tab', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'admin_label',
@@ -19,14 +19,14 @@ class Tm_Builder_Module_Tabs extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'tab' => array(
-					'label'    => esc_html__( 'Tab', 'tm_builder' ),
+					'label'    => esc_html__( 'Tab', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_tabs_controls li",
 						'color' => "{$this->main_css_element} .tm_pb_tabs_controls li a",
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_all_tabs",
 						'line_height' => "{$this->main_css_element} p",
@@ -45,19 +45,19 @@ class Tm_Builder_Module_Tabs extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'tabs_controls' => array(
-				'label'    => esc_html__( 'Tabs Controls', 'tm_builder' ),
+				'label'    => esc_html__( 'Tabs Controls', 'power-builder' ),
 				'selector' => '.tm_pb_tabs_controls',
 			),
 			'tab' => array(
-				'label'    => esc_html__( 'Tab', 'tm_builder' ),
+				'label'    => esc_html__( 'Tab', 'power-builder' ),
 				'selector' => '.tm_pb_tabs_controls li',
 			),
 			'active_tab' => array(
-				'label'    => esc_html__( 'Active Tab', 'tm_builder' ),
+				'label'    => esc_html__( 'Active Tab', 'power-builder' ),
 				'selector' => '.tm_pb_tabs_controls li.tm_pb_tab_active',
 			),
 			'tabs_content' => array(
-				'label'    => esc_html__( 'Tabs Content', 'tm_builder' ),
+				'label'    => esc_html__( 'Tabs Content', 'power-builder' ),
 				'selector' => '.tm_pb_all_tabs',
 			),
 		);
@@ -66,39 +66,39 @@ class Tm_Builder_Module_Tabs extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'active_tab_background_color' => array(
-				'label'             => esc_html__( 'Active Tab Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Active Tab Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'inactive_tab_background_color' => array(
-				'label'             => esc_html__( 'Inactive Tab Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Inactive Tab Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

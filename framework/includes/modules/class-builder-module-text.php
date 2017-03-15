@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Text extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Text', 'tm_builder' );
+		$this->name = esc_html__( 'Text', 'power-builder' );
 		$this->slug = 'tm_pb_text';
 		$this->icon = 'f031';
 
@@ -27,7 +27,7 @@ class Tm_Builder_Module_Text extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'text'   => array(
-					'label'    => esc_html__( 'Text', 'tm_builder' ),
+					'label'    => esc_html__( 'Text', 'power-builder' ),
 					'css'      => array(
 						'line_height' => "{$this->main_css_element} p",
 					),
@@ -50,30 +50,30 @@ class Tm_Builder_Module_Text extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			/*'background_layout' => array(
-				'label'             => esc_html__( 'Text Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Text Color', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'light' => esc_html__( 'Dark', 'tm_builder' ),
-					'dark'  => esc_html__( 'Light', 'tm_builder' ),
+					'light' => esc_html__( 'Dark', 'power-builder' ),
+					'dark'  => esc_html__( 'Light', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'power-builder' ),
 			),*/
 			'text_orientation' => array(
-				'label'             => esc_html__( 'Text Orientation', 'tm_builder' ),
+				'label'             => esc_html__( 'Text Orientation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => tm_builder_get_text_orientation_options(),
-				'description'       => esc_html__( 'This controls the how your text is aligned within the module.', 'tm_builder' ),
+				'description'       => esc_html__( 'This controls the how your text is aligned within the module.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'           => esc_html__( 'Content', 'tm_builder' ),
+				'label'           => esc_html__( 'Content', 'power-builder' ),
 				'type'            => 'tiny_mce',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Here you can create the content that will be used within the module.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can create the content that will be used within the module.', 'power-builder' ),
 			),
 			'max_width' => array(
-				'label'           => esc_html__( 'Max Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Max Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'mobile_options'  => true,
@@ -90,27 +90,27 @@ class Tm_Builder_Module_Text extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

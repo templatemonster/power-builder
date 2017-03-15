@@ -2,14 +2,14 @@
 class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Brands Showcase', 'tm_builder' );
+		$this->name = esc_html__( 'Brands Showcase', 'power-builder' );
 		$this->slug = 'tm_pb_brands_showcase_module';
 		$this->icon = 'f135';
 
 		$this->global_settings_slug = 'tm_pb_brands_showcase_module';
 
 		$this->child_slug = 'tm_pb_brands_showcase_module__item';
-		$this->child_item_text = esc_html__( 'Brand', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Brand', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'super_title',
@@ -83,7 +83,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'super_title' => array(
-					'label' => esc_html__( 'Super Title', 'tm_builder' ),
+					'label' => esc_html__( 'Super Title', 'power-builder' ),
 					'font_size' => array(
 						'default' => '20px',
 					),
@@ -95,7 +95,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 					)
 				),
 				'title' => array(
-					'label' => esc_html__( 'Title', 'tm_builder' ),
+					'label' => esc_html__( 'Title', 'power-builder' ),
 					'font_size' => array(
 						'default' => '24px',
 					),
@@ -107,7 +107,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 					)
 				),
 				'sub_title' => array(
-					'label' => esc_html__( 'Sub Title', 'tm_builder' ),
+					'label' => esc_html__( 'Sub Title', 'power-builder' ),
 					'font_size' => array(
 						'default' => '18px',
 					),
@@ -119,7 +119,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 					)
 				),
 				'brand_name' => array(
-					'label' => esc_html__( 'Brand Name', 'tm_builder' ),
+					'label' => esc_html__( 'Brand Name', 'power-builder' ),
 					'font_size' => array(
 						'default' => '20px',
 					),
@@ -131,7 +131,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 					)
 				),
 				'brand_description' => array(
-					'label' => esc_html__( 'Brand Description', 'tm_builder' ),
+					'label' => esc_html__( 'Brand Description', 'power-builder' ),
 					'font_size' => array(
 						'default' => '18px',
 					),
@@ -160,11 +160,11 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'super_title' => array(
-				'label' => esc_html__( 'Super Title', 'tm_builder' ),
+				'label' => esc_html__( 'Super Title', 'power-builder' ),
 				'selector' => '.tm_pb_brands_showcase__super-title',
 			),
 			'title' => array(
-				'label' => esc_html__( 'Title', 'tm_builder' ),
+				'label' => esc_html__( 'Title', 'power-builder' ),
 				'selector' => '.tm_pb_brands_showcase__title'
 			),
 		);
@@ -175,32 +175,32 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'super_title' => array(
-				'label'           => esc_html__( 'Super Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Super Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define the super title for your brands showcase.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define the super title for your brands showcase.', 'power-builder' ),
 			),
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define the title for your brands showcase.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define the title for your brands showcase.', 'power-builder' ),
 			),
 			'sub_title' => array(
-				'label'           => esc_html__( 'Sub Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Sub Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define the sub title for your brands showcase.', 'tm_builder' )
+				'description'     => esc_html__( 'Define the sub title for your brands showcase.', 'power-builder' )
 			),
 			'divider' => array(
-				'label'           => esc_html__( 'Show Divider', 'tm_builder' ),
+				'label'           => esc_html__( 'Show Divider', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'     => esc_html__( 'Toggle a separator between title & brands.', 'tm_builder' ),
+				'description'     => esc_html__( 'Toggle a separator between title & brands.', 'power-builder' ),
 				'affects'         => array(
 					'#tm_pb_divider_color',
 					'#tm_pb_divider_height',
@@ -208,13 +208,13 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 				),
 			),
 			'divider_color' => array(
-				'label'           => esc_html__( 'Divider Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Divider Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'This will adjust the color of the 1px divider line.', 'tm_builder' ),
+				'description'     => esc_html__( 'This will adjust the color of the 1px divider line.', 'power-builder' ),
 				'depends_show_if' => 'on',
 			),
 			'divider_height' => array(
-				'label'           => esc_html__( 'Divider Height', 'tm_builder' ),
+				'label'           => esc_html__( 'Divider Height', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -226,7 +226,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 				),
 				'mobile_options'      => true,
 				'mobile_global'       => true,
-				'description'     => esc_html__( 'Define how much space should be added below the divider.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define how much space should be added below the divider.', 'power-builder' ),
 				'depends_show_if' => 'on',
 			),
 			'divider_height_laptop' => array(
@@ -239,26 +239,26 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'divider_hide_on_mobile' => array(
-				'label'             => esc_html__( 'Hide Divider On Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Hide Divider On Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug'          => 'advanced',
 				'depends_show_if'   => 'on',
 			),
 			'template' => array(
-				'label'             => esc_html__( 'Template', 'tm_builder' ),
+				'label'             => esc_html__( 'Template', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'grid'       => esc_html__( 'Grid', 'tm_builder' ),
-					'carousel'   => esc_html__( 'Carousel', 'tm_builder' ),
+					'grid'       => esc_html__( 'Grid', 'power-builder' ),
+					'carousel'   => esc_html__( 'Carousel', 'power-builder' ),
 				),
 				'default'           => 'grid',
-				'description'       => esc_html__( 'Here you can choose the look of the brands showcase.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose the look of the brands showcase.', 'power-builder' ),
 				'affects'           => array(
 					'#tm_pb_columns',
 					'#tm_pb_show_pagination',
@@ -270,7 +270,7 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 				),
 			),
 			'columns' => array(
-				'label'           => esc_html__( 'Columns', 'tm_builder' ),
+				'label'           => esc_html__( 'Columns', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '4',
@@ -294,59 +294,59 @@ class Tm_Builder_Module_Brands_Showcase extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'					=> esc_html__( 'Disable on', 'tm_builder' ),
+				'label'					=> esc_html__( 'Disable on', 'power-builder' ),
 				'type'					=> 'multiple_checkboxes',
 				'options'				=> tm_pb_media_breakpoints(),
 				'additional_att'		=> 'disable_on',
 				'option_category'		=> 'configuration',
-				'description'			=> esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'			=> esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'autoplay' => array(
-				'label'					=> esc_html__( 'Autoplay', 'tm_builder' ),
+				'label'					=> esc_html__( 'Autoplay', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 				'depends_show_if'       => 'carousel',
 			),
 			'navigate_button' => array(
-				'label'					=> esc_html__( 'Display next/prev buttons', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display next/prev buttons', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 				'depends_show_if'       => 'carousel',
 			),
 			'navigate_pagination' => array(
-				'label'					=> esc_html__( 'Display pagination buttons', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display pagination buttons', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 				'depends_show_if'       => 'carousel',
 			),
 			'centered_slides' => array(
-				'label'					=> esc_html__( 'Display first item in center', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display first item in center', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 				'depends_show_if'       => 'carousel',
 			),
 			'slides_per_view' => array(
-				'label'					=> esc_html__( 'Multi Column slides layout', 'tm_builder' ),
+				'label'					=> esc_html__( 'Multi Column slides layout', 'power-builder' ),
 				'option_category'		=> 'configuration',
 				'type'					=> 'range',
 				'default'				=> '3',

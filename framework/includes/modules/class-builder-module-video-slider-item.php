@@ -1,13 +1,13 @@
 <?php
 class Tm_Builder_Module_Video_Slider_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Video', 'tm_builder' );
+		$this->name                        = esc_html__( 'Video', 'power-builder' );
 		$this->slug                        = 'tm_pb_video_slider_item';
 		$this->type                        = 'child';
 		$this->custom_css_tab              = false;
 		$this->child_title_var             = 'admin_title';
-		$this->advanced_setting_title_text = esc_html__( 'New Video', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Video Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Video', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Video Settings', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'admin_title',
@@ -22,43 +22,43 @@ class Tm_Builder_Module_Video_Slider_Item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'admin_title' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the video in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the video in the builder for easy identification.', 'power-builder' ),
 			),
 			'src' => array(
-				'label'              => esc_html__( 'Video MP4/URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Video MP4/URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Video MP4 File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Video', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired video in .MP4 format, or type in the URL to the video you would like to display', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Video MP4 File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Video', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired video in .MP4 format, or type in the URL to the video you would like to display', 'power-builder' ),
 			),
 			'src_webm' => array(
-				'label'              => esc_html__( 'Video Webm', 'tm_builder' ),
+				'label'              => esc_html__( 'Video Webm', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Video WEBM File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Video', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload the .WEBM version of your video here. All uploaded videos should be in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Video WEBM File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Video', 'power-builder' ),
+				'description'        => esc_html__( 'Upload the .WEBM version of your video here. All uploaded videos should be in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers.', 'power-builder' ),
 			),
 			'image_src' => array(
-				'label'              => esc_html__( 'Image Overlay URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Image Overlay URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
 				'additional_button'  => sprintf(
 					'<input type="button" class="button tm-pb-video-image-button" value="%1$s" />',
-					esc_attr__( 'Generate From Video', 'tm_builder' )
+					esc_attr__( 'Generate From Video', 'power-builder' )
 				),
 				'classes'            => 'tm_pb_video_overlay',
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'tm_builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'power-builder' ),
 			),
 		);
 		return $fields;

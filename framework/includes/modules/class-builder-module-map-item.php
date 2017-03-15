@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Map_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Pin', 'tm_builder' );
+		$this->name                        = esc_html__( 'Pin', 'power-builder' );
 		$this->slug                        = 'tm_pb_map_pin';
 		$this->type                        = 'child';
 		$this->child_title_var             = 'title';
@@ -17,27 +17,27 @@ class Tm_Builder_Module_Map_Item extends Tm_Builder_Module {
 			'content_new',
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Pin', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Pin Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Pin', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Pin Settings', 'power-builder' );
 	}
 
 	function get_fields() {
 		$fields = array(
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'The title will be used within the tab button for this tab.', 'tm_builder' ),
+				'description'     => esc_html__( 'The title will be used within the tab button for this tab.', 'power-builder' ),
 			),
 			'pin_address' => array(
-				'label'             => esc_html__( 'Map Pin Address', 'tm_builder' ),
+				'label'             => esc_html__( 'Map Pin Address', 'power-builder' ),
 				'type'              => 'text',
 				'option_category'   => 'basic_option',
 				'class'             => array( 'tm_pb_pin_address' ),
-				'description'       => esc_html__( 'Enter an address for this map pin, and the address will be geocoded and displayed on the map below.', 'tm_builder' ),
+				'description'       => esc_html__( 'Enter an address for this map pin, and the address will be geocoded and displayed on the map below.', 'power-builder' ),
 				'additional_button' => sprintf(
 					'<a href="#" class="tm_pb_find_address button">%1$s</a>',
-					esc_html__( 'Find', 'tm_builder' )
+					esc_html__( 'Find', 'power-builder' )
 				),
 			),
 			'zoom_level' => array(
@@ -59,10 +59,10 @@ class Tm_Builder_Module_Map_Item extends Tm_Builder_Module {
 				'use_container_wrapper' => false,
 			),
 			'content_new' => array(
-				'label'           => esc_html__( 'Content', 'tm_builder' ),
+				'label'           => esc_html__( 'Content', 'power-builder' ),
 				'type'            => 'tiny_mce',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Here you can define the content that will be placed within the infobox for the pin.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define the content that will be placed within the infobox for the pin.', 'power-builder' ),
 			),
 		);
 		return $fields;

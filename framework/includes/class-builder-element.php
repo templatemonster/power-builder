@@ -601,7 +601,7 @@ class Tm_Builder_Element {
 
 			if ( ! isset( $option_settings['hide_font'] ) || ! $option_settings['hide_font'] ) {
 				$additional_options["{$option_name}_font"] = wp_parse_args( $option_settings['font'], array(
-					'label'           => sprintf( esc_html__( '%1$s Font', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s Font', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'font',
 					'option_category' => 'font_option',
 					'tab_slug'        => 'advanced',
@@ -611,7 +611,7 @@ class Tm_Builder_Element {
 
 			if ( ! isset( $option_settings['hide_font_size'] ) || ! $option_settings['hide_font_size'] ) {
 				$additional_options["{$option_name}_font_size"] = wp_parse_args( $option_settings['font_size'], array(
-					'label'           => sprintf( esc_html__( '%1$s Font Size', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s Font Size', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'range',
 					'option_category' => 'font_option',
 					'tab_slug'        => 'advanced',
@@ -637,7 +637,7 @@ class Tm_Builder_Element {
 			}
 
 			$additional_options["{$option_name}_text_color"] = array(
-				'label'           => sprintf( esc_html__( '%1$s Text Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( '%1$s Text Color', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'color-alpha',
 				'option_category' => 'font_option',
 				'custom_color'    => true,
@@ -646,7 +646,7 @@ class Tm_Builder_Element {
 
 			if ( ! isset( $option_settings['hide_text_color'] ) || ! $option_settings['hide_text_color'] ) {
 				$additional_options["{$option_name}_text_color"] = array(
-					'label'           => sprintf( esc_html__( '%1$s Text Color', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s Text Color', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'color',
 					'option_category' => 'font_option',
 					'custom_color'    => true,
@@ -656,7 +656,7 @@ class Tm_Builder_Element {
 
 			if ( ! isset( $option_settings['hide_letter_spacing'] ) || ! $option_settings['hide_letter_spacing'] ) {
 				$additional_options["{$option_name}_letter_spacing"] = wp_parse_args( $option_settings['letter_spacing'], array(
-					'label'           => sprintf( esc_html__( '%1$s Letter Spacing', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s Letter Spacing', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'range',
 					'mobile_options'  => true,
 					'option_category' => 'font_option',
@@ -682,7 +682,7 @@ class Tm_Builder_Element {
 
 			if ( ! isset( $option_settings['hide_line_height'] ) || ! $option_settings['hide_line_height'] ) {
 				$default_option_line_height = array(
-					'label'           => sprintf( esc_html__( '%1$s Line Height', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s Line Height', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'range',
 					'mobile_options'  => true,
 					'option_category' => 'font_option',
@@ -716,12 +716,12 @@ class Tm_Builder_Element {
 
 			if ( isset( $option_settings['use_all_caps'] ) && $option_settings['use_all_caps'] ) {
 				$additional_options["{$option_name}_all_caps"] = array(
-					'label'           => sprintf( esc_html__( '%1$s All Caps', 'tm_builder' ), $option_settings['label'] ),
+					'label'           => sprintf( esc_html__( '%1$s All Caps', 'power-builder' ), $option_settings['label'] ),
 					'type'            => 'yes_no_button',
 					'option_category' => 'font_option',
 					'options'         => array(
-						'off' => esc_html__( 'Off', 'tm_builder' ),
-						'on'  => esc_html__( 'On', 'tm_builder' ),
+						'off' => esc_html__( 'Off', 'power-builder' ),
+						'on'  => esc_html__( 'On', 'power-builder' ),
 					),
 					'shortcode_default' => $option_settings['defaults']['all_caps'],
 					'tab_slug' => 'advanced',
@@ -748,7 +748,7 @@ class Tm_Builder_Element {
 
 		if ( $this->advanced_options['background']['use_background_color'] ) {
 			$additional_options['background_color'] = array(
-				'label'           => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Color', 'power-builder' ),
 				'type'            => $color_type,
 				'option_category' => 'configuration',
 				'custom_color'    => true,
@@ -758,12 +758,12 @@ class Tm_Builder_Element {
 
 		if ( $this->advanced_options['background']['use_background_image'] ) {
 			$additional_options['background_image'] = array(
-				'label'              => esc_html__( 'Background Image', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Image', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'configuration',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background', 'power-builder' ),
 				'tab_slug'           => 'advanced',
 			);
 		}
@@ -781,12 +781,12 @@ class Tm_Builder_Element {
 		$color_type = isset( $this->advanced_options['border']['settings']['color'] ) && 'alpha' === $this->advanced_options['border']['settings']['color'] ? 'color-alpha' : 'color';
 
 		$additional_options['use_border_color'] = array(
-			'label'           => esc_html__( 'Use Border', 'tm_builder' ),
+			'label'           => esc_html__( 'Use Border', 'power-builder' ),
 			'type'            => 'yes_no_button',
 			'option_category' => 'layout',
 			'options'         => array(
-				'off' => esc_html__( 'No', 'tm_builder' ),
-				'on'  => esc_html__( 'Yes', 'tm_builder' ),
+				'off' => esc_html__( 'No', 'power-builder' ),
+				'on'  => esc_html__( 'Yes', 'power-builder' ),
 			),
 			'affects' => array(
 				'#tm_pb_border_color',
@@ -798,7 +798,7 @@ class Tm_Builder_Element {
 		);
 
 		$additional_options['border_color'] = array(
-			'label'             => esc_html__( 'Border Color', 'tm_builder' ),
+			'label'             => esc_html__( 'Border Color', 'power-builder' ),
 			'type'              => $color_type,
 			'option_category'   => 'layout',
 			'default'           => '#ffffff',
@@ -808,7 +808,7 @@ class Tm_Builder_Element {
 		);
 
 		$additional_options['border_width'] = array(
-			'label'             => esc_html__( 'Border Width', 'tm_builder' ),
+			'label'             => esc_html__( 'Border Width', 'power-builder' ),
 			'type'              => 'range',
 			'option_category'   => 'layout',
 			'default'           => '1px',
@@ -818,7 +818,7 @@ class Tm_Builder_Element {
 		);
 
 		$additional_options['border_style'] = array(
-			'label'             => esc_html__( 'Border Style', 'tm_builder' ),
+			'label'             => esc_html__( 'Border Style', 'power-builder' ),
 			'type'              => 'select',
 			'option_category'   => 'layout',
 			'options'           => tm_builder_get_border_styles(),
@@ -845,7 +845,7 @@ class Tm_Builder_Element {
 
 		if ( $this->advanced_options['custom_margin_padding']['use_margin'] ) {
 			$additional_options['custom_margin'] = array(
-				'label'           => esc_html__( 'Custom Margin', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Margin', 'power-builder' ),
 				'type'            => 'custom_margin',
 				'mobile_options'  => true,
 				'option_category' => 'layout',
@@ -861,7 +861,7 @@ class Tm_Builder_Element {
 				'type' => 'skip',
 			);
 			$additional_options['custom_margin_target'] = array(
-				'label'           => esc_html__( 'Custom Margin Target Selector', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Margin Target Selector', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -875,7 +875,7 @@ class Tm_Builder_Element {
 
 		if ( $this->advanced_options['custom_margin_padding']['use_padding'] ) {
 			$additional_options['custom_padding'] = array(
-				'label'           => esc_html__( 'Custom Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Padding', 'power-builder' ),
 				'type'            => 'custom_padding',
 				'mobile_options'  => true,
 				'option_category' => 'layout',
@@ -891,7 +891,7 @@ class Tm_Builder_Element {
 				'type' => 'skip',
 			);
 			$additional_options['custom_padding_target'] = array(
-				'label'           => esc_html__( 'Custom Padding Target Selector', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Padding Target Selector', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -915,12 +915,12 @@ class Tm_Builder_Element {
 
 		foreach ( $this->advanced_options['button'] as $option_name => $option_settings ) {
 			$additional_options["custom_{$option_name}"] = array(
-				'label'           => sprintf( esc_html__( 'Use Custom Styles for %1$s ', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( 'Use Custom Styles for %1$s ', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'button',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects' => array(
 					"#tm_pb_{$option_name}_text_color",
@@ -944,7 +944,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_text_size"] = array(
-				'label'           => sprintf( esc_html__( '%1$s Text Size', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( '%1$s Text Size', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'range',
 				'range_settings'  => array(
 					'min'  => '1',
@@ -959,7 +959,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_text_color"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Text Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Text Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -970,7 +970,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_bg_color"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Background Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Background Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -981,7 +981,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_border_width"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Border Width', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Border Width', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'range',
 				'option_category'   => 'button',
 				'default'           => TM_Global_Settings::get_value( 'all_buttons_border_width' ),
@@ -991,7 +991,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_border_color"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Border Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Border Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -1002,7 +1002,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_border_radius"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Border Radius', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Border Radius', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'range',
 				'option_category'   => 'button',
 				'default'           => TM_Global_Settings::get_value( 'all_buttons_border_radius' ),
@@ -1012,7 +1012,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_letter_spacing"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Letter Spacing', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Letter Spacing', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'range',
 				'option_category'   => 'button',
 				'default'           => TM_Global_Settings::get_value( 'all_buttons_spacing' ),
@@ -1023,7 +1023,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_font"] = array(
-				'label'           => sprintf( esc_html__( '%1$s Font', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( '%1$s Font', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'font',
 				'option_category' => 'button',
 				'tab_slug'        => 'advanced',
@@ -1031,13 +1031,13 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_use_icon"] = array(
-				'label'           => sprintf( esc_html__( 'Add %1$s Icon', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( 'Add %1$s Icon', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'select',
 				'option_category' => 'button',
 				'options'         => array(
-					'default' => esc_html__( 'Default', 'tm_builder' ),
-					'on'      => esc_html__( 'Yes', 'tm_builder' ),
-					'off'     => esc_html__( 'No', 'tm_builder' ),
+					'default' => esc_html__( 'Default', 'power-builder' ),
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
+					'off'     => esc_html__( 'No', 'power-builder' ),
 				),
 				'affects' => array(
 					"#tm_pb_{$option_name}_icon_color",
@@ -1051,7 +1051,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_icon"] = array(
-				'label'               => sprintf( esc_html__( '%1$s Icon', 'tm_builder' ), $option_settings['label'] ),
+				'label'               => sprintf( esc_html__( '%1$s Icon', 'power-builder' ), $option_settings['label'] ),
 				'type'                => 'text',
 				'option_category'     => 'button',
 				'class'               => array( 'tm-pb-font-icon' ),
@@ -1063,7 +1063,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_icon_color"] = array(
-				'label'               => sprintf( esc_html__( '%1$s Icon Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'               => sprintf( esc_html__( '%1$s Icon Color', 'power-builder' ), $option_settings['label'] ),
 				'type'                => 'color-alpha',
 				'option_category'     => 'button',
 				'custom_color'        => true,
@@ -1074,12 +1074,12 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_icon_placement"] = array(
-				'label'           => sprintf( esc_html__( '%1$s Icon Placement', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( '%1$s Icon Placement', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'select',
 				'option_category' => 'button',
 				'options'         => array(
-					'right'   => esc_html__( 'Right', 'tm_builder' ),
-					'left'    => esc_html__( 'Left', 'tm_builder' ),
+					'right'   => esc_html__( 'Right', 'power-builder' ),
+					'left'    => esc_html__( 'Left', 'power-builder' ),
 				),
 				'shortcode_default'   => 'right',
 				'tab_slug'	       	  => 'advanced',
@@ -1087,12 +1087,12 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_on_hover"] = array(
-				'label'           => sprintf( esc_html__( 'Only Show Icon On Hover for %1$s', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( 'Only Show Icon On Hover for %1$s', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'button',
 				'options'         => array(
-					'on'      => esc_html__( 'Yes', 'tm_builder' ),
-					'off'     => esc_html__( 'No', 'tm_builder' ),
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
+					'off'     => esc_html__( 'No', 'power-builder' ),
 				),
 				'shortcode_default'   => 'on',
 				'tab_slug'	       	  => 'advanced',
@@ -1100,7 +1100,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_text_color_hover"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Hover Text Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Hover Text Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -1111,7 +1111,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_bg_color_hover"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Hover Background Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Hover Background Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -1122,7 +1122,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_border_color_hover"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Hover Border Color', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Hover Border Color', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'color-alpha',
 				'option_category'   => 'button',
 				'custom_color'      => true,
@@ -1133,7 +1133,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_border_radius_hover"] = array(
-				'label'             => sprintf( esc_html__( '%1$s Hover Border Radius', 'tm_builder' ), $option_settings['label'] ),
+				'label'             => sprintf( esc_html__( '%1$s Hover Border Radius', 'power-builder' ), $option_settings['label'] ),
 				'type'              => 'range',
 				'option_category'   => 'button',
 				'default'           => TM_Global_Settings::get_value( 'all_buttons_border_radius_hover' ),
@@ -1143,7 +1143,7 @@ class Tm_Builder_Element {
 			);
 
 			$additional_options["{$option_name}_letter_spacing_hover"] = array(
-				'label'           => sprintf( esc_html__( '%1$s Hover Letter Spacing', 'tm_builder' ), $option_settings['label'] ),
+				'label'           => sprintf( esc_html__( '%1$s Hover Letter Spacing', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'range',
 				'option_category' => 'button',
 				'default'         => TM_Global_Settings::get_value( 'all_buttons_spacing_hover' ),
@@ -1184,19 +1184,20 @@ class Tm_Builder_Element {
 		$custom_css_options = array();
 		$current_module_unique_class = '.' . $this->slug . '_' . "<%= typeof( module_order ) !== 'undefined' ?  module_order : '<span class=\"tm_pb_module_order_placeholder\"></span>' %>";
 		$main_css_element_output = isset( $this->main_css_element ) ? $this->main_css_element : '%%order_class%%';
+
 		$main_css_element_output = str_replace( '%%order_class%%', $current_module_unique_class, $main_css_element_output );
 
 		$custom_css_default_options = array(
 			'before' => array(
-				'label'                    => esc_html__( 'Before', 'tm_builder' ),
+				'label'                    => esc_html__( 'Before', 'power-builder' ),
 				'selector'                 => ':before',
 				'no_space_before_selector' => true,
 			),
 			'main_element' => array(
-				'label'    => esc_html__( 'Main Element', 'tm_builder' ),
+				'label'    => esc_html__( 'Main Element', 'power-builder' ),
 			),
 			'after' => array(
-				'label'                    => esc_html__( 'After', 'tm_builder' ),
+				'label'                    => esc_html__( 'After', 'power-builder' ),
 				'selector'                 => ':after',
 				'no_space_before_selector' => true,
 			),
@@ -1215,6 +1216,7 @@ class Tm_Builder_Element {
 
 		foreach ( $custom_css_options as $slug => $option ) {
 			$selector_output = isset( $option['selector'] ) ? str_replace( '%%order_class%%', $current_module_unique_class, $option['selector'] ) : '';
+
 			$custom_css_fields[ "custom_css_{$slug}" ] = array(
 				'label'    => sprintf(
 					'%1$s:<span>%2$s%3$s%4$s</span>',
@@ -1631,7 +1633,7 @@ class Tm_Builder_Element {
 					( 'color-alpha' === $field['type'] ? ' data-alpha="true"' : '' ),
 					( 'color' === $field['type'] ? ' maxlength="7"' : '' ),
 					( ! $is_custom_color ? ' tm-pb-main-setting' : '' ),
-					esc_attr__( 'Hex Value', 'tm_builder' )
+					esc_attr__( 'Hex Value', 'power-builder' )
 				);
 
 				if ( $is_custom_color ) {
@@ -1642,7 +1644,7 @@ class Tm_Builder_Element {
 							<input%3$s class="tm-pb-main-setting tm-pb-custom-color-picker" type="hidden" value="%4$s" />
 							%5$s
 						</div> <!-- .tm-pb-custom-color-container -->',
-						esc_html__( 'Choose Custom Color', 'tm_builder' ),
+						esc_html__( 'Choose Custom Color', 'power-builder' ),
 						$field_el,
 						$color_id,
 						$hidden_color_value,
@@ -1652,9 +1654,9 @@ class Tm_Builder_Element {
 				break;
 			case 'upload':
 				$field_data_type = ! empty( $field['data_type'] ) ? $field['data_type'] : 'image';
-				$field['upload_button_text'] = ! empty( $field['upload_button_text'] ) ? $field['upload_button_text'] : esc_attr__( 'Upload', 'tm_builder' );
-				$field['choose_text'] = ! empty( $field['choose_text'] ) ? $field['choose_text'] : esc_attr__( 'Choose image', 'tm_builder' );
-				$field['update_text'] = ! empty( $field['update_text'] ) ? $field['update_text'] : esc_attr__( 'Set image', 'tm_builder' );
+				$field['upload_button_text'] = ! empty( $field['upload_button_text'] ) ? $field['upload_button_text'] : esc_attr__( 'Upload', 'power-builder' );
+				$field['choose_text'] = ! empty( $field['choose_text'] ) ? $field['choose_text'] : esc_attr__( 'Choose image', 'power-builder' );
+				$field['update_text'] = ! empty( $field['update_text'] ) ? $field['update_text'] : esc_attr__( 'Set image', 'power-builder' );
 				$field['classes'] = ! empty( $field['classes'] ) ? ' ' . $field['classes'] : '';
 				$field_additional_button = ! empty( $field['additional_button'] ) ? "\n\t\t\t\t\t" . $field['additional_button'] : '';
 
@@ -1780,28 +1782,28 @@ class Tm_Builder_Element {
 						sprintf( '<%%= window.tm_builder.options_padding_output(%1$s) %%>',
 							json_encode( array_merge( $single_fields_settings, array(
 								'side' => 'top',
-								'label' => esc_html__( 'Top', 'tm_builder' ),
+								'label' => esc_html__( 'Top', 'power-builder' ),
 							) ) )
 						) : '',
 					! isset( $field['sides'] ) || ( ! empty( $field['sides'] ) && in_array( 'right', $field['sides'] ) ) ?
 						sprintf( '<%%= window.tm_builder.options_padding_output(%1$s) %%>',
 							json_encode( array_merge( $single_fields_settings, array(
 								'side' => 'right',
-								'label' => esc_html__( 'Right', 'tm_builder' ),
+								'label' => esc_html__( 'Right', 'power-builder' ),
 							) ) )
 						) : '',
 					! isset( $field['sides'] ) || ( ! empty( $field['sides'] ) && in_array( 'bottom', $field['sides'] ) ) ?
 						sprintf( '<%%= window.tm_builder.options_padding_output(%1$s) %%>',
 							json_encode( array_merge( $single_fields_settings, array(
 								'side' => 'bottom',
-								'label' => esc_html__( 'Bottom', 'tm_builder' ),
+								'label' => esc_html__( 'Bottom', 'power-builder' ),
 							) ) )
 						) : '',
 					! isset( $field['sides'] ) || ( ! empty( $field['sides'] ) && in_array( 'left', $field['sides'] ) ) ?
 						sprintf( '<%%= window.tm_builder.options_padding_output(%1$s) %%>',
 							json_encode( array_merge( $single_fields_settings, array(
 								'side' => 'left',
-								'label' => esc_html__( 'Left', 'tm_builder' ),
+								'label' => esc_html__( 'Left', 'power-builder' ),
 							) ) )
 						) : '',
 					$need_mobile_options ?
@@ -2040,9 +2042,9 @@ class Tm_Builder_Element {
 
 	function get_main_tabs() {
 		$tabs = array(
-			'general'    => esc_html__( 'General Settings', 'tm_builder' ),
-			'advanced'   => esc_html__( 'Advanced Design Settings', 'tm_builder' ),
-			'custom_css' => esc_html__( 'Custom CSS', 'tm_builder' ),
+			'general'    => esc_html__( 'General Settings', 'power-builder' ),
+			'advanced'   => esc_html__( 'Advanced Design Settings', 'power-builder' ),
+			'custom_css' => esc_html__( 'Custom CSS', 'power-builder' ),
 		);
 
 		return apply_filters( 'tm_builder_main_tabs', $tabs );
@@ -2197,7 +2199,7 @@ class Tm_Builder_Element {
 
 		// return error message if no tabs allowed for current user
 		if ( '' === $output ) {
-			$output = esc_html__( "You don't have sufficient permissions to access the settings", 'tm_builder' );
+			$output = esc_html__( "You don't have sufficient permissions to access the settings", 'power-builder' );
 		}
 
 		return $output;
@@ -2222,8 +2224,8 @@ class Tm_Builder_Element {
 			</div> <!-- .tm-pb-option -->%5$s',
 			esc_attr( $this->child_slug ),
 			esc_html( $this->add_new_child_text() ),
-			esc_html__( 'Content', 'tm_builder' ),
-			esc_html__( 'Here you can define the content that will be placed within the current tab.', 'tm_builder' ),
+			esc_html__( 'Content', 'power-builder' ),
+			esc_html__( 'Here you can define the content that will be placed within the current tab.', 'power-builder' ),
 			"\n\n",
 			"\t",
 			$this->predefined_child_modules()
@@ -2236,7 +2238,7 @@ class Tm_Builder_Element {
 	function add_new_child_text() {
 		$child_slug = ! empty( $this->child_item_text ) ? $this->child_item_text : '';
 
-		$child_slug = '' === $child_slug ? esc_html__( 'Add New Item', 'tm_builder' ) : sprintf( esc_html__( 'Add New %s', 'tm_builder' ), $child_slug );
+		$child_slug = '' === $child_slug ? esc_html__( 'Add New Item', 'power-builder' ) : sprintf( esc_html__( 'Add New %s', 'power-builder' ), $child_slug );
 
 		return $child_slug;
 	}
@@ -2248,7 +2250,7 @@ class Tm_Builder_Element {
 
 		// General Settings Tab should be added to all modules if allowed
 		if ( tm_pb_is_allowed( 'general_settings' ) ) {
-			$tabs['general'] = isset( $this->main_tabs['general'] ) ? $this->main_tabs['general'] : esc_html__( 'General Settings', 'tm_builder' );
+			$tabs['general'] = isset( $this->main_tabs['general'] ) ? $this->main_tabs['general'] : esc_html__( 'General Settings', 'power-builder' );
 		}
 
 		foreach ( $this->used_tabs as $tab_slug ) {
@@ -2338,9 +2340,9 @@ class Tm_Builder_Element {
 
 		if ( ! isset( $this->settings_text ) ) {
 			$settings_text = sprintf(
-				__( '%1$s %2$s Settings', 'tm_builder' ),
+				__( '%1$s %2$s Settings', 'power-builder' ),
 				esc_html( $this->name ),
-				'child' === $this->type ? esc_html__( 'Item', 'tm_builder' ) : esc_html__( 'Module', 'tm_builder' )
+				'child' === $this->type ? esc_html__( 'Item', 'power-builder' ) : esc_html__( 'Module', 'power-builder' )
 			);
 		} else {
 			$settings_text = $this->settings_text;

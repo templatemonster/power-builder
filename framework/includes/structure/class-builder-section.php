@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 	function init() {
-		$this->name = esc_html__( 'Section', 'tm_builder' );
+		$this->name = esc_html__( 'Section', 'power-builder' );
 		$this->slug = 'tm_pb_section';
 
 		$this->whitelisted_fields = array(
@@ -103,116 +103,116 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 	function get_fields() {
 		$fields = array(
 			'background_image' => array(
-				'label'              => esc_html__( 'Background Image', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Image', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background', 'tm_builder' ),
-				'description'        => esc_html__( 'If defined, this image will be used as the background for this module. To remove a background image, simply delete the URL from the settings field.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background', 'power-builder' ),
+				'description'        => esc_html__( 'If defined, this image will be used as the background for this module. To remove a background image, simply delete the URL from the settings field.', 'power-builder' ),
 			),
 			'transparent_background' => array(
-				'label'             => esc_html__( 'Transparent Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Transparent Background Color', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'color_option',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_background_color',
 				),
-				'description'       => esc_html__( 'Enabling this option will remove the background color of this section, allowing the website background color or background image to show through.', 'tm_builder' ),
+				'description'       => esc_html__( 'Enabling this option will remove the background color of this section, allowing the website background color or background image to show through.', 'power-builder' ),
 			),
 			'background_color' => array(
-				'label'           => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Color', 'power-builder' ),
 				'type'            => 'color',
 				'depends_show_if' => 'off',
-				'description'     => esc_html__( 'Define a custom background color for your module, or leave blank to use the default color.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a custom background color for your module, or leave blank to use the default color.', 'power-builder' ),
 				'additional_code' => '<span class="tm-pb-reset-setting reset-default-color" style="display: none;"></span>',
 			),
 			'background_video_mp4' => array(
-				'label'              => esc_html__( 'Background Video MP4', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Video MP4', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Video MP4 File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background Video', 'tm_builder' ),
-				'description'        => tm_get_safe_localization( __( 'All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers. Upload the .MP4 version here. <b>Important Note: Video backgrounds are disabled from mobile devices. Instead, your background image will be used. For this reason, you should define both a background image and a background video to ensure best results.</b>', 'tm_builder' ) ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Video MP4 File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background Video', 'power-builder' ),
+				'description'        => tm_get_safe_localization( __( 'All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers. Upload the .MP4 version here. <b>Important Note: Video backgrounds are disabled from mobile devices. Instead, your background image will be used. For this reason, you should define both a background image and a background video to ensure best results.</b>', 'power-builder' ) ),
 			),
 			'background_video_webm' => array(
-				'label'              => esc_html__( 'Background Video Webm', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Video Webm', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Background Video WEBM File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Background Video', 'tm_builder' ),
-				'description'        => tm_get_safe_localization( __( 'All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers. Upload the .WEBM version here. <b>Important Note: Video backgrounds are disabled from mobile devices. Instead, your background image will be used. For this reason, you should define both a background image and a background video to ensure best results.</b>', 'tm_builder' ) ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Background Video WEBM File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Background Video', 'power-builder' ),
+				'description'        => tm_get_safe_localization( __( 'All videos should be uploaded in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers. Upload the .WEBM version here. <b>Important Note: Video backgrounds are disabled from mobile devices. Instead, your background image will be used. For this reason, you should define both a background image and a background video to ensure best results.</b>', 'power-builder' ) ),
 			),
 			'background_video_width' => array(
-				'label'           => esc_html__( 'Background Video Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Video Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'In order for videos to be sized correctly, you must input the exact width (in pixels) of your video here.', 'tm_builder' ),
+				'description'     => esc_html__( 'In order for videos to be sized correctly, you must input the exact width (in pixels) of your video here.', 'power-builder' ),
 			),
 			'background_video_height' => array(
-				'label'           => esc_html__( 'Background Video Height', 'tm_builder' ),
+				'label'           => esc_html__( 'Background Video Height', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'In order for videos to be sized correctly, you must input the exact height (in pixels) of your video here.', 'tm_builder' ),
+				'description'     => esc_html__( 'In order for videos to be sized correctly, you must input the exact height (in pixels) of your video here.', 'power-builder' ),
 			),
 			'allow_player_pause' => array(
-				'label'           => esc_html__( 'Pause Video', 'tm_builder' ),
+				'label'           => esc_html__( 'Pause Video', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Allow video to be paused by other players when they begin playing', 'tm_builder' ),
+				'description'       => esc_html__( 'Allow video to be paused by other players when they begin playing', 'power-builder' ),
 			),
 			'inner_shadow' => array(
-				'label'           => esc_html__( 'Show Inner Shadow', 'tm_builder' ),
+				'label'           => esc_html__( 'Show Inner Shadow', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can select whether or not your section has an inner shadow. This can look great when you have colored backgrounds or background images.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can select whether or not your section has an inner shadow. This can look great when you have colored backgrounds or background images.', 'power-builder' ),
 			),
 			'parallax' => array(
-				'label'             => esc_html__( 'Use Parallax Effect', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Parallax Effect', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_parallax_method',
 				),
-				'description'       => esc_html__( 'If enabled, your background image will stay fixed as your scroll, creating a fun parallax-like effect.', 'tm_builder' ),
+				'description'       => esc_html__( 'If enabled, your background image will stay fixed as your scroll, creating a fun parallax-like effect.', 'power-builder' ),
 			),
 			'parallax_method' => array(
-				'label'             => esc_html__( 'Parallax Method', 'tm_builder' ),
+				'label'             => esc_html__( 'Parallax Method', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off'  => esc_html__( 'CSS', 'tm_builder' ),
-					'on'   => esc_html__( 'True Parallax', 'tm_builder' ),
+					'off'  => esc_html__( 'CSS', 'power-builder' ),
+					'on'   => esc_html__( 'True Parallax', 'power-builder' ),
 				),
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Define the method, used for the parallax effect.', 'tm_builder' ),
+				'description'       => esc_html__( 'Define the method, used for the parallax effect.', 'power-builder' ),
 			),
 			'custom_padding' => array(
-				'label'           => esc_html__( 'Custom Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Padding', 'power-builder' ),
 				'type'            => 'custom_padding',
 				'mobile_options'  => true,
 				'option_category' => 'layout',
-				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'tm_builder' ),
+				'description'     => esc_html__( 'Adjust padding to specific values, or leave blank to use the default padding.', 'power-builder' ),
 			),
 			'custom_padding_laptop' => array(
 				'type' => 'skip',
@@ -224,33 +224,33 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'type' => 'skip',
 			),
 			/*'padding_mobile' => array(
-				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Keep Custom Padding on Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'tm_builder' ),
+				'description'       => esc_html__( 'Allow custom padding to be retained on mobile screens', 'power-builder' ),
 			),*/
 			'make_fullwidth' => array(
-				'label'             => esc_html__( 'Make This Section Fullwidth', 'tm_builder' ),
+				'label'             => esc_html__( 'Make This Section Fullwidth', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'depends_show_if'   => 'off',
 				'tab_slug' => 'advanced',
 			),
 			'use_custom_width' => array(
-				'label'             => esc_html__( 'Use Custom Width', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Custom Width', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_make_fullwidth',
@@ -260,11 +260,11 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'tab_slug' => 'advanced',
 			),
 			'width_unit' => array(
-				'label'             => esc_html__( 'Unit', 'tm_builder' ),
+				'label'             => esc_html__( 'Unit', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'px', 'tm_builder' ),
+					'on'  => esc_html__( 'px', 'power-builder' ),
 					'off' => '%',
 				),
 				'button_options' => array(
@@ -278,7 +278,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'tab_slug' => 'advanced',
 			),
 			'custom_width_px' => array(
-				'label'           => esc_html__( 'Custom Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'depends_show_if' => 'on',
@@ -290,7 +290,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'tab_slug' => 'advanced',
 			),
 			'custom_width_percent' => array(
-				'label'           => esc_html__( 'Custom Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Custom Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'depends_show_if' => 'off',
@@ -302,22 +302,22 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'tab_slug' => 'advanced',
 			),
 			'make_equal' => array(
-				'label'             => esc_html__( 'Equalize Column Heights', 'tm_builder' ),
+				'label'             => esc_html__( 'Equalize Column Heights', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'          => 'advanced',
 			),
 			'use_custom_gutter' => array(
-				'label'             => esc_html__( 'Use Custom Gutter Width', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Custom Gutter Width', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_gutter_width',
@@ -325,7 +325,7 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'tab_slug' => 'advanced',
 			),
 			'gutter_width' => array(
-				'label'           => esc_html__( 'Gutter Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Gutter Width', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'range_settings'  => array(
@@ -471,27 +471,27 @@ class Tm_Builder_Section extends Tm_Builder_Structure_Element {
 				'priority'        => '20',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the section in the builder for easy identification when collapsed.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the section in the builder for easy identification when collapsed.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

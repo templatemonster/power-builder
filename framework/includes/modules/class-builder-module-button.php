@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Button extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Button', 'tm_builder' );
+		$this->name = esc_html__( 'Button', 'power-builder' );
 		$this->slug = 'tm_pb_button';
 		$this->icon = 'f0a6';
 
@@ -24,7 +24,7 @@ class Tm_Builder_Module_Button extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 					'css' => array(
 						'main' => $this->main_css_element,
 					),
@@ -36,60 +36,60 @@ class Tm_Builder_Module_Button extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'button_url' => array(
-				'label'           => esc_html__( 'Button URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Button URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the destination URL for your button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the destination URL for your button.', 'power-builder' ),
 			),
 			'url_new_window' => array(
-				'label'           => esc_html__( 'Url Opens', 'tm_builder' ),
+				'label'           => esc_html__( 'Url Opens', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'In The Same Window', 'tm_builder' ),
-					'on'  => esc_html__( 'In The New Tab', 'tm_builder' ),
+					'off' => esc_html__( 'In The Same Window', 'power-builder' ),
+					'on'  => esc_html__( 'In The New Tab', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'power-builder' ),
 			),
 			'button_text' => array(
-				'label'           => esc_html__( 'Button Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Button Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input your desired button text.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input your desired button text.', 'power-builder' ),
 			),
 			'button_alignment' => array(
-				'label'           => esc_html__( 'Button alignment', 'tm_builder' ),
+				'label'           => esc_html__( 'Button alignment', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'left'   => esc_html__( 'Left', 'tm_builder' ),
-					'center' => esc_html__( 'Center', 'tm_builder' ),
-					'right'  => esc_html__( 'Right', 'tm_builder' ),
+					'left'   => esc_html__( 'Left', 'power-builder' ),
+					'center' => esc_html__( 'Center', 'power-builder' ),
+					'right'  => esc_html__( 'Right', 'power-builder' ),
 				),
-				'description'     => esc_html__( 'Here you can define the alignemnt of Button', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define the alignemnt of Button', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

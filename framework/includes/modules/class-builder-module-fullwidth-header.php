@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 	function init() {
-		$this->name             = esc_html__( 'Fullwidth Header', 'tm_builder' );
+		$this->name             = esc_html__( 'Fullwidth Header', 'power-builder' );
 		$this->slug             = 'tm_pb_fullwidth_header';
 		$this->fullwidth        = true;
 		$this->main_css_element = '%%order_class%%';
@@ -63,16 +63,16 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 					'toggles_disabled' => true,
 				),
 				'toggles' => array(
-					'title_styles'   => esc_html__( 'Title Styling', 'tm_builder' ),
-					'subhead_styles' => esc_html__( 'Subhead Styling', 'tm_builder' ),
-					'content_styles' => esc_html__( 'Content Styling', 'tm_builder' ),
+					'title_styles'   => esc_html__( 'Title Styling', 'power-builder' ),
+					'subhead_styles' => esc_html__( 'Subhead Styling', 'power-builder' ),
+					'content_styles' => esc_html__( 'Content Styling', 'power-builder' ),
 				),
 			),
 		);
 		$this->advanced_options = array(
 			'fonts' => array(
 				'title' => array(
-					'label'    => esc_html__( 'Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Title', 'power-builder' ),
 					'css'      => array(
 						'main' => "%%order_class%%.tm_pb_fullwidth_header .header-content h1",
 					),
@@ -88,7 +88,7 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 					'hide_letter_spacing' => true,
 				),
 				'subhead' => array(
-					'label'    => esc_html__( 'Subhead', 'tm_builder' ),
+					'label'    => esc_html__( 'Subhead', 'power-builder' ),
 					'css'      => array(
 						'main' => "%%order_class%%.tm_pb_fullwidth_header .tm_pb_fullwidth_header_subhead",
 					),
@@ -103,7 +103,7 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 					'hide_letter_spacing' => true,
 				),
 				'content' => array(
-					'label'    => esc_html__( 'Content', 'tm_builder' ),
+					'label'    => esc_html__( 'Content', 'power-builder' ),
 					'css'      => array(
 						'main' => "%%order_class%%.tm_pb_fullwidth_header p",
 					),
@@ -121,7 +121,7 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 			),
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 					'css'      => array(
 						'main' => ".tm_pb_slider {$this->main_css_element}.tm_pb_slide .tm_pb_button",
 					),
@@ -130,13 +130,13 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 
 			'button' => array(
 				'button_one' => array(
-					'label' => esc_html__( 'Button One', 'tm_builder' ),
+					'label' => esc_html__( 'Button One', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_button_one.tm_pb_button",
 					),
 				),
 				'button_two' => array(
-					'label' => esc_html__( 'Button Two', 'tm_builder' ),
+					'label' => esc_html__( 'Button Two', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_button_two.tm_pb_button",
 					),
@@ -146,35 +146,35 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'header_container' => array(
-				'label'    => esc_html__( 'Header Container', 'tm_builder' ),
+				'label'    => esc_html__( 'Header Container', 'power-builder' ),
 				'selector' => '.tm_pb_fullwidth_header_container',
 			),
 			'header_image' => array(
-				'label'    => esc_html__( 'Header Image', 'tm_builder' ),
+				'label'    => esc_html__( 'Header Image', 'power-builder' ),
 				'selector' => '.tm_pb_fullwidth_header_container .header-image img',
 			),
 			'logo' => array(
-				'label'    => esc_html__( 'Logo', 'tm_builder' ),
+				'label'    => esc_html__( 'Logo', 'power-builder' ),
 				'selector' => '.header-content img',
 			),
 			'title' => array(
-				'label'    => esc_html__( 'Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Title', 'power-builder' ),
 				'selector' => '.header-content h1',
 			),
 			'subtitle' => array(
-				'label'    => esc_html__( 'Subtitle', 'tm_builder' ),
+				'label'    => esc_html__( 'Subtitle', 'power-builder' ),
 				'selector' => '.header-content .tm_pb_fullwidth_header_subhead',
 			),
 			'button_1' => array(
-				'label'    => esc_html__( 'Button One', 'tm_builder' ),
+				'label'    => esc_html__( 'Button One', 'power-builder' ),
 				'selector' => '.header-content .tm_pb_button_one',
 			),
 			'button_2' => array(
-				'label'    => esc_html__( 'Button Two', 'tm_builder' ),
+				'label'    => esc_html__( 'Button Two', 'power-builder' ),
 				'selector' => '.header-content .tm_pb_button_two',
 			),
 			'scroll_button' => array(
-				'label'    => esc_html__( 'Scroll Down Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Scroll Down Button', 'power-builder' ),
 				'selector' => '.tm_pb_fullwidth_header_scroll a .et-pb-icon',
 			),
 		);
@@ -183,79 +183,79 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Enter your page title here.', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter your page title here.', 'power-builder' ),
 			),
 			'subhead' => array(
-				'label'           => esc_html__( 'Subheading Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Subheading Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'If you would like to use a subhead, add it here. Your subhead will appear below your title in a small font.', 'tm_builder' ),
+				'description'     => esc_html__( 'If you would like to use a subhead, add it here. Your subhead will appear below your title in a small font.', 'power-builder' ),
 			),
 			'background_layout' => array(
-				'label'           => esc_html__( 'Text Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Text Color', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'color_option',
 				'options'         => array(
-					'light' => esc_html__( 'Dark', 'tm_builder' ),
-					'dark'  => esc_html__( 'Light', 'tm_builder' ),
+					'light' => esc_html__( 'Dark', 'power-builder' ),
+					'dark'  => esc_html__( 'Light', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'power-builder' ),
 			),
 			'text_orientation' => array(
-				'label'             => esc_html__( 'Text & Logo Orientation', 'tm_builder' ),
+				'label'             => esc_html__( 'Text & Logo Orientation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => tm_builder_get_text_orientation_options(),
-				'description'       => esc_html__( 'This controls the how your text is aligned within the module.', 'tm_builder' ),
+				'description'       => esc_html__( 'This controls the how your text is aligned within the module.', 'power-builder' ),
 			),
 
 			'header_fullscreen' => array(
-				'label'           => esc_html__( 'Make Fullscreen', 'tm_builder' ),
+				'label'           => esc_html__( 'Make Fullscreen', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_content_orientation',
 				),
-				'description'       => esc_html__( 'Here you can choose whether the header is expanded to fullscreen size.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether the header is expanded to fullscreen size.', 'power-builder' ),
 			),
 			'header_scroll_down' => array(
-				'label'           => esc_html__( 'Show Scroll Down Button', 'tm_builder' ),
+				'label'           => esc_html__( 'Show Scroll Down Button', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_scroll_down_icon',
 				),
-				'description'       => esc_html__( 'Here you can choose whether the scroll down button is shown.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether the scroll down button is shown.', 'power-builder' ),
 			),
 			'scroll_down_icon' => array(
-				'label'               => esc_html__( 'Icon', 'tm_builder' ),
+				'label'               => esc_html__( 'Icon', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'configuration',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_down_icon_list',
 				'renderer_with_field' => true,
-				'description'         => esc_html__( 'Choose an icon to display for the scroll down button.', 'tm_builder' ),
+				'description'         => esc_html__( 'Choose an icon to display for the scroll down button.', 'power-builder' ),
 				'depends_show_if'     => 'on',
 			),
 			'scroll_down_icon_color' => array(
-				'label'             => esc_html__( 'Scroll Down Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Scroll Down Icon Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'scroll_down_icon_size' => array(
-				'label'           => esc_html__( 'Scroll Down Icon Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Scroll Down Icon Size', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'layout',
 				'mobile_options'  => true,
@@ -268,28 +268,28 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'title_font_color' => array(
-				'label'             => esc_html__( 'Title Font Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Title Font Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'toggle_slug'       => 'title_styles',
 			),
 			'subhead_font_color' => array(
-				'label'             => esc_html__( 'Subhead Font Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Subhead Font Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'toggle_slug'       => 'subhead_styles',
 			),
 			'content_font_color' => array(
-				'label'             => esc_html__( 'Content Font Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Content Font Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 				'toggle_slug'       => 'content_styles',
 			),
 			'max_width' => array(
-				'label'           => esc_html__( 'Text Max Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Text Max Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -303,155 +303,155 @@ class Tm_Builder_Module_Fullwidth_Header extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'button_one_text' => array(
-				'label'           => sprintf( esc_html__( 'Button %1$s Text', 'tm_builder' ), '#1' ),
+				'label'           => sprintf( esc_html__( 'Button %1$s Text', 'power-builder' ), '#1' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Enter the text for the Button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter the text for the Button.', 'power-builder' ),
 			),
 			'button_one_url' => array(
-				'label'           => sprintf( esc_html__( 'Button %1$s URL', 'tm_builder' ), '#1' ),
+				'label'           => sprintf( esc_html__( 'Button %1$s URL', 'power-builder' ), '#1' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Enter the URL for the Button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter the URL for the Button.', 'power-builder' ),
 			),
 			'button_two_text' => array(
-				'label'           => sprintf( esc_html__( 'Button %1$s Text', 'tm_builder' ), '#2' ),
+				'label'           => sprintf( esc_html__( 'Button %1$s Text', 'power-builder' ), '#2' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Enter the text for the Button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter the text for the Button.', 'power-builder' ),
 			),
 			'button_two_url' => array(
-				'label'           => sprintf( esc_html__( 'Button %1$s URL', 'tm_builder' ), '#2' ),
+				'label'           => sprintf( esc_html__( 'Button %1$s URL', 'power-builder' ), '#2' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Enter the URL for the Button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Enter the URL for the Button.', 'power-builder' ),
 			),
 			'background_url' => array(
-				'label'              => esc_html__( 'Background Image URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Background Image URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'power-builder' ),
 			),
 			'background_color' => array(
-				'label'             => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 			),
 			'background_overlay_color' => array(
-				'label'             => esc_html__( 'Background Overlay Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Overlay Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 			),
 			'parallax' => array(
-				'label'           => esc_html__( 'Use Parallax effect', 'tm_builder' ),
+				'label'           => esc_html__( 'Use Parallax effect', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off'  => esc_html__( 'No', 'tm_builder' ),
-					'on' => esc_html__( 'Yes', 'tm_builder' ),
+					'off'  => esc_html__( 'No', 'power-builder' ),
+					'on' => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_parallax_method',
 				),
-				'description'        => esc_html__( 'If enabled, your background images will have a fixed position as your scroll, creating a fun parallax-like effect.', 'tm_builder' ),
+				'description'        => esc_html__( 'If enabled, your background images will have a fixed position as your scroll, creating a fun parallax-like effect.', 'power-builder' ),
 			),
 			'parallax_method' => array(
-				'label'           => esc_html__( 'Parallax method', 'tm_builder' ),
+				'label'           => esc_html__( 'Parallax method', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'CSS', 'tm_builder' ),
-					'on'  => esc_html__( 'True Parallax', 'tm_builder' ),
+					'off' => esc_html__( 'CSS', 'power-builder' ),
+					'on'  => esc_html__( 'True Parallax', 'power-builder' ),
 				),
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Define the method, used for the parallax effect.', 'tm_builder' ),
+				'description'       => esc_html__( 'Define the method, used for the parallax effect.', 'power-builder' ),
 			),
 
 			'logo_image_url' => array(
-				'label'              => esc_html__( 'Logo Image URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Logo Image URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'power-builder' ),
 			),
 			'logo_alt_text' => array(
-				'label'           => esc_html__( 'Logo Image Alternative Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Logo Image Alternative Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'This defines the HTML ALT text. A short description of your image can be placed here.', 'tm_builder' ),
+				'description'     => esc_html__( 'This defines the HTML ALT text. A short description of your image can be placed here.', 'power-builder' ),
 			),
 			'logo_title' => array(
-				'label'           => esc_html__( 'Logo Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Logo Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'This defines the HTML Title text.', 'tm_builder' ),
+				'description'     => esc_html__( 'This defines the HTML Title text.', 'power-builder' ),
 			),
 			'content_orientation' => array(
-				'label'           => esc_html__( 'Text Vertical Alignment', 'tm_builder' ),
+				'label'           => esc_html__( 'Text Vertical Alignment', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'layout',
 				'options'         => array(
-					'center'  => esc_html__( 'Center', 'tm_builder' ),
-					'bottom' => esc_html__( 'Bottom', 'tm_builder' ),
+					'center'  => esc_html__( 'Center', 'power-builder' ),
+					'bottom' => esc_html__( 'Bottom', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'This setting determines the vertical alignment of your content. Your content can either be vertically centered, or aligned to the bottom.', 'tm_builder' ),
+				'description'        => esc_html__( 'This setting determines the vertical alignment of your content. Your content can either be vertically centered, or aligned to the bottom.', 'power-builder' ),
 				'depends_show_if'    => 'on',
 			),
 
 			'header_image_url' => array(
-				'label'              => esc_html__( 'Header Image URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Header Image URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'power-builder' ),
 			),
 			'image_orientation' => array(
-				'label'           => esc_html__( 'Image Vertical Alignment', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Vertical Alignment', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'layout',
 				'options'         => array(
-					'center'  => esc_html__( 'Vertically Centered', 'tm_builder' ),
-					'bottom' => esc_html__( 'Bottom', 'tm_builder' ),
+					'center'  => esc_html__( 'Vertically Centered', 'power-builder' ),
+					'bottom' => esc_html__( 'Bottom', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'This controls the orientation of the image within the module.', 'tm_builder' ),
+				'description'        => esc_html__( 'This controls the orientation of the image within the module.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'           => esc_html__( 'Content', 'tm_builder' ),
+				'label'           => esc_html__( 'Content', 'power-builder' ),
 				'type'            => 'tiny_mce',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Here you can define the content that will be placed within the infobox for the pin.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define the content that will be placed within the infobox for the pin.', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => array(
-					'phone'   => esc_html__( 'Phone', 'tm_builder' ),
-					'tablet'  => esc_html__( 'Tablet', 'tm_builder' ),
-					'desktop' => esc_html__( 'Desktop', 'tm_builder' ),
+					'phone'   => esc_html__( 'Phone', 'power-builder' ),
+					'tablet'  => esc_html__( 'Tablet', 'power-builder' ),
+					'desktop' => esc_html__( 'Desktop', 'power-builder' ),
 				),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

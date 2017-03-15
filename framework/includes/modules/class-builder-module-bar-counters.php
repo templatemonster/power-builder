@@ -1,11 +1,11 @@
 <?php
 class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 	function init() {
-		$this->name            = esc_html__( 'Bar Counters', 'tm_builder' );
+		$this->name            = esc_html__( 'Bar Counters', 'power-builder' );
 		$this->icon            = 'f0ae';
 		$this->slug            = 'tm_pb_counters';
 		$this->child_slug      = 'tm_pb_counter';
-		$this->child_item_text = esc_html__( 'Bar Counter', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Bar Counter', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'background_color',
@@ -38,13 +38,13 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'title' => array(
-					'label'    => esc_html__( 'Title', 'tm_builder' ),
+					'label'    => esc_html__( 'Title', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_counter_title",
 					),
 				),
 				'percent'   => array(
-					'label'    => esc_html__( 'Percent', 'tm_builder' ),
+					'label'    => esc_html__( 'Percent', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_counter_amount",
 					),
@@ -61,15 +61,15 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'counter_title' => array(
-				'label'    => esc_html__( 'Counter Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Title', 'power-builder' ),
 				'selector' => '.tm_pb_counter_title',
 			),
 			'counter_container' => array(
-				'label'    => esc_html__( 'Counter Container', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Container', 'power-builder' ),
 				'selector' => '.tm_pb_counter_container',
 			),
 			'counter_amount' => array(
-				'label'    => esc_html__( 'Counter Amount', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Amount', 'power-builder' ),
 				'selector' => '.tm_pb_counter_amount',
 			),
 		);
@@ -78,26 +78,26 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'background_color' => array(
-				'label'             => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
-				'description'       => esc_html__( 'This will adjust the color of the empty space in the bar (currently gray).', 'tm_builder' ),
+				'description'       => esc_html__( 'This will adjust the color of the empty space in the bar (currently gray).', 'power-builder' ),
 			),
 			'bar_bg_color' => array(
-				'label'             => esc_html__( 'Bar Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Bar Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
-				'description'       => esc_html__( 'This will change the fill color for the bar.', 'tm_builder' ),
+				'description'       => esc_html__( 'This will change the fill color for the bar.', 'power-builder' ),
 			),
 			'use_percentages' => array(
-				'label'             => esc_html__( 'Use Percentages', 'tm_builder' ),
+				'label'             => esc_html__( 'Use Percentages', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
 			),
 			'bar_top_padding' => array(
-				'label'           => esc_html__( 'Bar Top Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Bar Top Padding', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -105,7 +105,7 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 				'validate_unit'   => true,
 			),
 			'bar_bottom_padding' => array(
-				'label'           => esc_html__( 'Bar Bottom Padding', 'tm_builder' ),
+				'label'           => esc_html__( 'Bar Bottom Padding', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -113,7 +113,7 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 				'validate_unit'   => true,
 			),
 			'border_radius' => array(
-				'label'             => esc_html__( 'Border Radius', 'tm_builder' ),
+				'label'             => esc_html__( 'Border Radius', 'power-builder' ),
 				'type'              => 'range',
 				'option_category'   => 'layout',
 				'tab_slug'          => 'advanced',
@@ -137,27 +137,27 @@ class Tm_Builder_Module_Bar_Counters extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Tabs_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Tab', 'tm_builder' );
+		$this->name                        = esc_html__( 'Tab', 'power-builder' );
 		$this->slug                        = 'tm_pb_tab';
 		$this->type                        = 'child';
 		$this->child_title_var             = 'title';
@@ -11,13 +11,13 @@ class Tm_Builder_Module_Tabs_Item extends Tm_Builder_Module {
 			'content_new',
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Tab', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Tab Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Tab', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Tab Settings', 'power-builder' );
 		$this->main_css_element = '%%order_class%%';
 		$this->advanced_options = array(
 			'fonts' => array(
 				'tab' => array(
-					'label'    => esc_html__( 'Tab', 'tm_builder' ),
+					'label'    => esc_html__( 'Tab', 'power-builder' ),
 					'css'      => array(
 						'main'      => "{$this->main_css_element}.tab-control",
 						'color'     => "{$this->main_css_element}.tab-control a",
@@ -32,7 +32,7 @@ class Tm_Builder_Module_Tabs_Item extends Tm_Builder_Module {
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'main'        => "{$this->main_css_element}.tab-content",
 					),
@@ -60,14 +60,14 @@ class Tm_Builder_Module_Tabs_Item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'title' => array(
-				'label'       => esc_html__( 'Title', 'tm_builder' ),
+				'label'       => esc_html__( 'Title', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'The title will be used within the tab button for this tab.', 'tm_builder' ),
+				'description' => esc_html__( 'The title will be used within the tab button for this tab.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'       => esc_html__( 'Content', 'tm_builder' ),
+				'label'       => esc_html__( 'Content', 'power-builder' ),
 				'type'        => 'tiny_mce',
-				'description' => esc_html__( 'Here you can define the content that will be placed within the current tab.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can define the content that will be placed within the current tab.', 'power-builder' ),
 			),
 		);
 		return $fields;
@@ -84,7 +84,7 @@ class Tm_Builder_Module_Tabs_Item extends Tm_Builder_Module {
 
 		$i = 0;
 
-		$title               = '' !== $title ? $title : esc_html__( 'Tab', 'tm_builder' );
+		$title               = '' !== $title ? $title : esc_html__( 'Tab', 'power-builder' );
 		$tm_pb_tab_titles[]  = $title;
 		$tm_pb_tab_classes[] = $module_class;
 		$module_class       .= ( 1 === count( $tm_pb_tab_titles ) ? ' tm_pb_active_content' : '' );

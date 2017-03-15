@@ -42,7 +42,7 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 	);
 
 	public function init() {
-		$this->name					= esc_html__( 'Carousel', 'tm_builder' );
+		$this->name					= esc_html__( 'Carousel', 'power-builder' );
 		$this->icon					= 'f03e';
 		$this->slug					= 'tm_pb_swiper';
 		$this->main_css_element		= '%%order_class%%.tm_pb_swiper';
@@ -80,14 +80,14 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 		return array(
 			/*  General Settings  */
 			'terms_type' => array(
-				'label'					=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+				'label'					=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 				'type'					=> 'select',
 				'option_category'		=> 'basic_option',
 				'options'				=> array(
-					'category_name'			=> esc_html__( 'Categories', 'tm_builder' ),
-					'tag'					=> esc_html__( 'Tag', 'tm_builder' ),
-					'post_format'			=> esc_html__( 'Post Format', 'tm_builder' ),
-					'include'				=> esc_html__( 'Post id', 'tm_builder' )
+					'category_name'			=> esc_html__( 'Categories', 'power-builder' ),
+					'tag'					=> esc_html__( 'Tag', 'power-builder' ),
+					'post_format'			=> esc_html__( 'Post Format', 'power-builder' ),
+					'include'				=> esc_html__( 'Post id', 'power-builder' )
 				),
 				'affects'				=> array(
 					'#tm_pb_category_name',
@@ -97,10 +97,10 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 					'#tm_pb_posts_per_page',
 					'#tm_pb_post_offset',
 				),
-				'description'			=> esc_html__( 'Choose taxonomy type', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose taxonomy type', 'power-builder' ),
 			),
 			'category_name' => array(
-				'label'					=> esc_html__( 'Include categories', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include categories', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'category_name',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -108,10 +108,10 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 					'use_terms' => false,
 					'input_name' => 'tm_pb_category_name',
 				),
-				'description'			=> esc_html__( 'Choose which categories you would like to include in the carousel.', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose which categories you would like to include in the carousel.', 'power-builder' ),
 			),
 			'tag' => array(
-				'label'					=> esc_html__( 'Include tags', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include tags', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'tag',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -120,10 +120,10 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 					'term_name'  => 'post_tag',
 					'input_name' => 'tm_pb_tag',
 				),
-				'description'		=> esc_html__( 'Choose which categories you would like to include in the carousel.', 'tm_builder' ),
+				'description'		=> esc_html__( 'Choose which categories you would like to include in the carousel.', 'power-builder' ),
 			),
 			'post_format' => array(
-				'label'					=> esc_html__( 'Include post format', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include post format', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'depends_show_if'		=> 'post_format',
 				'renderer'				=> 'tm_builder_include_categories_option',
@@ -132,94 +132,94 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 					'term_name'	=> 'post_format',
 					'input_name' => 'tm_pb_post_format',
 				),
-				'description'			=> esc_html__( 'Choose which post format you would like to include in the carousel.', 'tm_builder' ),
+				'description'			=> esc_html__( 'Choose which post format you would like to include in the carousel.', 'power-builder' ),
 			),
 			'include' => array(
-				'label'					=> esc_html__( 'Include post id', 'tm_builder' ),
+				'label'					=> esc_html__( 'Include post id', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'type'					=> 'text',
 				'depends_show_if'		=> 'include',
-				'description'			=> esc_html__( 'Enter post id you would like to include in the carousel. The separator gap. Example: 256 472 23 6', 'tm_builder' ),
+				'description'			=> esc_html__( 'Enter post id you would like to include in the carousel. The separator gap. Example: 256 472 23 6', 'power-builder' ),
 			),
 			'posts_per_page' => array(
-				'label'					=> esc_html__( 'Posts count ( Set 0 to show all ) ', 'tm_builder' ),
+				'label'					=> esc_html__( 'Posts count ( Set 0 to show all ) ', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'type'					=> 'range',
 				'default'				=> '12',
 				'depends_show_if_not'	=> 'include',
 			),
 			'post_offset' => array(
-				'label'					=> esc_html__( 'Offset post', 'tm_builder' ),
+				'label'					=> esc_html__( 'Offset post', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'type'					=> 'range',
 				'default'				=> '0',
 				'depends_show_if_not'	=> 'include',
 			),
 			'super_title' => array(
-				'label'					=> esc_html__( 'Super Title', 'tm_builder' ),
+				'label'					=> esc_html__( 'Super Title', 'power-builder' ),
 				'type'					=> 'text',
 				'option_category'		=> 'configuration',
 				'default'				=> $this->fields_defaults['super_title'][0],
 			),
 			'title' => array(
-				'label'					=> esc_html__( 'Title', 'tm_builder' ),
+				'label'					=> esc_html__( 'Title', 'power-builder' ),
 				'type'					=> 'text',
 				'option_category'		=> 'configuration',
 				'default'				=> $this->fields_defaults['title'][0],
 			),
 			'subtitle' => array(
-				'label'					=> esc_html__( 'Sub Title', 'tm_builder' ),
+				'label'					=> esc_html__( 'Sub Title', 'power-builder' ),
 				'type'					=> 'text',
 				'option_category'		=> 'configuration',
 				'default'				=> $this->fields_defaults['subtitle'][0],
 			),
 			'title_delimiter' => array(
-				'label'					=> esc_html__( 'Display title delimiter', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display title delimiter', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'				=> array(
 					'#tm_pb_background_color',
 				),
 			),
 			'title_length' => array(
-				'label'					=> esc_html__( 'Title words length ( Set 0 to hide title. )', 'tm_builder' ),
+				'label'					=> esc_html__( 'Title words length ( Set 0 to hide title. )', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'type'					=> 'range',
 				'default'				=> '5',
 			),
 			'excerpt_length' => array(
-				'label'					=> esc_html__( 'Excerpt words length ( Set 0 to hide excerpt. )', 'tm_builder' ),
+				'label'					=> esc_html__( 'Excerpt words length ( Set 0 to hide excerpt. )', 'power-builder' ),
 				'option_category'		=> 'basic_option',
 				'type'					=> 'range',
 				'default'				=> '5',
 			),
 			'image' => array(
-				'label'					=> esc_html__( 'Display post image', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display post image', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'more' => array(
-				'label'					=> esc_html__( 'Display more button', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display more button', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'affects'				=> array(
 					'#tm_pb_more_text',
 				),
 			),
 			'more_text' => array(
-				'label'					=> esc_html__( 'More button text', 'tm_builder' ),
+				'label'					=> esc_html__( 'More button text', 'power-builder' ),
 				'type'					=> 'text',
 				'option_category'		=> 'configuration',
 				'depends_show_if'		=> 'on',
@@ -227,12 +227,12 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 
 			),
 			'button_show_all' => array(
-				'label'					=> esc_html__( 'Display "Show all" button', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display "Show all" button', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'				=> array(
 					'#tm_pb_button_show_all_text',
@@ -240,96 +240,96 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 				),
 			),
 			'button_show_all_text' => array(
-				'label'           => esc_html__( 'Button text', 'tm_builder' ),
+				'label'           => esc_html__( 'Button text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'on',
 				'default'				=> $this->fields_defaults['button_show_all_text'][0],
 			),
 			'button_show_all_link' => array(
-				'label'           => esc_html__( 'Button link', 'tm_builder' ),
+				'label'           => esc_html__( 'Button link', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'on',
 				'default'				=> $this->fields_defaults['button_show_all_link'][0],
 			),
 			'meta_date' => array(
-				'label'					=> esc_html__( 'Display post meta data', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display post meta data', 'power-builder' ),
 				'type'					=> 'multiple_checkboxes',
 				'options'				=> array(
-					'date'			=> esc_html__( 'Date', 'tm_builder' ),
-					'author'		=> esc_html__( 'Author', 'tm_builder' ),
-					'comment_count'	=> esc_html__( 'Comment count', 'tm_builder' ),
-					'category'		=> esc_html__( 'Category', 'tm_builder' ),
-					'post_tag'		=> esc_html__( 'Tag', 'tm_builder' ),
+					'date'			=> esc_html__( 'Date', 'power-builder' ),
+					'author'		=> esc_html__( 'Author', 'power-builder' ),
+					'comment_count'	=> esc_html__( 'Comment count', 'power-builder' ),
+					'category'		=> esc_html__( 'Category', 'power-builder' ),
+					'post_tag'		=> esc_html__( 'Tag', 'power-builder' ),
 				),
 				'option_category' => 'configuration',
 			),
 			'image_size' => array(
-				'label'           => esc_html__( 'Featured Image Size', 'tm_builder' ),
+				'label'           => esc_html__( 'Featured Image Size', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => tm_builder_tools()->get_image_sizes(),
-				'description'     => esc_html__( 'Select featured thumbnail size.', 'tm_builder' ),
+				'description'     => esc_html__( 'Select featured thumbnail size.', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'					=> esc_html__( 'Disable on', 'tm_builder' ),
+				'label'					=> esc_html__( 'Disable on', 'power-builder' ),
 				'type'					=> 'multiple_checkboxes',
 				'options'				=> tm_pb_media_breakpoints(),
 				'additional_att'		=> 'disable_on',
 				'option_category'		=> 'configuration',
-				'description'			=> esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'			=> esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'					=> esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'					=> esc_html__( 'Admin Label', 'power-builder' ),
 				'type'					=> 'text',
 				'option_category'		=> 'configuration',
-				'description'			=> esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description'			=> esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 
 			/*  Advanced  */
 			'autoplay' => array(
-				'label'					=> esc_html__( 'Autoplay', 'tm_builder' ),
+				'label'					=> esc_html__( 'Autoplay', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 			),
 			'navigate_button' => array(
-				'label'					=> esc_html__( 'Display next/prev buttons', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display next/prev buttons', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 			),
 			'pagination' => array(
-				'label'					=> esc_html__( 'Display pagination buttons', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display pagination buttons', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 			),
 			'first_item_center' => array(
-				'label'					=> esc_html__( 'Display first item in center', 'tm_builder' ),
+				'label'					=> esc_html__( 'Display first item in center', 'power-builder' ),
 				'type'					=> 'yes_no_button',
 				'option_category'		=> 'configuration',
 				'options'				=> array(
-					'off'		=> esc_html__( 'No', 'tm_builder' ),
-					'on'		=> esc_html__( 'Yes', 'tm_builder' ),
+					'off'		=> esc_html__( 'No', 'power-builder' ),
+					'on'		=> esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'				=> 'advanced',
 			),
 			'counter_item_view' => array(
-				'label'					=> esc_html__( 'Multi Row slides layout', 'tm_builder' ),
+				'label'					=> esc_html__( 'Multi Row slides layout', 'power-builder' ),
 				'option_category'		=> 'configuration',
 				'type'					=> 'range',
 				'default'				=> '3',
@@ -343,14 +343,14 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 
 			/*  Custom CSS  */
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
@@ -455,7 +455,7 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 						'visible'		=> $comment_count_visible,
 						'html'			=> '<div class="post-meta post-comments">%1$s<a href="%2$s" %3$s %4$s>%5$s%6$s</a></div>',
 						'class'			=> 'post__comments-link',
-						'sufix'			=> _n_noop( '%s comment', '%s comments', 'tm_builder' ),
+						'sufix'			=> _n_noop( '%s comment', '%s comments', 'power-builder' ),
 					)
 				)
 			);
@@ -465,7 +465,7 @@ class Tm_Builder_Module_Carousel extends Tm_Builder_Module {
 				apply_filters( 'tm_pb_module_carousel_author_settings',
 					array(
 						'visible'		=> $author_visible,
-						'prefix'		=> esc_html__( 'Posted by ', 'tm_builder' ),
+						'prefix'		=> esc_html__( 'Posted by ', 'power-builder' ),
 						'html'			=> '<div class="post-meta posted-by">%1$s<a href="%2$s" %3$s %4$s rel="author">%5$s%6$s</a></div>',
 						'class'			=> 'posted-by__author',
 					)

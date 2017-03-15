@@ -11,7 +11,7 @@ if ( ! $this->is_meta_visible() ) {
 	if ( 'on' === $this->_var( 'show_author' ) ) {
 		echo tm_get_safe_localization(
 			sprintf(
-				__( 'by %s', 'tm_builder' ),
+				__( 'by %s', 'power-builder' ),
 				'<span class="author vcard">' .  tm_pb_get_the_author_posts_link() . '</span>'
 			)
 		);
@@ -20,7 +20,7 @@ if ( ! $this->is_meta_visible() ) {
 	if ( 'on' === $this->_var( 'show_date' ) ) {
 		echo tm_get_safe_localization(
 			sprintf(
-				__( '%s', 'tm_builder' ),
+				__( '%s', 'power-builder' ),
 				'<span class="published">' . esc_html( get_the_date( $this->_var( 'meta_date' ) ) ) . '</span>'
 			)
 		);
@@ -33,7 +33,7 @@ if ( ! $this->is_meta_visible() ) {
 	if ( 'on' === $this->_var( 'show_comments' ) ) {
 		printf(
 			esc_html(
-				_nx( '1 Comment', '%s Comments', get_comments_number(), 'number of comments', 'tm_builder' )
+				_nx( '1 Comment', '%s Comments', get_comments_number(), 'number of comments', 'power-builder' )
 			),
 			number_format_i18n( get_comments_number() )
 		);

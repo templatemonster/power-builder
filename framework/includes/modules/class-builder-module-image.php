@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Image extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Image', 'tm_builder' );
+		$this->name = esc_html__( 'Image', 'power-builder' );
 		$this->slug = 'tm_pb_image';
 		$this->icon = 'f03e';
 
@@ -53,11 +53,11 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'image' => array(
-				'label'    => esc_html__( 'Image', 'tm_builder' ),
+				'label'    => esc_html__( 'Image', 'power-builder' ),
 				'selector' => 'img',
 			),
 			'lightbox_link' => array(
-				'label'    => esc_html__( 'Lightbox link', 'tm_builder' ),
+				'label'    => esc_html__( 'Lightbox link', 'power-builder' ),
 				'selector' => '.tm_pb_lightbox_image',
 			),
 		);
@@ -66,12 +66,12 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 	function get_fields() {
 		// List of animation options
 		$animation_options_list = array(
-			'left'    => esc_html__( 'Left To Right', 'tm_builder' ),
-			'right'   => esc_html__( 'Right To Left', 'tm_builder' ),
-			'top'     => esc_html__( 'Top To Bottom', 'tm_builder' ),
-			'bottom'  => esc_html__( 'Bottom To Top', 'tm_builder' ),
-			'fade_in' => esc_html__( 'Fade In', 'tm_builder' ),
-			'off'     => esc_html__( 'No Animation', 'tm_builder' ),
+			'left'    => esc_html__( 'Left To Right', 'power-builder' ),
+			'right'   => esc_html__( 'Right To Left', 'power-builder' ),
+			'top'     => esc_html__( 'Top To Bottom', 'power-builder' ),
+			'bottom'  => esc_html__( 'Bottom To Top', 'power-builder' ),
+			'fade_in' => esc_html__( 'Fade In', 'power-builder' ),
+			'off'     => esc_html__( 'No Animation', 'power-builder' ),
 		);
 
 		$animation_option_name       = sprintf( '%1$s-animation', $this->slug );
@@ -95,69 +95,69 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 
 		$fields = array(
 			'src' => array(
-				'label'              => esc_html__( 'Image URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Image URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display.', 'power-builder' ),
 			),
 			'alt' => array(
-				'label'           => esc_html__( 'Image Alternative Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Alternative Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'This defines the HTML ALT text. A short description of your image can be placed here.', 'tm_builder' ),
+				'description'     => esc_html__( 'This defines the HTML ALT text. A short description of your image can be placed here.', 'power-builder' ),
 			),
 			'title_text' => array(
-				'label'           => esc_html__( 'Image Title Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Title Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'This defines the HTML Title text.', 'tm_builder' ),
+				'description'     => esc_html__( 'This defines the HTML Title text.', 'power-builder' ),
 			),
 			'show_in_lightbox' => array(
-				'label'             => esc_html__( 'Open in Lightbox', 'tm_builder' ),
+				'label'             => esc_html__( 'Open in Lightbox', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( "No", 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( "No", 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_url',
 					'#tm_pb_url_new_window',
 					'#tm_pb_use_overlay'
 				),
-				'description'       => esc_html__( 'Here you can choose whether or not the image should open in Lightbox. Note: if you select to open the image in Lightbox, url options below will be ignored.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether or not the image should open in Lightbox. Note: if you select to open the image in Lightbox, url options below will be ignored.', 'power-builder' ),
 			),
 			'url' => array(
-				'label'           => esc_html__( 'Link URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Link URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'depends_show_if' => 'off',
 				'affects'         => array(
 					'#tm_pb_use_overlay',
 				),
-				'description'     => esc_html__( 'If you would like your image to be a link, input your destination URL here. No link will be created if this field is left blank.', 'tm_builder' ),
+				'description'     => esc_html__( 'If you would like your image to be a link, input your destination URL here. No link will be created if this field is left blank.', 'power-builder' ),
 			),
 			'url_new_window' => array(
-				'label'             => esc_html__( 'Url Opens', 'tm_builder' ),
+				'label'             => esc_html__( 'Url Opens', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( 'In The Same Window', 'tm_builder' ),
-					'on'  => esc_html__( 'In The New Tab', 'tm_builder' ),
+					'off' => esc_html__( 'In The Same Window', 'power-builder' ),
+					'on'  => esc_html__( 'In The New Tab', 'power-builder' ),
 				),
 				'depends_show_if'   => 'off',
-				'description'       => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'power-builder' ),
 			),
 			'use_overlay' => array(
-				'label'             => esc_html__( 'Image Overlay', 'tm_builder' ),
+				'label'             => esc_html__( 'Image Overlay', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( 'Off', 'tm_builder' ),
-					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_overlay_icon_color',
@@ -165,62 +165,62 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 					'#tm_pb_hover_icon',
 				),
 				'depends_default'   => true,
-				'description'       => esc_html__( 'If enabled, an overlay color and icon will be displayed when a visitors hovers over the image', 'tm_builder' ),
+				'description'       => esc_html__( 'If enabled, an overlay color and icon will be displayed when a visitors hovers over the image', 'power-builder' ),
 			),
 			'overlay_icon_color' => array(
-				'label'             => esc_html__( 'Overlay Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Overlay Icon Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Here you can define a custom color for the overlay icon', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom color for the overlay icon', 'power-builder' ),
 			),
 			'hover_overlay_color' => array(
-				'label'             => esc_html__( 'Hover Overlay Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Hover Overlay Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'depends_show_if'   => 'on',
-				'description'       => esc_html__( 'Here you can define a custom color for the overlay', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom color for the overlay', 'power-builder' ),
 			),
 			'hover_icon' => array(
-				'label'               => esc_html__( 'Hover Icon Picker', 'tm_builder' ),
+				'label'               => esc_html__( 'Hover Icon Picker', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'configuration',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_icon_list',
 				'renderer_with_field' => true,
 				'depends_show_if'     => 'on',
-				'description'       => esc_html__( 'Here you can define a custom icon for the overlay', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can define a custom icon for the overlay', 'power-builder' ),
 			),
 			'animation' => array(
-				'label'             => esc_html__( 'Animation', 'tm_builder' ),
+				'label'             => esc_html__( 'Animation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'configuration',
 				'options'           => $animation_options,
-				'description'       => esc_html__( 'This controls the direction of the lazy-loading animation.', 'tm_builder' ),
+				'description'       => esc_html__( 'This controls the direction of the lazy-loading animation.', 'power-builder' ),
 			),
 			'sticky' => array(
-				'label'             => esc_html__( 'Remove Space Below The Image', 'tm_builder' ),
+				'label'             => esc_html__( 'Remove Space Below The Image', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off'     => esc_html__( 'No', 'tm_builder' ),
-					'on'      => esc_html__( 'Yes', 'tm_builder' ),
+					'off'     => esc_html__( 'No', 'power-builder' ),
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can choose whether or not the image should have a space below it.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose whether or not the image should have a space below it.', 'power-builder' ),
 			),
 			'align' => array(
-				'label'           => esc_html__( 'Image Alignment', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Alignment', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'layout',
 				'options' => array(
-					'left'   => esc_html__( 'Left', 'tm_builder' ),
-					'center' => esc_html__( 'Center', 'tm_builder' ),
-					'right'  => esc_html__( 'Right', 'tm_builder' ),
+					'left'   => esc_html__( 'Left', 'power-builder' ),
+					'center' => esc_html__( 'Center', 'power-builder' ),
+					'right'  => esc_html__( 'Right', 'power-builder' ),
 				),
-				'description'       => esc_html__( 'Here you can choose the image alignment.', 'tm_builder' ),
+				'description'       => esc_html__( 'Here you can choose the image alignment.', 'power-builder' ),
 			),
 			'max_width' => array(
-				'label'           => esc_html__( 'Image Max Width', 'tm_builder' ),
+				'label'           => esc_html__( 'Image Max Width', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'layout',
 				'tab_slug'        => 'advanced',
@@ -228,22 +228,22 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 				'validate_unit'   => true,
 			),
 			'force_fullwidth' => array(
-				'label'             => esc_html__( 'Force Fullwidth', 'tm_builder' ),
+				'label'             => esc_html__( 'Force Fullwidth', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'off' => esc_html__( "No", 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( "No", 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'tab_slug'    => 'advanced',
 			),
 			'always_center_on_mobile' => array(
-				'label'             => esc_html__( 'Always Center Image On Mobile', 'tm_builder' ),
+				'label'             => esc_html__( 'Always Center Image On Mobile', 'power-builder' ),
 				'type'              => 'yes_no_button',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( "No", 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( "No", 'power-builder' ),
 				),
 				'tab_slug'    => 'advanced',
 			),
@@ -257,27 +257,27 @@ class Tm_Builder_Module_Image extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

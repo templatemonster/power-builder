@@ -3,7 +3,7 @@ class Tm_Builder_Module_Sidebar extends Tm_Builder_Module {
 
 	function init() {
 
-		$this->name = esc_html__( 'Sidebar', 'tm_builder' );
+		$this->name = esc_html__( 'Sidebar', 'power-builder' );
 		$this->slug = 'tm_pb_sidebar';
 		$this->icon = 'f0db';
 
@@ -23,13 +23,13 @@ class Tm_Builder_Module_Sidebar extends Tm_Builder_Module {
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} h3, {$this->main_css_element} h4, {$this->main_css_element} .widget-title",
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element}, {$this->main_css_element} li, {$this->main_css_element} li:before, {$this->main_css_element} a",
 						'line_height' => "{$this->main_css_element} p",
@@ -39,11 +39,11 @@ class Tm_Builder_Module_Sidebar extends Tm_Builder_Module {
 		);
 		$this->custom_css_options = array(
 			'widget' => array(
-				'label'    => esc_html__( 'Widget', 'tm_builder' ),
+				'label'    => esc_html__( 'Widget', 'power-builder' ),
 				'selector' => '.tm_pb_widget',
 			),
 			'title' => array(
-				'label'    => esc_html__( 'Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Title', 'power-builder' ),
 				'selector' => 'h4.widgettitle',
 			),
 		);
@@ -85,43 +85,43 @@ class Tm_Builder_Module_Sidebar extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'orientation' => array(
-				'label'             => esc_html__( 'Orientation', 'tm_builder' ),
+				'label'             => esc_html__( 'Orientation', 'power-builder' ),
 				'type'              => 'select',
 				'option_category'   => 'layout',
 				'options'           => array(
-					'left'  => esc_html__( 'Left', 'tm_builder' ),
-					'right' => esc_html__( 'Right', 'tm_builder' ),
+					'left'  => esc_html__( 'Left', 'power-builder' ),
+					'right' => esc_html__( 'Right', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Choose which side of the page your sidebar will be on. This setting controls text orientation and border position.', 'tm_builder' ),
+				'description'        => esc_html__( 'Choose which side of the page your sidebar will be on. This setting controls text orientation and border position.', 'power-builder' ),
 			),
 			'area' => array(
-				'label'           => esc_html__( 'Widget Area', 'tm_builder' ),
+				'label'           => esc_html__( 'Widget Area', 'power-builder' ),
 				'renderer'        => 'tm_builder_get_widget_areas',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Select a widget-area that you would like to display. You can create new widget areas within the Appearances > Widgets tab.', 'tm_builder' )
+				'description'     => esc_html__( 'Select a widget-area that you would like to display. You can create new widget areas within the Appearances > Widgets tab.', 'power-builder' )
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

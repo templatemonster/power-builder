@@ -7,6 +7,8 @@
  * Author: TemplateMonster
  * Author URI: http://templatemonster.com/
  * License: GPLv2 or later
+ * Text Domain: power-builder
+ * Domain Path: /languages
  */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
@@ -43,7 +45,7 @@ class Tm_Builder_Plugin {
 		// Allow only one instance of the class
 		if ( true === self::$_instantiated ) {
 			wp_die( sprintf(
-				esc_html__( '%s is a singleton class and you cannot create a second instance.', 'tm_builder' ),
+				esc_html__( '%s is a singleton class and you cannot create a second instance.', 'power-builder' ),
 				get_class( $this )
 			) );
 		} else {
@@ -58,8 +60,6 @@ class Tm_Builder_Plugin {
 		defined( 'TM_BUILDER_ACTIVE' ) or define( 'TM_BUILDER_ACTIVE', true );
 		defined( 'TM_BUILDER_LAYOUT_POST_TYPE' ) or define( 'TM_BUILDER_LAYOUT_POST_TYPE', 'tm_pb_layout' );
 
-		load_plugin_textdomain( 'tm_builder', false, TM_BUILDER_DIR . '/languages/' );
-
 		require TM_BUILDER_DIR . '/functions.php';
 		require TM_BUILDER_DIR . '/framework/framework.php';
 
@@ -67,7 +67,7 @@ class Tm_Builder_Plugin {
 
 		$this->options->pagename = 'tm_builder_options';
 		$this->options->plugin_class_name = 'tm_builder';
-		$this->options->save_button_text = esc_html__( 'Save', 'tm_builder' );
+		$this->options->save_button_text = esc_html__( 'Save', 'power-builder' );
 		$this->options->top_level_page = 'toplevel_page';
 		$this->options->protocol = $this->getProtocol();
 		$this->options->config = get_option( 'tm_builder_options' ) || array();
@@ -82,6 +82,9 @@ class Tm_Builder_Plugin {
 		add_filter( 'the_content', array( $this, 'add_builder_content_wrapper' ) );
 
 		add_filter( 'tm_builder_inner_content_class', array( $this, 'add_builder_inner_content_class' ) );
+
+		// Internationalize the text strings used.
+		add_action( 'plugins_loaded', array( $this, 'lang' ) );
 	}
 
 	/**
@@ -114,8 +117,8 @@ class Tm_Builder_Plugin {
 			$read_more = sprintf(
 				' <a href="%1$s" title="%2$s" class="more-link">%3$s</a>',
 				esc_url( get_permalink() ),
-				sprintf( esc_attr__( 'Read more on %1$s', 'tm_builder' ), esc_html( get_the_title() ) ),
-				esc_html__( 'read more', 'tm_builder' )
+				sprintf( esc_attr__( 'Read more on %1$s', 'power-builder' ), esc_html( get_the_title() ) ),
+				esc_html__( 'read more', 'power-builder' )
 			);
 
 			// Use post excerpt if there's any. If there is no excerpt defined,
@@ -317,8 +320,8 @@ class Tm_Builder_Plugin {
 		}
 
 		add_menu_page(
-			esc_html__( 'Power', 'tm_builder' ),
-			esc_html__( 'Power', 'tm_builder' ),
+			esc_html__( 'Power', 'power-builder' ),
+			esc_html__( 'Power', 'power-builder' ),
 			'manage_options',
 			sprintf( 'edit.php?post_type=%s', TM_BUILDER_LAYOUT_POST_TYPE ),
 			'',
@@ -338,14 +341,11 @@ class Tm_Builder_Plugin {
 		wp_localize_script( 'tm-builder-js', 'builder_settings', array(
 			'tm_builder_nonce'           => wp_create_nonce( 'tm_builder_nonce' ),
 			'ajaxurl'                    => admin_url( 'admin-ajax.php', $this->getProtocol() ),
-			'authorize_text'             => esc_html__( 'Authorize', 'tm_builder' ),
-			'reauthorize_text'           => esc_html__( 'Re-Authorize', 'tm_builder' ),
+			'authorize_text'             => esc_html__( 'Authorize', 'power-builder' ),
+			'reauthorize_text'           => esc_html__( 'Re-Authorize', 'power-builder' ),
 			'save_settings'              => wp_create_nonce( 'save_settings' ),
 		) );
 
-		//wp_enqueue_script( 'tm-dashboard-mce-js', TM_BUILDER_DIR . '/dashboard/js/tinymce/js/tinymce/tinymce.min.js', array( 'jquery' ), TM_BUILDER_VERSION, true );
-		//wp_enqueue_style( 'tm-dashboard-css', TM_BUILDER_DIR . '/dashboard/css/tm-dashboard.css', array(), TM_BUILDER_VERSION );
-		//wp_enqueue_script( 'tm-dashboard-js', TM_BUILDER_DIR . '/dashboard/js/tm-dashboard.js', array( 'jquery' ), TM_BUILDER_VERSION, true );
 		wp_enqueue_script( 'wp-color-picker' );
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_media();
@@ -552,7 +552,7 @@ class Tm_Builder_Plugin {
 			if ( 'true' === $full_content ) {
 				$output .= sprintf(
 					'<li class="tm_dashboard_no_res">%1$s</li>',
-					esc_html__( 'No results found', 'tm_builder' )
+					esc_html__( 'No results found', 'power-builder' )
 				);
 			}
 		} else {
@@ -908,6 +908,16 @@ class Tm_Builder_Plugin {
 			unset( $this->options->config[ $option_key ] );
 			update_option( 'tm_builder_options', $this->options->config );
 		}
+	}
+
+
+	/**
+	 * Loads the translation files.
+	 *
+	 * @since 1.0.0
+	 */
+	function lang() {
+		load_plugin_textdomain( 'power-builder', false, TM_BUILDER_DIR . '/languages' );
 	}
 
 }

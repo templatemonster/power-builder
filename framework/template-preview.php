@@ -6,17 +6,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Early nonce check
 if ( ! isset( $_GET['tm_pb_preview_nonce'] ) || ! wp_verify_nonce( $_GET['tm_pb_preview_nonce'], 'tm_pb_preview_nonce' ) ) {
-	wp_die( esc_html__( 'Authentication failed. You cannot preview this item.', 'tm_builder' ) );
+	wp_die( esc_html__( 'Authentication failed. You cannot preview this item.', 'power-builder' ) );
 }
 
 // Logged in check
 if ( ! is_user_logged_in() ) {
-	wp_die( esc_html__( 'Authentication failed. You are not logged in.', 'tm_builder' ) );
+	wp_die( esc_html__( 'Authentication failed. You are not logged in.', 'power-builder' ) );
 }
 
 // Early permission check
 if ( ! current_user_can( 'edit_posts' ) ) {
-	wp_die( esc_html__( 'Authentication failed. You have no permission to preview this item.', 'tm_builder' ) );
+	wp_die( esc_html__( 'Authentication failed. You have no permission to preview this item.', 'power-builder' ) );
 }
 
 ?><!DOCTYPE html>
@@ -61,10 +61,10 @@ if ( ! current_user_can( 'edit_posts' ) ) {
 						if ( isset( $_POST['shortcode' ] ) ) {
 							if( ! isset( $_POST['tm_pb_preview_nonce'] ) || ! wp_verify_nonce( $_POST['tm_pb_preview_nonce'], 'tm_pb_preview_nonce' ) ) {
 								// Auth nonce
-								printf( '<p class="tm-pb-preview-message">%1$s</p>', esc_html__( 'Authentication failed. You cannot preview this item.', 'tm_builder' ) );
+								printf( '<p class="tm-pb-preview-message">%1$s</p>', esc_html__( 'Authentication failed. You cannot preview this item.', 'power-builder' ) );
 							} elseif( ! current_user_can( 'edit_posts' ) ) {
 								// Auth user
-								printf( '<p class="tm-pb-preview-message">%1$s</p>', esc_html__( 'Authentication failed. You have no permission to preview this item.', 'tm_builder' ) );
+								printf( '<p class="tm-pb-preview-message">%1$s</p>', esc_html__( 'Authentication failed. You have no permission to preview this item.', 'power-builder' ) );
 							} else {
 								// process content for builder plugin
 								if ( tm_is_builder_plugin_active() ) {
@@ -98,7 +98,7 @@ if ( ! current_user_can( 'edit_posts' ) ) {
 								echo $content;
 							}
 						} else {
-							printf( '<p class="tm-pb-preview-loading"><span>%1$s</span></p>', esc_html__( 'Loading preview...', 'tm_builder' ) );
+							printf( '<p class="tm-pb-preview-loading"><span>%1$s</span></p>', esc_html__( 'Loading preview...', 'power-builder' ) );
 						}
 					?>
 
@@ -106,11 +106,11 @@ if ( ! current_user_can( 'edit_posts' ) ) {
 					</div> <!-- #content -->
 					<div class="tm_pb_modal_overlay link-disabled">
 						<div class="tm_pb_prompt_modal">
-							<h3><?php esc_html_e( 'Link Disabled', 'tm_builder' ); ?></h3>
-							<p><?php esc_html_e( 'During preview, link to different page is disabled', 'tm_builder' ); ?></p>
+							<h3><?php esc_html_e( 'Link Disabled', 'power-builder' ); ?></h3>
+							<p><?php esc_html_e( 'During preview, link to different page is disabled', 'power-builder' ); ?></p>
 
 							<div class="tm_pb_prompt_buttons">
-								<a href="#" class="tm_pb_prompt_proceed"><?php esc_html_e( 'Close', 'tm_builder' ); ?></a>
+								<a href="#" class="tm_pb_prompt_proceed"><?php esc_html_e( 'Close', 'power-builder' ); ?></a>
 							</div>
 						</div><!-- .tm_pb_prompt_modal -->
 					</div><!-- .tm_pb_modal_overlay -->

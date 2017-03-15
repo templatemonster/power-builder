@@ -56,8 +56,8 @@ if ( ! class_exists( 'TM_Builder_Core' ) ) {
 
 			if ( ! $this->core ) {
 				wp_die(
-					__( 'Doing it wrong. get_core() function called before core was initalized', 'tm_builder' ),
-					__( 'Core called to early', 'tm_builder' )
+					__( 'Doing it wrong. get_core() function called before core was initalized', 'power-builder' ),
+					__( 'Core called to early', 'power-builder' )
 				);
 			}
 
@@ -100,7 +100,7 @@ if ( ! class_exists( 'TM_Builder_Core' ) ) {
 				$core_paths = array_values( $chery_core_version );
 				require_once( $core_paths[0] );
 			}else{
-				wp_die( __( 'Class Cherry_Core not found', 'tm_builder' ) );
+				wp_die( __( 'Class Cherry_Core not found', 'power-builder' ) );
 			}
 
 			$this->core = new Cherry_Core( array(
@@ -153,8 +153,8 @@ if ( ! class_exists( 'TM_Builder_Core' ) ) {
 						'value'              => '',
 						'multi_upload'       => false,
 						'library_type'       => 'image',
-						'upload_button_text' => esc_html__( 'Set thumbnail', 'tm_builder' ),
-						'label'              => esc_html__( 'Category thumbnail', 'tm_builder' ),
+						'upload_button_text' => esc_html__( 'Set thumbnail', 'power-builder' ),
+						'label'              => esc_html__( 'Category thumbnail', 'power-builder' ),
 					),
 				),
 			) );
@@ -168,8 +168,8 @@ if ( ! class_exists( 'TM_Builder_Core' ) ) {
 						'value'              => '',
 						'multi_upload'       => false,
 						'library_type'       => 'image',
-						'upload_button_text' => esc_html__( 'Set thumbnail', 'tm_builder' ),
-						'label'              => esc_html__( 'Tag thumbnail', 'tm_builder' ),
+						'upload_button_text' => esc_html__( 'Set thumbnail', 'power-builder' ),
+						'label'              => esc_html__( 'Tag thumbnail', 'power-builder' ),
 					),
 				),
 			) );

@@ -3,7 +3,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 	public static $module_class = '';
 
 	function init() {
-		$this->name            = esc_html__( 'Field', 'tm_builder' );
+		$this->name            = esc_html__( 'Field', 'power-builder' );
 		$this->slug            = 'tm_pb_contact_field';
 		$this->type            = 'child';
 		$this->child_title_var = 'field_id';
@@ -23,13 +23,13 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 			'select_first_blank',
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Field', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Field Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Field', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Field Settings', 'power-builder' );
 		$this->main_css_element = '%%order_class%%.tm_pb_contact_field .tm_pb_contact_form_input';
 		$this->advanced_options = array(
 			'fonts' => array(
 				'form_field'   => array(
-					'label'    => esc_html__( 'Field', 'tm_builder' ),
+					'label'    => esc_html__( 'Field', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element}",
 					),
@@ -49,84 +49,84 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'field_id' => array(
-				'label'       => esc_html__( 'Field ID', 'tm_builder' ),
+				'label'       => esc_html__( 'Field ID', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'Define the unique ID of this field. You should use only English characters without special characters and spaces.', 'tm_builder' ),
+				'description' => esc_html__( 'Define the unique ID of this field. You should use only English characters without special characters and spaces.', 'power-builder' ),
 			),
 			'field_title' => array(
-				'label'       => esc_html__( 'Title', 'tm_builder' ),
+				'label'       => esc_html__( 'Title', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'Here you can define the content that will be placed within the current tab.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can define the content that will be placed within the current tab.', 'power-builder' ),
 			),
 			'field_placeholder' => array(
-				'label'       => esc_html__( 'Placeholder', 'tm_builder' ),
+				'label'       => esc_html__( 'Placeholder', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'Here you can define the placeholder for the current field.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can define the placeholder for the current field.', 'power-builder' ),
 			),
 			'field_type' => array(
-				'label'       => esc_html__( 'Type', 'tm_builder' ),
+				'label'       => esc_html__( 'Type', 'power-builder' ),
 				'type'        => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'input'  => esc_html__( 'Input Field', 'tm_builder' ),
-					'email'  => esc_html__( 'Email Field', 'tm_builder' ),
-					'select' => esc_html__( 'Select Field', 'tm_builder' ),
-					'text'   => esc_html__( 'Textarea', 'tm_builder' ),
+					'input'  => esc_html__( 'Input Field', 'power-builder' ),
+					'email'  => esc_html__( 'Email Field', 'power-builder' ),
+					'select' => esc_html__( 'Select Field', 'power-builder' ),
+					'text'   => esc_html__( 'Textarea', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_select_options',
 					'#tm_pb_select_multiple',
 					'#tm_pb_select_first_blank',
 				),
-				'description' => esc_html__( 'Choose the type of field', 'tm_builder' ),
+				'description' => esc_html__( 'Choose the type of field', 'power-builder' ),
 			),
 			'select_options' => array(
-				'label'           => esc_html__( 'Type', 'tm_builder' ),
+				'label'           => esc_html__( 'Type', 'power-builder' ),
 				'type'            => 'textarea',
 				'option_category' => 'basic_option',
 				'depends_default' => true,
 				'depends_show_if' => 'select',
-				'description'     => esc_html__( 'Define select options. Separate options with ";". Separate option value from option label with "=="', 'tm_builder' ),
+				'description'     => esc_html__( 'Define select options. Separate options with ";". Separate option value from option label with "=="', 'power-builder' ),
 			),
 			'select_multiple' => array(
-				'label'           => esc_html__( 'Allow multiple selections', 'tm_builder' ),
+				'label'           => esc_html__( 'Allow multiple selections', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'depends_default' => true,
 				'depends_show_if' => 'select',
 			),
 			'select_first_blank' => array(
-				'label'           => esc_html__( 'Insert a placeholder as the first empty option', 'tm_builder' ),
+				'label'           => esc_html__( 'Insert a placeholder as the first empty option', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 				'depends_default' => true,
 				'depends_show_if' => 'select',
 			),
 			'required_mark' => array(
-				'label'           => esc_html__( 'Required Field', 'tm_builder' ),
+				'label'           => esc_html__( 'Required Field', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Define whether the field should be required or optional', 'tm_builder' ),
+				'description' => esc_html__( 'Define whether the field should be required or optional', 'power-builder' ),
 			),
 			'show_label' => array(
-				'label'           => esc_html__( 'Show field label', 'tm_builder' ),
+				'label'           => esc_html__( 'Show field label', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'layout',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
-					'off' => esc_html__( 'No', 'tm_builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
 				),
 			),
 			'field_width' => array(
@@ -143,13 +143,13 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 				),
 			),
 			'field_background_color' => array(
-				'label'             => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Background Color', 'power-builder' ),
 				'type'              => 'color-alpha',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'input_border_radius'   => array(
-				'label'             => esc_html__( 'Border Radius', 'tm_builder' ),
+				'label'             => esc_html__( 'Border Radius', 'power-builder' ),
 				'type'              => 'range',
 				'default'           => '0',
 				'range_settings'    => array(

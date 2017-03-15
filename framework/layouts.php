@@ -1,17 +1,17 @@
 <?php
 function tm_builder_register_layouts(){
 	$labels = array(
-		'name'               => esc_html_x( 'Layouts', 'Layout type general name', 'tm_builder' ),
-		'singular_name'      => esc_html_x( 'Layout', 'Layout type singular name', 'tm_builder' ),
-		'add_new'            => esc_html_x( 'Add New', 'Layout item', 'tm_builder' ),
-		'add_new_item'       => esc_html__( 'Add New Layout', 'tm_builder' ),
-		'edit_item'          => esc_html__( 'Edit Layout', 'tm_builder' ),
-		'new_item'           => esc_html__( 'New Layout', 'tm_builder' ),
-		'all_items'          => esc_html__( 'All Layouts', 'tm_builder' ),
-		'view_item'          => esc_html__( 'View Layout', 'tm_builder' ),
-		'search_items'       => esc_html__( 'Search Layouts', 'tm_builder' ),
-		'not_found'          => esc_html__( 'Nothing found', 'tm_builder' ),
-		'not_found_in_trash' => esc_html__( 'Nothing found in Trash', 'tm_builder' ),
+		'name'               => esc_html_x( 'Layouts', 'Layout type general name', 'power-builder' ),
+		'singular_name'      => esc_html_x( 'Layout', 'Layout type singular name', 'power-builder' ),
+		'add_new'            => esc_html_x( 'Add New', 'Layout item', 'power-builder' ),
+		'add_new_item'       => esc_html__( 'Add New Layout', 'power-builder' ),
+		'edit_item'          => esc_html__( 'Edit Layout', 'power-builder' ),
+		'new_item'           => esc_html__( 'New Layout', 'power-builder' ),
+		'all_items'          => esc_html__( 'All Layouts', 'power-builder' ),
+		'view_item'          => esc_html__( 'View Layout', 'power-builder' ),
+		'search_items'       => esc_html__( 'Search Layouts', 'power-builder' ),
+		'not_found'          => esc_html__( 'Nothing found', 'power-builder' ),
+		'not_found_in_trash' => esc_html__( 'Nothing found in Trash', 'power-builder' ),
 		'parent_item_colon'  => '',
 	);
 
@@ -37,7 +37,7 @@ function tm_builder_register_layouts(){
 	register_post_type( TM_BUILDER_LAYOUT_POST_TYPE, apply_filters( 'tm_pb_layout_args', $args ) );
 
 	$labels = array(
-		'name'              => esc_html__( 'Scope', 'tm_builder' )
+		'name'              => esc_html__( 'Scope', 'power-builder' )
 	);
 
 	register_taxonomy( 'scope', array( 'tm_pb_layout' ), array(
@@ -50,7 +50,7 @@ function tm_builder_register_layouts(){
 	) );
 
 	$labels = array(
-		'name'              => esc_html__( 'Layout Type', 'tm_builder' )
+		'name'              => esc_html__( 'Layout Type', 'power-builder' )
 	);
 
 	register_taxonomy( 'layout_type', array( 'tm_pb_layout' ), array(
@@ -63,7 +63,7 @@ function tm_builder_register_layouts(){
 	) );
 
 	$labels = array(
-		'name'              => esc_html__( 'Module Width', 'tm_builder' )
+		'name'              => esc_html__( 'Module Width', 'power-builder' )
 	);
 
 	register_taxonomy( 'module_width', array( 'tm_pb_layout' ), array(
@@ -76,7 +76,7 @@ function tm_builder_register_layouts(){
 	) );
 
 	$labels = array(
-		'name'              => esc_html__( 'Category', 'tm_builder' )
+		'name'              => esc_html__( 'Category', 'power-builder' )
 	);
 
 	register_taxonomy( 'layout_category', array( 'tm_pb_layout' ), array(
@@ -139,7 +139,7 @@ function tm_pb_layout_restrict_manage_posts() {
 
 	?>
 	<select name="built_for">
-		<option><?php esc_html_e( 'Built For Any', 'tm_builder' ); ?></option>
+		<option><?php esc_html_e( 'Built For Any', 'power-builder' ); ?></option>
 		<?php $is_default_added = false; ?>
 		<?php foreach ( $used_built_for_post_types as $built_for_post_type ) { ?>
 		<?php $is_default_post_type = in_array( $built_for_post_type, tm_pb_get_standard_post_types() );
@@ -164,8 +164,8 @@ function tm_pb_layout_manage_posts_columns( $columns ) {
 		$_new_columns[ $column_key ] = $column;
 
 		if ( 'taxonomy-layout_type' === $column_key ) {
-			$_new_columns['built_for'] = esc_html__( 'Built For', 'tm_builder' );
-			$_new_columns['layout_global'] = esc_html__( 'Global Layout', 'tm_builder' );
+			$_new_columns['built_for'] = esc_html__( 'Built For', 'power-builder' );
+			$_new_columns['layout_global'] = esc_html__( 'Global Layout', 'power-builder' );
 		}
 	}
 
@@ -177,7 +177,7 @@ function tm_pb_built_for_post_type_display( $post_type ) {
 	$standard_post_types = tm_pb_get_standard_post_types();
 
 	if ( in_array( $post_type, $standard_post_types ) ) {
-		return esc_html__( 'Standard', 'tm_builder' );
+		return esc_html__( 'Standard', 'power-builder' );
 	}
 
 	return $post_type;
@@ -418,7 +418,7 @@ function tm_pb_get_predefined_layouts() {
 	$layouts = array();
 
 	$layouts[] = array(
-		'name'    => esc_html__( 'About Us Button', 'tm_builder' ),
+		'name'    => esc_html__( 'About Us Button', 'power-builder' ),
 		'content' => '[tm_pb_section admin_label="section"][tm_pb_row admin_label="row"][tm_pb_column type="4_4"][tm_pb_button admin_label="Button" button_url="#about-us" url_new_window="off" button_text="About Us" button_alignment="left" custom_button="off" button_letter_spacing="0" button_use_icon="default" button_icon_placement="right" button_on_hover="on" button_letter_spacing_hover="0" /][/tm_pb_column][/tm_pb_row][/tm_pb_section]',
 	);
 

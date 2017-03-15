@@ -1,11 +1,11 @@
 <?php
 class Tm_Builder_Module_Social_Media_Follow extends Tm_Builder_Module {
 	function init() {
-		$this->name            = esc_html__( 'Social Media Follow', 'tm_builder' );
+		$this->name            = esc_html__( 'Social Media Follow', 'power-builder' );
 		$this->slug            = 'tm_pb_social_media_follow';
 		$this->icon            = 'f1e0';
 		$this->child_slug      = 'tm_pb_social_media_follow_network';
-		$this->child_item_text = esc_html__( 'Social Network', 'tm_builder' );
+		$this->child_item_text = esc_html__( 'Social Network', 'power-builder' );
 
 		$this->whitelisted_fields = array(
 			'link_shape',
@@ -24,15 +24,15 @@ class Tm_Builder_Module_Social_Media_Follow extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'social_follow' => array(
-				'label'    => esc_html__( 'Social Follow', 'tm_builder' ),
+				'label'    => esc_html__( 'Social Follow', 'power-builder' ),
 				'selector' => 'li',
 			),
 			'social_icon' => array(
-				'label'    => esc_html__( 'Social Icon', 'tm_builder' ),
+				'label'    => esc_html__( 'Social Icon', 'power-builder' ),
 				'selector' => 'li a.icon',
 			),
 			'follow_button' => array(
-				'label'    => esc_html__( 'Follow Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Follow Button', 'power-builder' ),
 				'selector' => 'li a.follow_button',
 			),
 		);
@@ -41,57 +41,57 @@ class Tm_Builder_Module_Social_Media_Follow extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'link_shape' => array(
-				'label'           => esc_html__( 'Link Shape', 'tm_builder' ),
+				'label'           => esc_html__( 'Link Shape', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'layout',
 				'options'         => array(
-					'rounded_rectangle' => esc_html__( 'Rounded Rectangle', 'tm_builder' ),
-					'circle'            => esc_html__( 'Circle', 'tm_builder' ),
+					'rounded_rectangle' => esc_html__( 'Rounded Rectangle', 'power-builder' ),
+					'circle'            => esc_html__( 'Circle', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Here you can choose the shape of your social network icons.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose the shape of your social network icons.', 'power-builder' ),
 			),
 			'url_new_window' => array(
-				'label'           => esc_html__( 'Url Opens', 'tm_builder' ),
+				'label'           => esc_html__( 'Url Opens', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'off' => esc_html__( 'In The Same Window', 'tm_builder' ),
-					'on'  => esc_html__( 'In The New Tab', 'tm_builder' ),
+					'off' => esc_html__( 'In The Same Window', 'power-builder' ),
+					'on'  => esc_html__( 'In The New Tab', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether or not your link opens in a new window', 'power-builder' ),
 			),
 			'follow_button' => array(
-				'label'           => esc_html__( 'Follow Button', 'tm_builder' ),
+				'label'           => esc_html__( 'Follow Button', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'           => array(
-					'off' => esc_html__( 'Off', 'tm_builder' ),
-					'on'  => esc_html__( 'On', 'tm_builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Here you can choose whether or not to include the follow button next to the icon.', 'tm_builder' ),
+				'description' => esc_html__( 'Here you can choose whether or not to include the follow button next to the icon.', 'power-builder' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

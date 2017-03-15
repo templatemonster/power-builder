@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Video extends Tm_Builder_Module {
 	function init() {
-		$this->name = esc_html__( 'Video', 'tm_builder' );
+		$this->name = esc_html__( 'Video', 'power-builder' );
 		$this->slug = 'tm_pb_video';
 		$this->icon = 'f03d';
 
@@ -27,7 +27,7 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'video_icon' => array(
-				'label'    => esc_html__( 'Video Icon', 'tm_builder' ),
+				'label'    => esc_html__( 'Video Icon', 'power-builder' ),
 				'selector' => '.tm_pb_video_play',
 			),
 		);
@@ -36,97 +36,97 @@ class Tm_Builder_Module_Video extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'src' => array(
-				'label'              => esc_html__( 'Video MP4/URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Video MP4/URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Video MP4 File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Video', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload your desired video in .MP4 format, or type in the URL to the video you would like to display', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Video MP4 File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Video', 'power-builder' ),
+				'description'        => esc_html__( 'Upload your desired video in .MP4 format, or type in the URL to the video you would like to display', 'power-builder' ),
 			),
 			'src_webm' => array(
-				'label'              => esc_html__( 'Video Webm', 'tm_builder' ),
+				'label'              => esc_html__( 'Video Webm', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
 				'data_type'          => 'video',
-				'upload_button_text' => esc_attr__( 'Upload a video', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose a Video WEBM File', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Video', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload the .WEBM version of your video here. All uploaded videos should be in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload a video', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose a Video WEBM File', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Video', 'power-builder' ),
+				'description'        => esc_html__( 'Upload the .WEBM version of your video here. All uploaded videos should be in both .MP4 .WEBM formats to ensure maximum compatibility in all browsers.', 'power-builder' ),
 			),
 			'image_src' => array(
-				'label'              => esc_html__( 'Image Overlay URL', 'tm_builder' ),
+				'label'              => esc_html__( 'Image Overlay URL', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
 				'additional_button'  => sprintf(
 					'<input type="button" class="button tm-pb-video-image-button" value="%1$s" />',
-					esc_attr__( 'Generate From Video', 'tm_builder' )
+					esc_attr__( 'Generate From Video', 'power-builder' )
 				),
 				'classes'            => 'tm_pb_video_overlay',
-				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'tm_builder' ),
+				'description'        => esc_html__( 'Upload your desired image, or type in the URL to the image you would like to display over your video. You can also generate a still image from your video.', 'power-builder' ),
 			),
 			'auto_play' => array(
-				'label'           => esc_html__( 'Auto play', 'tm_builder' ),
+				'label'           => esc_html__( 'Auto play', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Automatically plaing video when the page is loaded', 'tm_builder' ),
+				'description'        => esc_html__( 'Automatically plaing video when the page is loaded', 'power-builder' ),
 			),
 			'loop_play' => array(
-				'label'           => esc_html__( 'Loop', 'tm_builder' ),
+				'label'           => esc_html__( 'Loop', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Here you can choose whether or not to loop the video', 'tm_builder' ),
+				'description'        => esc_html__( 'Here you can choose whether or not to loop the video', 'power-builder' ),
 			),
 			'mute' => array(
-				'label'           => esc_html__( 'Mute', 'tm_builder' ),
+				'label'           => esc_html__( 'Mute', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'On', 'tm_builder' ),
-					'off' => esc_html__( 'Off', 'tm_builder' ),
+					'on'  => esc_html__( 'On', 'power-builder' ),
+					'off' => esc_html__( 'Off', 'power-builder' ),
 				),
-				'description'        => esc_html__( 'Here you can choose whether or not to mute the video', 'tm_builder' ),
+				'description'        => esc_html__( 'Here you can choose whether or not to mute the video', 'power-builder' ),
 			),
 			'play_icon_color' => array(
-				'label'             => esc_html__( 'Play Icon Color', 'tm_builder' ),
+				'label'             => esc_html__( 'Play Icon Color', 'power-builder' ),
 				'type'              => 'color',
 				'custom_color'      => true,
 				'tab_slug'          => 'advanced',
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm_builder' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm_builder' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm_builder' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm_builder' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm_builder' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

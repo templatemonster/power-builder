@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Bar_Counters_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name                        = esc_html__( 'Bar Counter', 'tm_builder' );
+		$this->name                        = esc_html__( 'Bar Counter', 'power-builder' );
 		$this->slug                        = 'tm_pb_counter';
 		$this->type                        = 'child';
 		$this->child_title_var             = 'content_new';
@@ -19,23 +19,23 @@ class Tm_Builder_Module_Bar_Counters_Item extends Tm_Builder_Module {
 			'percent' => array( '0' ),
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Bar Counter', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Bar Counter Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Bar Counter', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Bar Counter Settings', 'power-builder' );
 		$this->defaults                    = array(
 			'border_radius' => '0',
 		);
 
 		$this->custom_css_options = array(
 			'counter_title' => array(
-				'label'    => esc_html__( 'Counter Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Title', 'power-builder' ),
 				'selector' => '.tm_pb_counter_title',
 			),
 			'counter_container' => array(
-				'label'    => esc_html__( 'Counter Container', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Container', 'power-builder' ),
 				'selector' => '.tm_pb_counter_container',
 			),
 			'counter_amount' => array(
-				'label'    => esc_html__( 'Counter Amount', 'tm_builder' ),
+				'label'    => esc_html__( 'Counter Amount', 'power-builder' ),
 				'selector' => '.tm_pb_counter_amount',
 			),
 		);
@@ -44,37 +44,37 @@ class Tm_Builder_Module_Bar_Counters_Item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'content_new' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input a title for your bar.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input a title for your bar.', 'power-builder' ),
 			),
 			'percent' => array(
-				'label'           => esc_html__( 'Percent', 'tm_builder' ),
+				'label'           => esc_html__( 'Percent', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define a percentage for this bar.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a percentage for this bar.', 'power-builder' ),
 			),
 			'background_color' => array(
-				'label'        => esc_html__( 'Background Color', 'tm_builder' ),
+				'label'        => esc_html__( 'Background Color', 'power-builder' ),
 				'type'         => 'color-alpha',
 				'custom_color' => true,
 				'tab_slug'     => 'advanced',
 			),
 			'bar_background_color' => array(
-				'label'        => esc_html__( 'Bar Background Color', 'tm_builder' ),
+				'label'        => esc_html__( 'Bar Background Color', 'power-builder' ),
 				'type'         => 'color-alpha',
 				'custom_color' => true,
 				'tab_slug'     => 'advanced',
 			),
 			'label_color' => array(
-				'label'        => esc_html__( 'Label Color', 'tm_builder' ),
+				'label'        => esc_html__( 'Label Color', 'power-builder' ),
 				'type'         => 'color-alpha',
 				'custom_color' => true,
 				'tab_slug'     => 'advanced',
 			),
 			'percentage_color' => array(
-				'label'        => esc_html__( 'Percentage Color', 'tm_builder' ),
+				'label'        => esc_html__( 'Percentage Color', 'power-builder' ),
 				'type'         => 'color-alpha',
 				'custom_color' => true,
 				'tab_slug'     => 'advanced',

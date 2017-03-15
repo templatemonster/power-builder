@@ -1,7 +1,7 @@
 <?php
 class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 	function init() {
-		$this->name             = esc_html__( 'Pricing Table', 'tm_builder' );
+		$this->name             = esc_html__( 'Pricing Table', 'power-builder' );
 		$this->slug             = 'tm_pb_pricing_table';
 		$this->main_css_element = '%%order_class%%.tm_pb_pricing';
 		$this->type             = 'child';
@@ -42,17 +42,17 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 			'sticker_use_icon'   => array( 'on' ),
 			'sticker_icon'       => array( 'f164' ),
 			'sticker_icon_color' => array( $tm_secondary_color, 'only_default_setting' ),
-			'sticker_text'       => array( esc_html__( 'Sale', 'tm_builder' ) ),
+			'sticker_text'       => array( esc_html__( 'Sale', 'power-builder' ) ),
 			'sticker_bg_image'   => array( '' ),
 		);
 
-		$this->advanced_setting_title_text = esc_html__( 'New Pricing Table', 'tm_builder' );
-		$this->settings_text               = esc_html__( 'Pricing Table Settings', 'tm_builder' );
+		$this->advanced_setting_title_text = esc_html__( 'New Pricing Table', 'power-builder' );
+		$this->settings_text               = esc_html__( 'Pricing Table Settings', 'power-builder' );
 		$this->main_css_element = '%%order_class%%';
 		$this->advanced_options = array(
 			'fonts' => array(
 				'header' => array(
-					'label'    => esc_html__( 'Header', 'tm_builder' ),
+					'label'    => esc_html__( 'Header', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing_heading h2",
 					),
@@ -65,7 +65,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					),
 				),
 				'subheader' => array(
-					'label'    => esc_html__( 'Subheader', 'tm_builder' ),
+					'label'    => esc_html__( 'Subheader', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_best_value",
 					),
@@ -78,13 +78,13 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					),
 				),
 				'currency_frequency' => array(
-					'label'    => esc_html__( 'Currency &amp; Frequency', 'tm_builder' ),
+					'label'    => esc_html__( 'Currency &amp; Frequency', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_dollar_sign, {$this->main_css_element} .tm_pb_frequency",
 					),
 				),
 				'price' => array(
-					'label'    => esc_html__( 'Price', 'tm_builder' ),
+					'label'    => esc_html__( 'Price', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_sum",
 					),
@@ -97,7 +97,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					),
 				),
 				'body'   => array(
-					'label'    => esc_html__( 'Body', 'tm_builder' ),
+					'label'    => esc_html__( 'Body', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing li",
 					),
@@ -110,7 +110,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					),
 				),
 				'sticker' => array(
-					'label'    => esc_html__( 'Sticker text', 'tm_builder' ),
+					'label'    => esc_html__( 'Sticker text', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_pricing_sticker .tm_pb_sticker_text",
 					),
@@ -127,7 +127,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 			),
 			'button' => array(
 				'button' => array(
-					'label' => esc_html__( 'Button', 'tm_builder' ),
+					'label' => esc_html__( 'Button', 'power-builder' ),
 					'css'      => array(
 						'main' => "{$this->main_css_element} .tm_pb_button",
 					),
@@ -137,47 +137,47 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 
 		$this->custom_css_options = array(
 			'pricing_heading' => array(
-				'label'    => esc_html__( 'Pricing Heading', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Heading', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading',
 			),
 			'pricing_title' => array(
-				'label'    => esc_html__( 'Pricing Title', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Title', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading h2',
 			),
 			'pricing_subtitle' => array(
-				'label'    => esc_html__( 'Pricing Subtitle', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Subtitle', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_heading .tm_pb_best_value',
 			),
 			'pricing_top' => array(
-				'label'    => esc_html__( 'Pricing Top', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Top', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_content_top',
 			),
 			'price' => array(
-				'label'    => esc_html__( 'Price', 'tm_builder' ),
+				'label'    => esc_html__( 'Price', 'power-builder' ),
 				'selector' => '.tm_pb_tm_price',
 			),
 			'currency' => array(
-				'label'    => esc_html__( 'Currency', 'tm_builder' ),
+				'label'    => esc_html__( 'Currency', 'power-builder' ),
 				'selector' => '.tm_pb_dollar_sign',
 			),
 			'frequency' => array(
-				'label'    => esc_html__( 'Frequency', 'tm_builder' ),
+				'label'    => esc_html__( 'Frequency', 'power-builder' ),
 				'selector' => '.tm_pb_frequency',
 			),
 			'pricing_content' => array(
-				'label'    => esc_html__( 'Pricing Content', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Content', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_content',
 			),
 			'pricing_item' => array(
-				'label'    => esc_html__( 'Pricing Item', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Item', 'power-builder' ),
 				'selector' => 'ul.tm_pb_pricing li',
 			),
 			'pricing_item_excluded' => array(
-				'label'    => esc_html__( 'Excluded Item', 'tm_builder' ),
+				'label'    => esc_html__( 'Excluded Item', 'power-builder' ),
 				'selector' => 'ul.tm_pb_pricing li.tm_pb_not_available',
 			),
 			'pricing_button' => array(
-				'label'    => esc_html__( 'Pricing Button', 'tm_builder' ),
+				'label'    => esc_html__( 'Pricing Button', 'power-builder' ),
 				'selector' => '.tm_pb_pricing_table_button',
 			),
 		);
@@ -186,22 +186,22 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'featured' => array(
-				'label'           => esc_html__( 'Make This Table Featured', 'tm_builder' ),
+				'label'           => esc_html__( 'Make This Table Featured', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
-				'description' => esc_html__( 'Featuring a table will make it stand out from the rest.', 'tm_builder' ),
+				'description' => esc_html__( 'Featuring a table will make it stand out from the rest.', 'power-builder' ),
 			),
 			'sticker' => array(
-				'label'           => esc_html__( 'Use sticker', 'tm_builder' ),
+				'label'           => esc_html__( 'Use sticker', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_sticker_position',
@@ -212,70 +212,70 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 					'#tm_pb_sticker_icon_color',
 					'#tm_pb_sticker_icon_font_size',
 				),
-				'description' => esc_html__( 'Option determines whether or not to display the sticker', 'tm_builder' ),
+				'description' => esc_html__( 'Option determines whether or not to display the sticker', 'power-builder' ),
 			),
 			'sticker_position' => array(
-				'label'           => esc_html__( 'Sticker position', 'tm_builder' ),
+				'label'           => esc_html__( 'Sticker position', 'power-builder' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'top-right'  => esc_html__( 'Top right', 'tm_builder' ),
-					'top-center' => esc_html__( 'Top center', 'tm_builder' ),
-					'top-left'   => esc_html__( 'Top left', 'tm_builder' ),
+					'top-right'  => esc_html__( 'Top right', 'power-builder' ),
+					'top-center' => esc_html__( 'Top center', 'power-builder' ),
+					'top-left'   => esc_html__( 'Top left', 'power-builder' ),
 				),
-				'description'     => esc_html__( 'Define sticker position', 'tm_builder' ),
+				'description'     => esc_html__( 'Define sticker position', 'power-builder' ),
 			),
 			'sticker_bg_color' => array(
-				'label'           => esc_html__( 'Background color', 'tm_builder' ),
+				'label'           => esc_html__( 'Background color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'Here you can define a custom color for sticker background.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom color for sticker background.', 'power-builder' ),
 				'depends_default' => true,
 				'tab_slug'        => 'advanced',
 			),
 			'sticker_bg_image' => array(
-				'label'              => esc_html__( 'Sticker background image', 'tm_builder' ),
+				'label'              => esc_html__( 'Sticker background image', 'power-builder' ),
 				'type'               => 'upload',
 				'option_category'    => 'basic_option',
-				'upload_button_text' => esc_attr__( 'Upload an image', 'tm_builder' ),
-				'choose_text'        => esc_attr__( 'Choose an Image', 'tm_builder' ),
-				'update_text'        => esc_attr__( 'Set As Image', 'tm_builder' ),
-				'description'        => esc_html__( 'Upload an image to display at the bg of sticker.', 'tm_builder' ),
+				'upload_button_text' => esc_attr__( 'Upload an image', 'power-builder' ),
+				'choose_text'        => esc_attr__( 'Choose an Image', 'power-builder' ),
+				'update_text'        => esc_attr__( 'Set As Image', 'power-builder' ),
+				'description'        => esc_html__( 'Upload an image to display at the bg of sticker.', 'power-builder' ),
 				'tab_slug'           => 'advanced',
 			),
 			'sticker_use_icon' => array(
-				'label'           => esc_html__( 'Use sticker icon', 'tm_builder' ),
+				'label'           => esc_html__( 'Use sticker icon', 'power-builder' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm_builder' ),
-					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'power-builder' ),
+					'on'  => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects'           => array(
 					'#tm_pb_sticker_icon',
 					'#tm_pb_sticker_text',
 				),
-				'description' => esc_html__( 'Option determines whether or not to display the sticker icon', 'tm_builder' ),
+				'description' => esc_html__( 'Option determines whether or not to display the sticker icon', 'power-builder' ),
 			),
 			'sticker_icon' => array(
-				'label'               => esc_html__( 'Sticker icon', 'tm_builder' ),
+				'label'               => esc_html__( 'Sticker icon', 'power-builder' ),
 				'type'                => 'text',
 				'option_category'     => 'basic_option',
 				'class'               => array( 'tm-pb-font-icon' ),
 				'renderer'            => 'tm_pb_get_font_icon_list',
 				'renderer_with_field' => true,
-				'description'         => esc_html__( 'Choose an icon to display with table sticker.', 'tm_builder' ),
+				'description'         => esc_html__( 'Choose an icon to display with table sticker.', 'power-builder' ),
 				'depends_show_if'     => 'on',
 				'tab_slug'            => 'advanced',
 			),
 			'sticker_icon_color' => array(
-				'label'           => esc_html__( 'Icon or text Color', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon or text Color', 'power-builder' ),
 				'type'            => 'color-alpha',
-				'description'     => esc_html__( 'Here you can define a custom color for your icon or text.', 'tm_builder' ),
+				'description'     => esc_html__( 'Here you can define a custom color for your icon or text.', 'power-builder' ),
 				'depends_default' => true,
 				'tab_slug'        => 'advanced',
 			),
 			'sticker_icon_font_size' => array(
-				'label'           => esc_html__( 'Icon or text font size', 'tm_builder' ),
+				'label'           => esc_html__( 'Icon or text font size', 'power-builder' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'tab_slug'        => 'advanced',
@@ -297,64 +297,64 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 				'type' => 'skip',
 			),
 			'sticker_text' => array(
-				'label'           => esc_html__( 'Sticker text', 'tm_builder' ),
+				'label'           => esc_html__( 'Sticker text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'depends_show_if' => 'off',
-				'description'     => esc_html__( 'Define a text for the pricing sticker.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a text for the pricing sticker.', 'power-builder' ),
 			),
 
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm_builder' ),
+				'label'           => esc_html__( 'Title', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define a title for the pricing table.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a title for the pricing table.', 'power-builder' ),
 			),
 			'subtitle' => array(
-				'label'           => esc_html__( 'Subtitle', 'tm_builder' ),
+				'label'           => esc_html__( 'Subtitle', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Define a sub title for the table if desired.', 'tm_builder' ),
+				'description'     => esc_html__( 'Define a sub title for the table if desired.', 'power-builder' ),
 			),
 			'currency' => array(
-				'label'           => esc_html__( 'Currency', 'tm_builder' ),
+				'label'           => esc_html__( 'Currency', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input your desired currency symbol here.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input your desired currency symbol here.', 'power-builder' ),
 			),
 			'per' => array(
-				'label'           => esc_html__( 'Per', 'tm_builder' ),
+				'label'           => esc_html__( 'Per', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'If your pricing is subscription based, input the subscription payment cycle here.', 'tm_builder' ),
+				'description'     => esc_html__( 'If your pricing is subscription based, input the subscription payment cycle here.', 'power-builder' ),
 			),
 			'sum' => array(
-				'label'           => esc_html__( 'Price', 'tm_builder' ),
+				'label'           => esc_html__( 'Price', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the value of the product here.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the value of the product here.', 'power-builder' ),
 			),
 			'button_url' => array(
-				'label'           => esc_html__( 'Button URL', 'tm_builder' ),
+				'label'           => esc_html__( 'Button URL', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Input the destination URL for the signup button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Input the destination URL for the signup button.', 'power-builder' ),
 			),
 			'button_text' => array(
-				'label'           => esc_html__( 'Button Text', 'tm_builder' ),
+				'label'           => esc_html__( 'Button Text', 'power-builder' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Adjust the text used from the signup button.', 'tm_builder' ),
+				'description'     => esc_html__( 'Adjust the text used from the signup button.', 'power-builder' ),
 			),
 			'content_new' => array(
-				'label'           => esc_html__( 'Content', 'tm_builder' ),
+				'label'           => esc_html__( 'Content', 'power-builder' ),
 				'type'            => 'tiny_mce',
 				'option_category' => 'basic_option',
 				'description'     => sprintf(
 					'%1$s<br/> + %2$s<br/> - %3$s',
-					esc_html__( 'Input a list of features that are/are not included in the product. Separate items on a new line, and begin with either a + or - symbol: ', 'tm_builder' ),
-					esc_html__( 'Included option', 'tm_builder' ),
-					esc_html__( 'Excluded option', 'tm_builder' )
+					esc_html__( 'Input a list of features that are/are not included in the product. Separate items on a new line, and begin with either a + or - symbol: ', 'power-builder' ),
+					esc_html__( 'Included option', 'power-builder' ),
+					esc_html__( 'Excluded option', 'power-builder' )
 				),
 			),
 		);
