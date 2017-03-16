@@ -3,21 +3,21 @@ $grid-breakpoints: (
 	// Extra small screen / phone
 	xs: 0,
 	// Small screen / phone
-	sm: 544px,
+	sm: 600px,
 	// Medium screen / tablet
-	md: 768px,
+	md: 900px,
 	// Large screen / desktop
-	lg: 992px,
+	lg: 1200px,
 	// Extra large screen / wide desktop
-	xl: 1200px
+	xl: 1600px
 ) !default;
 
 // Grid containers
 $container-max-widths: (
-	sm: 576px,
-	md: 720px,
-	lg: 940px,
-	xl: 1140px
+	sm: 570px,
+	md: 820px,
+	lg: 1120px,
+	xl: 1440px
 ) !default;
 
 // Grid columns
