@@ -10,6 +10,7 @@
 			'html'        => '<a href="%1$s" %2$s><img src="%3$s" alt="%4$s"></a>',
 			'class'       => 'tm-posts_img',
 			'size'        => esc_attr( $this->_var( 'image_size' ) ),
+			'size'        => esc_attr( $this->_var( 'image_size' ) ),
 			'echo'        => true,
 		) );
 

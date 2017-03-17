@@ -201,8 +201,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '4_4':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 12,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 12,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 12,
 						'col-xl' => 12,
@@ -215,8 +215,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '1_2':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 6,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 6,
 						'col-xl' => 6,
@@ -229,8 +229,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '1_3':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 6,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 4,
 						'col-xl' => 4,
@@ -243,8 +243,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '1_4':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 6,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 3,
 						'col-xl' => 3,
@@ -257,8 +257,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '2_3':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 6,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 8,
 						'col-xl' => 8,
@@ -271,8 +271,8 @@ class Tm_Builder_Column extends Tm_Builder_Structure_Element {
 			case '3_4':
 				$grid = $this->generate_column_grid(
 					array(
-						'col-xs' => 12,
-						'col-sm' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 6,
+						'col-xs' => 'inherit' !== $tm_pb_responsive['phone'][ $array_index ] ? $tm_pb_responsive['phone'][ $array_index ] : 12,
+						'col-sm' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-md' => 'inherit' !== $tm_pb_responsive['tablet'][ $array_index ] ? $tm_pb_responsive['tablet'][ $array_index ] : 6,
 						'col-lg' => 'inherit' !== $tm_pb_responsive['laptop'][ $array_index ] ? $tm_pb_responsive['laptop'][ $array_index ] : 9,
 						'col-xl' => 9,

@@ -464,12 +464,14 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 		$data_map = array(
 			'phone'   => 'columns_phone',
 			'tablet'  => 'columns_tablet',
+			'laptop'  => 'columns_laptop',
 			'desktop' => 'columns',
 		);
 
 		$namespace = array(
 			'phone'   => 'sm',
 			'tablet'  => 'md',
+			'laptop'  => 'lg',
 			'desktop' => 'xl',
 		);
 

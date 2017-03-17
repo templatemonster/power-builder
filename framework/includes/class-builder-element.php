@@ -3480,7 +3480,7 @@ class Tm_Builder_Element {
 		$media_queries = array(
 			'min_width_1600' => '@media screen and ( min-width: 1601px )',
 
-			'sm_down'        => '@media screen and (max-width: 767px)',
+			'sm_down'        => '@media screen and (max-width: 599px)',
 			'md_down'        => '@media screen and (max-width: 1199px)',
 			'lg_down'        => '@media screen and (max-width: 1600px)',
 
