@@ -112,14 +112,10 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		$tm_accent_color = tm_builder_accent_color();
 
 		$image_icon_placement = array(
-			'top' => esc_html__( 'Top', 'power-builder' ),
+			'top'   => esc_html__( 'Top', 'power-builder' ),
+			'left'  => esc_html__( 'Left', 'power-builder' ),
+			'right' => esc_html__( 'Right', 'power-builder' ),
 		);
-
-		if ( ! is_rtl() ) {
-			$image_icon_placement['left'] = esc_html__( 'Left', 'power-builder' );
-		} else {
-			$image_icon_placement['right'] = esc_html__( 'Right', 'power-builder' );
-		}
 
 		$fields = array(
 			'title' => array(
@@ -494,9 +490,9 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 			$this->_var( 'text_orientation', 'right' );
 		}
 
-		if ( is_rtl() && 'left' === $this->_var( 'icon_placement' ) ) {
+		/*if ( is_rtl() && 'left' === $this->_var( 'icon_placement' ) ) {
 			$this->_var( 'icon_placement', 'right' );
-		}
+		}*/
 
 		if ( '' !== $this->_var( 'title' ) && '' !== $this->_var( 'url' ) ) {
 			$this->_var( 'title', sprintf( '<a href="%1$s"%3$s>%2$s</a>',

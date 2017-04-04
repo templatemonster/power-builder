@@ -5,10 +5,10 @@
   padding-right: 0.9375rem; }
   @media (min-width: 600px) {
     .container {
-      max-width: 570px; } }
+      max-width: 640px; } }
   @media (min-width: 900px) {
     .container {
-      max-width: 820px; } }
+      max-width: 940px; } }
   @media (min-width: 1200px) {
     .container {
       max-width: 1120px; } }
