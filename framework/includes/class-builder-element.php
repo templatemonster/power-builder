@@ -938,9 +938,15 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_border_color_hover",
 					"#tm_pb_{$option_name}_border_radius_hover",
 					"#tm_pb_{$option_name}_letter_spacing_hover",
+
+					"#tm_pb_{$option_name}_use_box_shadow",
+					"#tm_pb_{$option_name}_box_shadow_color",
+					"#tm_pb_{$option_name}_box_shadow_horizontal_length",
+					"#tm_pb_{$option_name}_box_shadow_vertical_length",
+					"#tm_pb_{$option_name}_box_shadow_blur_radius",
 				),
 				'shortcode_default' => 'off',
-				'tab_slug'	       	=> 'advanced',
+				'tab_slug'          => 'advanced',
 			);
 
 			$additional_options["{$option_name}_text_size"] = array(
@@ -1035,7 +1041,6 @@ class Tm_Builder_Element {
 				'type'            => 'select',
 				'option_category' => 'button',
 				'options'         => array(
-					'default' => esc_html__( 'Default', 'power-builder' ),
 					'on'      => esc_html__( 'Yes', 'power-builder' ),
 					'off'     => esc_html__( 'No', 'power-builder' ),
 				),
@@ -1081,21 +1086,8 @@ class Tm_Builder_Element {
 					'right'   => esc_html__( 'Right', 'power-builder' ),
 					'left'    => esc_html__( 'Left', 'power-builder' ),
 				),
-				'shortcode_default'   => 'right',
-				'tab_slug'	       	  => 'advanced',
-				'depends_show_if_not' => 'off',
-			);
-
-			$additional_options["{$option_name}_on_hover"] = array(
-				'label'           => sprintf( esc_html__( 'Only Show Icon On Hover for %1$s', 'power-builder' ), $option_settings['label'] ),
-				'type'            => 'yes_no_button',
-				'option_category' => 'button',
-				'options'         => array(
-					'on'      => esc_html__( 'Yes', 'power-builder' ),
-					'off'     => esc_html__( 'No', 'power-builder' ),
-				),
-				'shortcode_default'   => 'on',
-				'tab_slug'	       	  => 'advanced',
+				'shortcode_default'   => 'left',
+				'tab_slug'            => 'advanced',
 				'depends_show_if_not' => 'off',
 			);
 
@@ -1147,6 +1139,65 @@ class Tm_Builder_Element {
 				'type'            => 'range',
 				'option_category' => 'button',
 				'default'         => TM_Global_Settings::get_value( 'all_buttons_spacing_hover' ),
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_use_box_shadow"] = array(
+				'label'           => sprintf( esc_html__( 'Add %1$s box shadow', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'button',
+				'options'         => array(
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
+					'off'     => esc_html__( 'No', 'power-builder' ),
+				),
+				'affects' => array(
+					"#tm_pb_{$option_name}_box_shadow_color",
+					"#tm_pb_{$option_name}_box_shadow_horizontal_length",
+					"#tm_pb_{$option_name}_box_shadow_vertical_length",
+					"#tm_pb_{$option_name}_box_shadow_blur_radius",
+				),
+				'shortcode_default' => 'off',
+				'tab_slug'          => 'advanced',
+			);
+
+			$additional_options["{$option_name}_box_shadow_color"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Box Shadow Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_horizontal_length"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Shadow Horizontal Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_vertical_length"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Shadow Vertical Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_blur_radius"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Shadow Blur Radius', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
 				'tab_slug'        => 'advanced',
 				'mobile_options'  => true,
 				'depends_default' => true,
@@ -3041,7 +3092,6 @@ class Tm_Builder_Element {
 			$button_icon                        = $this->shortcode_atts["{$option_name}_icon"];
 			$button_icon_color                  = $this->shortcode_atts["{$option_name}_icon_color"];
 			$button_icon_placement              = $this->shortcode_atts["{$option_name}_icon_placement"];
-			$button_on_hover                    = $this->shortcode_atts["{$option_name}_on_hover"];
 			$button_text_color_hover            = $this->shortcode_atts["{$option_name}_text_color_hover"];
 			$button_bg_color_hover              = $this->shortcode_atts["{$option_name}_bg_color_hover"];
 			$button_border_color_hover          = $this->shortcode_atts["{$option_name}_border_color_hover"];
@@ -3072,8 +3122,7 @@ class Tm_Builder_Element {
 					%5$s
 					%6$s
 					%7$s
-					%8$s
-					%9$s',
+					%8$s',
 					'' !== $button_text_color ? sprintf( 'color:%1$s !important;', $button_text_color ) : '',
 					'' !== $button_bg_color ? sprintf( 'background:%1$s;', $button_bg_color ) : '',
 					'' !== $button_border_width && 'px' !== $button_border_width ? sprintf( 'border-width:%1$s !important;', tm_builder_process_range_value( $button_border_width ) ) : '',
@@ -3081,13 +3130,7 @@ class Tm_Builder_Element {
 					'' !== $button_border_radius && 'px' !== $button_border_radius ? sprintf( 'border-radius:%1$s;', tm_builder_process_range_value( $button_border_radius ) ) : '',
 					'' !== $button_letter_spacing && 'px' !== $button_letter_spacing ? sprintf( 'letter-spacing:%1$s;', tm_builder_process_range_value( $button_letter_spacing ) ) : '',
 					'' !== $button_text_size && 'px' !== $button_text_size ? sprintf( 'font-size:%1$s;', tm_builder_process_range_value( $button_text_size ) ) : '',
-					'' !== $button_font ? tm_builder_set_element_font( $button_font, true ) : '',
-					'off' === $button_on_hover ?
-						sprintf( 'padding-left:%1$s; padding-right: %2$s;',
-							'left' === $button_icon_placement ? '2em' : '0.7em',
-							'left' === $button_icon_placement ? '0.7em' : '2em'
-						)
-						: ''
+					'' !== $button_font ? tm_builder_set_element_font( $button_font, true ) : ''
 				);
 
 				self::set_style( $function_name, array(
@@ -3100,20 +3143,12 @@ class Tm_Builder_Element {
 					%2$s
 					%3$s
 					%4$s
-					%5$s
-					%6$s',
+					%5$s',
 					'' !== $button_text_color_hover ? sprintf( 'color:%1$s !important;', $button_text_color_hover ) : '',
 					'' !== $button_bg_color_hover ? sprintf( 'background:%1$s !important;', $button_bg_color_hover ) : '',
 					'' !== $button_border_color_hover ? sprintf( 'border-color:%1$s !important;', $button_border_color_hover ) : '',
 					'' !== $button_border_radius_hover ? sprintf( 'border-radius:%1$s;', tm_builder_process_range_value( $button_border_radius_hover ) ) : '',
-					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$spx;', $button_letter_spacing_hover ) : '',
-					( 'off' === $button_on_hover || 'off' === $button_use_icon ) ?
-						''
-						:
-						sprintf( 'padding-left:%1$s; padding-right: %2$s;',
-							'left' === $button_icon_placement ? '2em' : '0.7em',
-							'left' === $button_icon_placement ? '0.7em' : '2em'
-						)
+					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$spx;', $button_letter_spacing_hover ) : ''
 				);
 
 				self::set_style( $function_name, array(
@@ -3123,12 +3158,6 @@ class Tm_Builder_Element {
 
 				if ( 'off' === $button_use_icon ) {
 					$main_element_styles_after = 'display:none !important;';
-					/*$no_icon_styles = 'padding: 0.3em 1em !important;';
-
-					self::set_style( $function_name, array(
-						'selector'    => $css_element_processed . ',' . $css_element_processed . ':hover',
-						'declaration' => rtrim( $no_icon_styles ),
-					) );*/
 				} else {
 					if ( '' === $button_icon) {
 						$button_icon = 'f18e';
@@ -3144,43 +3173,24 @@ class Tm_Builder_Element {
 						'%1$s
 						%2$s
 						%3$s
-						%4$s
-						%5$s
-						%6$s',
+						%4$s',
 						'' !== $button_icon_color ? sprintf( 'color:%1$s;', $button_icon_color ) : '',
-						'' !== $button_icon_code ?
-							sprintf( 'line-height:%1$s;', '35' !== $button_icon_code ? '1.7em' : '1em' )
-							: '',
+						'' !== $button_icon_code ? sprintf( 'line-height:%1$s;', '35' !== $button_icon_code ? '1.7em' : '1em' ) : '',
 						'' !== $button_icon_code ? sprintf( 'font-size:%1$spx !important;', $button_icon_size ) : '',
-						sprintf( 'opacity:%1$s;', 'on' === $button_on_hover ? '0' : '1' ),
-						'' !== $button_icon_code ?
-							sprintf( '%1$s;',
-								'left' === $button_icon_placement
-									? 'left:0.6em'
-									: 'left:auto; margin-left: 0.6em'
-							)
-							: '',
 						'on' === $button_use_icon ? 'display: inline-block;' : ''
 					);
-
-					$hover_after_styles = 'on' === $button_on_hover ? 'opacity: 1;' : '';
-
-					self::set_style( $function_name, array(
-						'selector'    => $css_element_processed . ':hover:after',
-						'declaration' => rtrim( $hover_after_styles ),
-					) );
 
 					if ( '' === $button_icon ) {
 						$default_icons_size = $int_font_size . 'px';
 						$custom_icon_size = $button_text_size;
 
 						self::set_style( $function_name, array(
-							'selector'    => $css_element_processed . ':after',
+							'selector'    => $css_element_processed . ' .tm_pb_button_icon',
 							'declaration' => sprintf( 'font-size:%1$s;', $default_icons_size ),
 						) );
 
 						self::set_style( $function_name, array(
-							'selector'    => 'body.tm_button_custom_icon #page-container ' . $css_element . ':after',
+							'selector'    => 'body.tm_button_custom_icon #page-container ' . $css_element . ' .tm_pb_button_icon',
 							'declaration' => sprintf( 'font-size:%1$s;', $custom_icon_size ),
 						) );
 					}
@@ -3194,7 +3204,7 @@ class Tm_Builder_Element {
 
 					if ( ( '' !== $current_text_size && '0px' !== $current_text_size ) || '' !== $current_letter_spacing ) {
 						self::set_style( $function_name, array(
-							'selector'    => $css_element_processed . ',' . $css_element_processed . ':after',
+							'selector'    => $css_element_processed . ',' . $css_element_processed . ' .tm_pb_button_icon',
 							'declaration' => sprintf(
 								'%1$s
 								%2$s',
@@ -3218,7 +3228,7 @@ class Tm_Builder_Element {
 				}
 
 				self::set_style( $function_name, array(
-					'selector'    => $css_element_processed . ':after',
+					'selector'    => $css_element_processed . ' .tm_pb_button_icon',
 					'declaration' => rtrim( $main_element_styles_after ),
 				) );
 			}

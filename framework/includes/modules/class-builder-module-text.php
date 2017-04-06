@@ -49,16 +49,6 @@ class Tm_Builder_Module_Text extends Tm_Builder_Module {
 
 	function get_fields() {
 		$fields = array(
-			/*'background_layout' => array(
-				'label'             => esc_html__( 'Text Color', 'power-builder' ),
-				'type'              => 'select',
-				'option_category'   => 'configuration',
-				'options'           => array(
-					'light' => esc_html__( 'Dark', 'power-builder' ),
-					'dark'  => esc_html__( 'Light', 'power-builder' ),
-				),
-				'description'       => esc_html__( 'Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'power-builder' ),
-			),*/
 			'text_orientation' => array(
 				'label'             => esc_html__( 'Text Orientation', 'power-builder' ),
 				'type'              => 'select',
