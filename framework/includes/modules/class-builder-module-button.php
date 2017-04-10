@@ -17,9 +17,9 @@ class Tm_Builder_Module_Button extends Tm_Builder_Module {
 		);
 
 		$this->fields_defaults = array(
-			'url_new_window'    => array( 'off' ),
-			'simple_link'       => array( 'off' ),
-			'background_color'  => array( tm_builder_accent_color(), 'add_default_setting' ),
+			'url_new_window'        => array( 'off' ),
+			'simple_link'           => array( 'off' ),
+			'background_color'      => array( tm_builder_accent_color(), 'add_default_setting' ),
 		);
 
 		$this->main_css_element = '%%order_class%%';
@@ -161,6 +161,9 @@ class Tm_Builder_Module_Button extends Tm_Builder_Module {
 			) );
 		}
 
+		if ( 'on' === $simple_link ) {
+
+		}
 
 		$output = sprintf(
 			'<div class="tm_pb_button_module_wrapper tm_pb_module%8$s">

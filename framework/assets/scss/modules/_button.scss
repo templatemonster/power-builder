@@ -50,7 +50,13 @@
 		}
 
 		&.tm_pb_button_simple_link {
-
+			padding: 0;
+			color: #117bb8;
+			background-color: transparent;
+			border: none;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

@@ -1324,6 +1324,13 @@
     margin-left: 10px; }
   #tm_builder_outer_content .tm_pb_button.tm_pb_icon_left .tm_pb_button_icon {
     margin-right: 10px; }
+  #tm_builder_outer_content .tm_pb_button.tm_pb_button_simple_link {
+    padding: 0;
+    color: #117bb8;
+    background-color: transparent;
+    border: none; }
+    #tm_builder_outer_content .tm_pb_button.tm_pb_button_simple_link:hover {
+      text-decoration: underline; }
 
 #tm_builder_outer_content .tm_pb_promo {
   padding: 40px 60px;

@@ -940,10 +940,10 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_letter_spacing_hover",
 
 					"#tm_pb_{$option_name}_use_box_shadow",
-					"#tm_pb_{$option_name}_box_shadow_color",
+					/*"#tm_pb_{$option_name}_box_shadow_color",
 					"#tm_pb_{$option_name}_box_shadow_horizontal_length",
 					"#tm_pb_{$option_name}_box_shadow_vertical_length",
-					"#tm_pb_{$option_name}_box_shadow_blur_radius",
+					"#tm_pb_{$option_name}_box_shadow_blur_radius",*/
 				),
 				'shortcode_default' => 'off',
 				'tab_slug'          => 'advanced',
@@ -1050,8 +1050,8 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_on_hover",
 					"#tm_pb_{$option_name}_icon",
 				),
-				'shortcode_default' => 'on',
-				'tab_slug'	       	=> 'advanced',
+				'shortcode_default' => 'off',
+				'tab_slug'          => 'advanced',
 				'depends_default'   => true,
 			);
 
@@ -1159,6 +1159,8 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_box_shadow_blur_radius",
 				),
 				'shortcode_default' => 'off',
+				'default'           => 'off',
+				'depends_default'   => true,
 				'tab_slug'          => 'advanced',
 			);
 
@@ -3100,6 +3102,12 @@ class Tm_Builder_Element {
 			$button_letter_spacing_hover_tablet = $this->shortcode_atts["{$option_name}_letter_spacing_hover_tablet"];
 			$button_letter_spacing_hover_phone  = $this->shortcode_atts["{$option_name}_letter_spacing_hover_phone"];
 
+			$button_use_box_shadow               = $this->shortcode_atts["{$option_name}_use_box_shadow"];
+			$button_box_shadow_color             = $this->shortcode_atts["{$option_name}_box_shadow_color"];
+			$button_box_shadow_horizontal_length = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length"];
+			$button_box_shadow_vertical_length   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length"];
+			$button_box_shadow_blur_radius       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius"];
+
 			$this->set_module_cache( $function_name, 'button_icon_pos', $button_icon_placement );
 
 			if ( 'on' === $button_custom ) {
@@ -3114,6 +3122,18 @@ class Tm_Builder_Element {
 					$button_bg_color .= ' !important';
 				}
 
+				$button_shadow_styles = '';
+
+				if ( 'on' === $button_use_box_shadow ) {
+					$button_shadow_styles = sprintf(
+						'box-shadow:%1$s %2$s %3$s %4$s;',
+						$button_box_shadow_horizontal_length . 'px',
+						$button_box_shadow_vertical_length . 'px',
+						$button_box_shadow_blur_radius . 'px',
+						'' !== $button_box_shadow_color ? $button_box_shadow_color : 'transparent'
+					);
+				}
+
 				$main_element_styles = sprintf(
 					'%1$s
 					%2$s
@@ -3122,7 +3142,8 @@ class Tm_Builder_Element {
 					%5$s
 					%6$s
 					%7$s
-					%8$s',
+					%8$s
+					%9$s',
 					'' !== $button_text_color ? sprintf( 'color:%1$s !important;', $button_text_color ) : '',
 					'' !== $button_bg_color ? sprintf( 'background:%1$s;', $button_bg_color ) : '',
 					'' !== $button_border_width && 'px' !== $button_border_width ? sprintf( 'border-width:%1$s !important;', tm_builder_process_range_value( $button_border_width ) ) : '',
@@ -3130,7 +3151,8 @@ class Tm_Builder_Element {
 					'' !== $button_border_radius && 'px' !== $button_border_radius ? sprintf( 'border-radius:%1$s;', tm_builder_process_range_value( $button_border_radius ) ) : '',
 					'' !== $button_letter_spacing && 'px' !== $button_letter_spacing ? sprintf( 'letter-spacing:%1$s;', tm_builder_process_range_value( $button_letter_spacing ) ) : '',
 					'' !== $button_text_size && 'px' !== $button_text_size ? sprintf( 'font-size:%1$s;', tm_builder_process_range_value( $button_text_size ) ) : '',
-					'' !== $button_font ? tm_builder_set_element_font( $button_font, true ) : ''
+					'' !== $button_font ? tm_builder_set_element_font( $button_font, true ) : '',
+					'' !== $button_shadow_styles ? $button_shadow_styles : ''
 				);
 
 				self::set_style( $function_name, array(
@@ -3159,12 +3181,14 @@ class Tm_Builder_Element {
 				if ( 'off' === $button_use_icon ) {
 					$main_element_styles_after = 'display:none !important;';
 				} else {
+
 					if ( '' === $button_icon) {
 						$button_icon = 'f18e';
 					}
 
 					$button_icon_code = '' !== $button_icon ? str_replace( ';', '', str_replace( '&#x', '', html_entity_decode( tm_pb_process_font_icon( $button_icon ) ) ) ) : '';
 					$int_font_size = intval( str_replace( 'px', '', $button_text_size ) );
+
 					if ( '' !== $button_text_size ) {
 						$button_icon_size = $int_font_size;
 					}
