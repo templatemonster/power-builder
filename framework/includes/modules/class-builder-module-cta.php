@@ -206,6 +206,7 @@ class Tm_Builder_Module_CTA extends Tm_Builder_Module {
 				'max_width_phone',
 				'button_icon',
 				'custom_button',
+				'button_icon_placement'
 			)
 		);
 
@@ -243,6 +244,7 @@ class Tm_Builder_Module_CTA extends Tm_Builder_Module {
 		}
 
 		$button = '';
+
 		if ( '' !== $this->_var( 'button_url' ) && '' !== $this->_var( 'button_text' ) ) {
 			$button = $this->get_template_part( 'cta-button.php' );
 		}
