@@ -1041,8 +1041,8 @@ class Tm_Builder_Element {
 				'type'            => 'select',
 				'option_category' => 'button',
 				'options'         => array(
-					'on'      => esc_html__( 'Yes', 'power-builder' ),
 					'off'     => esc_html__( 'No', 'power-builder' ),
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects' => array(
 					"#tm_pb_{$option_name}_icon_color",
@@ -1149,8 +1149,8 @@ class Tm_Builder_Element {
 				'type'            => 'yes_no_button',
 				'option_category' => 'button',
 				'options'         => array(
-					'on'      => esc_html__( 'Yes', 'power-builder' ),
 					'off'     => esc_html__( 'No', 'power-builder' ),
+					'on'      => esc_html__( 'Yes', 'power-builder' ),
 				),
 				'affects' => array(
 					"#tm_pb_{$option_name}_box_shadow_color",
@@ -1159,7 +1159,6 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_box_shadow_blur_radius",
 				),
 				'shortcode_default' => 'off',
-				'default'           => 'off',
 				'depends_default'   => true,
 				'tab_slug'          => 'advanced',
 			);

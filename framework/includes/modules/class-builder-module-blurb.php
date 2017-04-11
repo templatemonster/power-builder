@@ -91,6 +91,14 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 					'important' => 'all',
 				),
 			),
+			'button' => array(
+				'button' => array(
+					'label' => esc_html__( 'Button', 'power-builder' ),
+					'css' => array(
+						'main' => $this->main_css_element . ' .tm_pb_button',
+					),
+				),
+			),
 		);
 		$this->custom_css_options = array(
 			'blurb_image' => array(
@@ -454,6 +462,10 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 				'icon_font_size_laptop',
 				'icon_font_size_tablet',
 				'icon_font_size_phone',
+
+				'custom_button',
+				'button_icon',
+				'button_icon_placement'
 			)
 		);
 
@@ -489,10 +501,6 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		if ( is_rtl() && 'left' === $this->_var( 'text_orientation' ) ) {
 			$this->_var( 'text_orientation', 'right' );
 		}
-
-		/*if ( is_rtl() && 'left' === $this->_var( 'icon_placement' ) ) {
-			$this->_var( 'icon_placement', 'right' );
-		}*/
 
 		if ( '' !== $this->_var( 'title' ) && '' !== $this->_var( 'url' ) ) {
 			$this->_var( 'title', sprintf( '<a href="%1$s"%3$s>%2$s</a>',
@@ -605,9 +613,28 @@ class Tm_Builder_Module_Blurb extends Tm_Builder_Module {
 		$url   = esc_url( $this->_var( 'url' ) );
 		$class = ( 'link' === $this->_var( 'button_type' ) ) ? 'tm_pb_link' : 'tm_pb_button';
 
+		$class .= ( 'left' === $this->_var( 'button_icon_placement' ) ) ? ' tm_pb_icon_left' : ' tm_pb_icon_right';
+
+		$icon = $this->_var( 'button_icon' );
+
+		if ( '' === $this->_var( 'button_icon' ) ) {
+			$icon = 'f18e';
+		}
+
+		$icon        = esc_attr( tm_pb_process_font_icon( $this->_var( 'button_icon' ) ) );
+		$icon_marker = ( '' !== $icon && 'on' === $this->_var( 'custom_button' ) && 'link' !== $this->_var( 'button_type' ) ) ? '<span class="tm_pb_button_icon">' . $icon . '</span>' : '';
+
 		return sprintf(
-			apply_filters( 'tm_pb_blurb_button_format', '<a href="%2$s" class="%3$s">%1$s</a>' ),
-			$text,
+			apply_filters(
+				'tm_pb_blurb_button_format',
+				'<a href="%2$s" class="%3$s">%1$s</a>'
+			),
+			sprintf(
+				'%1$s%2$s%3$s',
+				'left' === $this->_var( 'button_icon_placement' ) ? $icon_marker : '',
+				$text,
+				'right' === $this->_var( 'button_icon_placement' ) ? $icon_marker : ''
+			),
 			$url,
 			$class
 		);

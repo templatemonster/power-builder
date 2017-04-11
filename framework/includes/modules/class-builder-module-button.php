@@ -161,10 +161,6 @@ class Tm_Builder_Module_Button extends Tm_Builder_Module {
 			) );
 		}
 
-		if ( 'on' === $simple_link ) {
-
-		}
-
 		$output = sprintf(
 			'<div class="tm_pb_button_module_wrapper tm_pb_module%8$s">
 				<a class="tm_pb_button%5$s%7$s%9$s%10$s" href="%1$s"%3$s%4$s%6$s>%2$s</a>
