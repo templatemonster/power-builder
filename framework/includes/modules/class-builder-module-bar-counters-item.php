@@ -216,8 +216,8 @@ class Tm_Builder_Module_Bar_Counters_Item extends Tm_Builder_Module {
 
 		$this->_var( 'content', sanitize_text_field( $content ) );
 		$this->_var( 'percent', esc_attr( $percent ) );
-		$this->_var( 'background_color_style', sanitize_text_field( $background_color_style ) );
-		$this->_var( 'bar_color_style', sanitize_text_field( $bar_color_style ) );
+		$this->_var( 'background_color_style', $background_color_style );
+		$this->_var( 'bar_color_style', $bar_color_style );
 		$this->_var( 'module_class', esc_attr( ltrim( $module_class ) ) );
 
 		if ( isset( $tm_pb_counters_settings['use_percentages'] )
