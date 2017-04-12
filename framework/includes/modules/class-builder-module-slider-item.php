@@ -396,8 +396,10 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				'arrows_custom_color',
 				'button_icon',
 				'custom_button',
+				'button_icon_placement',
 				'button_2_icon',
 				'custom_button_2',
+				'button_2_icon_placement',
 				'background_position',
 				'background_size',
 				'use_bg_overlay',
@@ -476,15 +478,30 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				) );
 			}
 
+			$icon = $this->_var( 'button_icon' );
+
+			if ( '' === $this->_var( 'button_icon' ) ) {
+				$icon = 'f18e';
+			}
+
+			$icon        = esc_attr( tm_pb_process_font_icon( $icon ) );
+			$icon_marker = ( '' !== $icon && 'on' === $this->_var( 'custom_button' ) ) ? '<span class="tm_pb_button_icon">' . $icon . '</span>' : '';
+
 			$this->_var(
 				'button',
 				sprintf(
-					'<a href="%1$s" class="tm_pb_more_button tm_btn_1 tm_pb_button%3$s%5$s"%4$s>%2$s</a>',
+					'<a href="%1$s" class="tm_pb_more_button tm_btn_1 tm_pb_button%3$s%5$s%6$s"%4$s>%2$s</a>',
 					tm_builder_tools()->render_url( $this->_var( 'button_link' ) ),
-					esc_html( $this->_var( 'button_text' ) ),
+					sprintf(
+						'%1$s%2$s%3$s',
+						'left' === $this->_var( 'button_icon_placement' ) ? $icon_marker : '',
+						esc_html( $this->_var( 'button_text' ) ),
+						'right' === $this->_var( 'button_icon_placement' ) ? $icon_marker : ''
+					),
 					( 'on' === $tm_pb_slider_hide_mobile['hide_cta_on_mobile'] ? esc_attr( " {$hide_on_mobile_class}" ) : '' ),
 					( '' !== $custom_slide_icon ? sprintf( ' data-icon="%1$s"', $icon ) : '' ),
-					( '' !== $custom_slide_icon ? ' tm_pb_custom_button_icon' : '' )
+					( '' !== $custom_slide_icon ? ' tm_pb_custom_button_icon' : '' ),
+					( 'left' === $this->_var( 'button_icon_placement' ) ) ? ' tm_pb_icon_left' : ' tm_pb_icon_right'
 				)
 			);
 		}
@@ -505,15 +522,30 @@ class Tm_Builder_Module_Slider_Item extends Tm_Builder_Module {
 				) );
 			}
 
+			$icon_2 = $this->_var( 'button_2_icon' );
+
+			if ( '' === $this->_var( 'button_2_icon' ) ) {
+				$icon_2 = 'f18e';
+			}
+
+			$icon_2        = esc_attr( tm_pb_process_font_icon( $icon_2 ) );
+			$icon_marker = ( '' !== $icon && 'on' === $this->_var( 'custom_button_2' ) ) ? '<span class="tm_pb_button_icon">' . $icon_2 . '</span>' : '';
+
 			$this->_var(
 				'button_2',
 				sprintf(
-					'<a href="%1$s" class="tm_pb_more_button tm_btn_2 tm_pb_button%3$s%5$s"%4$s>%2$s</a>',
+					'<a href="%1$s" class="tm_pb_more_button tm_btn_2 tm_pb_button%3$s%5$s%6$s"%4$s>%2$s</a>',
 					tm_builder_tools()->render_url( $this->_var( 'button_2_link' ) ),
-					esc_html( $this->_var( 'button_2_text' ) ),
+					sprintf(
+						'%1$s%2$s%3$s',
+						'left' === $this->_var( 'button_2_icon_placement' ) ? $icon_marker : '',
+						esc_html( $this->_var( 'button_2_text' ) ),
+						'right' === $this->_var( 'button_2_icon_placement' ) ? $icon_marker : ''
+					),
 					( 'on' === $tm_pb_slider_hide_mobile['hide_cta_on_mobile'] ? esc_attr( " {$hide_on_mobile_class}" ) : '' ),
 					( '' !== $custom_slide_icon_2 ? sprintf( ' data-icon="%1$s"', $icon ) : '' ),
-					( '' !== $custom_slide_icon_2 ? ' tm_pb_custom_button_icon' : '' )
+					( '' !== $custom_slide_icon_2 ? ' tm_pb_custom_button_icon' : '' ),
+					( 'left' === $this->_var( 'button_2_icon_placement' ) ) ? ' tm_pb_icon_left' : ' tm_pb_icon_right'
 				)
 			);
 		}

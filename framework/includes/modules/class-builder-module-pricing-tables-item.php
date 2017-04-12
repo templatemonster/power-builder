@@ -389,6 +389,7 @@ class Tm_Builder_Module_Pricing_Tables_Item extends Tm_Builder_Module {
 				'button_text',
 				'custom_button',
 				'button_icon',
+				'button_icon_placement',
 			)
 		);
 
