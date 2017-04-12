@@ -2,9 +2,7 @@
 /**
  * Template part for carousel module displaying
  */
-$module_id    = trim( $this->_var( 'module_id' ) );
 $module_class = trim( $this->_var( 'module_class' ) );
-$module_id    = ! empty( $module_id ) ? sprintf( ' id="%s"', $module_id ) : '';
 $module_class = ! empty( $module_class ) ? sprintf( ' %s', $module_class ) : '';
 $template     = $this->_var( 'template' );
 
@@ -15,7 +13,6 @@ $divider_hide_on_mobile = $this->_var( 'divider_hide_on_mobile' );
 $children               = tm_builder_tools()->parse_children( $this->shortcode_content );
 
 $wrapper_atts = $this->prepare_atts( array(
-	'id' => $this->_var( 'module_id' ),
 	'class' => 'tm_pb_brands_showcase_module__wrapper ' . $this->_var( 'module_class' ),
 ) );
 

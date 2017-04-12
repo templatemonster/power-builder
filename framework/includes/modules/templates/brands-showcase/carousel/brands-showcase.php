@@ -11,7 +11,6 @@ $navigate_button = $this->_var( 'navigate_button' );
 $children = tm_builder_tools()->parse_children( $this->shortcode_content );
 
 $wrapper_atts = $this->prepare_atts( array(
-	'id' => $this->_var( 'module_id' ),
 	'class' => 'tm_pb_brands_showcase_module__wrapper ' . $this->_var( 'module_class' ),
 ) );
 
