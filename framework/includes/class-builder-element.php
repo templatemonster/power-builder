@@ -940,10 +940,6 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_letter_spacing_hover",
 
 					"#tm_pb_{$option_name}_use_box_shadow",
-					/*"#tm_pb_{$option_name}_box_shadow_color",
-					"#tm_pb_{$option_name}_box_shadow_horizontal_length",
-					"#tm_pb_{$option_name}_box_shadow_vertical_length",
-					"#tm_pb_{$option_name}_box_shadow_blur_radius",*/
 				),
 				'shortcode_default' => 'off',
 				'tab_slug'          => 'advanced',
@@ -1157,6 +1153,10 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_box_shadow_horizontal_length",
 					"#tm_pb_{$option_name}_box_shadow_vertical_length",
 					"#tm_pb_{$option_name}_box_shadow_blur_radius",
+					"#tm_pb_{$option_name}_box_shadow_color_hover",
+					"#tm_pb_{$option_name}_box_shadow_horizontal_length_hover",
+					"#tm_pb_{$option_name}_box_shadow_vertical_length_hover",
+					"#tm_pb_{$option_name}_box_shadow_blur_radius_hover",
 				),
 				'shortcode_default' => 'off',
 				'depends_default'   => true,
@@ -1196,6 +1196,47 @@ class Tm_Builder_Element {
 
 			$additional_options["{$option_name}_box_shadow_blur_radius"] = array(
 				'label'           => sprintf( esc_html__( '%1$s Box Shadow Blur Radius', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_color_hover"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Box Hover Shadow Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_horizontal_length_hover"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Hover Shadow Horizontal Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_vertical_length_hover"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Hover Shadow Vertical Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_blur_radius_hover"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Hover Shadow Blur Radius', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'range',
 				'option_category' => 'button',
 				'default'         => '0',
@@ -3107,6 +3148,11 @@ class Tm_Builder_Element {
 			$button_box_shadow_vertical_length   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length"];
 			$button_box_shadow_blur_radius       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius"];
 
+			$button_box_shadow_color_hover             = $this->shortcode_atts["{$option_name}_box_shadow_color_hover"];
+			$button_box_shadow_horizontal_length_hover = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length_hover"];
+			$button_box_shadow_vertical_length_hover   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length_hover"];
+			$button_box_shadow_blur_radius_hover       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius_hover"];
+
 			$this->set_module_cache( $function_name, 'button_icon_pos', $button_icon_placement );
 
 			if ( 'on' === $button_custom ) {
@@ -3122,6 +3168,7 @@ class Tm_Builder_Element {
 				}
 
 				$button_shadow_styles = '';
+				$button_shadow_hover_styles = '';
 
 				if ( 'on' === $button_use_box_shadow ) {
 					$button_shadow_styles = sprintf(
@@ -3130,6 +3177,14 @@ class Tm_Builder_Element {
 						$button_box_shadow_vertical_length . 'px',
 						$button_box_shadow_blur_radius . 'px',
 						'' !== $button_box_shadow_color ? $button_box_shadow_color : 'transparent'
+					);
+
+					$button_shadow_hover_styles = sprintf(
+						'box-shadow:%1$s %2$s %3$s %4$s;',
+						$button_box_shadow_horizontal_length_hover . 'px',
+						$button_box_shadow_vertical_length_hover . 'px',
+						$button_box_shadow_blur_radius_hover . 'px',
+						'' !== $button_box_shadow_color_hover ? $button_box_shadow_color_hover : 'transparent'
 					);
 				}
 
@@ -3164,12 +3219,14 @@ class Tm_Builder_Element {
 					%2$s
 					%3$s
 					%4$s
-					%5$s',
+					%5$s
+					%6$s',
 					'' !== $button_text_color_hover ? sprintf( 'color:%1$s !important;', $button_text_color_hover ) : '',
 					'' !== $button_bg_color_hover ? sprintf( 'background:%1$s !important;', $button_bg_color_hover ) : '',
 					'' !== $button_border_color_hover ? sprintf( 'border-color:%1$s !important;', $button_border_color_hover ) : '',
 					'' !== $button_border_radius_hover ? sprintf( 'border-radius:%1$s;', tm_builder_process_range_value( $button_border_radius_hover ) ) : '',
-					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$spx;', $button_letter_spacing_hover ) : ''
+					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$spx;', $button_letter_spacing_hover ) : '',
+					'' !== $button_shadow_hover_styles ? $button_shadow_hover_styles : ''
 				);
 
 				self::set_style( $function_name, array(
