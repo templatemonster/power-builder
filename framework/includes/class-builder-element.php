@@ -938,7 +938,9 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_border_color_hover",
 					"#tm_pb_{$option_name}_border_radius_hover",
 					"#tm_pb_{$option_name}_letter_spacing_hover",
-
+					"#tm_pb_{$option_name}_text_color_active",
+					"#tm_pb_{$option_name}_bg_color_active",
+					"#tm_pb_{$option_name}_border_color_active",
 					"#tm_pb_{$option_name}_use_box_shadow",
 				),
 				'shortcode_default' => 'off',
@@ -1140,6 +1142,39 @@ class Tm_Builder_Element {
 				'depends_default' => true,
 			);
 
+			$additional_options["{$option_name}_text_color_active"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Active Text Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
+			$additional_options["{$option_name}_bg_color_active"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Active Background Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
+			$additional_options["{$option_name}_border_color_active"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Active Border Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
 			$additional_options["{$option_name}_use_box_shadow"] = array(
 				'label'           => sprintf( esc_html__( 'Add %1$s box shadow', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'yes_no_button',
@@ -1157,6 +1192,9 @@ class Tm_Builder_Element {
 					"#tm_pb_{$option_name}_box_shadow_horizontal_length_hover",
 					"#tm_pb_{$option_name}_box_shadow_vertical_length_hover",
 					"#tm_pb_{$option_name}_box_shadow_blur_radius_hover",
+					"#tm_pb_{$option_name}_box_shadow_horizontal_length_active",
+					"#tm_pb_{$option_name}_box_shadow_vertical_length_active",
+					"#tm_pb_{$option_name}_box_shadow_blur_radius_active",
 				),
 				'shortcode_default' => 'off',
 				'depends_default'   => true,
@@ -1237,6 +1275,47 @@ class Tm_Builder_Element {
 
 			$additional_options["{$option_name}_box_shadow_blur_radius_hover"] = array(
 				'label'           => sprintf( esc_html__( '%1$s Box Hover Shadow Blur Radius', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_color_active"] = array(
+				'label'             => sprintf( esc_html__( '%1$s Box Active Shadow Color', 'power-builder' ), $option_settings['label'] ),
+				'type'              => 'color-alpha',
+				'option_category'   => 'button',
+				'custom_color'      => true,
+				'default'           => '',
+				'shortcode_default' => '',
+				'tab_slug'          => 'advanced',
+				'depends_default'   => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_horizontal_length_active"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Active Shadow Horizontal Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_vertical_length_active"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Active Shadow Vertical Length', 'power-builder' ), $option_settings['label'] ),
+				'type'            => 'range',
+				'option_category' => 'button',
+				'default'         => '0',
+				'tab_slug'        => 'advanced',
+				'mobile_options'  => true,
+				'depends_default' => true,
+			);
+
+			$additional_options["{$option_name}_box_shadow_blur_radius_active"] = array(
+				'label'           => sprintf( esc_html__( '%1$s Box Active Shadow Blur Radius', 'power-builder' ), $option_settings['label'] ),
 				'type'            => 'range',
 				'option_category' => 'button',
 				'default'         => '0',
@@ -3117,41 +3196,52 @@ class Tm_Builder_Element {
 		}
 
 		foreach ( $this->advanced_options['button'] as $option_name => $option_settings ) {
-			$button_custom                      = $this->shortcode_atts["custom_{$option_name}"];
-			$button_text_size                   = $this->shortcode_atts["{$option_name}_text_size"];
-			$button_text_size_tablet            = $this->shortcode_atts["{$option_name}_text_size_tablet"];
-			$button_text_size_phone             = $this->shortcode_atts["{$option_name}_text_size_phone"];
-			$button_text_color                  = $this->shortcode_atts["{$option_name}_text_color"];
-			$button_bg_color                    = $this->shortcode_atts["{$option_name}_bg_color"];
-			$button_border_width                = $this->shortcode_atts["{$option_name}_border_width"];
-			$button_border_color                = $this->shortcode_atts["{$option_name}_border_color"];
-			$button_border_radius               = $this->shortcode_atts["{$option_name}_border_radius"];
-			$button_font                        = $this->shortcode_atts["{$option_name}_font"];
-			$button_letter_spacing              = $this->shortcode_atts["{$option_name}_letter_spacing"];
-			$button_letter_spacing_tablet       = $this->shortcode_atts["{$option_name}_letter_spacing_tablet"];
-			$button_letter_spacing_phone        = $this->shortcode_atts["{$option_name}_letter_spacing_phone"];
-			$button_use_icon                    = $this->shortcode_atts["{$option_name}_use_icon"];
-			$button_icon                        = $this->shortcode_atts["{$option_name}_icon"];
-			$button_icon_color                  = $this->shortcode_atts["{$option_name}_icon_color"];
-			$button_icon_placement              = $this->shortcode_atts["{$option_name}_icon_placement"];
-			$button_text_color_hover            = $this->shortcode_atts["{$option_name}_text_color_hover"];
-			$button_bg_color_hover              = $this->shortcode_atts["{$option_name}_bg_color_hover"];
-			$button_border_color_hover          = $this->shortcode_atts["{$option_name}_border_color_hover"];
-			$button_border_radius_hover         = $this->shortcode_atts["{$option_name}_border_radius_hover"];
-			$button_letter_spacing_hover        = $this->shortcode_atts["{$option_name}_letter_spacing_hover"];
-			$button_letter_spacing_hover_tablet = $this->shortcode_atts["{$option_name}_letter_spacing_hover_tablet"];
-			$button_letter_spacing_hover_phone  = $this->shortcode_atts["{$option_name}_letter_spacing_hover_phone"];
+			$button_custom                              = $this->shortcode_atts["custom_{$option_name}"];
+			$button_text_size                           = $this->shortcode_atts["{$option_name}_text_size"];
+			$button_text_size_tablet                    = $this->shortcode_atts["{$option_name}_text_size_tablet"];
+			$button_text_size_phone                     = $this->shortcode_atts["{$option_name}_text_size_phone"];
+			$button_text_color                          = $this->shortcode_atts["{$option_name}_text_color"];
+			$button_bg_color                            = $this->shortcode_atts["{$option_name}_bg_color"];
+			$button_border_width                        = $this->shortcode_atts["{$option_name}_border_width"];
+			$button_border_color                        = $this->shortcode_atts["{$option_name}_border_color"];
+			$button_border_radius                       = $this->shortcode_atts["{$option_name}_border_radius"];
+			$button_font                                = $this->shortcode_atts["{$option_name}_font"];
+			$button_letter_spacing                      = $this->shortcode_atts["{$option_name}_letter_spacing"];
+			$button_letter_spacing_tablet               = $this->shortcode_atts["{$option_name}_letter_spacing_tablet"];
+			$button_letter_spacing_phone                = $this->shortcode_atts["{$option_name}_letter_spacing_phone"];
+			$button_use_icon                            = $this->shortcode_atts["{$option_name}_use_icon"];
+			$button_icon                                = $this->shortcode_atts["{$option_name}_icon"];
+			$button_icon_color                          = $this->shortcode_atts["{$option_name}_icon_color"];
+			$button_icon_placement                      = $this->shortcode_atts["{$option_name}_icon_placement"];
 
-			$button_use_box_shadow               = $this->shortcode_atts["{$option_name}_use_box_shadow"];
-			$button_box_shadow_color             = $this->shortcode_atts["{$option_name}_box_shadow_color"];
-			$button_box_shadow_horizontal_length = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length"];
-			$button_box_shadow_vertical_length   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length"];
-			$button_box_shadow_blur_radius       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius"];
+			$button_text_color_hover                    = $this->shortcode_atts["{$option_name}_text_color_hover"];
+			$button_bg_color_hover                      = $this->shortcode_atts["{$option_name}_bg_color_hover"];
+			$button_border_color_hover                  = $this->shortcode_atts["{$option_name}_border_color_hover"];
 
-			$button_box_shadow_color_hover             = $this->shortcode_atts["{$option_name}_box_shadow_color_hover"];
-			$button_box_shadow_horizontal_length_hover = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length_hover"];
-			$button_box_shadow_vertical_length_hover   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length_hover"];
-			$button_box_shadow_blur_radius_hover       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius_hover"];
+			$button_text_color_active                   = $this->shortcode_atts["{$option_name}_text_color_active"];
+			$button_bg_color_active                     = $this->shortcode_atts["{$option_name}_bg_color_active"];
+			$button_border_color_active                 = $this->shortcode_atts["{$option_name}_border_color_active"];
+
+			$button_border_radius_hover                 = $this->shortcode_atts["{$option_name}_border_radius_hover"];
+			$button_letter_spacing_hover                = $this->shortcode_atts["{$option_name}_letter_spacing_hover"];
+			$button_letter_spacing_hover_tablet         = $this->shortcode_atts["{$option_name}_letter_spacing_hover_tablet"];
+			$button_letter_spacing_hover_phone          = $this->shortcode_atts["{$option_name}_letter_spacing_hover_phone"];
+
+			$button_use_box_shadow                      = $this->shortcode_atts["{$option_name}_use_box_shadow"];
+			$button_box_shadow_color                    = $this->shortcode_atts["{$option_name}_box_shadow_color"];
+			$button_box_shadow_horizontal_length        = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length"];
+			$button_box_shadow_vertical_length          = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length"];
+			$button_box_shadow_blur_radius              = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius"];
+
+			$button_box_shadow_color_hover              = $this->shortcode_atts["{$option_name}_box_shadow_color_hover"];
+			$button_box_shadow_horizontal_length_hover  = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length_hover"];
+			$button_box_shadow_vertical_length_hover    = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length_hover"];
+			$button_box_shadow_blur_radius_hover        = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius_hover"];
+
+			$button_box_shadow_color_active             = $this->shortcode_atts["{$option_name}_box_shadow_color_active"];
+			$button_box_shadow_horizontal_length_active = $this->shortcode_atts["{$option_name}_box_shadow_horizontal_length_active"];
+			$button_box_shadow_vertical_length_active   = $this->shortcode_atts["{$option_name}_box_shadow_vertical_length_active"];
+			$button_box_shadow_blur_radius_active       = $this->shortcode_atts["{$option_name}_box_shadow_blur_radius_active"];
 
 			$this->set_module_cache( $function_name, 'button_icon_pos', $button_icon_placement );
 
@@ -3169,6 +3259,7 @@ class Tm_Builder_Element {
 
 				$button_shadow_styles = '';
 				$button_shadow_hover_styles = '';
+				$button_shadow_active_styles = '';
 
 				if ( 'on' === $button_use_box_shadow ) {
 					$button_shadow_styles = sprintf(
@@ -3185,6 +3276,14 @@ class Tm_Builder_Element {
 						$button_box_shadow_vertical_length_hover . 'px',
 						$button_box_shadow_blur_radius_hover . 'px',
 						'' !== $button_box_shadow_color_hover ? $button_box_shadow_color_hover : 'transparent'
+					);
+
+					$button_shadow_active_styles = sprintf(
+						'box-shadow:%1$s %2$s %3$s %4$s;',
+						$button_box_shadow_horizontal_length_active . 'px',
+						$button_box_shadow_vertical_length_active . 'px',
+						$button_box_shadow_vertical_length_active . 'px',
+						'' !== $button_box_shadow_color_active ? $button_box_shadow_color_active : 'transparent'
 					);
 				}
 
@@ -3214,6 +3313,21 @@ class Tm_Builder_Element {
 					'declaration' => rtrim( $main_element_styles ),
 				) );
 
+				$main_element_styles_active = sprintf(
+					'%1$s
+					%2$s
+					%3$s',
+					'' !== $button_text_color_active ? sprintf( 'color:%1$s !important;', $button_text_color_active ) : '',
+					'' !== $button_bg_color_active ? sprintf( 'background:%1$s !important;', $button_bg_color_active ) : '',
+					'' !== $button_border_color_active ? sprintf( 'border-color:%1$s !important;', $button_border_color_active ) : '',
+					'' !== $button_shadow_active_styles ? $button_shadow_active_styles : ''
+				);
+
+				self::set_style( $function_name, array(
+					'selector'    => $css_element_processed . ':active',
+					'declaration' => rtrim( $main_element_styles_active ),
+				) );
+
 				$main_element_styles_hover = sprintf(
 					'%1$s
 					%2$s
@@ -3233,6 +3347,7 @@ class Tm_Builder_Element {
 					'selector'    => $css_element_processed . ':hover',
 					'declaration' => rtrim( $main_element_styles_hover ),
 				) );
+
 
 				if ( 'off' === $button_use_icon ) {
 					$main_element_styles_after = 'display:none !important;';
