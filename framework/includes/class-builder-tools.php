@@ -129,17 +129,17 @@ if ( ! class_exists( 'TM_Builder_Tools' ) ) {
 		public function get_cols( $module ) {
 
 			$data_map = array(
-				'desktop' => 'columns',
-				'laptop'  => 'columns_laptop',
-				'tablet'  => 'columns_tablet',
 				'phone'   => 'columns_phone',
+				'tablet'  => 'columns_tablet',
+				'laptop'  => 'columns_laptop',
+				'desktop' => 'columns',
 			);
 
 			$namespace = array(
-				'desktop' => 'xl',
+				'phone'   => 'xs',
+				'tablet'  => 'sm',
 				'laptop'  => 'lg',
-				'tablet'  => 'md',
-				'phone'   => 'sm',
+				'desktop' => 'xl',
 			);
 
 			$result = array();
