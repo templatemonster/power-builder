@@ -72,12 +72,7 @@ class Tm_Builder_Module_Slider extends Tm_Builder_Module {
 						'main' => "{$this->main_css_element} .tm_pb_slide_content",
 					),
 				),
-			),
-			'button' => array(
-				'button' => array(
-					'label' => esc_html__( 'Button', 'power-builder' ),
-				),
-			),
+			)
 		);
 		$this->custom_css_options = array(
 			'slide_description' => array(
