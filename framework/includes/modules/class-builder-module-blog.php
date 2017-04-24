@@ -462,17 +462,17 @@ class Tm_Builder_Module_Blog extends Tm_Builder_Module {
 	public function get_cols() {
 
 		$data_map = array(
-			'phone'   => 'columns_phone',
-			'tablet'  => 'columns_tablet',
-			'laptop'  => 'columns_laptop',
-			'desktop' => 'columns',
+			'phone'        => 'columns_phone',
+			'tablet'       => 'columns_tablet',
+			'laptop'       => 'columns_laptop',
+			'desktop'      => 'columns',
 		);
 
 		$namespace = array(
-			'phone'   => 'sm',
-			'tablet'  => 'md',
-			'laptop'  => 'lg',
-			'desktop' => 'xl',
+			'phone'        => 'xs',
+			'tablet'       => 'sm',
+			'laptop'       => 'lg',
+			'desktop'      => 'xl',
 		);
 
 		$result = array();
