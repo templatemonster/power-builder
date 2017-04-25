@@ -3389,6 +3389,18 @@ class Tm_Builder_Element {
 							'declaration' => sprintf( 'font-size:%1$s;', $custom_icon_size ),
 						) );
 					}
+
+					$icon_family = tm_builder_get_icon_family();
+
+					if ( $icon_family ) {
+						self::set_style( $function_name, array(
+							'selector'    => $css_element_processed . ' .tm_pb_button_icon',
+							'declaration' => sprintf(
+								'font-family: "%1$s" !important;',
+								esc_attr( $icon_family )
+							),
+						) );
+					}
 				}
 
 				foreach( array( 'laptop', 'tablet', 'phone' ) as $device ) {
