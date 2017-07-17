@@ -955,12 +955,20 @@ function tm_pb_maybe_add_advanced_styles() {
 	$style = TM_Builder_Element::get_style();
 
 	if ( $style ) {
-		printf(
-			'<style type="text/css" id="tm-builder-advanced-style">
-				%1$s
-			</style>',
-			$style
-		);
+
+		$localize_var = apply_filters( 'cherry_dynamic_css_collector_localize_object', array(
+			'type'  => 'text/css',
+			'title' => 'tm-builder-advanced-style',
+			'css'   => $style,
+		) );
+
+		wp_localize_script( 'tm-builder-modules-script', 'TmCollectedCSS', $localize_var );
+
+		ob_start();
+		include 'assets/js/cherry-css-collector.js';
+		$handler = ob_get_clean();
+
+		wp_add_inline_script( 'tm-builder-modules-script', $handler );
 	}
 }
 add_action( 'wp_footer', 'tm_pb_maybe_add_advanced_styles' );
