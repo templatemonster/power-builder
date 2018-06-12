@@ -72,6 +72,7 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 					'email'  => esc_html__( 'Email Field', 'power-builder' ),
 					'select' => esc_html__( 'Select Field', 'power-builder' ),
 					'text'   => esc_html__( 'Textarea', 'power-builder' ),
+					'checkbox' => esc_html__( 'Checkbox', 'power-builder' ),
 				),
 				'affects'     => array(
 					'#tm_pb_select_options',
@@ -238,6 +239,9 @@ class Tm_Builder_Module_Contact_Form_item extends Tm_Builder_Module {
 				break;
 			case 'select':
 				$input_field = $this->get_template_part( 'contact-form/select.php' );
+				break;
+			case 'checkbox':
+				$input_field = $this->get_template_part( 'contact-form/checkbox.php' );
 				break;
 		}
 
